@@ -1,0 +1,52 @@
+/* SCENTORY v3075 — persistent mobile liquid-glass navigation */
+.scentory-liquid-dock{display:none}
+@media(max-width:760px){
+  body{padding-bottom:108px!important}
+  .floating-cart{display:none!important}
+  .scentory-liquid-dock{
+    position:fixed!important;left:12px!important;right:12px!important;
+    bottom:max(10px,env(safe-area-inset-bottom))!important;z-index:9997;
+    width:auto!important;max-width:none!important;transform:none!important;
+    display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;
+    padding:8px 7px;border:1px solid rgba(222,184,111,.34);border-radius:28px;
+    background:linear-gradient(145deg,rgba(30,25,17,.58),rgba(5,5,5,.76));
+    -webkit-backdrop-filter:blur(24px) saturate(165%);backdrop-filter:blur(24px) saturate(165%);
+    box-shadow:inset 0 1px 0 rgba(255,231,184,.18),inset 0 -1px 0 rgba(188,139,57,.12),0 16px 42px rgba(0,0,0,.44),0 0 24px rgba(193,145,61,.08);
+    overflow:hidden;isolation:isolate
+  }
+  .scentory-liquid-dock:before{content:"";position:absolute;z-index:0;inset:-45% 18% 55% -10%;background:radial-gradient(ellipse,rgba(245,210,143,.20),transparent 68%);pointer-events:none;filter:blur(5px)}
+  .scentory-liquid-dock:after{content:"";position:absolute;z-index:0;inset:auto 12% -48% 30%;height:70%;background:radial-gradient(ellipse,rgba(187,129,42,.13),transparent 68%);pointer-events:none;filter:blur(10px)}
+  .scentory-liquid-indicator{
+    position:absolute;z-index:1;top:7px;bottom:7px;left:7px;width:20%;
+    border:1px solid rgba(248,219,161,.18);border-radius:21px;
+    background:linear-gradient(145deg,rgba(222,174,85,.24),rgba(255,247,228,.075) 48%,rgba(142,91,24,.14));
+    box-shadow:inset 0 1px 0 rgba(255,240,208,.24),inset 0 -1px 0 rgba(182,123,38,.12),0 0 22px rgba(215,163,72,.13);
+    -webkit-backdrop-filter:blur(13px) saturate(180%);backdrop-filter:blur(13px) saturate(180%);
+    pointer-events:none;will-change:left,width,transform,filter
+  }
+  .scentory-liquid-indicator:before{content:"";position:absolute;left:15%;right:15%;top:5px;height:34%;border-radius:999px;background:linear-gradient(180deg,rgba(255,245,220,.18),rgba(255,255,255,0));filter:blur(.3px)}
+  .scentory-dock-item{
+    position:relative;z-index:2;min-width:0!important;overflow:visible;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+    padding:7px 1px 6px;border-radius:20px;color:rgba(244,239,229,.67)!important;
+    text-decoration:none!important;font:700 8.5px/1.05 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+    letter-spacing:.045em;text-transform:uppercase;-webkit-tap-highlight-color:transparent;
+    transition:color .30s cubic-bezier(.22,.88,.24,1),transform .30s cubic-bezier(.22,.88,.24,1),filter .30s ease
+  }
+  .scentory-dock-item>span{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:clip}
+  .scentory-dock-item svg{width:21px;height:21px;display:block;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .34s cubic-bezier(.22,.88,.24,1)}
+  .scentory-dock-item.active{color:#f7dfb0!important;filter:drop-shadow(0 0 7px rgba(230,189,114,.16));transform:translateY(-1px)}
+  .scentory-dock-item.active svg{transform:scale(1.055)}
+  .scentory-dock-item.active:after{content:"";position:absolute;bottom:2px;width:18px;height:2px;border-radius:99px;background:linear-gradient(90deg,transparent,#e6bd72,transparent);box-shadow:0 0 9px rgba(230,189,114,.42);opacity:.9}
+  .scentory-dock-count{position:absolute;top:2px;left:calc(50% + 8px);min-width:16px;height:16px;padding:0 4px;border-radius:99px;background:#ead09b;color:#090909;font-size:9px;line-height:16px;text-align:center;letter-spacing:0;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  .product h3 a,.product h3 a:link,.product h3 a:visited,.product h3 a:hover,.product h3 a:active{color:#f7f3eb!important;text-decoration:none!important}
+  .details-link,.details-link:visited{color:rgba(255,255,255,.92)!important}
+}
+@media(max-width:370px){
+  .scentory-liquid-dock{left:7px!important;right:7px!important;padding-left:4px;padding-right:4px}
+  .scentory-dock-item{font-size:7.6px;letter-spacing:.025em}
+  .scentory-dock-item svg{width:20px;height:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  .scentory-dock-item,.scentory-dock-item svg{transition:none!important}
+}
