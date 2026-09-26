@@ -2,7 +2,7 @@
   'use strict';
 
   const toolNames = {
-    find: 'Find My Perfume',
+    find: 'Scentory Match',
     weather: 'Scentory Manual Weather Match',
     box: 'Build My Decant Box',
     similar: 'Similar Perfumes',
@@ -563,9 +563,9 @@
   function renderFindTool() {
     const weather = defaultWeather();
     return renderToolShell('find',
-      'Answer a few quick questions. Results balance perfume family, maturity, occasion, weather, presence, budget position and profile confidence.',
+      'Build a match around your real life: where you will wear it, the character you want, your weather, presence and budget. Scentory then ranks the closest catalogue fits.',
       `
-        <form class="discovery-form" onsubmit="runFindMyPerfume(event)">
+        <form class="discovery-form scentory-match-form" onsubmit="runFindMyPerfume(event)">
           <div class="discovery-field"><label for="findOccasion">Where will you wear it?</label>
             <select id="findOccasion"><option value="daily">Daily wear</option><option value="office">Office / university</option><option value="date">Date night</option><option value="party">Party</option><option value="gym">Gym / active</option><option value="formal">Formal event</option></select>
           </div>
@@ -593,7 +593,7 @@
           <div class="discovery-field"><label for="findPricePreference">Within that budget, prefer</label>
             <select id="findPricePreference"><option value="balanced">Best overall balance</option><option value="premium">More premium choices</option><option value="value">Best value</option></select>
           </div>
-          <div class="discovery-form-actions"><button class="discovery-action" type="submit">Show My Matches</button></div>
+          <div class="discovery-form-actions"><button class="discovery-action" type="submit">Reveal My Scentory Matches</button></div>
         </form>
         <div id="findResults" class="discovery-results"></div>
       `

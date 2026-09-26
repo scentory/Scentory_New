@@ -34,7 +34,7 @@
   <link rel="preload" as="image" href="logo-horizontal-white.png?v=3043" />
   <link rel="preload" as="image" href="hero-scentory-main-desktop.webp?v=3070" media="(min-width: 641px)" fetchpriority="high" />
   <link rel="preload" as="image" href="hero-scentory-main-mobile.webp?v=3070" media="(max-width: 640px)" fetchpriority="high" />
-  <link rel="stylesheet" href="style-scentory-v3048.css?v=3073" />
+  <link rel="stylesheet" href="style-scentory-v3048.css?v=3077" />
 
   <script type="application/ld+json">
   {
@@ -110,7 +110,7 @@
         <summary>More</summary>
         <div class="more-nav-menu">
           <a href="index.html#decantBottles">Decant Bottles</a>
-          <a href="index.html#discoveryStudio">Perfume Tools</a>
+          <a href="index.html#discoveryStudio">Scentory Tools</a>
           <a href="index.html#whyScentory">Why Scentory</a>
           <a href="index.html#customerReviews">Reviews</a>
           <a href="index.html#faq">FAQ</a>
@@ -125,7 +125,7 @@
       <h1>Try Your Favourite Perfumes Without Buying the Full Bottle</h1>
       <p>Explore original bottle-sourced decants, choose your preferred ML size, and place your order with Scentory in a few taps.</p>
       <div class="hero-actions">
-        <button type="button" class="btn primary" onclick="openDiscoveryTool('find')">Find My Perfume</button>
+        <button type="button" class="btn primary" onclick="openDiscoveryTool('find')">Open Scentory Match</button>
         <a href="shop.html" class="btn primary">Shop All Perfumes</a>
         <a href="order.html" class="btn ghost">My Order</a>
       </div>
@@ -175,16 +175,16 @@
     <section class="catalog-panel">
       <div class="quick-shop" aria-label="Quick perfume categories">
         <button type="button" class="quick-shop-chip active" data-quick-tag="all">All</button>
-        <button type="button" class="quick-shop-chip" data-quick-target="bestSelling">Best Sellers</button>
-        <button type="button" class="quick-shop-chip" data-quick-target="hotArrivals">New Arrivals</button>
-        <button type="button" class="quick-shop-chip" data-quick-tag="Fresh">Fresh</button>
-        <button type="button" class="quick-shop-chip" data-quick-tag="Office">Office</button>
-        <button type="button" class="quick-shop-chip" data-quick-tag="Date Night">Date Night</button>
+        <button type="button" class="quick-shop-chip" data-quick-target="bestSelling">Scentory Favourites</button>
+        <button type="button" class="quick-shop-chip" data-quick-target="hotArrivals">Fresh Drops</button>
+        <button type="button" class="quick-shop-chip" data-quick-tag="Fresh">Fresh & Clean</button>
+        <button type="button" class="quick-shop-chip" data-quick-tag="Office">Work Ready</button>
+        <button type="button" class="quick-shop-chip" data-quick-tag="Date Night">Date Ready</button>
       </div>
       <section class="toolbar" aria-label="Filter perfumes">
         <div class="toolbar-title">
-          <strong>Collection Filter</strong>
-          <span>Browse all Scentory decants by availability.</span>
+          <strong>Quick Browse</strong>
+          <span>Narrow the homepage selection before opening full Discover.</span>
         </div>
         <select id="stockFilter" aria-label="Stock filter">
           <option value="all">All items</option>
@@ -215,8 +215,8 @@
       <section id="hotArrivals" class="hot-arrivals-section">
         <div class="hot-arrivals-head">
           <div>
-            <span class="hot-arrivals-tab">Hot Arrivals</span>
-            <h2>Choose Your Weapon</h2>
+            <span class="hot-arrivals-tab">Fresh Drops</span>
+            <h2>New to the Scentory Shelf</h2>
             <p>Big highlighted arrivals — tap any perfume to view the full card and select ML.</p>
           </div>
         </div>
@@ -226,7 +226,7 @@
       <section id="bestSelling" class="best-selling-section">
         <div class="section-title">
           <div>
-            <h2>Best Selling of the Month</h2>
+            <h2>Scentory Favourites</h2>
             <p>Tap any best seller to jump to the full perfume card.</p>
           </div>
         </div>
@@ -352,7 +352,7 @@
   <section id="discoveryStudio" class="discovery-studio" aria-labelledby="discoveryStudioTitle">
     <div class="discovery-studio-head">
       <div>
-        <span class="eyebrow">Scentory Discovery Studio</span>
+        <span class="eyebrow">Scentory Discovery Lab</span>
         <h2 id="discoveryStudioTitle">More than a catalogue. Your personal perfume guide.</h2>
         <p>Use Scentory’s original tools to discover perfumes for your taste, manually entered Bangladesh weather, occasion, collection and budget.</p>
       </div>
@@ -362,9 +362,9 @@
       <button type="button" class="discovery-tool-card" onclick="openDiscoveryTool('find')">
         <span class="discovery-tool-number">01</span>
         <span class="discovery-tool-icon" aria-hidden="true">◎</span>
-        <strong>Find My Perfume</strong>
-        <small>Receive transparent matches with clear reasons, trade-offs and blind-buy guidance.</small>
-        <em>Start matching →</em>
+        <strong>Scentory Match</strong>
+        <small>Match your occasion, perfume character, weather, presence and budget to the closest Scentory options.</small>
+        <em>Build my match →</em>
       </button>
       <button type="button" class="discovery-tool-card" onclick="openDiscoveryTool('weather')">
         <span class="discovery-tool-number">02</span>
@@ -565,8 +565,8 @@
   </div>
 
   <noscript><p class="noscript-note">JavaScript is required to load current prices, stock and ordering tools.</p></noscript>
-  <script src="script-scentory-v3048.js?v=3074" defer></script>
-  <script src="scentory-intelligence-v3048.js?v=3072" defer></script>
+  <script src="script-scentory-v3048.js?v=3077" defer></script>
+  <script src="scentory-intelligence-v3048.js?v=3077" defer></script>
   <script src="liquid-dock-v3075.js?v=3075" defer></script>
 </body>
 </html>

@@ -34,7 +34,7 @@
   <link rel="preload" as="image" href="logo-horizontal-white.png?v=3043" />
   <link rel="preload" as="image" href="hero-scentory-main-desktop.webp?v=3070" media="(min-width: 641px)" fetchpriority="high" />
   <link rel="preload" as="image" href="hero-scentory-main-mobile.webp?v=3070" media="(max-width: 640px)" fetchpriority="high" />
-  <link rel="stylesheet" href="style-scentory-v3048.css?v=3073" />
+  <link rel="stylesheet" href="style-scentory-v3048.css?v=3077" />
 
   <script type="application/ld+json">
   {
@@ -110,7 +110,7 @@
         <summary>More</summary>
         <div class="more-nav-menu">
           <a href="index.html#decantBottles">Decant Bottles</a>
-          <a href="index.html#discoveryStudio">Perfume Tools</a>
+          <a href="index.html#discoveryStudio">Scentory Tools</a>
           <a href="index.html#whyScentory">Why Scentory</a>
           <a href="index.html#customerReviews">Reviews</a>
           <a href="index.html#faq">FAQ</a>
@@ -125,7 +125,7 @@
       <h1>Try Your Favourite Perfumes Without Buying the Full Bottle</h1>
       <p>Explore original bottle-sourced decants, choose your preferred ML size, and place your order with Scentory in a few taps.</p>
       <div class="hero-actions">
-        <button type="button" class="btn primary" onclick="openDiscoveryTool('find')">Find My Perfume</button>
+        <button type="button" class="btn primary" onclick="openDiscoveryTool('find')">Open Scentory Match</button>
         <a href="shop.html" class="btn primary">Shop All Perfumes</a>
         <a href="order.html" class="btn ghost">My Order</a>
       </div>
@@ -172,42 +172,33 @@
   </section>
 
   <main id="collection" class="layout">
-    <section class="catalog-panel"><div class="shop-page-intro"><span class="eyebrow">SCENTORY SHOP</span><h1>Shop All Perfumes</h1><p>Search, filter, compare ML prices and open any perfume for its dedicated product page.</p></div>
+    <section class="catalog-panel"><div class="shop-page-intro"><span class="eyebrow">SCENTORY DISCOVER</span><h1>Find Your Next Perfume</h1><p>Search freely or shape the collection around your brand, character, moment, weather and budget.</p></div>
       <div class="quick-shop" aria-label="Quick perfume categories">
         <button type="button" class="quick-shop-chip active" data-quick-tag="all">All</button>
-        <button type="button" class="quick-shop-chip" data-quick-target="bestSelling">Best Sellers</button>
-        <button type="button" class="quick-shop-chip" data-quick-target="hotArrivals">New Arrivals</button>
-        <button type="button" class="quick-shop-chip" data-quick-tag="Fresh">Fresh</button>
-        <button type="button" class="quick-shop-chip" data-quick-tag="Office">Office</button>
-        <button type="button" class="quick-shop-chip" data-quick-tag="Date Night">Date Night</button>
+        <button type="button" class="quick-shop-chip" data-quick-target="bestSelling">Scentory Favourites</button>
+        <button type="button" class="quick-shop-chip" data-quick-target="hotArrivals">Fresh Drops</button>
+        <button type="button" class="quick-shop-chip" data-quick-tag="Fresh">Fresh & Clean</button>
+        <button type="button" class="quick-shop-chip" data-quick-occasion="office">Work Ready</button>
+        <button type="button" class="quick-shop-chip" data-quick-occasion="date">Date Ready</button>
       </div>
-      <section class="toolbar" aria-label="Filter perfumes">
-        <div class="toolbar-title">
-          <strong>Collection Filter</strong>
-          <span>Browse all Scentory decants by availability.</span>
+      <section class="toolbar discovery-refiner" aria-label="Refine perfume discovery">
+        <div class="toolbar-title refine-title">
+          <div><span class="refine-kicker">SCENTORY DISCOVERY</span><strong>Refine Your Discovery</strong></div>
+          <span>Shape the collection by brand, character, moment, weather and budget.</span>
         </div>
-        <select id="stockFilter" aria-label="Stock filter">
-          <option value="all">All items</option>
-          <option value="available">Available</option>
-          <option value="out">Out of stock</option>
-        </select>
-        <select id="tagFilter" aria-label="Perfume type filter">
-          <option value="all">All types</option>
-          <option value="Fresh">Fresh</option>
-          <option value="Sweet">Sweet</option>
-          <option value="Oud">Oud</option>
-          <option value="Blue">Blue</option>
-          <option value="Aquatic">Aquatic</option>
-          <option value="Office">Office</option>
-          <option value="Daily Wear">Daily Wear</option>
-          <option value="Gym">Gym</option>
-          <option value="Date Night">Date Night</option>
-          <option value="Party">Party</option>
-          <option value="Formal">Formal</option>
-          <option value="Summer">Summer</option>
-          <option value="Winter">Winter</option>
-          <option value="Beast Mode">Beast Mode</option>
-        </select>
+        <div class="refine-grid">
+          <label class="refine-field"><span>Brand</span><select id="brandFilter" aria-label="Filter by brand"><option value="all">All brands</option></select></label>
+          <label class="refine-field"><span>Character</span><select id="tagFilter" aria-label="Filter by perfume character">
+            <option value="all">Any character</option><option value="Fresh">Fresh & clean</option><option value="Aquatic">Aquatic & airy</option><option value="Citrus">Citrus & bright</option><option value="Sweet">Sweet</option><option value="Woody">Woody</option><option value="Spicy">Spicy</option><option value="Oud">Oud</option><option value="Vanilla">Vanilla</option><option value="Aromatic">Aromatic</option><option value="Fruity">Fruity</option>
+          </select></label>
+          <label class="refine-field"><span>Moment</span><select id="occasionFilter" aria-label="Filter by occasion"><option value="all">Any moment</option><option value="daily">Everyday</option><option value="office">Office / university</option><option value="date">Date night</option><option value="party">Party / social</option><option value="gym">Gym / active</option><option value="formal">Formal event</option></select></label>
+          <label class="refine-field"><span>Weather</span><select id="climateFilter" aria-label="Filter by weather"><option value="all">Any weather</option><option value="hot">Hot & humid</option><option value="monsoon">Monsoon</option><option value="winter">Cool weather</option><option value="ac">AC / indoor</option><option value="outdoor">Outdoor day</option></select></label>
+          <label class="refine-field"><span>Budget</span><select id="budgetFilter" aria-label="Filter by starting price"><option value="all">Any budget</option><option value="300">Starts within 300 Tk</option><option value="500">Starts within 500 Tk</option><option value="800">Starts within 800 Tk</option><option value="1200">Starts within 1,200 Tk</option></select></label>
+          <label class="refine-field"><span>Availability</span><select id="stockFilter" aria-label="Stock filter"><option value="all">All items</option><option value="available">Available now</option><option value="out">Out of stock</option></select></label>
+          <label class="refine-field"><span>Arrange</span><select id="sortFilter" aria-label="Sort perfumes"><option value="recommended">Scentory order</option><option value="popular">Scentory favourites</option><option value="new">Fresh drops first</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name A–Z</option></select></label>
+          <button id="clearDiscoveryFilters" class="refine-reset" type="button">Reset</button>
+        </div>
+        <div id="discoveryFilterSummary" class="refine-summary" aria-live="polite"></div>
       </section>
 
 
@@ -215,9 +206,9 @@
       <section id="hotArrivals" class="hot-arrivals-section">
         <div class="hot-arrivals-head">
           <div>
-            <span class="hot-arrivals-tab">Hot Arrivals</span>
-            <h2>Choose Your Weapon</h2>
-            <p>Big highlighted arrivals — tap any perfume to view the full card and select ML.</p>
+            <span class="hot-arrivals-tab">Fresh Drops</span>
+            <h2>New to the Scentory Shelf</h2>
+            <p>Recently added highlights — open a perfume or use Quick Pick when you reach the collection.</p>
           </div>
         </div>
         <div id="hotArrivalsGrid" class="hot-arrivals-grid"><p class="order-items empty">Loading hot arrivals...</p></div>
@@ -226,8 +217,8 @@
       <section id="bestSelling" class="best-selling-section">
         <div class="section-title">
           <div>
-            <h2>Best Selling of the Month</h2>
-            <p>Tap any best seller to jump to the full perfume card.</p>
+            <h2>Scentory Favourites</h2>
+            <p>Popular picks from the current Scentory collection.</p>
           </div>
         </div>
         <div id="bestSellingGrid" class="best-selling-strip"><p class="order-items empty">Loading best sellers...</p></div>
@@ -352,7 +343,7 @@
   <section id="discoveryStudio" class="discovery-studio" aria-labelledby="discoveryStudioTitle">
     <div class="discovery-studio-head">
       <div>
-        <span class="eyebrow">Scentory Discovery Studio</span>
+        <span class="eyebrow">Scentory Discovery Lab</span>
         <h2 id="discoveryStudioTitle">More than a catalogue. Your personal perfume guide.</h2>
         <p>Use Scentory’s original tools to discover perfumes for your taste, manually entered Bangladesh weather, occasion, collection and budget.</p>
       </div>
@@ -362,7 +353,7 @@
       <button type="button" class="discovery-tool-card" onclick="openDiscoveryTool('find')">
         <span class="discovery-tool-number">01</span>
         <span class="discovery-tool-icon" aria-hidden="true">◎</span>
-        <strong>Find My Perfume</strong>
+        <strong>Scentory Match</strong>
         <small>Receive transparent matches with clear reasons, trade-offs and blind-buy guidance.</small>
         <em>Start matching →</em>
       </button>
@@ -565,8 +556,8 @@
   </div>
 
   <noscript><p class="noscript-note">JavaScript is required to load current prices, stock and ordering tools.</p></noscript>
-  <script src="script-scentory-v3048.js?v=3074" defer></script>
-  <script src="scentory-intelligence-v3048.js?v=3072" defer></script>
+  <script src="script-scentory-v3048.js?v=3077" defer></script>
+  <script src="scentory-intelligence-v3048.js?v=3077" defer></script>
   <script src="liquid-dock-v3075.js?v=3075" defer></script>
 </body>
 </html>

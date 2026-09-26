@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '3072';
+const DATA_VERSION = '3077';
 const BEST_SELLING_IDS = [
   'hawas-ice-freeze',
   'sanaya-by-junaid-edp',
@@ -31,6 +31,13 @@ const searchInput = document.getElementById('searchInput');
 const searchSuggestions = document.getElementById('searchSuggestions');
 const stockFilter = document.getElementById('stockFilter');
 const tagFilter = document.getElementById('tagFilter');
+const brandFilter = document.getElementById('brandFilter');
+const occasionFilter = document.getElementById('occasionFilter');
+const climateFilter = document.getElementById('climateFilter');
+const budgetFilter = document.getElementById('budgetFilter');
+const sortFilter = document.getElementById('sortFilter');
+const clearDiscoveryFilters = document.getElementById('clearDiscoveryFilters');
+const discoveryFilterSummary = document.getElementById('discoveryFilterSummary');
 const customerName = document.getElementById('customerName');
 const customerPhone = document.getElementById('customerPhone');
 const customerAddress = document.getElementById('customerAddress');
@@ -310,6 +317,47 @@ function buildRecommendationFromTags(tagList = []) {
   return 'A versatile pick for exploring something new from Scentory.';
 }
 
+function perfumeBrand(p) {
+  const n = `${p?.name || ''} ${p?.id || ''}`.toLowerCase();
+  const rules = [
+    ['Afnan', /\bafnan\b|supremacy-not-only-intense/], ['Rasasi', /\bhawas\b|rasasi|shuhrah|fattan/],
+    ['Armaf', /club de nuit|armaf/], ['Lattafa', /lattafa|bade.?e al oud|qaed al fursan|fakhar|asad bourbon|\basad\b|haayati|najdia|khamrah|teriaq/],
+    ['Rayhaan', /rayhaan/], ['Khadlaj', /khadlaj|\btitan by khadlaj/], ['French Avenue', /french avenue|liquid brun|vulcan feu|atlantis extrait|zenith blue/],
+    ['Ahmed Al Maghribi', /by ahmed|\bkaaf\b|\bzeleny\b|\bblue by ahmed/], ['Al Haramain', /al haramain/],
+    ['Mykonos', /mykonos/], ['Yusuf Bhai', /yusuf bhai/], ['Brandy', /brandy/], ['Gulf Orchid', /gulf orchid|\bnaseem\b|mango ice/],
+    ['Arabiyat Prestige', /arabiyat|arabian prestige|\bmarwa\b|bois blanc/], ['Riiffs', /riiffs/], ['Azzaro', /azzaro/], ['Dior', /dior/],
+    ['Versace', /versace/], ['YSL', /ysl|yves saint/], ['Dolce & Gabbana', /dolce|gabbana/], ['Carolina Herrera', /carolina herrera|212 men/],
+    ['Davidoff', /davidoff/], ['Burberry', /burberry/], ['Kenzo', /kenzo/], ['Nautica', /nautica/], ['Mancera', /mancera/],
+    ['Junaid Jamshed', /junaid|sanaya/], ['Ajmal', /ajmal/], ['Reef', /reef/], ['Maison Asrar', /maison asrar|vanguard/],
+    ['Atralia', /atralia/], ['Maison X Cal', /maison x cal|thriller/], ['Ard Al Zaafaran', /\bmiami blue\b|by ard/], ['Aromatix', /aromatix/]
+  ];
+  return rules.find(([, pattern]) => pattern.test(n))?.[0] || 'Other';
+}
+
+function lowestAvailablePrice(p) {
+  const prices = Object.values(p?.sizes || {}).filter(item => item?.available && item.price !== null).map(item => Number(item.price)).filter(Number.isFinite);
+  return prices.length ? Math.min(...prices) : Infinity;
+}
+
+function populateBrandFilter() {
+  if (!brandFilter) return;
+  const current = brandFilter.value || 'all';
+  const brands = [...new Set(perfumes.map(perfumeBrand).filter(Boolean))].sort((a,b) => a.localeCompare(b));
+  brandFilter.innerHTML = '<option value="all">All brands</option>' + brands.map(brand => `<option value="${escapeHtml(brand)}">${escapeHtml(brand)}</option>`).join('');
+  brandFilter.value = brands.includes(current) ? current : 'all';
+}
+
+function updateDiscoveryFilterSummary(count) {
+  if (!discoveryFilterSummary) return;
+  const labels = [];
+  if (brandFilter?.value && brandFilter.value !== 'all') labels.push(brandFilter.value);
+  if (tagFilter?.value && tagFilter.value !== 'all') labels.push(tagFilter.options[tagFilter.selectedIndex]?.text || tagFilter.value);
+  if (occasionFilter?.value && occasionFilter.value !== 'all') labels.push(occasionFilter.options[occasionFilter.selectedIndex]?.text || occasionFilter.value);
+  if (climateFilter?.value && climateFilter.value !== 'all') labels.push(climateFilter.options[climateFilter.selectedIndex]?.text || climateFilter.value);
+  if (budgetFilter?.value && budgetFilter.value !== 'all') labels.push(`Starts within ${Number(budgetFilter.value).toLocaleString('en-BD')} Tk`);
+  discoveryFilterSummary.textContent = `${count} perfume${count === 1 ? '' : 's'} shown${labels.length ? ' · ' + labels.join(' · ') : ' · Explore the full Scentory collection'}`;
+}
+
 function renderTagPills(p, limit = 4) {
   const profile = getScentProfile(p);
   return profile.tags.slice(0, limit).map(tag => `<span class="tag scent-tag">${escapeHtml(tag)}</span>`).join('');
@@ -415,7 +463,8 @@ function renderProductCardV3002(p) {
         <p class="product-reco">${escapeHtml(profile.recommendation)}</p>
         <a class="details-link" href="${encodeURIComponent(p.id)}.html">View Details</a>
       </div>
-      <div class="price-buttons four-row">${renderPriceTiles(p)}</div>
+      <div class="quick-pick-head"><span>Quick Pick</span><small>Tap a size to add it to My Picks</small></div>
+      <div class="price-buttons four-row quick-pick-grid">${renderPriceTiles(p)}</div>
     </article>
   `;
 }
@@ -600,6 +649,7 @@ async function loadPerfumes() {
     if (!response.ok) throw new Error('Could not load perfume database');
     perfumes = await response.json();
     normalizeCartAfterLoad();
+    populateBrandFilter();
     injectCatalogueStructuredData();
     renderProducts();
     renderHotArrivals();
@@ -726,7 +776,7 @@ function renderHotArrivals() {
     return;
   }
 
-  hotArrivalsGrid.innerHTML = items.map((p, index) => {
+  hotArrivalsGrid.innerHTML = items.map((p) => {
     const availableSizes = Object.entries(p.sizes || {})
       .filter(([, item]) => item.available && item.price !== null)
       .map(([ml, item]) => `${displayMl(ml)} ${taka(item.price)}`)
@@ -734,7 +784,6 @@ function renderHotArrivals() {
       .join(' · ');
     return `
       <button type="button" class="hot-arrival-card" data-target-id="${escapeHtml(p.id)}" aria-label="View ${escapeHtml(p.name)} in price list">
-        <span class="hot-arrival-badge">#${index + 1}</span>
         <span class="hot-arrival-photo-wrap">
           <img ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
         </span>
@@ -762,9 +811,8 @@ function renderBestSelling() {
     return;
   }
 
-  bestSellingGrid.innerHTML = items.map((p, index) => `
+  bestSellingGrid.innerHTML = items.map((p) => `
     <button type="button" class="best-seller-card" data-target-id="${escapeHtml(p.id)}" aria-label="View ${escapeHtml(p.name)} in price list">
-      <span class="best-rank">${index + 1}</span>
       <img ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
       <span class="best-seller-copy">
         <b>${escapeHtml(p.name)}</b>
@@ -833,6 +881,11 @@ function scrollToPerfume(id, options = {}) {
   }
   if (stockFilter) stockFilter.value = 'all';
   if (tagFilter) tagFilter.value = 'all';
+  if (brandFilter) brandFilter.value = 'all';
+  if (occasionFilter) occasionFilter.value = 'all';
+  if (climateFilter) climateFilter.value = 'all';
+  if (budgetFilter) budgetFilter.value = 'all';
+  if (sortFilter) sortFilter.value = 'recommended';
   hideSearchSuggestions();
   renderProducts();
 
@@ -854,14 +907,19 @@ function renderProducts() {
   const exactId = searchInput?.dataset.selectedId || '';
   const stock = stockFilter?.value || 'all';
   const selectedTag = tagFilter?.value || 'all';
+  const selectedBrand = brandFilter?.value || 'all';
+  const selectedOccasion = occasionFilter?.value || 'all';
+  const selectedClimate = climateFilter?.value || 'all';
+  const maxBudget = budgetFilter?.value === 'all' || !budgetFilter?.value ? Infinity : Number(budgetFilter.value);
+  const sortMode = sortFilter?.value || 'recommended';
 
   const matchesTerm = p => exactId
     ? p.id === exactId
-    : (!term || `${p.name} ${p.id} ${shortOrderName(p.name)}`.toLowerCase().includes(term));
+    : (!term || `${p.name} ${p.id} ${shortOrderName(p.name)} ${perfumeBrand(p)}`.toLowerCase().includes(term));
 
   const collectionMode = document.body?.dataset?.page === 'shop' ? new URLSearchParams(location.search).get('collection') : '';
   const collectionIds = collectionMode === 'best' ? BEST_SELLING_IDS : (collectionMode === 'new' ? HOT_ARRIVAL_IDS : null);
-  const filtered = perfumes.filter(p => {
+  let filtered = perfumes.filter(p => {
     if (collectionIds && !collectionIds.includes(p.id)) return false;
     const hasAvailable = productHasAvailableSize(p);
     const upcoming = isUpcoming(p);
@@ -869,21 +927,41 @@ function renderProducts() {
       (stock === 'available' && hasAvailable) ||
       (stock === 'out' && !hasAvailable && !upcoming);
     const profile = getScentProfile(p);
-    const matchesTag = selectedTag === 'all' || profile.tags.includes(selectedTag);
-    return matchesTerm(p) && matchesStock && matchesTag;
+    const rawProfile = p.profile || {};
+    const normalizedCharacter = (rawProfile.character || []).map(value => String(value).toLowerCase());
+    const matchesTag = selectedTag === 'all' || profile.tags.includes(selectedTag) || normalizedCharacter.includes(selectedTag.toLowerCase());
+    const matchesBrand = selectedBrand === 'all' || perfumeBrand(p) === selectedBrand;
+    const occasions = (rawProfile.occasions || []).map(String);
+    const climates = (rawProfile.climates || []).map(String);
+    const occasionAliases = selectedOccasion === 'gym' ? ['gym','active'] : [selectedOccasion];
+    const matchesOccasion = selectedOccasion === 'all' || occasionAliases.some(value => occasions.includes(value)) || profile.tags.some(tag => tag.toLowerCase().includes(selectedOccasion === 'date' ? 'date' : selectedOccasion));
+    const matchesClimate = selectedClimate === 'all' || climates.includes(selectedClimate) || (selectedClimate === 'hot' && profile.tags.includes('Summer')) || (selectedClimate === 'winter' && profile.tags.includes('Winter'));
+    const matchesBudget = maxBudget === Infinity || lowestAvailablePrice(p) <= maxBudget;
+    return matchesTerm(p) && matchesStock && matchesTag && matchesBrand && matchesOccasion && matchesClimate && matchesBudget;
   });
 
-  if (perfumeCount) perfumeCount.textContent = '140+ Perfumes';
+  const originalIndex = new Map(perfumes.map((p, i) => [p.id, i]));
+  const popularityIndex = new Map(BEST_SELLING_IDS.map((id, i) => [id, i]));
+  const newIndex = new Map(HOT_ARRIVAL_IDS.map((id, i) => [id, i]));
+  filtered = [...filtered].sort((a,b) => {
+    if (sortMode === 'price-asc') return lowestAvailablePrice(a) - lowestAvailablePrice(b) || a.name.localeCompare(b.name);
+    if (sortMode === 'price-desc') return lowestAvailablePrice(b) - lowestAvailablePrice(a) || a.name.localeCompare(b.name);
+    if (sortMode === 'name') return a.name.localeCompare(b.name);
+    if (sortMode === 'popular') return (popularityIndex.has(a.id) ? popularityIndex.get(a.id) : 999) - (popularityIndex.has(b.id) ? popularityIndex.get(b.id) : 999) || originalIndex.get(a.id) - originalIndex.get(b.id);
+    if (sortMode === 'new') return (newIndex.has(a.id) ? newIndex.get(a.id) : 999) - (newIndex.has(b.id) ? newIndex.get(b.id) : 999) || originalIndex.get(a.id) - originalIndex.get(b.id);
+    return originalIndex.get(a.id) - originalIndex.get(b.id);
+  });
+
   const visibleProducts = document.body?.dataset?.page === 'home' ? filtered.slice(0, 8) : filtered;
 
   if (!visibleProducts.length) {
-    productGrid.innerHTML = '<p class="order-items empty">No perfume found. Try a different search or tag.</p>';
+    productGrid.innerHTML = '<p class="order-items empty">No perfume matches those choices. Reset one filter or try another search.</p>';
   } else {
     productGrid.innerHTML = visibleProducts.map(renderProductCardV3002).join('');
   }
+  updateDiscoveryFilterSummary(filtered.length);
   updatePriceTileStates();
 }
-
 
 function openImageModal(src, title) {
   if (!imageModal || !imageModalImg) return;
@@ -1347,6 +1425,18 @@ tagFilter?.addEventListener('change', () => {
   renderProducts();
   renderSearchSuggestions();
 });
+[brandFilter, occasionFilter, climateFilter, budgetFilter, sortFilter].forEach(control => control?.addEventListener('change', () => {
+  renderProducts();
+  renderSearchSuggestions();
+}));
+clearDiscoveryFilters?.addEventListener('click', () => {
+  [brandFilter, tagFilter, occasionFilter, climateFilter, budgetFilter, stockFilter].forEach(control => { if (control) control.value = 'all'; });
+  if (sortFilter) sortFilter.value = 'recommended';
+  if (searchInput) { searchInput.value = ''; delete searchInput.dataset.selectedId; }
+  document.querySelectorAll('.quick-shop-chip').forEach(chip => chip.classList.toggle('active', chip.dataset.quickTag === 'all'));
+  renderProducts();
+  renderSearchSuggestions();
+});
 
 deliveryLocation.addEventListener('change', () => { saveCustomerData(); renderCart(); setFieldError(deliveryLocation, false); });
 [customerName, customerPhone, customerAddress].forEach(field => {
@@ -1467,6 +1557,11 @@ document.querySelectorAll('.quick-shop-chip').forEach(chip => chip.addEventListe
   }
   if (tagFilter) tagFilter.value = chip.dataset.quickTag || 'all';
   if (stockFilter) stockFilter.value = 'all';
+  if (brandFilter) brandFilter.value = 'all';
+  if (occasionFilter) occasionFilter.value = chip.dataset.quickOccasion || 'all';
+  if (climateFilter) climateFilter.value = 'all';
+  if (budgetFilter) budgetFilter.value = 'all';
+  if (sortFilter) sortFilter.value = 'recommended';
   if (searchInput) { searchInput.value=''; delete searchInput.dataset.selectedId; }
   renderProducts();
   document.getElementById('priceList')?.scrollIntoView({behavior:'smooth', block:'start'});
