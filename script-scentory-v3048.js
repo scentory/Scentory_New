@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '3062';
+const DATA_VERSION = '3066';
 const BEST_SELLING_IDS = [
   'versace-eros-edt',
   'afnan-supremacy-collector-s-edition-edp',
@@ -226,7 +226,11 @@ const shortOrderName = name => {
     .trim();
 };
 
-const imagePath = p => p.image || `images/${p.id}.jpg`;
+const imagePath = p => {
+  const image = p.image || `images/${p.id}.jpg`;
+  if (/^(?:https?:|data:|images\/|Website_Product_Posters\/)/i.test(image) || image === 'product-image-coming-soon.svg') return image;
+  return `Website_Product_Posters/${image}`;
+};
 const hideBrokenImage = img => { img.closest('.product-image-wrap')?.classList.add('image-missing'); };
 
 

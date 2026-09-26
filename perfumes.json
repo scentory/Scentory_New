@@ -109,6 +109,194 @@
     }
   },
   {
+    "id": "azzaro-the-most-wanted-parfum",
+    "name": "Azzaro The Most Wanted (Parfum)",
+    "status": "available",
+    "sizes": {
+      "3ml": {
+        "price": 260,
+        "available": true,
+        "premium": false
+      },
+      "5ml": {
+        "price": 399,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 490,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 749,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 1049,
+        "available": true,
+        "premium": false
+      }
+    },
+    "image": "azzaro-the-most-wanted-parfum-poster.jpg",
+    "tags": [
+      "Warm",
+      "Spicy",
+      "Vanilla",
+      "Date Night",
+      "Winter"
+    ],
+    "recommendation": "A warm spicy vanilla fragrance for dates, parties, dinners, weddings and cool-weather evenings.",
+    "prices": {
+      "3 ML": 260,
+      "5 ML": 399,
+      "6 ML": 490,
+      "10 ML": 749,
+      "15 ML": 1049
+    },
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "warm",
+        "spicy",
+        "vanilla",
+        "woody"
+      ],
+      "occasions": [
+        "date",
+        "party",
+        "formal"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ],
+      "strength": 4,
+      "projection": 4,
+      "longevity": 4,
+      "sweetness": 2,
+      "freshness": 3,
+      "warmth": 3,
+      "officeSafety": 4,
+      "heatSafety": 3,
+      "versatility": 4,
+      "evidence": "scentory-supplied",
+      "reviewedAt": "2026-09-26",
+      "topPickEligible": true,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "scentory-supplied",
+      "notes": {
+        "listed": [
+          "Ginger",
+          "Warm woody notes",
+          "Bourbon vanilla"
+        ]
+      },
+      "performance": "Around 10–12+ hours on clothes, based on Scentory guidance.",
+      "comparison": "Original Azzaro fragrance",
+      "sourceNote": "Profile details are based on the Scentory-supplied website poster. Performance can vary by wearer, weather and spray count.",
+      "sources": [],
+      "profileScope": "perfume",
+      "overview": "A warm spicy vanilla fragrance for dates, parties, dinners, weddings and cool-weather evenings."
+    }
+  },
+  {
+    "id": "sanaya-by-junaid-edp",
+    "name": "Sanaya by Junaid EDP",
+    "status": "available",
+    "sizes": {
+      "5ml": {
+        "price": 279,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 339,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 499,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 699,
+        "available": true,
+        "premium": false
+      }
+    },
+    "image": "sanaya-by-junaid-poster.jpg",
+    "tags": [
+      "Fresh",
+      "Citrus",
+      "Musky",
+      "Office",
+      "Summer"
+    ],
+    "recommendation": "A refreshing citrus, aromatic and musky scent for office, university, casual outings, daytime dates and travel.",
+    "prices": {
+      "5 ML": 279,
+      "6 ML": 339,
+      "10 ML": 499,
+      "15 ML": 699
+    },
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "fresh",
+        "citrus",
+        "aromatic",
+        "musky"
+      ],
+      "occasions": [
+        "daily",
+        "office",
+        "date"
+      ],
+      "climates": [
+        "hot",
+        "ac",
+        "outdoor"
+      ],
+      "strength": 4,
+      "projection": 4,
+      "longevity": 4,
+      "sweetness": 2,
+      "freshness": 3,
+      "warmth": 3,
+      "officeSafety": 4,
+      "heatSafety": 3,
+      "versatility": 4,
+      "evidence": "scentory-supplied",
+      "reviewedAt": "2026-09-26",
+      "topPickEligible": true,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "scentory-supplied",
+      "notes": {
+        "listed": [
+          "Bergamot",
+          "Ginger",
+          "Geranium",
+          "Ambergris",
+          "Musk",
+          "Incense"
+        ]
+      },
+      "performance": "Around 7–9 hours on clothes, based on Scentory guidance.",
+      "comparison": "Louis Vuitton Imagination",
+      "sourceNote": "Profile details are based on the Scentory-supplied website poster. Performance can vary by wearer, weather and spray count.",
+      "sources": [],
+      "profileScope": "perfume",
+      "overview": "A refreshing citrus, aromatic and musky scent for office, university, casual outings, daytime dates and travel."
+    }
+  },
+  {
     "id": "mykonos-inception-edp",
     "name": "Mykonos Inception (EDP)",
     "status": "available",
@@ -230,7 +418,7 @@
       },
       "15ml": {
         "price": 840,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -307,6 +495,102 @@
       },
       "profileScope": "perfume",
       "overview": "A mango, citrus and warm spice scent for summer outings, beaches, vacations, daytime dates and casual hangouts."
+    }
+  },
+  {
+    "id": "hawas-ice-freeze",
+    "name": "Hawas Ice Freeze",
+    "status": "available",
+    "sizes": {
+      "5ml": {
+        "price": 290,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 360,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 540,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 750,
+        "available": false,
+        "premium": false
+      }
+    },
+    "image": "hawas-ice-freeze-poster.png",
+    "tags": [
+      "Fresh",
+      "Citrus",
+      "Mint",
+      "Office",
+      "Hot Weather"
+    ],
+    "recommendation": "A crisp citrus, mint and ginger fragrance for hot days, office and casual outings.",
+    "prices": {
+      "5 ML": 290,
+      "6 ML": 360,
+      "10 ML": 540,
+      "15 ML": 750
+    },
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "fresh",
+        "citrus",
+        "minty",
+        "woody",
+        "musky"
+      ],
+      "occasions": [
+        "daily",
+        "office"
+      ],
+      "climates": [
+        "hot",
+        "ac",
+        "outdoor"
+      ],
+      "strength": 4,
+      "projection": 4,
+      "longevity": 4,
+      "sweetness": 2,
+      "freshness": 3,
+      "warmth": 3,
+      "officeSafety": 4,
+      "heatSafety": 3,
+      "versatility": 4,
+      "evidence": "scentory-supplied",
+      "reviewedAt": "2026-09-26",
+      "topPickEligible": true,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "scentory-supplied",
+      "notes": {
+        "listed": [
+          "Bergamot",
+          "Orange",
+          "Mandarin",
+          "Ginger",
+          "Mint",
+          "Lily of the valley",
+          "Ambergris",
+          "Sandalwood",
+          "Musk"
+        ]
+      },
+      "performance": "7–9 hours on clothes, based on Scentory guidance.",
+      "comparison": "No specific fragrance confirmed",
+      "sourceNote": "Profile details are based on the Scentory-supplied website poster. Performance can vary by wearer, weather and spray count.",
+      "sources": [],
+      "profileScope": "perfume",
+      "overview": "A crisp citrus, mint and ginger fragrance for hot days, office and casual outings."
     }
   },
   {
@@ -605,6 +889,101 @@
       "sourceNote": "Scentory catalogue guidance for this perfume. A reliable exact note pyramid has not been confirmed in the research collected for this update; no note stages or fixed wear time are asserted.",
       "comparison": "",
       "overview": "A bold fresh-dark style for office, evening plans, and confident daily wear."
+    }
+  },
+  {
+    "id": "hawas-tropical-edp",
+    "name": "Hawas Tropical EDP",
+    "status": "available",
+    "sizes": {
+      "5ml": {
+        "price": 270,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 330,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 499,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 670,
+        "available": false,
+        "premium": false
+      }
+    },
+    "image": "hawas-tropical-poster.jpg",
+    "tags": [
+      "Tropical",
+      "Fresh",
+      "Fruity",
+      "Summer",
+      "Vacation"
+    ],
+    "recommendation": "A tropical fresh scent for beach days, vacations, casual outings and daytime dates.",
+    "prices": {
+      "5 ML": 270,
+      "6 ML": 330,
+      "10 ML": 499,
+      "15 ML": 670
+    },
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "fresh",
+        "tropical",
+        "fruity",
+        "green",
+        "woody"
+      ],
+      "occasions": [
+        "daily",
+        "date"
+      ],
+      "climates": [
+        "hot",
+        "outdoor"
+      ],
+      "strength": 4,
+      "projection": 4,
+      "longevity": 4,
+      "sweetness": 2,
+      "freshness": 3,
+      "warmth": 3,
+      "officeSafety": 4,
+      "heatSafety": 3,
+      "versatility": 4,
+      "evidence": "scentory-supplied",
+      "reviewedAt": "2026-09-26",
+      "topPickEligible": true,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "scentory-supplied",
+      "notes": {
+        "listed": [
+          "Coconut water",
+          "Fig leaf",
+          "Ginger",
+          "Coconut",
+          "Fig",
+          "Mint",
+          "Sandalwood",
+          "Tonka bean",
+          "Musk"
+        ]
+      },
+      "performance": "Around 7–9 hours on clothes, based on Scentory guidance.",
+      "comparison": "Jean Paul Gaultier Le Beau Paradise Garden",
+      "sourceNote": "Profile details are based on the Scentory-supplied website poster. Performance can vary by wearer, weather and spray count.",
+      "sources": [],
+      "profileScope": "perfume",
+      "overview": "A tropical fresh scent for beach days, vacations, casual outings and daytime dates."
     }
   },
   {
@@ -1183,16 +1562,16 @@
   {
     "id": "shuhrah-bois-e-edp",
     "name": "Shuhrah Boisée EDP",
-    "status": "available",
+    "status": "out",
     "sizes": {
       "5ml": {
         "price": 260,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "6ml": {
         "price": 320,
-        "available": true,
+        "available": false,
         "premium": true
       },
       "10ml": {
@@ -2776,7 +3155,7 @@
       },
       "15ml": {
         "price": 900,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -3247,6 +3626,110 @@
     }
   },
   {
+    "id": "mancera-amberful-edp",
+    "name": "Mancera Amberful EDP",
+    "status": "upcoming",
+    "sizes": {
+      "3ml": {
+        "price": 360,
+        "available": false,
+        "premium": false
+      },
+      "5ml": {
+        "price": 560,
+        "available": false,
+        "premium": false
+      },
+      "6ml": {
+        "price": 670,
+        "available": false,
+        "premium": true
+      },
+      "10ml": {
+        "price": 1050,
+        "available": false,
+        "premium": false
+      },
+      "15ml": {
+        "price": 1499,
+        "available": false,
+        "premium": false
+      }
+    },
+    "image": "mancera-amberful-poster.png",
+    "tags": [
+      "Fresh",
+      "Citrus",
+      "Amber",
+      "Woody",
+      "Office"
+    ],
+    "recommendation": "A bright citrus, violet and amberwood fragrance suited to office, meetings, smart-casual outings and dinner dates.",
+    "prices": {
+      "3 ML": 360,
+      "5 ML": 560,
+      "6 ML": 670,
+      "10 ML": 1050,
+      "15 ML": 1499
+    },
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "fresh",
+        "citrus",
+        "amber",
+        "woody",
+        "spicy"
+      ],
+      "occasions": [
+        "office",
+        "date",
+        "formal"
+      ],
+      "climates": [
+        "hot",
+        "ac",
+        "outdoor"
+      ],
+      "strength": 4,
+      "projection": 4,
+      "longevity": 4,
+      "sweetness": 2,
+      "freshness": 3,
+      "warmth": 3,
+      "officeSafety": 4,
+      "heatSafety": 3,
+      "versatility": 4,
+      "evidence": "scentory-supplied",
+      "reviewedAt": "2026-09-26",
+      "topPickEligible": true,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "scentory-supplied",
+      "notes": {
+        "listed": [
+          "Yuzu",
+          "Bergamot",
+          "Pink Pepper",
+          "Nutmeg",
+          "Amberwood",
+          "Violet",
+          "Patchouli",
+          "Cedar",
+          "Amber",
+          "Moss"
+        ]
+      },
+      "performance": "Approx. 10+ hours on clothes, based on Scentory guidance.",
+      "comparison": "Original creation; often compared to Ganymede",
+      "sourceNote": "Profile details are based on the Scentory-supplied website poster. Performance can vary by wearer, weather and spray count.",
+      "sources": [],
+      "profileScope": "perfume",
+      "overview": "A bright citrus, violet and amberwood fragrance suited to office, meetings, smart-casual outings and dinner dates."
+    }
+  },
+  {
     "id": "azzaro-the-most-wanted-edp-intense",
     "name": "Azzaro The Most Wanted EDP Intense",
     "status": "available",
@@ -3345,7 +3828,7 @@
       },
       "10ml": {
         "price": 1299,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -3398,111 +3881,6 @@
       "sourceNote": "Scentory catalogue guidance for this perfume. A reliable exact note pyramid has not been confirmed in the research collected for this update; no note stages or fixed wear time are asserted.",
       "comparison": "",
       "overview": "Best for office, university, casual outings, dates, and evening wear."
-    }
-  },
-  {
-    "id": "bleu-de-chanel-edp",
-    "image": "bleu-de-chanel-edp-poster-v3061.png",
-    "tags": [
-      "Fresh",
-      "Woody",
-      "Aromatic",
-      "Elegant",
-      "Office"
-    ],
-    "recommendation": "A refined fresh woody blue scent for office, dinners, formal wear and signature daily use.",
-    "profile": {
-      "schemaVersion": 2,
-      "character": [
-        "fresh",
-        "citrus",
-        "aromatic",
-        "woody",
-        "amber"
-      ],
-      "occasions": [
-        "daily",
-        "office",
-        "date",
-        "formal"
-      ],
-      "climates": [
-        "hot",
-        "monsoon",
-        "ac",
-        "outdoor"
-      ],
-      "strength": 3,
-      "projection": 3,
-      "longevity": 4,
-      "sweetness": 1,
-      "freshness": 4,
-      "warmth": 3,
-      "officeSafety": 5,
-      "heatSafety": 4,
-      "versatility": 5,
-      "evidence": "scentory-supplied",
-      "reviewedAt": "2026-09-07",
-      "topPickEligible": true,
-      "scope": "perfume"
-    },
-    "details": {
-      "verification": "scentory-supplied",
-      "notes": {
-        "top": [
-          "Grapefruit",
-          "Lemon",
-          "Mint",
-          "Pink Pepper"
-        ],
-        "heart": [
-          "Ginger",
-          "Nutmeg",
-          "Jasmine"
-        ],
-        "base": [
-          "Cedar",
-          "Sandalwood",
-          "Incense",
-          "Patchouli"
-        ]
-      },
-      "performance": "Usually long-lasting with a smooth refined trail. Performance varies by wearer, environment and spray count.",
-      "comparison": "A premium blue signature scent",
-      "sourceNote": "Featured note emphasis is based on the supplied Scentory poster. The fuller profile is Scentory-curated for shopping guidance.",
-      "sources": [],
-      "profileScope": "perfume",
-      "overview": "A refined fresh woody blue scent for office, dinners, formal wear and signature daily use."
-    },
-    "name": "Bleu De Chanel EDP",
-    "status": "upcoming",
-    "sizes": {
-      "3ml": {
-        "price": 730,
-        "available": false,
-        "premium": false
-      },
-      "5ml": {
-        "price": 1190,
-        "available": false,
-        "premium": false
-      },
-      "6ml": {
-        "price": 1430,
-        "available": false,
-        "premium": true
-      },
-      "10ml": {
-        "price": 2299,
-        "available": false,
-        "premium": false
-      }
-    },
-    "prices": {
-      "3 ML": 730,
-      "5 ML": 1190,
-      "6 ML": 1430,
-      "10 ML": 2299
     }
   },
   {
@@ -4071,7 +4449,7 @@
           "Patchouli"
         ]
       },
-      "performance": "Often praised for strong wear from a bright woody profile. Performance varies by wearer, weather and spray count.",
+      "performance": "9–10+ hours on clothes, based on Scentory guidance; performance varies by wearer and conditions.",
       "comparison": "A modern spicy woody niche profile",
       "sourceNote": "Featured note emphasis is based on the supplied Scentory poster. The fuller profile is Scentory-curated for shopping guidance.",
       "sources": [],
@@ -4079,34 +4457,34 @@
       "overview": "A bright spicy green-woody scent for office, smart casual wear, upscale daytime use and signature wear."
     },
     "name": "Bois Impérial EDP",
-    "status": "upcoming",
+    "status": "available",
     "sizes": {
       "3ml": {
-        "price": 570,
-        "available": false,
+        "price": 470,
+        "available": true,
         "premium": false
       },
       "5ml": {
-        "price": 899,
-        "available": false,
+        "price": 720,
+        "available": true,
         "premium": false
       },
       "6ml": {
-        "price": 1099,
-        "available": false,
+        "price": 870,
+        "available": true,
         "premium": true
       },
       "10ml": {
-        "price": 1770,
-        "available": false,
+        "price": 1390,
+        "available": true,
         "premium": false
       }
     },
     "prices": {
-      "3 ML": 570,
-      "5 ML": 899,
-      "6 ML": 1099,
-      "10 ML": 1770
+      "3 ML": 470,
+      "5 ML": 720,
+      "6 ML": 870,
+      "10 ML": 1390
     }
   },
   {
@@ -4964,7 +5342,7 @@
       },
       "15ml": {
         "price": 430,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -5130,7 +5508,7 @@
       },
       "15ml": {
         "price": 720,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -7897,7 +8275,7 @@
       },
       "15ml": {
         "price": 710,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -9125,7 +9503,7 @@
       },
       "15ml": {
         "price": 520,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
