@@ -1,0 +1,11 @@
+(() => {
+const $=s=>document.querySelector(s); const productId=document.body.dataset.productId;
+const taka=n=>`${Number(n||0).toLocaleString('en-BD')} Tk`; let catalogue=[], product=null;
+const cart=()=>{try{return JSON.parse(localStorage.getItem('scentoryCart')||'[]')}catch{return[]}};
+const save=c=>localStorage.setItem('scentoryCart',JSON.stringify(c));
+function updateCount(){const n=cart().reduce((s,i)=>s+(Number(i.qty)||1),0);document.querySelectorAll('[data-cart-count]').forEach(x=>x.textContent=n)}
+function liquid(el){if(!el||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const t=$('.product-cart-link');if(!t)return;const a=el.getBoundingClientRect(),b=t.getBoundingClientRect(),d=document.createElement('i');d.className='product-liquid-drop';d.style.left=`${a.left+a.width/2}px`;d.style.top=`${a.top+a.height/2}px`;document.body.appendChild(d);const x=b.left+b.width/2-(a.left+a.width/2),y=b.top+b.height/2-(a.top+a.height/2);d.animate([{transform:'translate(-50%,-50%) scale(1)',opacity:1},{transform:`translate(calc(-50% + ${x}px),calc(-50% + ${y}px)) scale(.2)`,opacity:.1}],{duration:460,easing:'cubic-bezier(.2,.78,.22,1)'}).onfinish=()=>d.remove()}
+function sync(){const c=cart();document.querySelectorAll('[data-size]').forEach(btn=>{const found=c.find(i=>i.key===`${productId}-${btn.dataset.size}`);btn.classList.toggle('selected',!!found);btn.setAttribute('aria-pressed',found?'true':'false');const q=btn.querySelector('.product-qty');if(q)q.textContent=found?`×${found.qty||1}`:''});updateCount()}
+async function init(){try{catalogue=await fetch('perfumes.json?v=3072',{cache:'no-store'}).then(r=>r.json());product=catalogue.find(p=>p.id===productId);if(!product)return;document.querySelectorAll('[data-size]').forEach(btn=>btn.addEventListener('click',()=>{const ml=btn.dataset.size,item=product.sizes?.[ml];if(!item?.available||item.price==null)return;let c=cart(),key=`${productId}-${ml}`,ix=c.findIndex(i=>i.key===key);if(ix>=0)c.splice(ix,1);else{c.push({key,id:productId,ml,name:product.name,image:product.image,price:item.price,premium:!!item.premium,qty:1});liquid(btn)}save(c);sync()}));sync()}catch(e){console.error(e)}}
+init(); window.addEventListener('storage',sync);
+})();

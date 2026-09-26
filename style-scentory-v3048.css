@@ -3605,3 +3605,21 @@ body {
   .policy-accept-row { font-size:.68rem; margin:9px 0 10px; }
   .policy-continue { min-height:40px; }
 }
+
+
+/* v3072 multi-page storefront */
+.home-view-all{display:flex;justify-content:center;margin:26px 0 6px}.home-view-all .btn{min-width:min(320px,100%);justify-content:center}
+body[data-page="home"] .quick-shop,body[data-page="home"] .toolbar,body[data-page="home"] #myOrder{display:none!important}
+body[data-page="home"] .layout{display:block;max-width:1240px;margin-inline:auto}
+body[data-page="home"] #priceList{margin-top:42px}
+body[data-page="shop"] .hero,body[data-page="shop"] .decant-section,body[data-page="shop"] .trust-marquee,body[data-page="shop"] #hotArrivals,body[data-page="shop"] #bestSelling,body[data-page="shop"] #myOrder,body[data-page="shop"] #customerReviews,body[data-page="shop"] #whyScentory,body[data-page="shop"] #discoveryStudio,body[data-page="shop"] #howToOrder,body[data-page="shop"] #faq,body[data-page="shop"] #contactScentory{display:none!important}
+body[data-page="shop"] .layout{display:block;max-width:1240px;margin:0 auto;padding-top:34px}
+body[data-page="shop"] .home-view-all{display:none}
+body[data-page="shop"] .shop-page-intro{display:block}
+.shop-page-intro{display:none;margin:4px 0 24px;padding:24px;border:1px solid rgba(208,169,93,.32);border-radius:24px;background:linear-gradient(135deg,rgba(208,169,93,.11),rgba(10,10,10,.92) 55%,rgba(208,169,93,.05));box-shadow:inset 0 1px rgba(255,226,166,.08)}
+.shop-page-intro h1{margin:5px 0 8px;font-size:clamp(2rem,5vw,3.4rem)}.shop-page-intro p{margin:0;color:#bbb}
+body[data-page="order"] .hero,body[data-page="order"] .decant-section,body[data-page="order"] .trust-marquee,body[data-page="order"] .catalog-panel,body[data-page="order"] #customerReviews,body[data-page="order"] #whyScentory,body[data-page="order"] #discoveryStudio,body[data-page="order"] #howToOrder,body[data-page="order"] #faq,body[data-page="order"] #contactScentory{display:none!important}
+body[data-page="order"] .layout{display:block;max-width:760px;margin:0 auto;padding-top:34px}body[data-page="order"] #myOrder{display:block!important;position:static;max-width:none}
+body[data-page="order"] .floating-cart{display:none!important}
+.page-banner{max-width:1240px;margin:0 auto;padding:24px 20px 0}.page-banner h1{font-size:clamp(2rem,6vw,3.7rem);margin:0 0 8px}.page-banner p{color:#aaa;margin:0}
+@media(max-width:720px){body[data-page="shop"] .layout,body[data-page="order"] .layout{padding-top:18px}.shop-page-intro{padding:18px;border-radius:20px}body[data-page="home"] #priceList{margin-top:28px}}

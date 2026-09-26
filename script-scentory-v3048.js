@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '3071';
+const DATA_VERSION = '3072';
 const BEST_SELLING_IDS = [
   'hawas-ice-freeze',
   'sanaya-by-junaid-edp',
@@ -401,19 +401,19 @@ function renderProductCardV3002(p) {
   const statusText = upcoming ? 'Upcoming' : (hasAvailable ? 'Available' : 'Out of stock');
   return `
     <article id="perfume-${escapeHtml(p.id)}" data-perfume-id="${escapeHtml(p.id)}" class="product ${hasAvailable ? '' : 'sold-out'} ${upcoming ? 'upcoming-card' : ''}">
-      <button type="button" class="product-image-wrap" data-full-image="${escapeHtml(imagePath(p))}" data-full-title="${escapeHtml(p.name)}" onclick="openImageModal(this.dataset.fullImage, this.dataset.fullTitle)" aria-label="Open ${escapeHtml(p.name)} photo">
+      <a class="product-image-wrap" href="${encodeURIComponent(p.id)}.html" aria-label="Open ${escapeHtml(p.name)} product page">
         <img class="product-image" ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
-      </button>
+      </a>
       <div class="product-main">
         <div class="product-head">
-          <h3>${escapeHtml(p.name)}</h3>
+          <h3><a href="${encodeURIComponent(p.id)}.html">${escapeHtml(p.name)}</a></h3>
           <div class="tags">
             <span class="tag ${upcoming ? 'upcoming' : (hasAvailable ? '' : 'out')}">${statusText}</span>
             ${renderTagPills(p, 3)}
           </div>
         </div>
         <p class="product-reco">${escapeHtml(profile.recommendation)}</p>
-        <button type="button" class="details-link" onclick="openProductDetails('${escapeHtml(p.id)}')">View Details</button>
+        <a class="details-link" href="${encodeURIComponent(p.id)}.html">View Details</a>
       </div>
       <div class="price-buttons four-row">${renderPriceTiles(p)}</div>
     </article>
@@ -539,27 +539,8 @@ function renderSearchSuggestions() {
 function selectSearchPerfume(id) {
   const perfume = getPerfumeById(id);
   if (!perfume) return;
-
-  // Exact selection: keep one dedicated result, close the keyboard, then perform one jump.
-  if (searchInput) {
-    searchInput.value = perfume.name;
-    searchInput.dataset.selectedId = id;
-    searchInput.blur();
-  }
-  if (stockFilter) stockFilter.value = 'all';
-  if (tagFilter) tagFilter.value = 'all';
   hideSearchSuggestions();
-  renderProducts();
-
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    const card = document.getElementById(`perfume-${id}`);
-    if (!card) {
-      showToast('Could not open the selected perfume. Please try again.', 'error');
-      return;
-    }
-    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    highlightElement(card, 'jump-highlight', 900);
-  }));
+  window.location.href = `${encodeURIComponent(perfume.id)}.html`;
 }
 
 function showToast(message, type = 'info') {
@@ -766,10 +747,7 @@ function renderHotArrivals() {
   }).join('');
 
   hotArrivalsGrid.querySelectorAll('.hot-arrival-card[data-target-id]').forEach(btn => {
-    btn.addEventListener('click', event => {
-      event.preventDefault();
-      scrollToPerfume(btn.dataset.targetId);
-    });
+    btn.addEventListener('click', () => { window.location.href = `${encodeURIComponent(btn.dataset.targetId)}.html`; });
   });
 }
 
@@ -797,10 +775,7 @@ function renderBestSelling() {
   `).join('');
 
   bestSellingGrid.querySelectorAll('.best-seller-card[data-target-id]').forEach(btn => {
-    btn.addEventListener('click', event => {
-      event.preventDefault();
-      scrollToPerfume(btn.dataset.targetId);
-    });
+    btn.addEventListener('click', () => { window.location.href = `${encodeURIComponent(btn.dataset.targetId)}.html`; });
   });
 }
 
@@ -884,7 +859,10 @@ function renderProducts() {
     ? p.id === exactId
     : (!term || `${p.name} ${p.id} ${shortOrderName(p.name)}`.toLowerCase().includes(term));
 
+  const collectionMode = document.body?.dataset?.page === 'shop' ? new URLSearchParams(location.search).get('collection') : '';
+  const collectionIds = collectionMode === 'best' ? BEST_SELLING_IDS : (collectionMode === 'new' ? HOT_ARRIVAL_IDS : null);
   const filtered = perfumes.filter(p => {
+    if (collectionIds && !collectionIds.includes(p.id)) return false;
     const hasAvailable = productHasAvailableSize(p);
     const upcoming = isUpcoming(p);
     const matchesStock = stock === 'all' ||
@@ -896,11 +874,12 @@ function renderProducts() {
   });
 
   if (perfumeCount) perfumeCount.textContent = '140+ Perfumes';
+  const visibleProducts = document.body?.dataset?.page === 'home' ? filtered.slice(0, 8) : filtered;
 
-  if (!filtered.length) {
+  if (!visibleProducts.length) {
     productGrid.innerHTML = '<p class="order-items empty">No perfume found. Try a different search or tag.</p>';
   } else {
-    productGrid.innerHTML = filtered.map(renderProductCardV3002).join('');
+    productGrid.innerHTML = visibleProducts.map(renderProductCardV3002).join('');
   }
   updatePriceTileStates();
 }
@@ -1381,10 +1360,8 @@ document.getElementById('clearOrder').addEventListener('click', clearOrder);
 if (floatingCart) {
   floatingCart.addEventListener('click', event => {
     event.preventDefault();
-    scrollToOrderCard();
-    if (history && history.replaceState) {
-      history.replaceState(null, '', '#myOrder');
-    }
+    if (document.body?.dataset?.page === 'order') scrollToOrderCard();
+    else window.location.href = 'order.html';
   });
 }
 
@@ -1393,26 +1370,15 @@ const brandHomeButton = document.querySelector('.brand-center');
 if (topCartButton) {
   topCartButton.addEventListener('click', event => {
     event.preventDefault();
-    scrollToOrderCard();
-    if (history && history.replaceState) {
-      history.replaceState(null, '', '#myOrder');
-    }
+    if (document.body?.dataset?.page === 'order') scrollToOrderCard();
+    else window.location.href = 'order.html';
   });
 }
 
 if (brandHomeButton) {
   brandHomeButton.addEventListener('click', event => {
     event.preventDefault();
-    if (searchInput) { searchInput.value = ''; delete searchInput.dataset.selectedId; searchInput.blur(); }
-    if (stockFilter) stockFilter.value = 'all';
-    if (tagFilter) tagFilter.value = 'all';
-    hideSearchSuggestions();
-    renderProducts();
-    const collection = document.getElementById('collection');
-    if (collection) requestAnimationFrame(() => scrollElementIntoView(collection, 8, 'smooth'));
-    if (history && history.replaceState) {
-      history.replaceState(null, '', '#collection');
-    }
+    window.location.href = 'index.html';
   });
 }
 
