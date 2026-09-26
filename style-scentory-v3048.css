@@ -3534,3 +3534,74 @@ body {
 @media (prefers-reduced-motion:reduce) {
   .liquid-cart-drop, .cart-pill.liquid-hit { animation:none !important; }
 }
+
+
+/* ==== SCENTORY v3071 — warmer anniversary glass + compact order policy ==== */
+:root {
+  --anniv-gold: rgba(214, 170, 88, .34);
+  --anniv-gold-soft: rgba(238, 203, 132, .16);
+  --anniv-line: rgba(232, 195, 122, .25);
+}
+body {
+  background:
+    radial-gradient(920px 540px at 10% 7%, rgba(207,151,62,.085), transparent 62%),
+    radial-gradient(820px 560px at 90% 34%, rgba(235,194,111,.060), transparent 66%),
+    #050505 !important;
+}
+.product, .order-card, .decant-copy, .decant-photo-card, .toolbar,
+.hot-arrivals-section, .best-selling-section, .brand-showcase-card,
+.discovery-tool-card, .review-card, .faq-grid details, .steps-grid article,
+.hot-arrival-card, .best-seller-card, .about-stat-card {
+  border-color: rgba(228,190,116,.17) !important;
+  background-image:
+    radial-gradient(circle at 12% 0%, rgba(239,202,129,.075), transparent 34%),
+    linear-gradient(145deg, rgba(220,174,91,.065), rgba(31,25,16,.025) 42%, rgba(235,197,124,.025)) !important;
+  box-shadow: inset 0 1px 0 rgba(255,224,164,.055), 0 16px 40px rgba(0,0,0,.20);
+}
+.product::after, .order-card::after, .decant-photo-card::after {
+  background: linear-gradient(118deg, transparent 10%, rgba(255,220,149,.060) 34%, rgba(217,164,71,.022) 43%, transparent 57%) !important;
+}
+.hot-arrival-card:hover, .hot-arrival-card:focus-visible,
+.best-seller-card:hover, .best-seller-card:focus-visible {
+  border-color: rgba(235,197,124,.27) !important;
+  background-image: linear-gradient(145deg, rgba(230,185,101,.10), rgba(37,29,17,.04)) !important;
+}
+.quick-shop-chip.active {
+  border-color: rgba(230,190,111,.40) !important;
+  background: linear-gradient(135deg, rgba(214,164,73,.18), rgba(86,62,26,.07)) !important;
+}
+
+.order-policy-modal {
+  position: fixed; inset: 0; z-index: 12000; display: none; place-items: center;
+  padding: 14px; background: rgba(0,0,0,.72); backdrop-filter: blur(8px);
+}
+.order-policy-modal.show { display: grid; }
+.order-policy-card {
+  position: relative; width: min(430px, calc(100vw - 28px)); max-height: calc(100dvh - 28px);
+  padding: 20px 18px 18px; border: 1px solid rgba(232,195,122,.25); border-radius: 20px;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(236,197,119,.10), transparent 36%),
+    linear-gradient(145deg, rgba(22,18,12,.98), rgba(7,7,7,.99));
+  box-shadow: 0 24px 70px rgba(0,0,0,.58), inset 0 1px 0 rgba(255,226,169,.07);
+  overflow: hidden;
+}
+.order-policy-close {
+  position:absolute; top:9px; right:10px; width:32px; height:32px; border-radius:50%;
+  border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:#eee; font-size:20px; cursor:pointer;
+}
+.order-policy-kicker { display:block; margin:0 38px 6px 0; color:#d7b474; font-size:.62rem; font-weight:800; letter-spacing:.10em; text-transform:uppercase; }
+.order-policy-card h2 { margin:0 38px 9px 0; font-size:1.12rem; line-height:1.15; }
+.order-policy-card p { margin:0 0 9px; color:#c8c8c8; font-size:.76rem; line-height:1.48; }
+.order-policy-card .advance-delivery-note { color:#f0d29a; font-weight:800; }
+.policy-accept-row { display:flex; align-items:flex-start; gap:9px; margin:11px 0 12px; color:#e2e2e2; font-size:.72rem; line-height:1.35; cursor:pointer; }
+.policy-accept-row input { width:17px; height:17px; margin:0; flex:0 0 auto; accent-color:#c99a45; }
+.policy-continue { min-height:42px; padding:10px 14px !important; }
+.policy-continue:disabled { opacity:.42; cursor:not-allowed; filter:saturate(.45); }
+@media (max-width:420px) {
+  .order-policy-modal { padding:10px; }
+  .order-policy-card { width:calc(100vw - 20px); max-height:calc(100dvh - 20px); padding:17px 15px 15px; border-radius:18px; }
+  .order-policy-card h2 { font-size:1.02rem; margin-bottom:7px; }
+  .order-policy-card p { font-size:.70rem; line-height:1.4; margin-bottom:7px; }
+  .policy-accept-row { font-size:.68rem; margin:9px 0 10px; }
+  .policy-continue { min-height:40px; }
+}

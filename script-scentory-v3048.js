@@ -5,19 +5,19 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '3068';
+const DATA_VERSION = '3071';
 const BEST_SELLING_IDS = [
-  'versace-eros-edt',
-  'afnan-supremacy-collector-s-edition-edp',
-  'khadlaj-karus-gold-absolu-edp',
-  'hawas-ice-edp'
+  'hawas-ice-freeze',
+  'sanaya-by-junaid-edp',
+  'azzaro-the-most-wanted-parfum',
+  'bois-imperial-edp'
 ];
 
 const HOT_ARRIVAL_IDS = [
-  'mykonos-inception-edp',
-  'mykonos-dreamscape-edp',
-  'khadlaj-island-sun-edp',
-  'club-de-nuit-intense-overdose'
+  'hawas-ice-freeze',
+  'sanaya-by-junaid-edp',
+  'azzaro-the-most-wanted-parfum',
+  'bois-imperial-edp'
 ];
 
 
@@ -48,6 +48,11 @@ const productModal = document.getElementById('productModal');
 const productModalContent = document.getElementById('productModalContent');
 const productModalClose = document.getElementById('productModalClose');
 const orderFormError = document.getElementById('orderFormError');
+const orderPolicyModal = document.getElementById('orderPolicyModal');
+const orderPolicyClose = document.getElementById('orderPolicyClose');
+const orderPolicyAccept = document.getElementById('orderPolicyAccept');
+const orderPolicyContinue = document.getElementById('orderPolicyContinue');
+let pendingOrderAction = null;
 
 const modalReturnFocus = new WeakMap();
 const FOCUSABLE_SELECTOR = [
@@ -57,7 +62,7 @@ const FOCUSABLE_SELECTOR = [
 ].join(',');
 
 function getTopOpenModal() {
-  return [imageModal, document.getElementById('discoveryModal'), productModal]
+  return [orderPolicyModal, imageModal, document.getElementById('discoveryModal'), productModal]
     .find(modal => modal?.classList.contains('show')) || null;
 }
 
@@ -88,7 +93,7 @@ function deactivateAccessibleModal(modal) {
 }
 
 function syncModalBodyState() {
-  const open = [imageModal, productModal, document.getElementById('discoveryModal')]
+  const open = [orderPolicyModal, imageModal, productModal, document.getElementById('discoveryModal')]
     .some(modal => modal?.classList.contains('show'));
   document.body.classList.toggle('modal-open', open);
 }
@@ -832,13 +837,10 @@ function scrollToOrderCard() {
   syncTopbarHeight();
   const header = document.querySelector('.topbar');
   const headerH = header ? header.getBoundingClientRect().height : 0;
-  const go = () => {
-    const top = Math.max(0, orderCard.getBoundingClientRect().top + window.scrollY - headerH - 12);
-    window.scrollTo({ top, behavior: 'smooth' });
-    highlightElement(orderCard, 'order-jump-highlight', 700);
-  };
-  go();
-  requestAnimationFrame(go);
+  const top = Math.max(0, orderCard.getBoundingClientRect().top + window.scrollY - headerH - 12);
+  // Cart navigation is intentionally instant: no smooth/auto-scroll animation.
+  window.scrollTo(0, top);
+  highlightElement(orderCard, 'order-jump-highlight', 420);
 }
 
 function scrollToPerfume(id, options = {}) {
@@ -1212,7 +1214,7 @@ function buildOrderText() {
   ].join('\n');
 }
 
-async function copyOrder(showAlert = true) {
+async function performCopyOrder(showAlert = true) {
   if (!validateOrder({ requireCustomer: true })) return false;
   const text = buildOrderText();
   try {
@@ -1225,7 +1227,7 @@ async function copyOrder(showAlert = true) {
   }
 }
 
-function sendWhatsAppOrder() {
+function performWhatsAppOrder() {
   if (!validateOrder({ requireCustomer: true })) return;
   saveOrderToPrivateSheet();
   const text = encodeURIComponent(buildOrderText());
@@ -1235,7 +1237,7 @@ function sendWhatsAppOrder() {
   window.open(url, '_blank');
 }
 
-async function sendFacebookOrder() {
+async function performFacebookOrder() {
   if (!validateOrder({ requireCustomer: true })) return;
   const orderText = buildOrderText();
   saveOrderToPrivateSheet();
@@ -1246,6 +1248,46 @@ async function sendFacebookOrder() {
   const messengerUrl = `${FACEBOOK_PAGE_URL}${separator}text=${encodeURIComponent(orderText)}`;
   window.open(messengerUrl, '_blank');
   showToast('Order copied. Messenger is opening — paste and send to confirm.', 'success');
+}
+
+function closeOrderPolicy() {
+  if (!orderPolicyModal) return;
+  orderPolicyModal.classList.remove('show');
+  orderPolicyModal.setAttribute('aria-hidden', 'true');
+  pendingOrderAction = null;
+  if (orderPolicyAccept) orderPolicyAccept.checked = false;
+  if (orderPolicyContinue) orderPolicyContinue.disabled = true;
+  syncModalBodyState();
+  deactivateAccessibleModal(orderPolicyModal);
+}
+
+function openOrderPolicy(action) {
+  if (!validateOrder({ requireCustomer: true })) return;
+  if (!orderPolicyModal) {
+    if (action === 'facebook') performFacebookOrder();
+    else if (action === 'whatsapp') performWhatsAppOrder();
+    else performCopyOrder(true);
+    return;
+  }
+  pendingOrderAction = action;
+  if (orderPolicyAccept) orderPolicyAccept.checked = false;
+  if (orderPolicyContinue) orderPolicyContinue.disabled = true;
+  orderPolicyModal.classList.add('show');
+  orderPolicyModal.setAttribute('aria-hidden', 'false');
+  syncModalBodyState();
+  activateAccessibleModal(orderPolicyModal, orderPolicyAccept);
+}
+
+function continueAfterPolicy() {
+  if (!orderPolicyAccept?.checked || !pendingOrderAction) return;
+  const action = pendingOrderAction;
+  orderPolicyModal?.classList.remove('show');
+  orderPolicyModal?.setAttribute('aria-hidden', 'true');
+  pendingOrderAction = null;
+  syncModalBodyState();
+  if (action === 'facebook') performFacebookOrder();
+  else if (action === 'whatsapp') performWhatsAppOrder();
+  else performCopyOrder(true);
 }
 
 function clearOrder() {
@@ -1331,9 +1373,9 @@ deliveryLocation.addEventListener('change', () => { saveCustomerData(); renderCa
 [customerName, customerPhone, customerAddress].forEach(field => {
   field?.addEventListener('input', () => { saveCustomerData(); setFieldError(field, false); });
 });
-document.getElementById('copyOrder').addEventListener('click', () => copyOrder(true));
-document.getElementById('sendWhatsApp').addEventListener('click', sendWhatsAppOrder);
-document.getElementById('sendFacebook').addEventListener('click', sendFacebookOrder);
+document.getElementById('copyOrder').addEventListener('click', () => openOrderPolicy('copy'));
+document.getElementById('sendWhatsApp').addEventListener('click', () => openOrderPolicy('whatsapp'));
+document.getElementById('sendFacebook').addEventListener('click', () => openOrderPolicy('facebook'));
 document.getElementById('clearOrder').addEventListener('click', clearOrder);
 
 if (floatingCart) {
@@ -1376,6 +1418,15 @@ if (brandHomeButton) {
 
 
 
+orderPolicyAccept?.addEventListener('change', () => {
+  if (orderPolicyContinue) orderPolicyContinue.disabled = !orderPolicyAccept.checked;
+});
+orderPolicyContinue?.addEventListener('click', continueAfterPolicy);
+orderPolicyClose?.addEventListener('click', closeOrderPolicy);
+orderPolicyModal?.addEventListener('click', event => {
+  if (event.target === orderPolicyModal) closeOrderPolicy();
+});
+
 imageModalClose?.addEventListener('click', closeImageModal);
 productModalClose?.addEventListener('click', closeProductDetails);
 productModal?.addEventListener('click', event => {
@@ -1408,7 +1459,8 @@ document.addEventListener('keydown', event => {
     }
   }
   if (event.key === 'Escape') {
-    if (modal === imageModal) closeImageModal();
+    if (modal === orderPolicyModal) closeOrderPolicy();
+    else if (modal === imageModal) closeImageModal();
     else if (modal === productModal) closeProductDetails();
     // Discovery modal owns its close routine in the intelligence script.
   }
