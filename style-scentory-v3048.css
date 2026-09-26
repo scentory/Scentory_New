@@ -3623,3 +3623,7 @@ body[data-page="order"] .layout{display:block;max-width:760px;margin:0 auto;padd
 body[data-page="order"] .floating-cart{display:none!important}
 .page-banner{max-width:1240px;margin:0 auto;padding:24px 20px 0}.page-banner h1{font-size:clamp(2rem,6vw,3.7rem);margin:0 0 8px}.page-banner p{color:#aaa;margin:0}
 @media(max-width:720px){body[data-page="shop"] .layout,body[data-page="order"] .layout{padding-top:18px}.shop-page-intro{padding:18px;border-radius:20px}body[data-page="home"] #priceList{margin-top:28px}}
+
+/* v3073 product-link state fix */
+.product h3 a,.product h3 a:link,.product h3 a:visited,.product h3 a:hover,.product h3 a:active{color:var(--text)!important;text-decoration:none!important}
+.details-link,.details-link:link,.details-link:visited,.details-link:hover,.details-link:active{color:rgba(255,255,255,.92)!important}

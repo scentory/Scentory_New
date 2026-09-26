@@ -1,0 +1,16 @@
+
+/* SCENTORY v3073 — mobile liquid-glass utility dock */
+.scentory-liquid-dock{display:none}
+@media(max-width:760px){
+  body{padding-bottom:104px!important}
+  .floating-cart{display:none!important}
+  .scentory-liquid-dock{position:fixed;left:50%;bottom:max(12px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:9997;width:min(94vw,560px);display:grid;grid-template-columns:repeat(5,1fr);gap:2px;padding:8px 7px;border:1px solid rgba(222,184,111,.34);border-radius:28px;background:linear-gradient(145deg,rgba(30,25,17,.58),rgba(5,5,5,.74));-webkit-backdrop-filter:blur(22px) saturate(155%);backdrop-filter:blur(22px) saturate(155%);box-shadow:inset 0 1px 0 rgba(255,231,184,.18),inset 0 -1px 0 rgba(188,139,57,.12),0 16px 42px rgba(0,0,0,.42),0 0 24px rgba(193,145,61,.08);overflow:hidden}
+  .scentory-liquid-dock:before{content:"";position:absolute;inset:-45% 18% 55% -10%;background:radial-gradient(ellipse,rgba(245,210,143,.20),transparent 68%);pointer-events:none;filter:blur(5px)}
+  .scentory-dock-item{position:relative;z-index:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:7px 2px 6px;border-radius:20px;color:rgba(244,239,229,.68)!important;text-decoration:none!important;font:700 9px/1.05 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.055em;text-transform:uppercase;-webkit-tap-highlight-color:transparent}
+  .scentory-dock-item svg{width:21px;height:21px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .scentory-dock-item.active{color:#f5dfb4!important;background:linear-gradient(145deg,rgba(221,176,91,.22),rgba(255,255,255,.055));box-shadow:inset 0 1px 0 rgba(255,235,198,.20),0 0 20px rgba(203,153,67,.10)}
+  .scentory-dock-item.active:after{content:"";position:absolute;bottom:2px;width:20px;height:2px;border-radius:99px;background:linear-gradient(90deg,transparent,#e6bd72,transparent);box-shadow:0 0 9px rgba(230,189,114,.5)}
+  .scentory-dock-count{position:absolute;top:3px;left:calc(50% + 8px);min-width:16px;height:16px;padding:0 4px;border-radius:99px;background:#ead09b;color:#090909;font-size:9px;line-height:16px;text-align:center;letter-spacing:0;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  .product h3 a,.product h3 a:link,.product h3 a:visited,.product h3 a:hover,.product h3 a:active{color:#f7f3eb!important;text-decoration:none!important}
+  .details-link,.details-link:visited{color:rgba(255,255,255,.92)!important}
+}

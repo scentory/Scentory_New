@@ -1289,7 +1289,7 @@ function clearOrder() {
   showToast('Order cleared. Everything is reset.', 'success');
 }
 
-function saveCart() { localStorage.setItem('scentoryCart', JSON.stringify(cart)); }
+function saveCart() { localStorage.setItem('scentoryCart', JSON.stringify(cart)); try{window.dispatchEvent(new Event('scentory-cart-change'));}catch(e){} }
 function restoreCart() {
   try { cart = JSON.parse(localStorage.getItem('scentoryCart') || '[]'); }
   catch { cart = []; }
