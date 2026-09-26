@@ -227,23 +227,18 @@ const shortOrderName = name => {
 };
 
 const imageFile = p => p.image || `${p.id}.jpg`;
+// This deployment keeps product images directly in the repository/site root.
 const imagePath = p => {
   const image = imageFile(p);
-  if (/^(?:https?:|data:|images\/|Website_Product_Posters\/)/i.test(image) || image === 'product-image-coming-soon.svg') return image;
-  return `Website_Product_Posters/${image}`;
+  if (/^(?:https?:|data:)/i.test(image)) return image;
+  if (image === 'product-image-coming-soon.svg') return image;
+  return image.replace(/^Website_Product_Posters\//i, '').replace(/^images\//i, '');
 };
-// Robust fallback for both the custom domain and GitHub Pages project paths.
-// Do not hide a perfume photo until every valid location has been tried.
 const productImageCandidates = p => {
   const image = imageFile(p);
-  if (/^(?:https?:|data:)/i.test(image) || image === 'product-image-coming-soon.svg' || /^images\//i.test(image)) return [image];
-  const file = image.replace(/^Website_Product_Posters\//i, '');
-  return [
-    `Website_Product_Posters/${file}`,
-    `./Website_Product_Posters/${file}`,
-    `/Website_Product_Posters/${file}`,
-    `https://scentoryfragrance.com/Website_Product_Posters/${file}`
-  ];
+  if (/^(?:https?:|data:)/i.test(image)) return [image];
+  const file = image.replace(/^Website_Product_Posters\//i, '').replace(/^images\//i, '');
+  return [file, `./${file}`, `/${file}`, `https://scentoryfragrance.com/${file}`];
 };
 const handleProductImageError = img => {
   let candidates = [];
@@ -435,7 +430,7 @@ function openProductDetails(id) {
         ${renderIntelligenceDetails(p)}
         <p class="small-note modal-note">Tap a size below to add or remove it from your order.</p>
         <div class="price-buttons four-row modal-price-grid">${renderPriceTiles(p, 'modal-price-tile')}</div>
-        <a class="details-link" href="perfume/${encodeURIComponent(p.id)}.html">Open shareable product page</a>
+        <a class="details-link" href="${encodeURIComponent(p.id)}.html">Open shareable product page</a>
       </div>
     </div>
   `;
