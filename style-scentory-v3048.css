@@ -3432,3 +3432,105 @@ body {
   aspect-ratio: auto;
   height: auto;
 }
+
+
+/* ==== SCENTORY v3070 — simple shopping UX + soft anniversary finish ==== */
+:root {
+  --anniv-gold: rgba(205, 165, 94, .22);
+  --anniv-gold-soft: rgba(230, 198, 132, .10);
+  --anniv-line: rgba(226, 193, 127, .18);
+}
+body {
+  background:
+    radial-gradient(900px 520px at 12% 8%, rgba(196,145,70,.055), transparent 62%),
+    radial-gradient(760px 520px at 88% 36%, rgba(226,190,118,.035), transparent 65%),
+    #050505 !important;
+}
+.topbar {
+  background: linear-gradient(180deg, rgba(5,5,5,.985), rgba(7,6,5,.975)) !important;
+  border-bottom: 1px solid rgba(224,190,124,.10) !important;
+}
+/* Hero uses the exact same supplied photograph on desktop and mobile. */
+.hero {
+  min-height: 0 !important;
+  height: auto !important;
+  background: #050505 !important;
+  border-bottom-color: rgba(224,190,124,.12) !important;
+}
+.hero::before {
+  display: block !important;
+  inset: 0 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.16) 0%, rgba(0,0,0,.42) 48%, rgba(0,0,0,.76) 100%),
+    url("hero-scentory-main-desktop.webp?v=3070") center center / cover no-repeat !important;
+}
+.hero::after {
+  background:
+    linear-gradient(115deg, rgba(228,190,117,.07), transparent 26%, transparent 72%, rgba(190,137,61,.035)),
+    linear-gradient(180deg, transparent 72%, rgba(0,0,0,.34)) !important;
+}
+.hero-inner { padding: 72px 18px 64px !important; }
+.hero .eyebrow,
+.eyebrow { border-color: var(--anniv-line) !important; box-shadow: inset 0 1px 0 rgba(255,236,196,.04); }
+
+/* Soft glass/gold anniversary reflection — intentionally minimal. */
+.product, .order-card, .decant-copy, .decant-photo-card, .toolbar,
+.hot-arrivals-section, .best-selling-section, .brand-showcase-card,
+.discovery-tool-card, .review-card, .faq-grid details, .steps-grid article {
+  border-color: rgba(224,190,124,.105) !important;
+  background-image: linear-gradient(145deg, rgba(231,199,137,.025), transparent 34%, rgba(255,255,255,.012)) !important;
+}
+.product::after, .order-card::after, .decant-photo-card::after {
+  content:""; position:absolute; inset:0; pointer-events:none; border-radius:inherit;
+  background: linear-gradient(118deg, transparent 12%, rgba(255,226,167,.025) 35%, transparent 55%);
+}
+.product, .order-card, .decant-photo-card { position: relative; overflow: hidden; }
+.price-tile.selected { border-color: rgba(230,196,128,.36) !important; box-shadow: inset 0 0 0 1px rgba(230,196,128,.08); }
+
+/* Simpler navigation: important destinations first, everything else preserved in More. */
+.simplified-nav { overflow: visible !important; justify-content: center; align-items: center; }
+.more-nav { position: relative; }
+.more-nav summary { list-style:none; cursor:pointer; color:#ddd; font-weight:760; font-size:.72rem; padding:8px 12px; border:1px solid rgba(255,255,255,.10); border-radius:999px; background:rgba(255,255,255,.035); }
+.more-nav summary::-webkit-details-marker { display:none; }
+.more-nav-menu { position:absolute; right:0; top:calc(100% + 8px); min-width:190px; padding:8px; display:grid; gap:4px; background:#0b0b0b; border:1px solid rgba(224,190,124,.16); border-radius:16px; box-shadow:0 18px 42px rgba(0,0,0,.48); z-index:1200; }
+.more-nav:not([open]) .more-nav-menu { display:none; }
+.more-nav-menu a { display:block; white-space:nowrap; text-align:left; }
+
+/* Easy category shortcuts; advanced filters remain directly below. */
+.quick-shop { display:flex; gap:8px; overflow-x:auto; padding:0 0 10px; scrollbar-width:none; }
+.quick-shop::-webkit-scrollbar { display:none; }
+.quick-shop-chip { flex:0 0 auto; border:1px solid rgba(255,255,255,.12); border-radius:999px; background:#101010; color:#ddd; padding:9px 13px; font:inherit; font-size:.72rem; font-weight:760; cursor:pointer; }
+.quick-shop-chip.active { color:#fff; border-color:rgba(225,190,122,.30); background:linear-gradient(135deg,rgba(211,171,96,.12),rgba(255,255,255,.045)); }
+
+/* Cart must always receive the first tap. */
+.cart-pill { position:relative !important; z-index:1300 !important; pointer-events:auto !important; touch-action:manipulation !important; }
+.cart-pill.liquid-hit { animation:cartLiquidHit .28s ease-out; }
+@keyframes cartLiquidHit { 0%{transform:scale(1)} 45%{transform:scale(1.09)} 100%{transform:scale(1)} }
+.liquid-cart-drop { position:fixed; z-index:9999; width:12px; height:18px; border-radius:60% 60% 68% 68% / 72% 72% 42% 42%; pointer-events:none; background:linear-gradient(180deg,rgba(255,225,163,.96),rgba(191,133,51,.88)); box-shadow:0 0 14px rgba(224,179,94,.35); }
+
+/* Keep catalogue poster + every price visible, with clearer visual hierarchy. */
+.product-image-wrap { border-color:rgba(224,190,124,.10) !important; }
+.product h3 { letter-spacing:-.025em; }
+.price-buttons { position:relative; z-index:2; }
+
+@media (max-width:640px) {
+  .hero { min-height:0 !important; height:auto !important; }
+  .hero::before {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.44) 48%, rgba(0,0,0,.78) 100%),
+      url("hero-scentory-main-mobile.webp?v=3070") center center / cover no-repeat !important;
+  }
+  .hero-inner { max-width:390px !important; padding:72px 14px 52px !important; }
+  .hero-actions { margin-top:18px !important; }
+  .simplified-nav { justify-content:flex-start; overflow-x:auto !important; padding-left:10px !important; padding-right:10px !important; }
+  .simplified-nav > a, .more-nav { flex:0 0 auto; }
+  .more-nav-menu { position:fixed; right:12px; top:132px; max-height:55vh; overflow:auto; }
+  #decantBottles { margin-top:0 !important; }
+  .quick-shop { margin:0 -2px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .liquid-cart-drop, .cart-pill.liquid-hit { animation:none !important; }
+}

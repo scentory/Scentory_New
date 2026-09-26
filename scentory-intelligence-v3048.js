@@ -274,7 +274,7 @@
   }
 
   function money(value) {
-    return `৳${Number(value || 0).toLocaleString('en-BD')}`;
+    return `${Number(value || 0).toLocaleString('en-BD')} Tk`;
   }
 
   function clamp(value, min = 0, max = 1) {
@@ -563,7 +563,7 @@
   function renderFindTool() {
     const weather = defaultWeather();
     return renderToolShell('find',
-      'Answer a few quick questions. Results balance scent family, maturity, occasion, weather, presence, budget position and profile confidence.',
+      'Answer a few quick questions. Results balance perfume family, maturity, occasion, weather, presence, budget position and profile confidence.',
       `
         <form class="discovery-form" onsubmit="runFindMyPerfume(event)">
           <div class="discovery-field"><label for="findOccasion">Where will you wear it?</label>
@@ -588,7 +588,7 @@
             <select id="findSize"><option value="5ml">5 ML</option><option value="6ml">6 ML Premium</option><option value="10ml">10 ML</option><option value="15ml">15 ML</option></select>
           </div>
           <div class="discovery-field"><label for="findBudget">Maximum perfume budget</label>
-            <select id="findBudget"><option value="300">Up to ৳300</option><option value="500" selected>Up to ৳500</option><option value="800">Up to ৳800</option><option value="1200">Up to ৳1,200</option><option value="2000">Up to ৳2,000</option></select>
+            <select id="findBudget"><option value="300">Up to 300 Tk</option><option value="500" selected>Up to 500 Tk</option><option value="800">Up to 800 Tk</option><option value="1200">Up to 1,200 Tk</option><option value="2000">Up to 2,000 Tk</option></select>
           </div>
           <div class="discovery-field"><label for="findPricePreference">Within that budget, prefer</label>
             <select id="findPricePreference"><option value="balanced">Best overall balance</option><option value="premium">More premium choices</option><option value="value">Best value</option></select>
@@ -677,7 +677,7 @@
         reason: why.slice(0, 3).join(' · '),
         breakdown: `<div class="explainable-match"><strong>Why it fits</strong><ul>${why.map(item => `<li>${esc(item)}</li>`).join('')}</ul><strong>Consider before choosing</strong><p>${cautions.length ? esc(cautions.join('. ')) : 'No major conflict was detected from your answers.'}</p><span>${esc(risk)} — try 5 ML first if unsure.</span></div>`
       })).join('')}</div>
-      <p class="discovery-disclaimer"><strong>Transparent scoring:</strong> occasion 22%, scent family 20%, weather 16%, presence 12%, style/maturity 14%, budget position 8%, availability 4% and profile confidence 4%. Results are diversified by scent family and brand, with penalties for dislikes and first-pick restrictions. This is shopping guidance, not a guarantee of personal preference.</p>
+      <p class="discovery-disclaimer"><strong>Transparent scoring:</strong> occasion 22%, perfume family 20%, weather 16%, presence 12%, style/maturity 14%, budget position 8%, availability 4% and profile confidence 4%. Results are diversified by perfume family and brand, with penalties for dislikes and first-pick restrictions. This is shopping guidance, not a guarantee of personal preference.</p>
     `;
     saveToolPreference('find', { occasion, mood, style, weather, presence, avoid, size, budget, pricePreference });
   }
@@ -888,7 +888,7 @@
       'Choose your budget, size, number of perfumes and box personality. Generate another valid combination anytime with Next Option.',
       `
         <form class="discovery-form" onsubmit="runDecantBox(event)">
-          <div class="discovery-field"><label for="boxBudget">Perfume budget</label><select id="boxBudget"><option value="800">৳800</option><option value="1200" selected>৳1,200</option><option value="1600">৳1,600</option><option value="2200">৳2,200</option><option value="3000">৳3,000</option><option value="4000">৳4,000</option><option value="5000">৳5,000</option></select></div>
+          <div class="discovery-field"><label for="boxBudget">Perfume budget</label><select id="boxBudget"><option value="800">800 Tk</option><option value="1200" selected>1,200 Tk</option><option value="1600">1,600 Tk</option><option value="2200">2,200 Tk</option><option value="3000">3,000 Tk</option><option value="4000">4,000 Tk</option><option value="5000">5,000 Tk</option></select></div>
           <div class="discovery-field"><label for="boxSize">One size for every decant</label><select id="boxSize"><option value="5ml">5 ML</option><option value="6ml">6 ML Premium</option><option value="10ml">10 ML</option><option value="15ml">15 ML</option></select></div>
           <div class="discovery-field"><label for="boxCount">Number of perfumes</label><select id="boxCount"><option value="3">3 perfumes</option><option value="4" selected>4 perfumes</option><option value="5">5 perfumes</option><option value="6">6 perfumes</option></select></div>
           <div class="discovery-field"><label for="boxStyle">Box personality</label><select id="boxStyle"><option value="balanced">Balanced wardrobe</option><option value="fresh">Fresh & clean</option><option value="office">Office-ready</option><option value="evening">Evening & date</option><option value="summer">Bangladesh summer</option><option value="sweet">Sweet collection</option><option value="bold">Bold performers</option><option value="versatile">Everyday versatile</option></select></div>
@@ -1165,8 +1165,8 @@
           <div class="cost-wear-stat"><span>Approx. sprays</span><strong>${guide.min}–${guide.max}</strong></div>
           <div class="cost-wear-stat"><span>Sprays per wearing</span><strong>${spraysPerWear}</strong></div>
           <div class="cost-wear-stat"><span>Approx. wears</span><strong>${minimumWears}${maximumWears !== minimumWears ? `–${maximumWears}` : ''}</strong></div>
-          <div class="cost-wear-stat"><span>Average cost per spray</span><strong>~৳${costPerSpray.toFixed(2)}</strong></div>
-          <div class="cost-wear-stat featured"><span>Average cost per wearing</span><strong>~৳${costPerWear.toFixed(1)}</strong></div>
+          <div class="cost-wear-stat"><span>Average cost per spray</span><strong>~${costPerSpray.toFixed(2)} Tk</strong></div>
+          <div class="cost-wear-stat featured"><span>Average cost per wearing</span><strong>~${costPerWear.toFixed(1)} Tk</strong></div>
         </div>
         <p class="cost-size-message"><strong>${esc(guide.title)}</strong><span>${esc(guide.copy)}</span></p>
         <div class="discovery-result-actions"><button type="button" class="discovery-mini-action primary" onclick="addDiscoveryItem('${esc(product.id)}','${esc(size)}')">Add ${esc(displayMl(size))} to order</button></div>

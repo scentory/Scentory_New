@@ -93,7 +93,7 @@ function syncModalBodyState() {
   document.body.classList.toggle('modal-open', open);
 }
 
-const taka = amount => `৳${Number(amount || 0).toLocaleString('en-BD')}`;
+const taka = amount => `${Number(amount || 0).toLocaleString('en-BD')} Tk`;
 const displayMl = ml => ml.replace('ml', ' ML');
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({
   '&': '&amp;',
@@ -105,6 +105,11 @@ const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({
 
 const shortOrderName = name => {
   const custom = {
+    "Azzaro The Most Wanted (Parfum)": "Azzaro TMW Parfum",
+    "Sanaya by Junaid EDP": "Sanaya",
+    "Mancera Amberful EDP": "Mancera Amberful",
+    "Hawas Ice Freeze": "Hawas Ice Freeze",
+    "Hawas Tropical EDP": "Hawas Tropical",
     "Club De Nuit Intesne Man EDP": "CDNIM EDP",
     "Club De Nuit Intense Man PURE Parfum": "CDNIM Pure Parfum",
     "Club De Nuit Intesne Man EDT": "CDNIM EDT",
@@ -114,7 +119,7 @@ const shortOrderName = name => {
     "Club de Nuit Precieux Extrait De Parfum": "CDN Precuix",
     "Al Haramain Amber Oud Gold Edition": "Al Haramain Gold Edition",
     "Al Haramain Amber Oud Aqua Dubai": "Al Haramain Aqua Dubai",
-    "Marwa by Arabiyat Prestige": "Marwa by Arabiyat",
+    "Marwa by Arabiyat Prestige": "Marwa",
     "Liquid Brun by French Avenue (EDP)": "Liquid Brun",
     "Hawas For Him EDP": "Hawas",
     "Hawas Ice EDP": "Hawas Ice",
@@ -143,7 +148,7 @@ const shortOrderName = name => {
     "Versace Eros (EDT)": "Versace Eros",
     "Kenzo Homme EDT Intense": "Kenzo Homme Intense",
     "Davidoff Cool Water (EDT)": "Cool Water",
-    "Al Haramain Amber Oud Gold Edition": "Amber Oud Gold",
+    "Al Haramain Amber Oud Gold Edition": "Al Haramain Gold Edition",
     "Al Haramain Amber Oud Aqua Dubai": "Amber Oud Aqua",
     "Kaaf By Ahmed EDP": "Kaaf",
     "Blue By Ahmed EDP": "Blue Ahmed",
@@ -177,7 +182,7 @@ const shortOrderName = name => {
     "Club de Nuit Precieux Extrait De Parfum": "CDN Precieux",
     "Club De Nuit Intense Man EDT": "CDNIM EDT",
     "Club De Nuit Urban man Elixir EDP": "CDN Urban Elixir",
-    "Club de Nuit Blue Iconic": "CDN Blue Iconic",
+    "Club de Nuit Blue Iconic": "CDN Iconic Blue",
     "Atlantis Extrait by French Avenue (EDP)": "Atlantis Extrait",
     "Zenith Blue by French Avenue (EDP)": "Zenith Blue",
     "Liquid Brun by French Avenue (EDP)": "Liquid Brun",
@@ -344,7 +349,7 @@ function renderIntelligenceDetails(p) {
   return `
     <section class="verified-perfume-details" aria-label="Perfume profile shared across all decant sizes">
       <span class="profile-review-badge checked">Scentory supplied profile</span>
-      ${character.length ? `<div class="profile-fact"><b>Scent character</b><span>${character.map(escapeHtml).join(' · ')}</span></div>` : ''}
+      ${character.length ? `<div class="profile-fact"><b>perfume character</b><span>${character.map(escapeHtml).join(' · ')}</span></div>` : ''}
       ${noteRows.map(([label, values]) => `<div class="profile-fact"><b>${escapeHtml(label)}</b><span>${values.map(escapeHtml).join(' · ')}</span></div>`).join('')}
       <div class="profile-fact"><b>Expected longevity</b><span>${escapeHtml(details.performance || 'Skin, weather, batch and atomizer can change real-world performance.')}</span></div>
       ${bestPlaces.length ? `<div class="profile-fact"><b>Best places to wear</b><span>${bestPlaces.map(escapeHtml).join(' · ')}</span></div>` : ''}
@@ -371,7 +376,7 @@ function renderPriceTiles(p, extraClass = '') {
         ${disabled ? 'disabled' : ''}
         data-id="${escapeHtml(p.id)}"
         data-ml="${escapeHtml(ml)}"
-        onclick="toggleCartItem('${escapeHtml(p.id)}', '${escapeHtml(ml)}')"
+        onclick="toggleCartItem('${escapeHtml(p.id)}', '${escapeHtml(ml)}', this)"
         aria-pressed="${selected ? 'true' : 'false'}">
         <span class="tile-top">
           <span class="ml-label">${displayMl(ml)}</span>
@@ -596,7 +601,7 @@ function injectCatalogueStructuredData() {
   node.textContent = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Scentory — 120+ perfume choices in Bangladesh',
+    name: 'Scentory — 140+ perfume choices in Bangladesh',
     itemListElement: itemList
   });
   document.head.appendChild(node);
@@ -692,7 +697,7 @@ function renderProductCard(p) {
         ${disabled ? 'disabled' : ''}
         data-id="${p.id}"
         data-ml="${ml}"
-        onclick="toggleCartItem('${p.id}', '${ml}')"
+        onclick="toggleCartItem('${p.id}', '${ml}', this)"
         aria-pressed="${selected ? 'true' : 'false'}">
         <span class="tile-top">
           <span class="ml-label">${displayMl(ml)}</span>
@@ -824,7 +829,16 @@ function highlightElement(element, className = 'jump-highlight', duration = 900)
 function scrollToOrderCard() {
   const orderCard = document.getElementById('myOrder');
   if (!orderCard) return;
-  requestAnimationFrame(() => scrollElementIntoView(orderCard, 10, 'smooth'));
+  syncTopbarHeight();
+  const header = document.querySelector('.topbar');
+  const headerH = header ? header.getBoundingClientRect().height : 0;
+  const go = () => {
+    const top = Math.max(0, orderCard.getBoundingClientRect().top + window.scrollY - headerH - 12);
+    window.scrollTo({ top, behavior: 'smooth' });
+    highlightElement(orderCard, 'order-jump-highlight', 700);
+  };
+  go();
+  requestAnimationFrame(go);
 }
 
 function scrollToPerfume(id, options = {}) {
@@ -879,7 +893,7 @@ function renderProducts() {
     return matchesTerm(p) && matchesStock && matchesTag;
   });
 
-  if (perfumeCount) perfumeCount.textContent = '120+ Perfumes';
+  if (perfumeCount) perfumeCount.textContent = '140+ Perfumes';
 
   if (!filtered.length) {
     productGrid.innerHTML = '<p class="order-items empty">No perfume found. Try a different search or tag.</p>';
@@ -955,7 +969,42 @@ function removeFromCart(id, ml) {
   updatePriceTileStates();
 }
 
-function toggleCartItem(id, ml) {
+
+function animateLiquidToCart(sourceEl) {
+  if (!sourceEl || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+  const target = document.querySelector('.cart-pill');
+  if (!target) return;
+  const from = sourceEl.getBoundingClientRect();
+  const to = target.getBoundingClientRect();
+  const drop = document.createElement('span');
+  drop.className = 'liquid-cart-drop';
+  drop.style.left = `${from.left + from.width / 2 - 6}px`;
+  drop.style.top = `${from.top + from.height / 2 - 9}px`;
+  document.body.appendChild(drop);
+  const dx = (to.left + to.width / 2) - (from.left + from.width / 2);
+  const dy = (to.top + to.height / 2) - (from.top + from.height / 2);
+  const done = () => {
+    drop.remove();
+    target.classList.remove('liquid-hit');
+    void target.offsetWidth;
+    target.classList.add('liquid-hit');
+    setTimeout(() => target.classList.remove('liquid-hit'), 300);
+  };
+  if (drop.animate) {
+    const motion = drop.animate([
+      { transform:'translate3d(0,0,0) scale(1)', opacity:.98, borderRadius:'60% 60% 68% 68% / 72% 72% 42% 42%' },
+      { transform:`translate3d(${dx*.58}px,${dy*.50}px,0) scale(.82,.58)`, opacity:.92, borderRadius:'48% 48% 60% 60%' },
+      { transform:`translate3d(${dx}px,${dy}px,0) scale(.28)`, opacity:.15 }
+    ], { duration:460, easing:'cubic-bezier(.2,.78,.22,1)', fill:'forwards' });
+    motion.onfinish = done;
+  } else {
+    drop.style.transition='transform .46s ease, opacity .46s ease';
+    requestAnimationFrame(()=>{ drop.style.transform=`translate(${dx}px,${dy}px) scale(.28)`; drop.style.opacity='.15'; });
+    setTimeout(done,470);
+  }
+}
+
+function toggleCartItem(id, ml, sourceEl = null) {
   const perfume = perfumes.find(p => p.id === id);
   const existing = getCartItem(id, ml);
   if (existing) {
@@ -964,6 +1013,7 @@ function toggleCartItem(id, ml) {
   } else {
     const added = addToCart(id, ml);
     if (added) {
+      animateLiquidToCart(sourceEl);
       showToast(`${perfume?.name || 'Item'} was added. Tap the bottom order bar to review.`, 'success');
     }
   }
@@ -1063,7 +1113,7 @@ function renderCart() {
             <img src="${escapeHtml(thumbSrc)}" alt="${escapeHtml(item.name)}" loading="lazy" decoding="async" onerror="this.closest('.order-item-thumb')?.classList.add('image-missing')">
           </button>
           <div class="order-item-copy">
-            <strong>${escapeHtml(item.name)}</strong>
+            <strong>${escapeHtml(shortOrderName(item.name))}</strong>
             <small>${unitText}</small>
             <span class="cart-price-line">${priceText}</span>
           </div>
@@ -1382,3 +1432,24 @@ if ('ResizeObserver' in window) {
 }
 requestAnimationFrame(syncTopbarHeight);
 loadPerfumes();
+
+
+// v3070 simple-navigation helpers.
+document.querySelectorAll('.more-nav-menu a').forEach(link => link.addEventListener('click', () => {
+  const details = link.closest('details');
+  if (details) details.open = false;
+}));
+document.querySelectorAll('.quick-shop-chip').forEach(chip => chip.addEventListener('click', () => {
+  document.querySelectorAll('.quick-shop-chip').forEach(x => x.classList.remove('active'));
+  chip.classList.add('active');
+  const target = chip.dataset.quickTarget;
+  if (target) {
+    document.getElementById(target)?.scrollIntoView({behavior:'smooth', block:'start'});
+    return;
+  }
+  if (tagFilter) tagFilter.value = chip.dataset.quickTag || 'all';
+  if (stockFilter) stockFilter.value = 'all';
+  if (searchInput) { searchInput.value=''; delete searchInput.dataset.selectedId; }
+  renderProducts();
+  document.getElementById('priceList')?.scrollIntoView({behavior:'smooth', block:'start'});
+}));
