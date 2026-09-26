@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '3066';
+const DATA_VERSION = '3068';
 const BEST_SELLING_IDS = [
   'versace-eros-edt',
   'afnan-supremacy-collector-s-edition-edp',
@@ -226,12 +226,39 @@ const shortOrderName = name => {
     .trim();
 };
 
+const imageFile = p => p.image || `${p.id}.jpg`;
 const imagePath = p => {
-  const image = p.image || `images/${p.id}.jpg`;
+  const image = imageFile(p);
   if (/^(?:https?:|data:|images\/|Website_Product_Posters\/)/i.test(image) || image === 'product-image-coming-soon.svg') return image;
   return `Website_Product_Posters/${image}`;
 };
-const hideBrokenImage = img => { img.closest('.product-image-wrap')?.classList.add('image-missing'); };
+// Robust fallback for both the custom domain and GitHub Pages project paths.
+// Do not hide a perfume photo until every valid location has been tried.
+const productImageCandidates = p => {
+  const image = imageFile(p);
+  if (/^(?:https?:|data:)/i.test(image) || image === 'product-image-coming-soon.svg' || /^images\//i.test(image)) return [image];
+  const file = image.replace(/^Website_Product_Posters\//i, '');
+  return [
+    `Website_Product_Posters/${file}`,
+    `./Website_Product_Posters/${file}`,
+    `/Website_Product_Posters/${file}`,
+    `https://scentoryfragrance.com/Website_Product_Posters/${file}`
+  ];
+};
+const handleProductImageError = img => {
+  let candidates = [];
+  try { candidates = JSON.parse(img.dataset.imageCandidates || '[]'); } catch (_) {}
+  const currentIndex = Number(img.dataset.imageCandidateIndex || 0);
+  const nextIndex = currentIndex + 1;
+  if (nextIndex < candidates.length) {
+    img.dataset.imageCandidateIndex = String(nextIndex);
+    img.src = candidates[nextIndex];
+    return;
+  }
+  img.closest('.product-image-wrap, .order-item-thumb')?.classList.add('image-missing');
+  img.style.display = 'none';
+};
+const imageAttrs = p => `src="${escapeHtml(productImageCandidates(p)[0])}" data-image-candidates='${escapeHtml(JSON.stringify(productImageCandidates(p)))}' data-image-candidate-index="0" onerror="handleProductImageError(this)"`;
 
 
 const SCENT_TAGS = [
@@ -370,7 +397,7 @@ function renderProductCardV3002(p) {
   return `
     <article id="perfume-${escapeHtml(p.id)}" data-perfume-id="${escapeHtml(p.id)}" class="product ${hasAvailable ? '' : 'sold-out'} ${upcoming ? 'upcoming-card' : ''}">
       <button type="button" class="product-image-wrap" data-full-image="${escapeHtml(imagePath(p))}" data-full-title="${escapeHtml(p.name)}" onclick="openImageModal(this.dataset.fullImage, this.dataset.fullTitle)" aria-label="Open ${escapeHtml(p.name)} photo">
-        <img class="product-image" src="${escapeHtml(imagePath(p))}" alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low" onerror="hideBrokenImage(this)">
+        <img class="product-image" ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
       </button>
       <div class="product-main">
         <div class="product-head">
@@ -398,7 +425,7 @@ function openProductDetails(id) {
   productModalContent.innerHTML = `
     <div class="product-modal-grid">
       <button type="button" class="product-modal-image" data-full-image="${escapeHtml(imagePath(p))}" data-full-title="${escapeHtml(p.name)}" onclick="openImageModal(this.dataset.fullImage, this.dataset.fullTitle)">
-        <img src="${escapeHtml(imagePath(p))}" alt="${escapeHtml(p.name)}" loading="eager" decoding="async">
+        <img ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="eager" decoding="async">
       </button>
       <div class="product-modal-copy">
         <span class="tag ${upcoming ? 'upcoming' : (hasAvailable ? '' : 'out')}">${statusText}</span>
@@ -486,7 +513,7 @@ function renderSearchSuggestions() {
     const statusText = upcoming ? 'Upcoming' : (available ? 'Available' : 'Out of stock');
     return `
       <button type="button" class="search-suggestion" data-suggest-id="${escapeHtml(p.id)}" role="option">
-        <img src="${escapeHtml(imagePath(p))}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <img ${imageAttrs(p)} alt="" loading="lazy" decoding="async">
         <span>
           <b>${escapeHtml(p.name)}</b>
           <small>${statusText}</small>
@@ -685,7 +712,7 @@ function renderProductCard(p) {
   return `
     <article id="perfume-${p.id}" data-perfume-id="${p.id}" class="product ${hasAvailable ? '' : 'sold-out'} ${upcoming ? 'upcoming-card' : ''}">
       <button type="button" class="product-image-wrap" data-full-image="${escapeHtml(imagePath(p))}" data-full-title="${escapeHtml(p.name)}" onclick="openImageModal(this.dataset.fullImage, this.dataset.fullTitle)" aria-label="Open ${escapeHtml(p.name)} photo">
-        <img class="product-image" src="${escapeHtml(imagePath(p))}" alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low" onerror="hideBrokenImage(this)">
+        <img class="product-image" ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
       </button>
       <div class="product-main">
         <div class="product-head">
@@ -723,7 +750,7 @@ function renderHotArrivals() {
       <button type="button" class="hot-arrival-card" data-target-id="${escapeHtml(p.id)}" aria-label="View ${escapeHtml(p.name)} in price list">
         <span class="hot-arrival-badge">#${index + 1}</span>
         <span class="hot-arrival-photo-wrap">
-          <img src="${escapeHtml(imagePath(p))}" alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low" onerror="this.style.display='none'">
+          <img ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
         </span>
         <span class="hot-arrival-copy">
           <b>${escapeHtml(p.name)}</b>
@@ -755,7 +782,7 @@ function renderBestSelling() {
   bestSellingGrid.innerHTML = items.map((p, index) => `
     <button type="button" class="best-seller-card" data-target-id="${escapeHtml(p.id)}" aria-label="View ${escapeHtml(p.name)} in price list">
       <span class="best-rank">${index + 1}</span>
-      <img src="${escapeHtml(imagePath(p))}" alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low" onerror="this.style.display='none'">
+      <img ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
       <span class="best-seller-copy">
         <b>${escapeHtml(p.name)}</b>
         <small>Tap to view & add</small>
