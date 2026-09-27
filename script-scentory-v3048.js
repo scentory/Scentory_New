@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '3077';
+const DATA_VERSION = '3078';
 const BEST_SELLING_IDS = [
   'hawas-ice-freeze',
   'sanaya-by-junaid-edp',
@@ -24,6 +24,7 @@ const HOT_ARRIVAL_IDS = [
 const productGrid = document.getElementById('productGrid');
 const bestSellingGrid = document.getElementById('bestSellingGrid');
 const hotArrivalsGrid = document.getElementById('hotArrivalsGrid');
+const anniversaryOffersGrid = document.getElementById('anniversaryOffersGrid');
 const orderItems = document.getElementById('orderItems');
 const grandTotal = document.getElementById('grandTotal');
 const deliveryLocation = document.getElementById('deliveryLocation');
@@ -421,7 +422,7 @@ function renderPriceTiles(p, extraClass = '') {
   return Object.entries(p.sizes || {}).map(([ml, item]) => {
     const disabled = upcoming || !hasAvailable || !item.available || item.price === null;
     const selected = !disabled && !!getCartItem(p.id, ml);
-    const label = item.price === null ? 'N/A' : taka(item.price);
+    const label = item.price === null ? 'N/A' : (p._anniversaryActive ? window.ScentoryAnniversary?.offerMarkup(item) || taka(item.price) : taka(item.price));
     const note = upcoming ? '<em>Soon</em>' : (item.premium ? '<em>Premium</em>' : (disabled ? '<em>Out</em>' : '<em>&nbsp;</em>'));
     const selectedBadge = `<span class="selected-qty ${selected ? '' : 'hide'}">×${getCartQty(p.id, ml)}</span>`;
     return `
@@ -457,6 +458,7 @@ function renderProductCardV3002(p) {
           <h3><a href="${encodeURIComponent(p.id)}.html">${escapeHtml(p.name)}</a></h3>
           <div class="tags">
             <span class="tag ${upcoming ? 'upcoming' : (hasAvailable ? '' : 'out')}">${statusText}</span>
+            ${p._anniversaryActive ? window.ScentoryAnniversary?.badge(p) || '' : ''}
             ${renderTagPills(p, 3)}
           </div>
         </div>
@@ -648,12 +650,14 @@ async function loadPerfumes() {
     const response = await fetch(`perfumes.json?v=${DATA_VERSION}`, { cache: 'no-store' });
     if (!response.ok) throw new Error('Could not load perfume database');
     perfumes = await response.json();
+    window.ScentoryAnniversary?.applyToCatalogue(perfumes);
     normalizeCartAfterLoad();
     populateBrandFilter();
     injectCatalogueStructuredData();
     renderProducts();
     renderHotArrivals();
     renderBestSelling();
+    renderAnniversaryOffers();
     renderCart();
   } catch (error) {
     productGrid.innerHTML = '<p class="order-items empty">Could not load the price list. Please refresh the page.</p>';
@@ -764,6 +768,30 @@ function renderProductCard(p) {
 }
 
 
+
+function renderAnniversaryOffers() {
+  if (!anniversaryOffersGrid) return;
+  const api = window.ScentoryAnniversary;
+  if (!api || !api.isActive()) {
+    anniversaryOffersGrid.innerHTML = '<p class="order-items empty">Anniversary prices activate at 11:00 PM, Dhaka time.</p>';
+    return;
+  }
+  const items = perfumes.filter(p => p._anniversaryActive && productHasAvailableSize(p)).slice(0, 18);
+  if (!items.length) {
+    anniversaryOffersGrid.innerHTML = '<p class="order-items empty">Anniversary offers are being prepared.</p>';
+    return;
+  }
+  anniversaryOffersGrid.innerHTML = items.map(p => {
+    const available = Object.entries(p.sizes || {}).filter(([,s]) => s.available && s.price != null);
+    const first = available.sort((a,b)=>Number(a[1].price)-Number(b[1].price))[0];
+    const item = first?.[1];
+    const regular = Number(item?._regularPrice), current = Number(item?.price);
+    const price = p._anniversarySpecial
+      ? `<div class="anniversary-card-price"><strong>From ${taka(current)}</strong></div><small>Already anniversary priced</small>`
+      : `<div class="anniversary-card-price"><del>${taka(regular)}</del><strong>From ${taka(current)}</strong></div><small>Limited-time anniversary price</small>`;
+    return `<a class="anniversary-card" href="${encodeURIComponent(p.id)}.html">${api.badge(p)}<img ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async"><h4>${escapeHtml(p.name)}</h4>${price}</a>`;
+  }).join('');
+}
 
 function renderHotArrivals() {
   if (!hotArrivalsGrid) return;
@@ -921,6 +949,7 @@ function renderProducts() {
   const collectionIds = collectionMode === 'best' ? BEST_SELLING_IDS : (collectionMode === 'new' ? HOT_ARRIVAL_IDS : null);
   let filtered = perfumes.filter(p => {
     if (collectionIds && !collectionIds.includes(p.id)) return false;
+    if (collectionMode === 'anniversary' && !p._anniversaryActive) return false;
     const hasAvailable = productHasAvailableSize(p);
     const upcoming = isUpcoming(p);
     const matchesStock = stock === 'all' ||

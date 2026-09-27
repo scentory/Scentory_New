@@ -4874,26 +4874,26 @@
   {
     "id": "blue-by-ahmed-edp",
     "name": "Blue By Ahmed EDP",
-    "status": "out",
+    "status": "available",
     "sizes": {
       "5ml": {
         "price": 220,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "6ml": {
         "price": 270,
-        "available": false,
+        "available": true,
         "premium": true
       },
       "10ml": {
         "price": 399,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "15ml": {
         "price": 540,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
