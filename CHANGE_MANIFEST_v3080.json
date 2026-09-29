@@ -1,0 +1,31 @@
+{
+  "version": "v3080",
+  "purpose": "Add six supplied SCENTORY product posters to v3079 without changing prices, availability, or anniversary offer pricing.",
+  "base": "SCENTORY_MASTER_UPDATED_v3079.zip",
+  "posters": {
+    "versace-eros-flame-edp": "versace-eros-flame-edp-poster.png",
+    "hawas-lava-gold": "hawas-lava-gold-poster.png",
+    "rayhaan-floriana": "rayhaan-floriana-poster.png",
+    "hawas-thunder": "hawas-thunder-poster.png",
+    "ateeq-nusuk-by-lattafa": "ateeq-nusuk-by-lattafa-poster.png",
+    "spectre-ghost-by-french-avenue": "spectre-ghost-by-french-avenue-poster.png"
+  },
+  "changed_files": [
+    "perfumes.json",
+    "versace-eros-flame-edp.html",
+    "hawas-lava-gold.html",
+    "rayhaan-floriana.html",
+    "hawas-thunder.html",
+    "ateeq-nusuk-by-lattafa.html",
+    "spectre-ghost-by-french-avenue.html",
+    "versace-eros-flame-edp-poster.png",
+    "hawas-lava-gold-poster.png",
+    "rayhaan-floriana-poster.png",
+    "hawas-thunder-poster.png",
+    "ateeq-nusuk-by-lattafa-poster.png",
+    "spectre-ghost-by-french-avenue-poster.png"
+  ],
+  "pricing_changed": false,
+  "availability_changed": false,
+  "anniversary_offer_changed": false
+}
