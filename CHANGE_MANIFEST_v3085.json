@@ -1,0 +1,34 @@
+{
+  "version": "v3085-clean",
+  "base": "v3082 master + v3084 master data corrections",
+  "removed": [
+    "SCENTORY GUIDE",
+    "v3084 upgrade layer",
+    "Discovery Set Builder",
+    "Recently Viewed layer",
+    "sticky purchase bar",
+    "extra trust strip",
+    "extra quick-chip layer",
+    "continuous MutationObserver rescans"
+  ],
+  "kept": [
+    "existing SCENTORY storefront",
+    "Anniversary engine",
+    "search and filters",
+    "Quick Pick",
+    "My Picks/order flow",
+    "product profiles/recommendations",
+    "Houses section",
+    "mobile bottom navigation",
+    "SCENTORY COMPARE"
+  ],
+  "performance": [
+    "compact layout is CSS-only",
+    "Compare uses one delegated click listener",
+    "Compare modal is created only when opened",
+    "no MutationObserver in v3085 additions",
+    "mobile fixed glass blur removed/reduced",
+    "brand marquee becomes swipeable instead of continuously animated on mobile"
+  ],
+  "data": "perfumes.json copied from v3084 to retain intended Kenzo stockout and Khadlaj Island Sun 6ML non-Premium corrections"
+}
