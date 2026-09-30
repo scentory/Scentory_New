@@ -1,0 +1,15 @@
+{
+  "release": "v3082",
+  "base": "v3081",
+  "anniversary_pricing": "Exact user-supplied Anniversary Offer Price table; no calculated discounts; legacy Kenzo offer removed.",
+  "availability": "Unchanged from v3081 perfumes.json / latest master price-stock baseline.",
+  "new_perfume_offer_exclusions": [
+    "hawas-thunder",
+    "hawas-lava-gold",
+    "versace-eros-flame-edp",
+    "rayhaan-floriana",
+    "spectre-ghost-by-french-avenue",
+    "ateeq-nusuk-by-lattafa"
+  ],
+  "brand_section": "Removed Clearbit dependencies; verified logo sources plus text fallback; no broken image icons."
+}
