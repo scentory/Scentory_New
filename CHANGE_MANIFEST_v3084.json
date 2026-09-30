@@ -1,0 +1,30 @@
+{
+  "version": "v3084",
+  "date": "2026-09-30",
+  "release": "Compact Commerce + Compare + Controlled Guide",
+  "master_data_authority": "SCENTORY FINAL APPLIED PRICE LIST August 2026 supplied 30 Sep 2026",
+  "anniversary_authority": "SCENTORY ANNIVERSARY OFFER PRICES supplied 30 Sep 2026",
+  "pricing_rules": [
+    "Master catalogue controls OG price, stock and size availability.",
+    "Anniversary engine uses only the locked FROZEN_OFFERS table and never changes stock availability.",
+    "Hawas Thunder, Hawas Lava Gold, Versace Eros Flame EDP, Rayhaan Floriana, Spectre Ghost and Ateeq Nusuk are not Anniversary-offer products.",
+    "Kenzo Homme EDT Intense corrected to whole-product stockout because the authoritative master marks the perfume name with ❎.",
+    "Khadlaj Island Sun 6 ML corrected to regular 6 ML (not Premium) exactly as the latest master list specifies."
+  ],
+  "customer_features": [
+    "Compact two-column mobile Discover cards",
+    "Select size then explicit Add to My Picks",
+    "Compact mobile product pages",
+    "Sticky product purchase bar",
+    "SCENTORY COMPARE for up to three perfumes with size-specific price/availability",
+    "Controlled catalogue-backed SCENTORY GUIDE with Compare handoff",
+    "Quick View with explicit selected-size add",
+    "Recently Viewed / Continue Discovering",
+    "Discovery Set Builder for 3, 5 or 8 perfumes",
+    "Share perfume and shareable comparison links",
+    "Expanded quick discovery chips and Available Now shortcut",
+    "Compact My Picks presentation and Anniversary savings summary",
+    "Bottom-navigation clearance and subtle commerce micro-interactions"
+  ],
+  "dependency_packaging": "Update-Only package includes all shared HTML/JS/CSS/data dependencies required by the changed pages, including product-page-v3079.js, product-global-v3079.js and liquid-dock-v3075.js."
+}
