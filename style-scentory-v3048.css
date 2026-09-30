@@ -3693,3 +3693,9 @@ body[data-page="order"] .floating-cart{display:none!important}
 .profile-overview{color:#c9c5bd;line-height:1.65;margin:-6px 0 18px}
 @media(max-width:700px){.houses-section{margin:34px 14px;border-radius:25px;padding:27px 0}.brand-logo-card{width:124px;height:78px}.brand-logo-card img{max-width:92px;max-height:40px}.brand-marquee-track{animation-duration:34s}.brand-disclaimer{text-align:left;font-size:.72rem}}
 @media(prefers-reduced-motion:reduce){.brand-marquee-track{animation:none;transform:none}.brand-marquee{overflow-x:auto}}
+
+/* v3082 brand-house resilience */
+.brand-logo-card .verified-brand-logo{max-width:112px;max-height:45px;object-fit:contain;filter:grayscale(1) invert(1) brightness(1.75);opacity:.94}
+.brand-logo-card .brand-wordmark-fallback{position:static;display:block;max-width:116px;text-align:center;color:#f1e4c8;font-size:.92rem;line-height:1.05;letter-spacing:.035em;font-weight:800;text-transform:uppercase}
+.brand-logo-card .brand-wordmark-fallback[hidden]{display:none!important}
+@media(max-width:700px){.brand-logo-card .verified-brand-logo{max-width:92px;max-height:38px}.brand-logo-card .brand-wordmark-fallback{max-width:98px;font-size:.78rem}}
