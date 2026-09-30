@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '3078';
+const DATA_VERSION = '3081';
 const BEST_SELLING_IDS = [
   'hawas-ice-freeze',
   'sanaya-by-junaid-edp',
@@ -653,6 +653,10 @@ async function loadPerfumes() {
     window.ScentoryAnniversary?.applyToCatalogue(perfumes);
     normalizeCartAfterLoad();
     populateBrandFilter();
+    if (document.body?.dataset?.page === 'shop') {
+      const requestedBrand = new URLSearchParams(location.search).get('brand');
+      if (requestedBrand && brandFilter && [...brandFilter.options].some(option => option.value === requestedBrand)) brandFilter.value = requestedBrand;
+    }
     injectCatalogueStructuredData();
     renderProducts();
     renderHotArrivals();

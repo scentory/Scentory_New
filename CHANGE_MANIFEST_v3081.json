@@ -1,0 +1,26 @@
+{
+  "version": "3081",
+  "base": "v3080",
+  "date": "2026-09-30",
+  "changes": [
+    "Reordered six newly added perfumes to match master list structure",
+    "Completed six new perfume profiles; removed Under review placeholders",
+    "Corrected 15ML stock for Hawas Thunder, Hawas Lava Gold, Versace Eros Flame EDP and Spectre Ghost",
+    "Added The Houses of Scentory moving brand-logo section",
+    "Added stronger independent retailer / trademark disclaimer",
+    "Added brand deep-link filtering from logo section",
+    "Preserved existing anniversary offer logic and prices"
+  ],
+  "changedFiles": [
+    "perfumes.json",
+    "index.html",
+    "style-scentory-v3048.css",
+    "script-scentory-v3048.js",
+    "hawas-thunder.html",
+    "hawas-lava-gold.html",
+    "versace-eros-flame-edp.html",
+    "rayhaan-floriana.html",
+    "spectre-ghost-by-french-avenue.html",
+    "ateeq-nusuk-by-lattafa.html"
+  ]
+}
