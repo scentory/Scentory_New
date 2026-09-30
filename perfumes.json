@@ -4428,16 +4428,16 @@
   {
     "id": "kenzo-homme-edt-intense",
     "name": "Kenzo Homme EDT Intense",
-    "status": "available",
+    "status": "out",
     "sizes": {
       "5ml": {
         "price": 420,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "6ml": {
         "price": 510,
-        "available": true,
+        "available": false,
         "premium": true
       },
       "10ml": {
@@ -11235,7 +11235,7 @@
       "6ml": {
         "price": 320,
         "available": true,
-        "premium": true
+        "premium": false
       },
       "10ml": {
         "price": 480,

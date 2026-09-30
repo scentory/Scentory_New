@@ -465,7 +465,7 @@ function renderProductCardV3002(p) {
         <p class="product-reco">${escapeHtml(profile.recommendation)}</p>
         <a class="details-link" href="${encodeURIComponent(p.id)}.html">View Details</a>
       </div>
-      <div class="quick-pick-head"><span>Quick Pick</span><small>Tap a size to add it to My Picks</small></div>
+      <div class="quick-pick-head"><span>Quick Pick</span><small>Select a size, then add</small></div>
       <div class="price-buttons four-row quick-pick-grid">${renderPriceTiles(p)}</div>
     </article>
   `;
