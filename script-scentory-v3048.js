@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '3081';
+const DATA_VERSION = '3085';
 const BEST_SELLING_IDS = [
   'hawas-ice-freeze',
   'sanaya-by-junaid-edp',
@@ -463,9 +463,9 @@ function renderProductCardV3002(p) {
           </div>
         </div>
         <p class="product-reco">${escapeHtml(profile.recommendation)}</p>
-        <a class="details-link" href="${encodeURIComponent(p.id)}.html">View Details</a>
+        <div class="s85-card-links"><a class="details-link" href="${encodeURIComponent(p.id)}.html">View Details</a><button type="button" class="s85-compare-trigger" data-compare-id="${escapeHtml(p.id)}">+ Compare</button></div>
       </div>
-      <div class="quick-pick-head"><span>Quick Pick</span><small>Select a size, then add</small></div>
+      <div class="quick-pick-head"><span>Quick Pick</span><small>Tap a size to add it to My Picks</small></div>
       <div class="price-buttons four-row quick-pick-grid">${renderPriceTiles(p)}</div>
     </article>
   `;
