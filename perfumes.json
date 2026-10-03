@@ -114,27 +114,27 @@
     "status": "available",
     "sizes": {
       "3ml": {
-        "price": 260,
+        "price": 330,
         "available": true,
         "premium": false
       },
       "5ml": {
-        "price": 399,
+        "price": 499,
         "available": true,
         "premium": false
       },
       "6ml": {
-        "price": 490,
+        "price": 599,
         "available": true,
         "premium": true
       },
       "10ml": {
-        "price": 749,
+        "price": 940,
         "available": true,
         "premium": false
       },
       "15ml": {
-        "price": 1049,
+        "price": 1350,
         "available": true,
         "premium": false
       }
@@ -149,11 +149,11 @@
     ],
     "recommendation": "A warm spicy vanilla fragrance for dates, parties, dinners, weddings and cool-weather evenings.",
     "prices": {
-      "3 ML": 260,
-      "5 ML": 399,
-      "6 ML": 490,
-      "10 ML": 749,
-      "15 ML": 1049
+      "3 ML": 330,
+      "5 ML": 499,
+      "6 ML": 599,
+      "10 ML": 940,
+      "15 ML": 1350
     },
     "profile": {
       "schemaVersion": 2,
@@ -294,6 +294,111 @@
       "sources": [],
       "profileScope": "perfume",
       "overview": "A refreshing citrus, aromatic and musky perfume for office, university, casual outings, daytime dates and travel."
+    }
+  },
+  {
+    "id": "sanaya-40-by-junaid-extrait",
+    "name": "Sanaya 40 by Junaid (Extrait Version)",
+    "status": "available",
+    "sizes": {
+      "3ml": {
+        "price": 270,
+        "available": true,
+        "premium": false
+      },
+      "5ml": {
+        "price": 399,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 480,
+        "available": true,
+        "premium": false
+      },
+      "10ml": {
+        "price": 730,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 1050,
+        "available": false,
+        "premium": false
+      }
+    },
+    "image": "sanaya-40-by-junaid-poster.png",
+    "tags": [
+      "Fresh",
+      "Citrus",
+      "Ginger",
+      "Musky",
+      "Unisex"
+    ],
+    "recommendation": "A higher-concentration Sanaya expression with a fresh bergamot-and-ginger opening, aromatic heart and musky-incense base.",
+    "prices": {
+      "3 ML": 270,
+      "5 ML": 399,
+      "6 ML": 480,
+      "10 ML": 730,
+      "15 ML": 1050
+    },
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "fresh",
+        "citrus",
+        "aromatic",
+        "musky",
+        "warm"
+      ],
+      "occasions": [
+        "daily",
+        "special occasion"
+      ],
+      "climates": [
+        "summer",
+        "winter",
+        "autumn"
+      ],
+      "strength": 4,
+      "projection": 4,
+      "longevity": 4,
+      "sweetness": 2,
+      "freshness": 4,
+      "warmth": 3,
+      "officeSafety": 4,
+      "heatSafety": 4,
+      "versatility": 4,
+      "evidence": "official-brand",
+      "reviewedAt": "2026-10-03",
+      "topPickEligible": true,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "official-brand",
+      "notes": {
+        "top": [
+          "Bergamot",
+          "Ginger"
+        ],
+        "heart": [
+          "Geranium",
+          "Ambergris"
+        ],
+        "base": [
+          "Musk",
+          "Incense"
+        ]
+      },
+      "performance": "Junaid positions Sanaya 40 as a higher-concentration version with stronger presence and a lasting trail; exact wear time varies by wearer, weather and spray count.",
+      "comparison": "Sanaya by Junaid",
+      "sourceNote": "Fragrance profile and notes are based on Junaid Perfumes official Sanaya 40 product information. Scentory prices and availability follow the supplied Final Applied Price List.",
+      "sources": [
+        "Junaid Perfumes official Sanaya 40 product page"
+      ],
+      "profileScope": "perfume",
+      "overview": "A richer, higher-concentration expression of Sanaya, opening with bergamot and ginger, moving through geranium and ambergris, and drying down to musk and incense."
     }
   },
   {
