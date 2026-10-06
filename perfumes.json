@@ -3549,7 +3549,7 @@
       },
       "10ml": {
         "price": 499,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
@@ -3916,31 +3916,31 @@
   {
     "id": "mancera-amberful-edp",
     "name": "Mancera Amberful EDP",
-    "status": "upcoming",
+    "status": "available",
     "sizes": {
       "3ml": {
-        "price": 360,
-        "available": false,
+        "price": 370,
+        "available": true,
         "premium": false
       },
       "5ml": {
         "price": 560,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "6ml": {
         "price": 670,
-        "available": false,
-        "premium": true
+        "available": true,
+        "premium": false
       },
       "10ml": {
-        "price": 1050,
-        "available": false,
+        "price": 1060,
+        "available": true,
         "premium": false
       },
       "15ml": {
-        "price": 1499,
-        "available": false,
+        "price": 1520,
+        "available": true,
         "premium": false
       }
     },
@@ -6358,7 +6358,7 @@
       },
       "15ml": {
         "price": 530,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -6437,7 +6437,7 @@
       },
       "10ml": {
         "price": 390,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
@@ -6696,7 +6696,7 @@
       },
       "15ml": {
         "price": 530,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -6780,7 +6780,7 @@
       },
       "15ml": {
         "price": 530,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -7109,7 +7109,7 @@
       },
       "15ml": {
         "price": 530,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
