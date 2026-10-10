@@ -12026,5 +12026,117 @@
       "profileScope": "perfume",
       "overview": "A fresh marine-citrus, sweet-woody perfume for hot-weather casual wear, active use and energetic evenings—not a dense traditional oud profile."
     }
+  },
+  {
+    "id": "amber-empire-by-french-avenue",
+    "name": "Amber Empire by French Avenue",
+    "status": "available",
+    "sizes": {
+      "5ml": {
+        "price": 309,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 380,
+        "available": true,
+        "premium": false
+      },
+      "10ml": {
+        "price": 570,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 790,
+        "available": false,
+        "premium": false
+      },
+      "30ml": {
+        "price": 1550,
+        "available": false,
+        "premium": false
+      }
+    },
+    "image": "amber-empire-by-french-avenue-poster.jpg",
+    "tags": [
+      "Woody",
+      "Vanilla",
+      "Warm"
+    ],
+    "recommendation": "See fragrance notes and available decant sizes.",
+    "prices": {
+      "5 ML": 309,
+      "6 ML": 380,
+      "10 ML": 570,
+      "15 ML": 790,
+      "30 ML": 1550
+    },
+    "details": {
+      "verification": "scentory-supplied",
+      "notes": {
+        "featured": [
+          "Woody notes",
+          "Vanilla"
+        ]
+      },
+      "sourceNote": "Featured notes based on the supplied SCENTORY poster. No performance claims verified."
+    }
+  },
+  {
+    "id": "jpg-le-male-le-parfum",
+    "name": "JPG Le Male Le Parfum",
+    "status": "available",
+    "sizes": {
+      "3ml": {
+        "price": 299,
+        "available": true,
+        "premium": false
+      },
+      "5ml": {
+        "price": 450,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 540,
+        "available": true,
+        "premium": false
+      },
+      "10ml": {
+        "price": 850,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 1199,
+        "available": true,
+        "premium": false
+      }
+    },
+    "image": "jpg-le-male-le-parfum-poster.jpg",
+    "tags": [
+      "Vanilla",
+      "Spicy",
+      "Warm"
+    ],
+    "recommendation": "See fragrance notes and available decant sizes.",
+    "prices": {
+      "3 ML": 299,
+      "5 ML": 450,
+      "6 ML": 540,
+      "10 ML": 850,
+      "15 ML": 1199
+    },
+    "details": {
+      "verification": "scentory-supplied",
+      "notes": {
+        "featured": [
+          "Vanilla",
+          "Cardamom"
+        ]
+      },
+      "sourceNote": "Featured notes based on the supplied SCENTORY poster. No performance claims verified."
+    }
   }
 ]
