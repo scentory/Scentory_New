@@ -1,5 +1,94 @@
 [
   {
+    "id": "amber-empire-by-french-avenue",
+    "name": "Amber Empire by French Avenue",
+    "status": "available",
+    "sizes": {
+      "5ml": {
+        "price": 309,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 380,
+        "available": true,
+        "premium": false
+      },
+      "10ml": {
+        "price": 570,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 790,
+        "available": false,
+        "premium": false
+      },
+      "30ml": {
+        "price": 1550,
+        "available": false,
+        "premium": false
+      }
+    },
+    "image": "amber-empire-by-french-avenue-poster.jpg",
+    "tags": [
+      "Amber",
+      "Vanilla",
+      "Woody",
+      "Winter",
+      "Date Night"
+    ],
+    "recommendation": "A rich amber-vanilla fragrance with liqueur sweetness, warm woods and a smooth musky finish, suited to cooler evenings and formal occasions.",
+    "prices": {
+      "5 ML": 309,
+      "6 ML": 380,
+      "10 ML": 570,
+      "15 ML": 790,
+      "30 ML": 1550
+    },
+    "details": {
+      "verification": "scentory-supplied",
+      "notes": {
+        "listed": [
+          "Vanilla",
+          "Liqueur",
+          "Amber",
+          "Sugar cane",
+          "Cashmere wood",
+          "Cedar",
+          "Tonka",
+          "Sandalwood",
+          "Musk",
+          "Labdanum"
+        ],
+        "featured": [
+          "Vanilla",
+          "Liqueur",
+          "Amber"
+        ]
+      },
+      "performance": "Approx. 8–10 hours on clothes (SCENTORY estimate; varies by conditions).",
+      "bestWear": "Winter evenings, date nights and formal dinners, especially in air-conditioned venues.",
+      "comparison": "Inspired by Clive Christian Blonde Amber (fragrance comparison, not official affiliation).",
+      "sourceNote": "SCENTORY supplied fragrance information; longevity is an estimate."
+    },
+    "profile": {
+      "character": [
+        "amber",
+        "warm",
+        "sweet"
+      ],
+      "occasions": [
+        "date",
+        "formal"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ]
+    }
+  },
+  {
     "id": "dior-sauvage-edt",
     "image": "dior-sauvage-edt-poster-v3062.jpg",
     "tags": [
@@ -201,6 +290,90 @@
       "sources": [],
       "profileScope": "perfume",
       "overview": "A warm spicy vanilla fragrance for dates, parties, dinners, weddings and cool-weather evenings."
+    }
+  },
+  {
+    "id": "jpg-le-male-le-parfum",
+    "name": "JPG Le Male Le Parfum",
+    "status": "available",
+    "sizes": {
+      "3ml": {
+        "price": 299,
+        "available": true,
+        "premium": false
+      },
+      "5ml": {
+        "price": 450,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 540,
+        "available": true,
+        "premium": false
+      },
+      "10ml": {
+        "price": 850,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 1199,
+        "available": true,
+        "premium": false
+      }
+    },
+    "image": "jpg-le-male-le-parfum-poster.jpg",
+    "tags": [
+      "Spicy",
+      "Vanilla",
+      "Amber",
+      "Winter",
+      "Date Night"
+    ],
+    "recommendation": "A warm, spicy vanilla fragrance with cardamom, lavender, iris and woody amber depth, suited to elegant evenings.",
+    "prices": {
+      "3 ML": 299,
+      "5 ML": 450,
+      "6 ML": 540,
+      "10 ML": 850,
+      "15 ML": 1199
+    },
+    "details": {
+      "verification": "scentory-supplied",
+      "notes": {
+        "listed": [
+          "Cardamom",
+          "Lavender",
+          "Iris",
+          "Vanilla",
+          "Woody amber warmth"
+        ],
+        "featured": [
+          "Cardamom",
+          "Lavender",
+          "Iris"
+        ]
+      },
+      "performance": "Approx. 9–10 hours on clothes (SCENTORY estimate; varies by conditions).",
+      "bestWear": "Date nights, evening dinners and weddings, especially in winter or air-conditioned settings.",
+      "comparison": "An original Jean Paul Gaultier designer fragrance; not a dupe.",
+      "sourceNote": "SCENTORY supplied fragrance information; longevity is an estimate."
+    },
+    "profile": {
+      "character": [
+        "spicy",
+        "warm",
+        "vanilla"
+      ],
+      "occasions": [
+        "date",
+        "formal"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ]
     }
   },
   {
@@ -12025,118 +12198,6 @@
       },
       "profileScope": "perfume",
       "overview": "A fresh marine-citrus, sweet-woody perfume for hot-weather casual wear, active use and energetic evenings—not a dense traditional oud profile."
-    }
-  },
-  {
-    "id": "amber-empire-by-french-avenue",
-    "name": "Amber Empire by French Avenue",
-    "status": "available",
-    "sizes": {
-      "5ml": {
-        "price": 309,
-        "available": true,
-        "premium": false
-      },
-      "6ml": {
-        "price": 380,
-        "available": true,
-        "premium": false
-      },
-      "10ml": {
-        "price": 570,
-        "available": true,
-        "premium": false
-      },
-      "15ml": {
-        "price": 790,
-        "available": false,
-        "premium": false
-      },
-      "30ml": {
-        "price": 1550,
-        "available": false,
-        "premium": false
-      }
-    },
-    "image": "amber-empire-by-french-avenue-poster.jpg",
-    "tags": [
-      "Woody",
-      "Vanilla",
-      "Warm"
-    ],
-    "recommendation": "See fragrance notes and available decant sizes.",
-    "prices": {
-      "5 ML": 309,
-      "6 ML": 380,
-      "10 ML": 570,
-      "15 ML": 790,
-      "30 ML": 1550
-    },
-    "details": {
-      "verification": "scentory-supplied",
-      "notes": {
-        "featured": [
-          "Woody notes",
-          "Vanilla"
-        ]
-      },
-      "sourceNote": "Featured notes based on the supplied SCENTORY poster. No performance claims verified."
-    }
-  },
-  {
-    "id": "jpg-le-male-le-parfum",
-    "name": "JPG Le Male Le Parfum",
-    "status": "available",
-    "sizes": {
-      "3ml": {
-        "price": 299,
-        "available": true,
-        "premium": false
-      },
-      "5ml": {
-        "price": 450,
-        "available": true,
-        "premium": false
-      },
-      "6ml": {
-        "price": 540,
-        "available": true,
-        "premium": false
-      },
-      "10ml": {
-        "price": 850,
-        "available": true,
-        "premium": false
-      },
-      "15ml": {
-        "price": 1199,
-        "available": true,
-        "premium": false
-      }
-    },
-    "image": "jpg-le-male-le-parfum-poster.jpg",
-    "tags": [
-      "Vanilla",
-      "Spicy",
-      "Warm"
-    ],
-    "recommendation": "See fragrance notes and available decant sizes.",
-    "prices": {
-      "3 ML": 299,
-      "5 ML": 450,
-      "6 ML": 540,
-      "10 ML": 850,
-      "15 ML": 1199
-    },
-    "details": {
-      "verification": "scentory-supplied",
-      "notes": {
-        "featured": [
-          "Vanilla",
-          "Cardamom"
-        ]
-      },
-      "sourceNote": "Featured notes based on the supplied SCENTORY poster. No performance claims verified."
     }
   }
 ]

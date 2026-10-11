@@ -444,31 +444,16 @@ function renderPriceTiles(p, extraClass = '') {
 }
 
 function renderProductCardV3002(p) {
-  const hasAvailable = productHasAvailableSize(p);
-  const upcoming = isUpcoming(p);
-  const profile = getScentProfile(p);
-  const statusText = upcoming ? 'Upcoming' : (hasAvailable ? 'Available' : 'Out of stock');
-  return `
-    <article id="perfume-${escapeHtml(p.id)}" data-perfume-id="${escapeHtml(p.id)}" class="product ${hasAvailable ? '' : 'sold-out'} ${upcoming ? 'upcoming-card' : ''}">
-      <a class="product-image-wrap" href="${encodeURIComponent(p.id)}.html" aria-label="Open ${escapeHtml(p.name)} product page">
-        <img class="product-image" ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
-      </a>
-      <div class="product-main">
-        <div class="product-head">
-          <h3><a href="${encodeURIComponent(p.id)}.html">${escapeHtml(p.name)}</a></h3>
-          <div class="tags">
-            <span class="tag ${upcoming ? 'upcoming' : (hasAvailable ? '' : 'out')}">${statusText}</span>
-            ${p._anniversaryActive ? window.ScentoryAnniversary?.badge(p) || '' : ''}
-            ${renderTagPills(p, 3)}
-          </div>
-        </div>
-        <p class="product-reco">${escapeHtml(profile.recommendation)}</p>
-        <div class="s85-card-links"><a class="details-link" href="${encodeURIComponent(p.id)}.html">View Details</a><button type="button" class="s85-compare-trigger" data-compare-id="${escapeHtml(p.id)}">+ Compare</button></div>
-      </div>
-      <div class="quick-pick-head"><span>Quick Pick</span><small>Tap a size to add it to My Picks</small></div>
-      <div class="price-buttons four-row quick-pick-grid">${renderPriceTiles(p)}</div>
-    </article>
-  `;
+  const available=Object.entries(p.sizes||{}).filter(([,s])=>s.available&&s.price!=null);
+  const min=available.length?Math.min(...available.map(([,s])=>Number(s.price))):null;
+  const notes=(p.details?.notes?.listed||p.details?.notes?.featured||p.tags||[]).slice(0,3).join(' · ');
+  const first=available[0]?.[0]||'';
+  const options=Object.entries(p.sizes||{}).map(([ml,s])=>`<option value="${escapeHtml(ml)}" ${!s.available||s.price==null?'disabled':''}>${escapeHtml(displayMl(ml))}${!s.available||s.price==null?' — Unavailable':''}</option>`).join('');
+  return `<article id="perfume-${escapeHtml(p.id)}" data-perfume-id="${escapeHtml(p.id)}" class="product v31-card ${available.length?'':'sold-out'}">
+    <a class="product-image-wrap" href="${encodeURIComponent(p.id)}.html" aria-label="View ${escapeHtml(p.name)}"><img class="product-image" ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async"></a>
+    <div class="product-main"><h3><a href="${encodeURIComponent(p.id)}.html">${escapeHtml(p.name)}</a></h3><p class="v31-notes">${escapeHtml(notes||'Perfume decant')}</p><strong class="v31-from">${min!=null?'From '+taka(min):'Currently unavailable'}</strong>
+    <div class="v31-quick" data-id="${escapeHtml(p.id)}"><label for="v31-${escapeHtml(p.id)}">Choose size</label><select id="v31-${escapeHtml(p.id)}" class="v31-size" data-id="${escapeHtml(p.id)}" ${available.length?'':'disabled'}><option value="">Select size</option>${options}</select><div class="v31-selection" aria-live="polite">Select a size to see price and sprays</div><button class="v31-add" type="button" data-id="${escapeHtml(p.id)}" disabled>Add to My Picks</button></div>
+    <div class="s85-card-links"><a class="details-link" href="${encodeURIComponent(p.id)}.html">View Details</a><button type="button" class="s85-compare-trigger" data-compare-id="${escapeHtml(p.id)}">+ Compare</button></div></div></article>`;
 }
 
 function openProductDetails(id) {
@@ -1599,3 +1584,20 @@ document.querySelectorAll('.quick-shop-chip').forEach(chip => chip.addEventListe
   renderProducts();
   document.getElementById('priceList')?.scrollIntoView({behavior:'smooth', block:'start'});
 }));
+
+// SCENTORY V3.1 — inline Quick Shop; reuses existing My Picks/cart implementation.
+document.addEventListener('change',function(e){
+ const select=e.target.closest('.v31-size');if(!select)return;
+ const p=perfumes.find(x=>x.id===select.dataset.id),item=p?.sizes?.[select.value];
+ const card=select.closest('.v31-quick'),label=card?.querySelector('.v31-selection'),add=card?.querySelector('.v31-add');
+ if(!item?.available||item.price==null){if(label)label.textContent='Select an available size';if(add)add.disabled=true;return}
+ const ml=parseInt(select.value,10);if(label)label.textContent=`${taka(item.price)} · Approx. ${ml*10}–${ml*15} sprays`;
+ if(add){add.disabled=false;add.dataset.ml=select.value;add.textContent=getCartItem(p.id,select.value)?'Remove from My Picks':'Add to My Picks'}
+});
+document.addEventListener('click',function(e){
+ const add=e.target.closest('.v31-add');if(!add||add.disabled)return;
+ const p=perfumes.find(x=>x.id===add.dataset.id),item=p?.sizes?.[add.dataset.ml];
+ if(!item?.available||item.price==null)return;
+ toggleCartItem(p.id,add.dataset.ml,add);
+ add.textContent=getCartItem(p.id,add.dataset.ml)?'Remove from My Picks':'Add to My Picks';
+});
