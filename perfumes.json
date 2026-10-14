@@ -1,94 +1,5 @@
 [
   {
-    "id": "amber-empire-by-french-avenue",
-    "name": "Amber Empire by French Avenue",
-    "status": "available",
-    "sizes": {
-      "5ml": {
-        "price": 309,
-        "available": true,
-        "premium": false
-      },
-      "6ml": {
-        "price": 380,
-        "available": true,
-        "premium": false
-      },
-      "10ml": {
-        "price": 570,
-        "available": true,
-        "premium": false
-      },
-      "15ml": {
-        "price": 790,
-        "available": false,
-        "premium": false
-      },
-      "30ml": {
-        "price": 1550,
-        "available": false,
-        "premium": false
-      }
-    },
-    "image": "amber-empire-by-french-avenue-poster.jpg",
-    "tags": [
-      "Amber",
-      "Vanilla",
-      "Woody",
-      "Winter",
-      "Date Night"
-    ],
-    "recommendation": "A rich amber-vanilla fragrance with liqueur sweetness, warm woods and a smooth musky finish, suited to cooler evenings and formal occasions.",
-    "prices": {
-      "5 ML": 309,
-      "6 ML": 380,
-      "10 ML": 570,
-      "15 ML": 790,
-      "30 ML": 1550
-    },
-    "details": {
-      "verification": "scentory-supplied",
-      "notes": {
-        "listed": [
-          "Vanilla",
-          "Liqueur",
-          "Amber",
-          "Sugar cane",
-          "Cashmere wood",
-          "Cedar",
-          "Tonka",
-          "Sandalwood",
-          "Musk",
-          "Labdanum"
-        ],
-        "featured": [
-          "Vanilla",
-          "Liqueur",
-          "Amber"
-        ]
-      },
-      "performance": "Approx. 8–10 hours on clothes (SCENTORY estimate; varies by conditions).",
-      "bestWear": "Winter evenings, date nights and formal dinners, especially in air-conditioned venues.",
-      "comparison": "Inspired by Clive Christian Blonde Amber (fragrance comparison, not official affiliation).",
-      "sourceNote": "SCENTORY supplied fragrance information; longevity is an estimate."
-    },
-    "profile": {
-      "character": [
-        "amber",
-        "warm",
-        "sweet"
-      ],
-      "occasions": [
-        "date",
-        "formal"
-      ],
-      "climates": [
-        "winter",
-        "ac"
-      ]
-    }
-  },
-  {
     "id": "dior-sauvage-edt",
     "image": "dior-sauvage-edt-poster-v3062.jpg",
     "tags": [
@@ -310,7 +221,7 @@
       "6ml": {
         "price": 540,
         "available": true,
-        "premium": false
+        "premium": true
       },
       "10ml": {
         "price": 850,
@@ -2785,6 +2696,97 @@
     }
   },
   {
+    "id": "ateeq-nusuk-by-lattafa",
+    "name": "Ateeq Nusuk by Riiffs",
+    "status": "available",
+    "sizes": {
+      "5ml": {
+        "price": 270,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 330,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 490,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 670,
+        "available": true,
+        "premium": false
+      }
+    },
+    "prices": {
+      "5 ML": 270,
+      "6 ML": 330,
+      "10 ML": 490,
+      "15 ML": 670
+    },
+    "image": "ateeq-nusuk-by-lattafa-poster.png",
+    "tags": [
+      "Honey",
+      "Cinnamon",
+      "Tobacco",
+      "Winter"
+    ],
+    "recommendation": "A dense honey-cinnamon and tobacco profile with a warm sweet woody base for cooler-weather wear.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "honey",
+        "cinnamon",
+        "tobacco",
+        "sweet",
+        "warm"
+      ],
+      "occasions": [
+        "date",
+        "party",
+        "formal"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ],
+      "strength": 5,
+      "projection": 5,
+      "longevity": 5,
+      "sweetness": 4,
+      "freshness": 2,
+      "warmth": 4,
+      "officeSafety": 2,
+      "heatSafety": 2,
+      "versatility": 3,
+      "evidence": "scentory-poster-plus-source-review",
+      "reviewedAt": "2026-09-30",
+      "topPickEligible": true,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "scentory-poster-plus-source-review",
+      "notes": {
+        "listed": [
+          "Honey",
+          "cinnamon"
+        ]
+      },
+      "performance": "Very long-lasting extrait-style wear is commonly reported; performance varies by wearer and application.",
+      "sourceNote": "Customer-facing accords follow the approved Scentory poster. Projection and perfume-profile overview were reviewed separately. Performance can vary by wearer, weather and spray count.",
+      "sources": [],
+      "profileScope": "perfume",
+      "overview": "A warm aromatic composition built around honey and cinnamon, with tobacco and lavender through the heart and a sweet tonka, cedar, musk and vanilla-orchid base.",
+      "bestToWear": "Dates, evening wear, formal occasions and special events",
+      "bestSeason": "Fall, winter and cool evenings",
+      "projectionText": "Strong to very strong",
+      "posterNotesText": "Honey and cinnamon — the two key accords highlighted on the approved Scentory poster."
+    }
+  },
+  {
     "id": "reef-33-edp",
     "name": "Reef 33 Mother's Day (Limited Edition)",
     "status": "available",
@@ -3393,7 +3395,7 @@
       },
       "15ml": {
         "price": 1170,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -6510,23 +6512,88 @@
     }
   },
   {
-    "id": "rayhaan-azul-edp",
-    "name": "Rayhaan Azul EDP",
+    "id": "rayhaan-vantage",
+    "name": "Rayhaan Vantage",
     "status": "available",
     "sizes": {
       "5ml": {
-        "price": 220,
+        "price": 259,
         "available": true,
         "premium": false
       },
       "6ml": {
-        "price": 270,
+        "price": 309,
         "available": true,
         "premium": true
       },
       "10ml": {
-        "price": 390,
+        "price": 449,
         "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 619,
+        "available": true,
+        "premium": false
+      },
+      "30ml": {
+        "price": 1150,
+        "available": true,
+        "premium": false
+      }
+    },
+    "image": "rayhaan-vantage-poster.jpg",
+    "tags": [
+      "Rayhaan",
+      "Vantage"
+    ],
+    "recommendation": "Explore Rayhaan Vantage in your preferred decant size.",
+    "prices": {
+      "5 ML": 259,
+      "6 ML": 309,
+      "10 ML": 449,
+      "15 ML": 619,
+      "30 ML": 1150
+    },
+    "details": {
+      "verification": "scentory-supplied-pricing",
+      "notes": {},
+      "performance": "Longevity has not been independently verified for this listing.",
+      "bestWear": "Explore based on your personal preference.",
+      "comparison": "No verified inspiration claim provided.",
+      "sourceNote": "SCENTORY supplied pricing and poster; fragrance notes and longevity have not been independently confirmed."
+    },
+    "profile": {
+      "character": [
+        "spicy",
+        "warm"
+      ],
+      "occasions": [
+        "casual"
+      ],
+      "climates": [
+        "ac"
+      ]
+    }
+  },
+  {
+    "id": "rayhaan-azul-edp",
+    "name": "Rayhaan Azul EDP",
+    "status": "unavailable",
+    "sizes": {
+      "5ml": {
+        "price": 220,
+        "available": false,
+        "premium": false
+      },
+      "6ml": {
+        "price": 270,
+        "available": false,
+        "premium": true
+      },
+      "10ml": {
+        "price": 390,
+        "available": false,
         "premium": false
       },
       "15ml": {
@@ -6610,12 +6677,12 @@
       },
       "10ml": {
         "price": 390,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "15ml": {
         "price": 530,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -7277,7 +7344,7 @@
       },
       "10ml": {
         "price": 390,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
@@ -9044,12 +9111,12 @@
       },
       "10ml": {
         "price": 590,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
         "price": 830,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -9308,6 +9375,95 @@
       "sourceNote": "Scentory catalogue guidance for this perfume. A reliable exact note pyramid has not been confirmed in the research collected for this update; no note stages or fixed wear time are asserted.",
       "comparison": "",
       "overview": "A new Scentory selection for fragrance discovery and everyday rotation."
+    }
+  },
+  {
+    "id": "amber-empire-by-french-avenue",
+    "name": "Amber Empire by French Avenue",
+    "status": "available",
+    "sizes": {
+      "5ml": {
+        "price": 309,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 380,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 570,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 790,
+        "available": false,
+        "premium": false
+      },
+      "30ml": {
+        "price": 1550,
+        "available": false,
+        "premium": false
+      }
+    },
+    "image": "amber-empire-by-french-avenue-poster.jpg",
+    "tags": [
+      "Amber",
+      "Vanilla",
+      "Woody",
+      "Winter",
+      "Date Night"
+    ],
+    "recommendation": "A rich amber-vanilla fragrance with liqueur sweetness, warm woods and a smooth musky finish, suited to cooler evenings and formal occasions.",
+    "prices": {
+      "5 ML": 309,
+      "6 ML": 380,
+      "10 ML": 570,
+      "15 ML": 790,
+      "30 ML": 1550
+    },
+    "details": {
+      "verification": "scentory-supplied",
+      "notes": {
+        "listed": [
+          "Vanilla",
+          "Liqueur",
+          "Amber",
+          "Sugar cane",
+          "Cashmere wood",
+          "Cedar",
+          "Tonka",
+          "Sandalwood",
+          "Musk",
+          "Labdanum"
+        ],
+        "featured": [
+          "Vanilla",
+          "Liqueur",
+          "Amber"
+        ]
+      },
+      "performance": "Approx. 8–10 hours on clothes (SCENTORY estimate; varies by conditions).",
+      "bestWear": "Winter evenings, date nights and formal dinners, especially in air-conditioned venues.",
+      "comparison": "Inspired by Clive Christian Blonde Amber (fragrance comparison, not official affiliation).",
+      "sourceNote": "SCENTORY supplied fragrance information; longevity is an estimate."
+    },
+    "profile": {
+      "character": [
+        "amber",
+        "warm",
+        "sweet"
+      ],
+      "occasions": [
+        "date",
+        "formal"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ]
     }
   },
   {
@@ -9838,7 +9994,7 @@
       },
       "15ml": {
         "price": 670,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -9913,97 +10069,6 @@
       "sourceNote": "Scentory supplied profile. Note information follows the linked product source; wear occasions and recommendation scores are Scentory catalogue guidance, not measured test results.",
       "profileScope": "perfume",
       "overview": "Best for summer and spring, daytime casual outings, beach trips, gym sessions, and office."
-    }
-  },
-  {
-    "id": "ateeq-nusuk-by-lattafa",
-    "name": "Ateeq Nusuk by Lattafa",
-    "status": "available",
-    "sizes": {
-      "5ml": {
-        "price": 270,
-        "available": true,
-        "premium": false
-      },
-      "6ml": {
-        "price": 330,
-        "available": true,
-        "premium": true
-      },
-      "10ml": {
-        "price": 490,
-        "available": true,
-        "premium": false
-      },
-      "15ml": {
-        "price": 670,
-        "available": true,
-        "premium": false
-      }
-    },
-    "prices": {
-      "5 ML": 270,
-      "6 ML": 330,
-      "10 ML": 490,
-      "15 ML": 670
-    },
-    "image": "ateeq-nusuk-by-lattafa-poster.png",
-    "tags": [
-      "Honey",
-      "Cinnamon",
-      "Tobacco",
-      "Winter"
-    ],
-    "recommendation": "A dense honey-cinnamon and tobacco profile with a warm sweet woody base for cooler-weather wear.",
-    "profile": {
-      "schemaVersion": 2,
-      "character": [
-        "honey",
-        "cinnamon",
-        "tobacco",
-        "sweet",
-        "warm"
-      ],
-      "occasions": [
-        "date",
-        "party",
-        "formal"
-      ],
-      "climates": [
-        "winter",
-        "ac"
-      ],
-      "strength": 5,
-      "projection": 5,
-      "longevity": 5,
-      "sweetness": 4,
-      "freshness": 2,
-      "warmth": 4,
-      "officeSafety": 2,
-      "heatSafety": 2,
-      "versatility": 3,
-      "evidence": "scentory-poster-plus-source-review",
-      "reviewedAt": "2026-09-30",
-      "topPickEligible": true,
-      "scope": "perfume"
-    },
-    "details": {
-      "verification": "scentory-poster-plus-source-review",
-      "notes": {
-        "listed": [
-          "Honey",
-          "cinnamon"
-        ]
-      },
-      "performance": "Very long-lasting extrait-style wear is commonly reported; performance varies by wearer and application.",
-      "sourceNote": "Customer-facing accords follow the approved Scentory poster. Projection and perfume-profile overview were reviewed separately. Performance can vary by wearer, weather and spray count.",
-      "sources": [],
-      "profileScope": "perfume",
-      "overview": "A warm aromatic composition built around honey and cinnamon, with tobacco and lavender through the heart and a sweet tonka, cedar, musk and vanilla-orchid base.",
-      "bestToWear": "Dates, evening wear, formal occasions and special events",
-      "bestSeason": "Fall, winter and cool evenings",
-      "projectionText": "Strong to very strong",
-      "posterNotesText": "Honey and cinnamon — the two key accords highlighted on the approved Scentory poster."
     }
   },
   {
@@ -10447,7 +10512,7 @@
       },
       "10ml": {
         "price": 360,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {

@@ -5,19 +5,24 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '3088';
+const DATA_VERSION = '3102';
 const BEST_SELLING_IDS = [
-  'hawas-ice-freeze',
   'sanaya-by-junaid-edp',
+  'dolce-gabbana-the-one-edp',
   'azzaro-the-most-wanted-parfum',
-  'bois-imperial-edp'
+  'hawas-ice-freeze',
+  'sanaya-40-by-junaid-extrait'
 ];
 
 const HOT_ARRIVAL_IDS = [
-  'hawas-ice-freeze',
-  'sanaya-by-junaid-edp',
+  'rayhaan-vantage',
+  'jpg-le-male-le-parfum',
+  'dolce-gabbana-the-one-edp',
+  'mancera-amberful-edp',
   'azzaro-the-most-wanted-parfum',
-  'bois-imperial-edp'
+  'hawas-lava-gold',
+  'spectre-ghost-by-french-avenue',
+  'hawas-thunder'
 ];
 
 
