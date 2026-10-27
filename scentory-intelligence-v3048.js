@@ -2,7 +2,7 @@
   'use strict';
 
   const toolNames = {
-    find: 'Scentory Match',
+    find: 'Find My Perfume',
     weather: 'Scentory Manual Weather Match',
     box: 'Build My Decant Box',
     similar: 'Similar Perfumes',
@@ -593,7 +593,7 @@
           <div class="discovery-field"><label for="findPricePreference">Within that budget, prefer</label>
             <select id="findPricePreference"><option value="balanced">Best overall balance</option><option value="premium">More premium choices</option><option value="value">Best value</option></select>
           </div>
-          <div class="discovery-form-actions"><button class="discovery-action" type="submit">Reveal My Scentory Matches</button></div>
+          <div class="discovery-form-actions"><button class="discovery-action" type="submit">Show My Perfume Matches</button></div>
         </form>
         <div id="findResults" class="discovery-results"></div>
       `
