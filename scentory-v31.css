@@ -19,3 +19,308 @@ body[data-page="product"] .spray-estimate{display:block;color:#aaa;font-style:no
 body[data-page="product"] .fact-row span{overflow-wrap:anywhere}
 @media(max-width:760px){.v31-review-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.v31-reviews{padding:12px 10px;margin:20px auto}.v31-card .product-main{padding:8px!important}.v31-card .v31-notes{font-size:.59rem}.v31-card .v31-from{font-size:.7rem}.v31-card .v31-selection{font-size:.57rem}.v31-card .v31-add{min-height:35px;font-size:.61rem}body[data-page="product"] h1{font-size:clamp(1.35rem,6vw,1.8rem)!important}body[data-page="product"] .product-size-btn{min-height:72px!important}}
 @media(prefers-reduced-motion:reduce){.trust-marquee__track{animation:none!important}}
+
+
+/* Scentory V34: porcelain white, charcoal type, deep green actions. */
+:root {
+  --bg:#f8f9f7; --bg2:#f2f5f1; --card:#fff; --card2:#f6f8f5;
+  --text:#1d2925; --muted:#55635e; --line:#dce4de; --line2:#cbd8cf;
+  --accent:#245e47; --accent2:#1d513d; --gold:#245e47;
+  --tile:#fff; --tile-selected:#e3f0e8; --dark:#1d2925;
+  --danger:#ad3939; --s85-gold:#245e47; --s85-line:#dce4de;
+  --anniv-gold:rgba(36,94,71,.16); --anniv-gold-soft:#e9f3ed;
+  --anniv-line:#dce4de; --shadow:0 10px 30px rgba(29,41,37,.05);
+  --soft-shadow:0 6px 20px rgba(29,41,37,.045);
+  color-scheme:light;
+}
+html { background:#f8f9f7!important; }
+body,body[data-page="product"] { background:#f8f9f7!important; color:#1d2925!important; }
+body { font-size:16px; }
+button,input,select,textarea { font-family:inherit; }
+:focus-visible { outline:2px solid #245e47!important; outline-offset:2px; }
+
+/* One calm header on every page. The existing white-on-black wordmark is inverted. */
+.topbar,.phead,body[data-page="product"] .phead {
+  background:#fff!important; border-bottom:1px solid #e1e8e2!important;
+  box-shadow:0 4px 18px rgba(24,49,36,.035)!important;
+}
+.site-logo,.phead .product-brand-center img { filter:invert(1)!important; }
+.site-nav a,.more-nav summary {
+  background:#fff!important; border:1px solid #e1e8e2!important;
+  color:#283a32!important; box-shadow:none!important;
+}
+.site-nav a:hover,.site-nav a:focus-visible,.more-nav summary:hover {
+  background:#edf4ee!important; border-color:#9cbdab!important;
+}
+.more-nav-menu { background:#fff!important; border:1px solid #dce4de!important;
+  box-shadow:0 15px 36px rgba(24,49,36,.12)!important; }
+.cart-pill,.product-cart-link {
+  background:#e9f3ec!important; color:#1d513d!important;
+  border:1px solid #b7d4c0!important; box-shadow:none!important;
+}
+.cart-pill svg,.product-cart-link svg { stroke:currentColor!important; }
+.product-cart-link [data-cart-count] { background:#245e47!important; color:#fff!important; }
+.top-search-input,.product-global-search input {
+  background:#f6f8f6!important; border:1px solid #cad8ce!important;
+  color:#1d2925!important; box-shadow:none!important;
+}
+.top-search-input::placeholder,.product-global-search input::placeholder { color:#64736b!important; }
+.product-global-search::before { border-color:#64736b!important; }
+.product-global-search::after { background:#64736b!important; }
+.search-suggestions,.product-global-search .search-suggestions {
+  background:#fff!important; color:#1d2925!important;
+  border:1px solid #dce4de!important; box-shadow:0 18px 45px rgba(24,49,36,.16)!important;
+}
+.search-suggestion,.product-global-search .search-suggestion { color:#1d2925!important; }
+.search-suggestion:hover,.product-global-search .search-suggestion:hover { background:#edf4ee!important; }
+.search-suggestion small,.product-global-search .search-suggestion small { color:#5d6b63!important; }
+.search-suggestion em,.product-global-search .search-suggestion em { color:#245e47!important; }
+
+/* The established Scentory headline stays prominent, with the photo alongside it. */
+.hero { min-height:0!important; background:#fff!important; border-bottom:1px solid #e5ebe6!important; }
+.hero::before {
+  display:block!important; inset:22px 4% 22px auto!important;
+  width:43%!important; height:auto!important; border-radius:18px!important;
+  background:url("hero-scentory-main-desktop.webp?v=3070") center / cover no-repeat!important;
+  filter:none!important; transform:none!important; opacity:1!important;
+}
+.hero::after { display:none!important; }
+.hero-inner {
+  max-width:1180px!important; min-height:355px!important;
+  padding:55px 49% 50px 22px!important; text-align:left!important;
+}
+.hero .eyebrow,.eyebrow {
+  color:#245e47!important; border:1px solid #c8dccd!important;
+  background:#eef5ef!important; box-shadow:none!important;
+}
+.hero h1 { color:#1d2925!important; text-shadow:none!important;
+  font-size:clamp(2.15rem,4.3vw,3.65rem)!important; line-height:1.08!important;
+  letter-spacing:-.047em; margin:15px 0 13px!important; }
+.hero p { color:#53635a!important; margin:0!important; font-size:1rem!important; }
+.hero-actions { justify-content:flex-start!important; gap:9px!important; margin-top:22px!important; }
+.btn,.btn.primary,.btn.dark,.floating-cart,.discovery-action,.policy-continue {
+  background:#245e47!important; color:#fff!important; border:1px solid #245e47!important;
+  box-shadow:none!important; text-shadow:none!important;
+}
+.btn.ghost,.btn.ghost:visited,.discovery-action.secondary {
+  background:#fff!important; color:#245e47!important; border:1px solid #a4c2ad!important;
+}
+.btn:hover,.discovery-action:hover { filter:brightness(.95); }
+.count-badge,.hot-arrivals-tab {
+  background:#e9f3ec!important; color:#245e47!important; box-shadow:none!important;
+}
+.trust-marquee { background:#eaf2eb!important; color:#245e47!important;
+  border-color:#dae6dc!important; box-shadow:none!important; }
+.trust-marquee__track,.trust-marquee__track span {
+  color:#245e47!important; text-shadow:none!important;
+}
+.trust-marquee__track span::after { color:#8eaa97!important; }
+
+/* Clear, compact product discovery. */
+.layout,.brand-showcase,.info-section,.about-section,.faq-section,.contact-section { color:#1d2925; }
+.shop-page-intro,.discovery-refiner,.toolbar,
+.hot-arrivals-section,.best-selling-section,.product,.order-card,
+.decant-copy,.decant-photo-card,.reviews-section,.brand-showcase-card,
+.discovery-studio,.discovery-tool-card,.review-card,.steps-grid article,
+.faq-grid details,.about-section>div:first-child,.about-stat-card {
+  background:#fff!important; background-image:none!important;
+  color:#1d2925!important; border:1px solid #e0e7e1!important;
+  box-shadow:0 6px 22px rgba(24,49,36,.045)!important;
+}
+.product::before,.product::after,.order-card::after,.decant-photo-card::after,
+.brand-showcase-card::after { display:none!important; }
+.shop-page-intro,.discovery-refiner { padding:17px 20px!important; border-radius:16px!important; }
+.shop-page-intro h1 { color:#1d2925!important; font-size:clamp(1.75rem,3vw,2.6rem)!important; }
+.shop-page-intro p,.refine-title>span,.refine-summary { color:#53635a!important; }
+.refine-kicker,.refine-title strong,.refine-field>span { color:#245e47!important; }
+.refine-field select,.refine-reset,.toolbar select,input,select,textarea {
+  color:#1d2925!important; background:#fff!important; border-color:#cbd8cf!important;
+}
+.refine-reset { color:#245e47!important; background:#edf4ee!important; }
+.quick-shop-chip { background:#fff!important; border-color:#d4dfd6!important; color:#34463b!important; }
+.quick-shop-chip.active { background:#245e47!important; color:#fff!important;
+  border-color:#245e47!important; }
+.hot-arrivals-head h2,.section-title h2,.decant-copy h2,
+.brand-showcase-card h2,.info-section h2,.about-section h2,
+.faq-section h2,.contact-section h2,.discovery-studio-head h2 { color:#1d2925!important; }
+.section-title p,.hot-arrivals-head p,.decant-copy p,.reviews-section p,
+.brand-showcase-card p,.info-section p,.about-section p,.faq-section p,
+.contact-section p,.discovery-studio-head p,.profile-overview { color:#5a6860!important; }
+.hot-arrival-card,.best-seller-card,.brand-feature-grid div,.decant-list li {
+  background:#fff!important; background-image:none!important; color:#1d2925!important;
+  border:1px solid #dce4de!important; box-shadow:none!important;
+}
+.hot-arrival-card:hover,.best-seller-card:hover { background:#f6faf6!important; border-color:#9cbdab!important; }
+.hot-arrival-copy b,.best-seller-copy b { color:#1d2925!important; }
+.hot-arrival-copy small,.best-seller-copy small,.brand-feature-grid span,
+.decant-list span,.about-stat-card span { color:#5a6860!important; }
+.hot-arrival-badge,.decant-list strong,.steps-grid article span {
+  background:#e8f2ea!important; color:#245e47!important; box-shadow:none!important;
+}
+.product,.product.upcoming-card { border-radius:12px!important; }
+.product-image-wrap,body[data-page="shop"] #productGrid .product-image-wrap {
+  background:#f5f7f4!important; border-color:#e0e7e1!important; box-shadow:none!important;
+}
+.product h3,.product h3 a,.product h3 a:link,.product h3 a:visited,
+.product h3 a:hover,.product h3 a:active { color:#1d2925!important; }
+.product-reco,.v31-card .v31-notes { color:#5a6860!important; }
+.v31-card .v31-from { color:#1d2925!important; }
+.tag { color:#285b44!important; background:#eaf2ec!important; border-color:#d6e5d9!important; }
+.tag.out { color:#a03e3e!important; background:#fff0f0!important; }
+.tag.upcoming { color:#245e47!important; }
+.v31-card .v31-quick label,.v31-card .v31-selection { color:#56685b!important; }
+.v31-card .v31-size,.price-tile,.quick-pick-grid .price-tile {
+  background:#fff!important; color:#1d2925!important; border:1px solid #cbd8cf!important;
+  box-shadow:none!important;
+}
+.price-tile:not(.disabled):hover { background:#f0f7f1!important; border-color:#9cbdab!important; }
+.price-tile.selected,.quick-pick-grid .price-tile.selected {
+  background:#e5f2e9!important; color:#154d35!important; border-color:#245e47!important;
+  box-shadow:inset 0 0 0 1px #245e47!important;
+}
+.price-tile.disabled { color:#657269!important; background:#f3f5f2!important; }
+.v31-card .v31-add { background:#245e47!important; color:#fff!important;
+  border:1px solid #245e47!important; }
+.v31-card .v31-add:disabled { background:#c9d2cb!important; color:#3b4940!important; opacity:1!important; }
+.s85-card-links a,.details-link,.details-link:link,.details-link:visited,
+.details-link:hover,.details-link:active,.v31-card .s85-compare-trigger,
+.s85-compare-trigger { color:#245e47!important; }
+.s85-compare-trigger { background:#fff!important; border-color:#bdd3c2!important; }
+
+/* Orders and supporting information. */
+.order-item,.qty-controls button,.review-card,.faq-grid details {
+  background:#fff!important; color:#1d2925!important; border-color:#dce4de!important;
+}
+.order-item-copy small,.small-note,.fine,.profile-source-note { color:#59685f!important; }
+.total-row { border-color:#dce4de!important; }
+.field-error-message { color:#a02f2f!important; }
+.order-form-error { background:#fff2f1!important; border-color:#d79591!important; }
+footer { background:#f3f6f2!important; color:#526159!important; border-color:#dce4de!important; }
+.footer-link { color:#245e47!important; border-color:#a4c2ad!important; }
+.houses-section { background:#fff!important; border:1px solid #e0e7e1!important;
+  box-shadow:none!important; }
+.houses-head h2 { color:#1d2925!important; }
+.houses-head p,.brand-disclaimer,.brand-disclaimer strong { color:#53635a!important; }
+.brand-logo-card,body .brand-logo-card {
+  background:#f7f9f6!important; border:1px solid #dce4de!important; box-shadow:none!important;
+}
+.brand-logo-card span,.brand-logo-card .brand-wordmark-fallback { color:#31463a!important; }
+.brand-logo-card img,.brand-logo-card .verified-brand-logo {
+  filter:grayscale(1) brightness(.42)!important; opacity:1!important;
+}
+
+/* Tools, product previews, compare, and policy use the same light surfaces. */
+.discovery-studio,.discovery-modal-card,.product-modal-card,.order-policy-card,
+.s85-compare-card,.s85-compare-head,.s85-label,.s85-hero {
+  background:#fff!important; background-image:none!important; color:#1d2925!important;
+  border-color:#dce4de!important; box-shadow:0 12px 38px rgba(24,49,36,.12)!important;
+}
+.discovery-tool-card,.discovery-result-card,.discovery-box-item,.cost-wear-stat,
+.similarity-method,.similarity-source,.collection-stat-grid article,
+.collection-insight,.layering-card,.meter-card,.meter-balance,.meter-guidance,
+.verified-perfume-details,.profile-fact,.s85-cell {
+  background:#fff!important; color:#1d2925!important; border-color:#dce4de!important;
+}
+.discovery-tool-number,.discovery-tool-kicker,.discovery-tool-card em,
+.discovery-studio-mark,.order-policy-kicker { color:#245e47!important; }
+.discovery-tool-card strong,.discovery-result-copy h4,.discovery-tool-shell h2,
+.s85-hero b,.s85-price strong { color:#1d2925!important; }
+.discovery-tool-card small,.discovery-tool-lead,.discovery-guidance-note,
+.discovery-result-copy p,.discovery-disclaimer,.profile-fact span,
+.verified-perfume-details>p,.similarity-method span,.similarity-source div span,
+.layering-card dd,.layering-card>p,.meter-row>span,.meter-balance p,
+.meter-guidance span,.collection-insight p { color:#56665d!important; }
+.discovery-field label,.policy-accept-row,.order-policy-card p { color:#34463b!important; }
+.discovery-field input,.discovery-field select { background:#fff!important; color:#1d2925!important;
+  border-color:#cbd8cf!important; }
+.discovery-modal-close,.product-modal-close,.order-policy-close,.s85-compare-close,
+.s85-size-tabs button,.s85-add,.discovery-mini-action {
+  background:#fff!important; color:#245e47!important; border-color:#bdd3c2!important;
+}
+.s85-size-tabs button.active,.s85-comparebar .primary,.discovery-mini-action.primary {
+  background:#245e47!important; color:#fff!important; border-color:#245e47!important;
+}
+.s85-comparebar { background:#fff!important; color:#1d2925!important; border-color:#dce4de!important; }
+.s85-comparebar span,.s85-cell { color:#34463b!important; }
+.s85-comparebar button { background:#fff!important; color:#245e47!important; border-color:#bdd3c2!important; }
+.order-policy-card .advance-delivery-note { color:#245e47!important; }
+.policy-accept-row input { accent-color:#245e47!important; }
+.product-modal-copy p,.product-modal-copy h2 { color:#1d2925!important; }
+.liquid-cart-drop,.product-liquid-drop { background:linear-gradient(#81ad92,#245e47)!important;
+  box-shadow:0 0 12px rgba(36,94,71,.24)!important; }
+
+/* Individual perfume pages. */
+body[data-page="product"] .wrap { color:#1d2925!important; }
+body[data-page="product"] .photo,body[data-page="product"] .buy-block,
+body[data-page="product"] .facts,body[data-page="product"] .rec-card {
+  background:#fff!important; background-image:none!important; color:#1d2925!important;
+  border:1px solid #dce4de!important; box-shadow:0 5px 22px rgba(24,49,36,.05)!important;
+}
+body[data-page="product"] .crumb,body[data-page="product"] .status,
+body[data-page="product"] .fact-row b { color:#245e47!important; }
+body[data-page="product"] .status { background:#e9f3ec!important; border-color:#bed9c6!important; }
+body[data-page="product"] h1,body[data-page="product"] h2,
+body[data-page="product"] .rec-card h3 { color:#1d2925!important; }
+body[data-page="product"] article>p,body[data-page="product"] .buy-block>p,
+body[data-page="product"] .fact-row span,body[data-page="product"] .recommend-sub,
+body[data-page="product"] .rec-card small,body[data-page="product"] .fine,
+body[data-page="product"] .spray-estimate {
+  color:#56665d!important;
+}
+body[data-page="product"] .chips span { background:#eaf2ec!important; border-color:#d6e5d9!important;
+  color:#245e47!important; }
+body[data-page="product"] .product-size-btn { background:#fff!important; color:#1d2925!important;
+  border-color:#cbd8cf!important; }
+body[data-page="product"] .product-size-btn strong,
+body[data-page="product"] .rec-card strong { color:#245e47!important; }
+body[data-page="product"] .product-size-btn.selected { background:#e5f2e9!important; border-color:#245e47!important; }
+body[data-page="product"] .product-size-btn small { color:#59685f!important; }
+body[data-page="product"] .product-size-btn.disabled { background:#f3f5f2!important; }
+body[data-page="product"] .fact-row { border-color:#e4ebe5!important; }
+body[data-page="product"] .btn.ghost { color:#245e47!important; background:#fff!important; }
+body[data-page="product"] .s85-product-compare { background:#fff!important; color:#245e47!important;
+  border-color:#bdd3c2!important; }
+
+/* The bottom navigation replaces the dark glass and gold glow from V31. */
+@media(max-width:760px) {
+  .scentory-liquid-dock {
+    background:#fff!important; border:1px solid #cbd8cf!important;
+    box-shadow:0 8px 30px rgba(24,49,36,.16)!important;
+    border-radius:20px!important;
+  }
+  .scentory-liquid-indicator { background:#e5f2e9!important; border:0!important; box-shadow:none!important; }
+  .scentory-dock-item { color:#4f6056!important; filter:none!important; }
+  .scentory-dock-item.active { color:#245e47!important; filter:none!important; }
+  .scentory-dock-item.active:after { background:#245e47!important; box-shadow:none!important; }
+  .scentory-dock-count { background:#245e47!important; color:#fff!important; box-shadow:none!important; }
+  .hero::before {
+    display:block!important; inset:auto 14px 16px!important; width:auto!important; height:174px!important;
+    background:url("hero-scentory-main-mobile.webp?v=3070") center / cover no-repeat!important;
+    border-radius:14px!important;
+  }
+  .hero-inner { max-width:580px!important; min-height:0!important;
+    padding:27px 16px 207px!important; }
+  .hero h1 { font-size:clamp(1.9rem,7.7vw,2.45rem)!important; line-height:1.08!important; }
+  .hero p { font-size:.93rem!important; }
+  .hero-actions .btn { font-size:.8rem!important; min-height:40px!important; }
+  .v31-card .v31-notes { font-size:.72rem!important; line-height:1.3!important; }
+  .v31-card .v31-from { font-size:.8rem!important; }
+  .v31-card .v31-quick label,.v31-card .v31-selection { font-size:.7rem!important; }
+  .v31-card .v31-size { font-size:.75rem!important; }
+  .v31-card .v31-add { font-size:.75rem!important; min-height:38px!important; }
+  #productGrid .product,body[data-page="shop"] #productGrid .product {
+    background:#fff!important; border:1px solid #dce4de!important; color:#1d2925!important;
+  }
+  #productGrid .product-main { padding:10px!important; }
+  #productGrid .product h3 { font-size:.82rem!important; }
+  #productGrid .details-link { font-size:.7rem!important; }
+  #productGrid .s85-compare-trigger { font-size:.68rem!important; }
+  body[data-page="product"] .photo,body[data-page="product"] .buy-block,
+  body[data-page="product"] .facts { background:#fff!important; }
+  body[data-page="product"] .product-size-btn .spray-estimate { font-size:.61rem!important; }
+  body[data-page="product"] .rec-card { background:#fff!important; }
+}
+@media(max-width:370px) {
+  .hero h1 { font-size:1.84rem!important; }
+  .scentory-dock-item { font-size:8px!important; }
+}

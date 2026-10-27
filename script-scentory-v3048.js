@@ -629,7 +629,7 @@ function injectCatalogueStructuredData() {
   node.textContent = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Scentory — 140+ perfume choices in Bangladesh',
+    name: 'Scentory — 150+ perfume choices in Bangladesh',
     itemListElement: itemList
   });
   document.head.appendChild(node);
@@ -795,7 +795,7 @@ function renderHotArrivals() {
     .filter(p => p && productHasAvailableSize(p) && !isUpcoming(p));
 
   if (!items.length) {
-    hotArrivalsGrid.innerHTML = '<p class="order-items empty">No hot arrivals found.</p>';
+    hotArrivalsGrid.innerHTML = '<p class="order-items empty">No new arrivals found.</p>';
     return;
   }
 
