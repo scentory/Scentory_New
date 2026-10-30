@@ -1,7 +1,7 @@
 [
   {
     "id": "club-de-nuit-elite",
-    "image": "club-de-nuit-elite-poster.png",
+    "image": "club-de-nuit-elite-poster-v41.png",
     "tags": [
       "Fresh",
       "Citrus",
@@ -43,8 +43,8 @@
           "Bergamot"
         ]
       },
-      "performance": "Performance guidance is not yet verified; wear time and projection vary by wearer.",
-      "sourceNote": "Featured notes supplied by Scentory. Full note structure is under review.",
+      "performance": "No independently verified wear-time estimate is available.",
+      "sourceNote": "Green Tea and Bergamot were supplied by Scentory. Exact wear time and comparison claims on the supplied poster are unverified.",
       "overview": "Club de Nuit Élite is upcoming at Scentory. Explore its fresh green tea and bergamot character."
     },
     "name": "Club de Nuit Élite",
@@ -52,11 +52,6 @@
     "sizes": {
       "3ml": {
         "price": 280,
-        "available": true,
-        "premium": false
-      },
-      "5ml": {
-        "price": 399,
         "available": true,
         "premium": false
       },
@@ -78,7 +73,6 @@
     },
     "prices": {
       "3 ML": 280,
-      "5 ML": 399,
       "6 ML": 510,
       "10 ML": 790,
       "15 ML": 1120
@@ -164,11 +158,6 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 660,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 830,
         "available": true,
@@ -187,10 +176,115 @@
     },
     "prices": {
       "3 ML": 430,
-      "5 ML": 660,
       "6 ML": 830,
       "10 ML": 1320,
       "15 ML": 1920
+    }
+  },
+  {
+    "id": "valentino-uomo-born-in-roma-coral-fantasy",
+    "name": "Valentino Uomo Born in Roma Coral Fantasy",
+    "image": "valentino-uomo-born-in-roma-coral-fantasy-poster.jpg",
+    "tags": [
+      "Perfume"
+    ],
+    "recommendation": "Coming soon to Scentory. Detailed perfume profile is being verified.",
+    "status": "upcoming",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [],
+      "occasions": [],
+      "climates": [],
+      "topPickEligible": false,
+      "scope": "perfume",
+      "evidence": "pending"
+    },
+    "details": {
+      "verification": "pending-official-source",
+      "overview": "Valentino Uomo Born in Roma Coral Fantasy is coming soon to Scentory.",
+      "sourceNote": "Perfume notes and performance have not been independently confirmed.",
+      "performance": "No verified wear-time estimate is available."
+    },
+    "sizes": {
+      "3ml": {
+        "price": 445,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 829,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 1320,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 1920,
+        "available": false,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 445,
+      "6 ML": 829,
+      "10 ML": 1320,
+      "15 ML": 1920
+    }
+  },
+  {
+    "id": "good-girl-by-carolina-herrera",
+    "name": "Good Girl by Carolina Herrera",
+    "image": "good-girl-by-carolina-herrera-poster.jpg",
+    "tags": [
+      "Perfume"
+    ],
+    "recommendation": "Coming soon to Scentory. Detailed perfume profile is being verified.",
+    "status": "upcoming",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [],
+      "occasions": [],
+      "climates": [],
+      "topPickEligible": false,
+      "scope": "perfume",
+      "evidence": "pending"
+    },
+    "details": {
+      "verification": "pending-official-source",
+      "overview": "Good Girl by Carolina Herrera is coming soon to Scentory.",
+      "sourceNote": "Perfume notes and performance have not been independently confirmed.",
+      "performance": "No verified wear-time estimate is available."
+    },
+    "sizes": {
+      "3ml": {
+        "price": 399,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 749,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 1189,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 1729,
+        "available": true,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 399,
+      "6 ML": 749,
+      "10 ML": 1189,
+      "15 ML": 1729
     }
   },
   {
@@ -200,11 +294,6 @@
     "sizes": {
       "3ml": {
         "price": 350,
-        "available": true,
-        "premium": false
-      },
-      "5ml": {
-        "price": 530,
         "available": true,
         "premium": false
       },
@@ -235,7 +324,6 @@
     "recommendation": "A warm spicy vanilla fragrance for dates, parties, dinners, weddings and cool-weather evenings.",
     "prices": {
       "3 ML": 350,
-      "5 ML": 530,
       "6 ML": 670,
       "10 ML": 1060,
       "15 ML": 1530
@@ -298,11 +386,6 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 460,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 580,
         "available": true,
@@ -330,7 +413,6 @@
     "recommendation": "A warm, spicy vanilla fragrance with cardamom, lavender, iris and woody amber depth, suited to elegant evenings.",
     "prices": {
       "3 ML": 310,
-      "5 ML": 460,
       "6 ML": 580,
       "10 ML": 900,
       "15 ML": 1290
@@ -377,8 +459,8 @@
     "name": "Sanaya by Junaid EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 290,
+      "3ml": {
+        "price": 210,
         "available": true,
         "premium": false
       },
@@ -408,7 +490,7 @@
     ],
     "recommendation": "A refreshing citrus, aromatic and musky perfume for office, university, casual outings, daytime dates and travel.",
     "prices": {
-      "5 ML": 290,
+      "3 ML": 210,
       "6 ML": 370,
       "10 ML": 550,
       "15 ML": 750
@@ -475,15 +557,10 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 410,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 520,
         "available": true,
-        "premium": false
+        "premium": true
       },
       "10ml": {
         "price": 810,
@@ -507,7 +584,6 @@
     "recommendation": "A higher-concentration Sanaya expression with a fresh bergamot-and-ginger opening, aromatic heart and musky-incense base.",
     "prices": {
       "3 ML": 280,
-      "5 ML": 410,
       "6 ML": 520,
       "10 ML": 810,
       "15 ML": 1160
@@ -575,8 +651,8 @@
     "name": "Mykonos Inception (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 350,
+      "3ml": {
+        "price": 240,
         "available": true,
         "premium": false
       },
@@ -605,7 +681,7 @@
     ],
     "recommendation": "A citrus, ginger and tea perfume for office, university, daytime dates, casual outings and travel.",
     "prices": {
-      "5 ML": 350,
+      "3 ML": 240,
       "6 ML": 440,
       "10 ML": 670,
       "15 ML": 940
@@ -675,8 +751,8 @@
     "name": "Mykonos Dreamscape EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 350,
+      "3ml": {
+        "price": 240,
         "available": true,
         "premium": false
       },
@@ -705,7 +781,7 @@
     ],
     "recommendation": "A mango, citrus and warm spice perfume for summer outings, beaches, vacations, daytime dates and casual hangouts.",
     "prices": {
-      "5 ML": 350,
+      "3 ML": 240,
       "6 ML": 440,
       "10 ML": 670,
       "15 ML": 940
@@ -776,8 +852,8 @@
     "name": "Hawas Ice Freeze",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 300,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -807,7 +883,7 @@
     ],
     "recommendation": "A crisp citrus, mint and ginger fragrance for hot days, office and casual outings.",
     "prices": {
-      "5 ML": 300,
+      "3 ML": 220,
       "6 ML": 390,
       "10 ML": 580,
       "15 ML": 800
@@ -872,8 +948,8 @@
     "name": "Hawas For Him EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 260,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -901,7 +977,7 @@
     ],
     "recommendation": "Best for summer/spring, casual day outs, beach days, errands, and hanging out.",
     "prices": {
-      "5 ML": 260,
+      "3 ML": 190,
       "6 ML": 330,
       "10 ML": 490,
       "15 ML": 660
@@ -980,8 +1056,8 @@
     "name": "Hawas Thunder",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 310,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -1002,7 +1078,7 @@
       }
     },
     "prices": {
-      "5 ML": 310,
+      "3 ML": 220,
       "6 ML": 400,
       "10 ML": 600,
       "15 ML": 830
@@ -1072,8 +1148,8 @@
     "name": "Hawas Lava Gold",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 300,
+      "3ml": {
+        "price": 210,
         "available": true,
         "premium": false
       },
@@ -1094,7 +1170,7 @@
       }
     },
     "prices": {
-      "5 ML": 300,
+      "3 ML": 210,
       "6 ML": 380,
       "10 ML": 570,
       "15 ML": 780
@@ -1163,8 +1239,8 @@
     "name": "Hawas Ice EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 200,
         "available": true,
         "premium": false
       },
@@ -1192,7 +1268,7 @@
     ],
     "recommendation": "Best for clean fresh summer use, gym, daytime casual outings, and office.",
     "prices": {
-      "5 ML": 270,
+      "3 ML": 200,
       "6 ML": 350,
       "10 ML": 510,
       "15 ML": 700
@@ -1272,8 +1348,8 @@
     "name": "Hawas Black EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 200,
         "available": true,
         "premium": false
       },
@@ -1301,7 +1377,7 @@
     ],
     "recommendation": "A bold fresh-dark style for office, evening plans, and confident daily wear.",
     "prices": {
-      "5 ML": 270,
+      "3 ML": 200,
       "6 ML": 350,
       "10 ML": 510,
       "15 ML": 700
@@ -1353,8 +1429,8 @@
     "name": "Hawas Tropical EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 280,
+      "3ml": {
+        "price": 200,
         "available": true,
         "premium": false
       },
@@ -1384,7 +1460,7 @@
     ],
     "recommendation": "A tropical fresh perfume for beach days, vacations, casual outings and daytime dates.",
     "prices": {
-      "5 ML": 280,
+      "3 ML": 200,
       "6 ML": 350,
       "10 ML": 530,
       "15 ML": 720
@@ -1448,8 +1524,8 @@
     "name": "Hawas Chrome EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 300,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -1477,7 +1553,7 @@
     ],
     "recommendation": "Best for summer, casual outings, university, beach trips, day hangouts, evening plans, and AC environments.",
     "prices": {
-      "5 ML": 300,
+      "3 ML": 220,
       "6 ML": 390,
       "10 ML": 580,
       "15 ML": 800
@@ -1531,8 +1607,8 @@
     "name": "Hawas La Mer EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 300,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -1562,7 +1638,7 @@
     ],
     "recommendation": "Fresh ocean-inspired daily wear for office, daytime travel, casual outings, and warm weather.",
     "prices": {
-      "5 ML": 300,
+      "3 ML": 220,
       "6 ML": 390,
       "10 ML": 580,
       "15 ML": 800
@@ -1622,8 +1698,8 @@
     "recommendation": "Currently out of stock. Profile details will be expanded when verified product information is available.",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 300,
+      "3ml": {
+        "price": 220,
         "available": false,
         "premium": false
       },
@@ -1644,7 +1720,7 @@
       }
     },
     "prices": {
-      "5 ML": 300,
+      "3 ML": 220,
       "6 ML": 390,
       "10 ML": 580,
       "15 ML": 800
@@ -1694,8 +1770,8 @@
     "name": "Hawas Majestic EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 320,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -1723,7 +1799,7 @@
     ],
     "recommendation": "Best for dates, parties, evening outings, and special occasions.",
     "prices": {
-      "5 ML": 320,
+      "3 ML": 220,
       "6 ML": 400,
       "10 ML": 610,
       "15 ML": 840
@@ -1774,8 +1850,8 @@
     "name": "Hawas Kobra (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 260,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -1803,7 +1879,7 @@
     ],
     "recommendation": "Best for office, university, gym, casual outings, summer/daytime, and clean daily use.",
     "prices": {
-      "5 ML": 260,
+      "3 ML": 190,
       "6 ML": 330,
       "10 ML": 490,
       "15 ML": 660
@@ -1862,8 +1938,8 @@
     "name": "Hawas Elixir EDP",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 200,
         "available": false,
         "premium": false
       },
@@ -1891,7 +1967,7 @@
     ],
     "recommendation": "Best for evening plans, dates, parties, and when you want a stronger impression.",
     "prices": {
-      "5 ML": 270,
+      "3 ML": 200,
       "6 ML": 350,
       "10 ML": 510,
       "15 ML": 700
@@ -1941,8 +2017,8 @@
     "name": "Hawas Fire EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 310,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -1970,7 +2046,7 @@
     ],
     "recommendation": "Best for fresh casual wear, warm weather, gym, and daytime plans.",
     "prices": {
-      "5 ML": 310,
+      "3 ML": 220,
       "6 ML": 390,
       "10 ML": 590,
       "15 ML": 810
@@ -2021,8 +2097,8 @@
     "name": "Shuhrah Boisée EDP",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 200,
         "available": false,
         "premium": false
       },
@@ -2050,7 +2126,7 @@
     ],
     "recommendation": "Best for evening wear, colder weather, formal occasions, and deeper perfume moods.",
     "prices": {
-      "5 ML": 270,
+      "3 ML": 200,
       "6 ML": 340,
       "10 ML": 510,
       "15 ML": 700
@@ -2103,8 +2179,8 @@
     "name": "Shuhrah Elixir EDP",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 200,
         "available": false,
         "premium": false
       },
@@ -2132,7 +2208,7 @@
     ],
     "recommendation": "Best for daily use, office, formal occasions, and day-to-night wear.",
     "prices": {
-      "5 ML": 270,
+      "3 ML": 200,
       "6 ML": 340,
       "10 ML": 510,
       "15 ML": 700
@@ -2188,8 +2264,8 @@
     "name": "Rasasi Fattan EDP",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 290,
+      "3ml": {
+        "price": 210,
         "available": false,
         "premium": false
       },
@@ -2217,7 +2293,7 @@
     ],
     "recommendation": "Best for office, university, business meetings, summer/daytime, and formal casual wear.",
     "prices": {
-      "5 ML": 290,
+      "3 ML": 210,
       "6 ML": 370,
       "10 ML": 550,
       "15 ML": 760
@@ -2274,8 +2350,8 @@
     "name": "Yusuf Bhai - Wulong Cha",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 410,
+      "3ml": {
+        "price": 280,
         "available": true,
         "premium": false
       },
@@ -2305,7 +2381,7 @@
     ],
     "recommendation": "Best for office, university, daytime outings, brunch, travel, and upscale casual wear, especially in spring and summer.",
     "prices": {
-      "5 ML": 410,
+      "3 ML": 280,
       "6 ML": 510,
       "10 ML": 790,
       "15 ML": 1130
@@ -2368,8 +2444,8 @@
     "recommendation": "Best for office, smart-casual wear, meetings, and a polished woody everyday signature.",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 320,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -2390,7 +2466,7 @@
       }
     },
     "prices": {
-      "5 ML": 320,
+      "3 ML": 220,
       "6 ML": 400,
       "10 ML": 610,
       "15 ML": 840
@@ -2455,8 +2531,8 @@
     "recommendation": "Best for office, university, clean daytime wear, and an easy everyday rotation.",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -2477,7 +2553,7 @@
       }
     },
     "prices": {
-      "5 ML": 270,
+      "3 ML": 190,
       "6 ML": 340,
       "10 ML": 500,
       "15 ML": 680
@@ -2542,8 +2618,8 @@
     "recommendation": "Best for fresh daytime wear, gym, office, university, travel, and warm-weather use.",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -2564,7 +2640,7 @@
       }
     },
     "prices": {
-      "5 ML": 270,
+      "3 ML": 190,
       "6 ML": 340,
       "10 ML": 500,
       "15 ML": 680
@@ -2622,8 +2698,8 @@
     "name": "Riiffs Fareed EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 250,
+      "3ml": {
+        "price": 180,
         "available": true,
         "premium": false
       },
@@ -2651,7 +2727,7 @@
     ],
     "recommendation": "Best for date nights, evening gatherings, and office wear.",
     "prices": {
-      "5 ML": 250,
+      "3 ML": 180,
       "6 ML": 310,
       "10 ML": 460,
       "15 ML": 620
@@ -2703,8 +2779,8 @@
     "name": "Riiffs Freeze EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 320,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -2732,7 +2808,7 @@
     ],
     "recommendation": "Best for office, university, casual outings, and summer days.",
     "prices": {
-      "5 ML": 320,
+      "3 ML": 220,
       "6 ML": 400,
       "10 ML": 610,
       "15 ML": 840
@@ -2785,8 +2861,8 @@
     "name": "Ateeq Nusuk by Riiffs",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 280,
+      "3ml": {
+        "price": 200,
         "available": true,
         "premium": false
       },
@@ -2807,7 +2883,7 @@
       }
     },
     "prices": {
-      "5 ML": 280,
+      "3 ML": 200,
       "6 ML": 360,
       "10 ML": 530,
       "15 ML": 730
@@ -2876,8 +2952,8 @@
     "name": "Reef 33 Mother's Day (Limited Edition)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 320,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -2905,7 +2981,7 @@
     ],
     "recommendation": "A new Scentory selection for fragrance discovery and everyday rotation.",
     "prices": {
-      "5 ML": 320,
+      "3 ML": 220,
       "6 ML": 400,
       "10 ML": 610,
       "15 ML": 840
@@ -2955,8 +3031,8 @@
     "name": "Thriller III - Maison X Cal Cologne",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 340,
+      "3ml": {
+        "price": 240,
         "available": true,
         "premium": false
       },
@@ -2984,7 +3060,7 @@
     ],
     "recommendation": "A new Scentory selection for fragrance discovery and everyday rotation.",
     "prices": {
-      "5 ML": 340,
+      "3 ML": 240,
       "6 ML": 430,
       "10 ML": 650,
       "15 ML": 900
@@ -3035,8 +3111,8 @@
     "name": "Vanguard by Maison Asrar",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 350,
+      "3ml": {
+        "price": 240,
         "available": false,
         "premium": false
       },
@@ -3064,7 +3140,7 @@
     ],
     "recommendation": "Best for office, formal events, and evening dates.",
     "prices": {
-      "5 ML": 350,
+      "3 ML": 240,
       "6 ML": 440,
       "10 ML": 670,
       "15 ML": 940
@@ -3141,8 +3217,8 @@
     "name": "Afnan Supremacy Collector's Edition EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 480,
+      "3ml": {
+        "price": 320,
         "available": true,
         "premium": false
       },
@@ -3170,7 +3246,7 @@
     ],
     "recommendation": "A versatile signature perfume for office, dates, formal events, and balanced year-round wear.",
     "prices": {
-      "5 ML": 480,
+      "3 ML": 320,
       "6 ML": 610,
       "10 ML": 950,
       "15 ML": 1370
@@ -3247,8 +3323,8 @@
     "name": "Afnan Supremacy Not Only Intense",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 350,
+      "3ml": {
+        "price": 250,
         "available": true,
         "premium": false
       },
@@ -3277,7 +3353,7 @@
     ],
     "recommendation": "A powerful fruity, mossy and woody signature for smart casual wear, events and outdoor occasions.",
     "prices": {
-      "5 ML": 350,
+      "3 ML": 250,
       "6 ML": 450,
       "10 ML": 680,
       "15 ML": 960
@@ -3358,8 +3434,8 @@
     "name": "Afnan Turathi Blue (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 340,
+      "3ml": {
+        "price": 240,
         "available": true,
         "premium": false
       },
@@ -3387,7 +3463,7 @@
     ],
     "recommendation": "Best for the office, high-heat summer days, and polished formal daytime wear.",
     "prices": {
-      "5 ML": 340,
+      "3 ML": 240,
       "6 ML": 430,
       "10 ML": 660,
       "15 ML": 920
@@ -3463,8 +3539,8 @@
     "name": "Afnan 9 PM Night Out EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 440,
+      "3ml": {
+        "price": 300,
         "available": true,
         "premium": false
       },
@@ -3493,7 +3569,7 @@
     ],
     "recommendation": "A bold fruity, spicy and woody night perfume for parties, dates and confident evening wear.",
     "prices": {
-      "5 ML": 440,
+      "3 ML": 300,
       "6 ML": 560,
       "10 ML": 870,
       "15 ML": 1250
@@ -3578,8 +3654,8 @@
     "name": "Afnan 9 PM EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 300,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -3608,7 +3684,7 @@
     ],
     "recommendation": "A sweet, warm-spicy evening perfume best suited to dates, parties and cooler or air-conditioned settings.",
     "prices": {
-      "5 ML": 300,
+      "3 ML": 220,
       "6 ML": 390,
       "10 ML": 580,
       "15 ML": 800
@@ -3686,8 +3762,8 @@
     "name": "Afnan 9 PM Rebel EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 360,
+      "3ml": {
+        "price": 250,
         "available": true,
         "premium": false
       },
@@ -3716,7 +3792,7 @@
     ],
     "recommendation": "A fruity, woody and ambery perfume that can move from daytime casual wear to dates and nights out.",
     "prices": {
-      "5 ML": 360,
+      "3 ML": 250,
       "6 ML": 460,
       "10 ML": 700,
       "15 ML": 980
@@ -3797,8 +3873,8 @@
     "name": "Afnan Modest Une (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 290,
+      "3ml": {
+        "price": 210,
         "available": true,
         "premium": false
       },
@@ -3826,7 +3902,7 @@
     ],
     "recommendation": "Upcoming at Scentory. A clean blue-style pick for daily wear, office, and casual use.",
     "prices": {
-      "5 ML": 290,
+      "3 ML": 210,
       "6 ML": 370,
       "10 ML": 550,
       "15 ML": 760
@@ -3912,11 +3988,6 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 480,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 610,
         "available": true,
@@ -3930,7 +4001,6 @@
     },
     "prices": {
       "3 ML": 320,
-      "5 ML": 480,
       "6 ML": 610,
       "10 ML": 950
     },
@@ -3985,11 +4055,6 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 710,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 890,
         "available": true,
@@ -4012,7 +4077,6 @@
     "recommendation": "A rich sweet warm-spicy perfume for date nights, parties and cooler-weather evenings.",
     "prices": {
       "3 ML": 460,
-      "5 ML": 710,
       "6 ML": 890,
       "10 ML": 1440
     },
@@ -4150,11 +4214,6 @@
         "available": false,
         "premium": false
       },
-      "5ml": {
-        "price": 750,
-        "available": false,
-        "premium": false
-      },
       "6ml": {
         "price": 950,
         "available": false,
@@ -4168,7 +4227,6 @@
     },
     "prices": {
       "3 ML": 480,
-      "5 ML": 750,
       "6 ML": 950,
       "10 ML": 1530
     }
@@ -4183,15 +4241,10 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 580,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 730,
         "available": true,
-        "premium": false
+        "premium": true
       },
       "10ml": {
         "price": 1160,
@@ -4215,7 +4268,6 @@
     "recommendation": "A bright citrus, violet and amberwood fragrance suited to office, meetings, smart-casual outings and dinner dates.",
     "prices": {
       "3 ML": 380,
-      "5 ML": 580,
       "6 ML": 730,
       "10 ML": 1160,
       "15 ML": 1670
@@ -4287,11 +4339,6 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 490,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 620,
         "available": true,
@@ -4312,7 +4359,6 @@
     "recommendation": "Best for date night, evening hangouts, parties, dinner, winter/fall, cold weather, and AC environments.",
     "prices": {
       "3 ML": 330,
-      "5 ML": 490,
       "6 ML": 620,
       "10 ML": 970
     },
@@ -4364,11 +4410,6 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 730,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 920,
         "available": true,
@@ -4389,7 +4430,6 @@
     "recommendation": "Best for office, university, casual outings, dates, and evening wear.",
     "prices": {
       "3 ML": 470,
-      "5 ML": 730,
       "6 ML": 920,
       "10 ML": 1480
     },
@@ -4436,8 +4476,8 @@
     "name": "Nautica Voyage",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 210,
+      "3ml": {
+        "price": 160,
         "available": true,
         "premium": false
       },
@@ -4465,7 +4505,7 @@
     ],
     "recommendation": "Best for casual daytime settings, gym, office, beach outings, spring, and summer.",
     "prices": {
-      "5 ML": 210,
+      "3 ML": 160,
       "6 ML": 270,
       "10 ML": 380,
       "15 ML": 510
@@ -4527,11 +4567,6 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 460,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 580,
         "available": true,
@@ -4557,7 +4592,6 @@
     "recommendation": "Best for office or daily casual use, especially spring and summer days.",
     "prices": {
       "3 ML": 310,
-      "5 ML": 460,
       "6 ML": 580,
       "10 ML": 900,
       "15 ML": 1290
@@ -4615,11 +4649,6 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 420,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 530,
         "available": true,
@@ -4645,7 +4674,6 @@
     "recommendation": "Best for nightclubs, parties, evening social events, and office wear.",
     "prices": {
       "3 ML": 290,
-      "5 ML": 420,
       "6 ML": 530,
       "10 ML": 830,
       "15 ML": 1180
@@ -4703,11 +4731,6 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 430,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 550,
         "available": true,
@@ -4726,7 +4749,6 @@
     },
     "prices": {
       "3 ML": 290,
-      "5 ML": 430,
       "6 ML": 550,
       "10 ML": 850,
       "15 ML": 1220
@@ -4795,8 +4817,8 @@
     "name": "Kenzo Homme EDT Intense",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 450,
+      "3ml": {
+        "price": 300,
         "available": false,
         "premium": false
       },
@@ -4824,7 +4846,7 @@
     ],
     "recommendation": "Best for beach, summer outings, outdoor hangouts, casual day wear, travel, and seaside evening vibes.",
     "prices": {
-      "5 ML": 450,
+      "3 ML": 300,
       "6 ML": 560,
       "10 ML": 880,
       "15 ML": 1250
@@ -4877,8 +4899,8 @@
     "name": "Davidoff Cool Water (EDT)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -4906,7 +4928,7 @@
     ],
     "recommendation": "Best for office, daily use, casual wear, gym, and daytime freshness.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 300,
       "10 ML": 430,
       "15 ML": 580
@@ -4962,8 +4984,8 @@
     "name": "Burberry Touch (EDT)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 310,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -4992,7 +5014,7 @@
     ],
     "recommendation": "A clean, easygoing perfume for office, daily wear, smart-casual settings, and relaxed occasions.",
     "prices": {
-      "5 ML": 310,
+      "3 ML": 220,
       "6 ML": 390,
       "10 ML": 590,
       "15 ML": 820
@@ -5121,11 +5143,6 @@
         "available": true,
         "premium": false
       },
-      "5ml": {
-        "price": 780,
-        "available": true,
-        "premium": false
-      },
       "6ml": {
         "price": 980,
         "available": true,
@@ -5139,7 +5156,6 @@
     },
     "prices": {
       "3 ML": 500,
-      "5 ML": 780,
       "6 ML": 980,
       "10 ML": 1580
     }
@@ -5149,8 +5165,8 @@
     "name": "Al Haramain Amber Oud Gold Edition",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 330,
+      "3ml": {
+        "price": 230,
         "available": true,
         "premium": false
       },
@@ -5178,7 +5194,7 @@
     ],
     "recommendation": "Best for spring/summer parties, clubbing, outdoor events, and times you want to be noticed.",
     "prices": {
-      "5 ML": 330,
+      "3 ML": 230,
       "6 ML": 420,
       "10 ML": 630,
       "15 ML": 880
@@ -5234,8 +5250,8 @@
     "name": "Al Haramain Amber Oud Aqua Dubai",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 330,
+      "3ml": {
+        "price": 230,
         "available": true,
         "premium": false
       },
@@ -5263,7 +5279,7 @@
     ],
     "recommendation": "Best for office, high-heat summer days, casual daytime outings, and daily wear.",
     "prices": {
-      "5 ML": 330,
+      "3 ML": 230,
       "6 ML": 420,
       "10 ML": 630,
       "15 ML": 880
@@ -5321,8 +5337,8 @@
     "name": "Bujairami Sydney Hectic EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 380,
+      "3ml": {
+        "price": 260,
         "available": true,
         "premium": false
       },
@@ -5351,7 +5367,7 @@
     ],
     "recommendation": "Citrus, ginger and tea character with Scentory guidance for office, university and daytime wear.",
     "prices": {
-      "5 ML": 380,
+      "3 ML": 260,
       "6 ML": 480,
       "10 ML": 740,
       "15 ML": 1040
@@ -5421,8 +5437,8 @@
     "name": "Kaaf By Ahmed EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 290,
+      "3ml": {
+        "price": 210,
         "available": true,
         "premium": false
       },
@@ -5451,7 +5467,7 @@
     ],
     "recommendation": "A clean fruity-aquatic and musky perfume for hot days, office, university and active casual wear.",
     "prices": {
-      "5 ML": 290,
+      "3 ML": 210,
       "6 ML": 370,
       "10 ML": 550,
       "15 ML": 760
@@ -5533,8 +5549,8 @@
     "name": "Blue By Ahmed EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 180,
         "available": true,
         "premium": false
       },
@@ -5563,7 +5579,7 @@
     ],
     "recommendation": "A citrus, aromatic and woody-spicy perfume for daily wear, office and polished casual settings.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 180,
       "6 ML": 300,
       "10 ML": 430,
       "15 ML": 580
@@ -5650,8 +5666,8 @@
     "name": "Zeleny By Ahmed EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 180,
         "available": true,
         "premium": false
       },
@@ -5679,7 +5695,7 @@
     ],
     "recommendation": "Best for daytime, summer, and office wear.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 180,
       "6 ML": 300,
       "10 ML": 430,
       "15 ML": 580
@@ -5732,9 +5748,9 @@
     "name": "Miami Blue by Ard",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 210,
-        "available": true,
+      "3ml": {
+        "price": 160,
+        "available": false,
         "premium": false
       },
       "6ml": {
@@ -5761,7 +5777,7 @@
     ],
     "recommendation": "A fresh blue-style pick for daily wear, warm weather, office, university, and casual outings.",
     "prices": {
-      "5 ML": 210,
+      "3 ML": 160,
       "6 ML": 270,
       "10 ML": 380,
       "15 ML": 500
@@ -5814,9 +5830,9 @@
     "name": "Brandy Salvage EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 190,
-        "available": true,
+      "3ml": {
+        "price": 150,
+        "available": false,
         "premium": false
       },
       "6ml": {
@@ -5843,7 +5859,7 @@
     ],
     "recommendation": "Best for office, gym, casual daily wear, and fresh all-season use.",
     "prices": {
-      "5 ML": 190,
+      "3 ML": 150,
       "6 ML": 250,
       "10 ML": 340,
       "15 ML": 450
@@ -5898,9 +5914,9 @@
     "name": "Brandy After Swim EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 190,
-        "available": true,
+      "3ml": {
+        "price": 150,
+        "available": false,
         "premium": false
       },
       "6ml": {
@@ -5927,7 +5943,7 @@
     ],
     "recommendation": "Best for summer, office, gym, and casual daytime.",
     "prices": {
-      "5 ML": 190,
+      "3 ML": 150,
       "6 ML": 250,
       "10 ML": 340,
       "15 ML": 450
@@ -5982,9 +5998,9 @@
     "name": "Brandy Inspiration EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 190,
-        "available": true,
+      "3ml": {
+        "price": 150,
+        "available": false,
         "premium": false
       },
       "6ml": {
@@ -6011,7 +6027,7 @@
     ],
     "recommendation": "Best as a signature daily perfume for office, professional meetings, and high-end casual events.",
     "prices": {
-      "5 ML": 190,
+      "3 ML": 150,
       "6 ML": 250,
       "10 ML": 340,
       "15 ML": 450
@@ -6064,8 +6080,8 @@
     "name": "Brandy Ambre Leather EDP",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 220,
+      "3ml": {
+        "price": 160,
         "available": false,
         "premium": false
       },
@@ -6093,7 +6109,7 @@
     ],
     "recommendation": "Best for evening wear, date nights, and formal events.",
     "prices": {
-      "5 ML": 220,
+      "3 ML": 160,
       "6 ML": 270,
       "10 ML": 390,
       "15 ML": 520
@@ -6148,8 +6164,8 @@
     "name": "Marwa by Arabiyat Prestige",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 290,
+      "3ml": {
+        "price": 210,
         "available": true,
         "premium": false
       },
@@ -6178,7 +6194,7 @@
     ],
     "recommendation": "A refined citrus, tea, incense and woody perfume for signature wear, office and smart-casual occasions.",
     "prices": {
-      "5 ML": 290,
+      "3 ML": 210,
       "6 ML": 370,
       "10 ML": 560,
       "15 ML": 770
@@ -6259,8 +6275,8 @@
     "name": "Bois Blanc by Arabiyat Prestige",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 200,
         "available": false,
         "premium": false
       },
@@ -6288,7 +6304,7 @@
     ],
     "recommendation": "A fresh, easygoing pick for office, university, daytime wear, and a clean daily signature.",
     "prices": {
-      "5 ML": 270,
+      "3 ML": 200,
       "6 ML": 350,
       "10 ML": 510,
       "15 ML": 700
@@ -6356,8 +6372,8 @@
     "name": "Absolute Chill by Atralia (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 180,
         "available": true,
         "premium": false
       },
@@ -6385,7 +6401,7 @@
     ],
     "recommendation": "Best for spring and summer days, office, gym, casual brunches, and outdoor summer events.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 180,
       "6 ML": 300,
       "10 ML": 430,
       "15 ML": 580
@@ -6440,8 +6456,8 @@
     "name": "Absolute Ice by Atralia (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 250,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -6469,7 +6485,7 @@
     ],
     "recommendation": "A new Scentory selection for fragrance discovery and everyday rotation.",
     "prices": {
-      "5 ML": 250,
+      "3 ML": 190,
       "6 ML": 320,
       "10 ML": 470,
       "15 ML": 640
@@ -6519,8 +6535,8 @@
     "name": "Kayaan Midnight EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 250,
+      "3ml": {
+        "price": 180,
         "available": true,
         "premium": false
       },
@@ -6548,7 +6564,7 @@
     ],
     "recommendation": "Best for office, everyday use, and evening events.",
     "prices": {
-      "5 ML": 250,
+      "3 ML": 180,
       "6 ML": 310,
       "10 ML": 460,
       "15 ML": 620
@@ -6601,8 +6617,8 @@
     "name": "Rayhaan Vantage",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -6620,11 +6636,6 @@
         "price": 680,
         "available": false,
         "premium": false
-      },
-      "30ml": {
-        "price": 1150,
-        "available": false,
-        "premium": false
       }
     },
     "image": "rayhaan-vantage-poster.jpg",
@@ -6634,11 +6645,10 @@
     ],
     "recommendation": "Explore Rayhaan Vantage in your preferred decant size.",
     "prices": {
-      "5 ML": 270,
+      "3 ML": 190,
       "6 ML": 340,
       "10 ML": 500,
-      "15 ML": 680,
-      "30 ML": 1150
+      "15 ML": 680
     },
     "details": {
       "verification": "scentory-supplied-pricing",
@@ -6666,8 +6676,8 @@
     "name": "Rayhaan Azul EDP",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": false,
         "premium": false
       },
@@ -6695,7 +6705,7 @@
     ],
     "recommendation": "Best for summer, daytime, office, university, gym, casual outings, beach, and travel.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -6750,8 +6760,8 @@
     "name": "Rayhaan Cedrus Blanc EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -6781,7 +6791,7 @@
     ],
     "recommendation": "Best for office, university, daytime outings, smart-casual and formal settings, especially in spring, summer, and warm weather.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -6837,8 +6847,8 @@
     "name": "Rayhaan Pacific Aloha EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -6866,7 +6876,7 @@
     ],
     "recommendation": "Best for summer, beach, vacation, daytime outings, casual hangouts, university, and gym.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -6920,8 +6930,8 @@
     "name": "Rayhaan Nocturno Elixir EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -6949,7 +6959,7 @@
     ],
     "recommendation": "Best for evening outings, date nights, formal events, and office.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -7004,8 +7014,8 @@
     "name": "Rayhaan Pharaoh EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -7033,7 +7043,7 @@
     ],
     "recommendation": "Best for evening, winter/cool weather, date night, party, formal events, and AC room.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -7088,8 +7098,8 @@
     "name": "Rayhaan Italia EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -7117,7 +7127,7 @@
     ],
     "recommendation": "Best for daily wear, office, nights out, and special occasions.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -7170,8 +7180,8 @@
     "name": "Rayhaan Jungle Vibe EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -7199,7 +7209,7 @@
     ],
     "recommendation": "Best for office-safe wear, gym, casual daytime outings, daily wear, spring, and summer.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -7254,8 +7264,8 @@
     "name": "Rayhaan Lion EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -7283,7 +7293,7 @@
     ],
     "recommendation": "Best for cool/cold weather, evenings, dates, parties, and formal occasions.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -7335,8 +7345,8 @@
     "name": "Rayhaan Tiger EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -7364,7 +7374,7 @@
     ],
     "recommendation": "Best for date nights, weddings, evening outings, and winter/cooler weather.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -7417,8 +7427,8 @@
     "name": "Rayhaan Wolf EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -7446,7 +7456,7 @@
     ],
     "recommendation": "Best for evening, date, winter, and night events.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -7496,8 +7506,8 @@
     "name": "Rayhaan Aquatica EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -7525,7 +7535,7 @@
     ],
     "recommendation": "Best for summer days, clubbing, casual outings, office, and gym.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -7581,8 +7591,8 @@
     "name": "Rayhaan Pacific Aura EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -7610,7 +7620,7 @@
     ],
     "recommendation": "Best for summer, daytime, office, university, casual outings, travel, and clean fresh daily use.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -7665,8 +7675,8 @@
     "name": "Rayhaan Floriana",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 220,
+      "3ml": {
+        "price": 160,
         "available": true,
         "premium": false
       },
@@ -7687,7 +7697,7 @@
       }
     },
     "prices": {
-      "5 ML": 220,
+      "3 ML": 160,
       "6 ML": 270,
       "10 ML": 390,
       "15 ML": 530
@@ -7757,8 +7767,8 @@
     "name": "Rayhaan Tropical Vibe EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -7786,7 +7796,7 @@
     ],
     "recommendation": "Best for beach, tropical vacations, casual outdoor summer hangouts, and gym.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -7839,8 +7849,8 @@
     "name": "Rayhaan Obsidian EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -7868,7 +7878,7 @@
     ],
     "recommendation": "Best for evening wear, cooler weather, special occasions, and bold signature moments.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -7920,8 +7930,8 @@
     "name": "Rayhaan Terra EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -7949,7 +7959,7 @@
     ],
     "recommendation": "Best for evening outings, night dates, and formal occasions.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -8002,8 +8012,8 @@
     "name": "Rayhaan Elixir EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 230,
+      "3ml": {
+        "price": 170,
         "available": true,
         "premium": false
       },
@@ -8031,7 +8041,7 @@
     ],
     "recommendation": "Best for night outs, dates, and formal evening events in autumn and winter.",
     "prices": {
-      "5 ML": 230,
+      "3 ML": 170,
       "6 ML": 290,
       "10 ML": 420,
       "15 ML": 570
@@ -8084,8 +8094,8 @@
     "name": "Ajmal Kuro EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 280,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -8116,7 +8126,7 @@
     ],
     "recommendation": "A fresh spicy aromatic and woody perfume for office, university, casual outings, and evening dates.",
     "prices": {
-      "5 ML": 280,
+      "3 ML": 190,
       "6 ML": 340,
       "10 ML": 500,
       "15 ML": 690
@@ -8190,8 +8200,8 @@
     "name": "Bade'e Al Oud - 'Oud for Glory'",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 260,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -8220,7 +8230,7 @@
     ],
     "recommendation": "A dense oud, patchouli and spice profile for cool evenings, formal events and experienced oud wearers.",
     "prices": {
-      "5 ML": 260,
+      "3 ML": 190,
       "6 ML": 330,
       "10 ML": 490,
       "15 ML": 660
@@ -8297,8 +8307,8 @@
     "name": "Bade'e Al Oud - 'Honor & Glory'",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 260,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -8326,7 +8336,7 @@
     ],
     "recommendation": "Best for highly versatile casual outings, dates, and evening events.",
     "prices": {
-      "5 ML": 260,
+      "3 ML": 190,
       "6 ML": 330,
       "10 ML": 490,
       "15 ML": 660
@@ -8404,8 +8414,8 @@
     "name": "Armaf Dunescape EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 310,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -8433,7 +8443,7 @@
     ],
     "recommendation": "Best for office, spring time, formal events, and gym.",
     "prices": {
-      "5 ML": 310,
+      "3 ML": 220,
       "6 ML": 390,
       "10 ML": 590,
       "15 ML": 810
@@ -8514,8 +8524,8 @@
     "name": "Club De Nuit Intense Man PURE Parfum",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 330,
+      "3ml": {
+        "price": 230,
         "available": true,
         "premium": false
       },
@@ -8543,7 +8553,7 @@
     ],
     "recommendation": "Best for evening, date nights, parties, and longer-lasting presence.",
     "prices": {
-      "5 ML": 330,
+      "3 ML": 230,
       "6 ML": 420,
       "10 ML": 630,
       "15 ML": 880
@@ -8621,8 +8631,8 @@
     "name": "Club De Nuit Intense - Overdose",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 420,
+      "3ml": {
+        "price": 280,
         "available": true,
         "premium": false
       },
@@ -8652,7 +8662,7 @@
     ],
     "recommendation": "Best for parties, weddings, date nights, formal events, and special occasions, especially evenings and cooler weather.",
     "prices": {
-      "5 ML": 420,
+      "3 ML": 280,
       "6 ML": 530,
       "10 ML": 820,
       "15 ML": 1170
@@ -8707,8 +8717,8 @@
     "name": "Club de Nuit Intenso - Fuego",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 420,
+      "3ml": {
+        "price": 290,
         "available": true,
         "premium": false
       },
@@ -8737,7 +8747,7 @@
     ],
     "recommendation": "Tropical fruit, leather and warm woods, with Scentory guidance favouring evening dates and parties.",
     "prices": {
-      "5 ML": 420,
+      "3 ML": 290,
       "6 ML": 540,
       "10 ML": 830,
       "15 ML": 1190
@@ -8804,8 +8814,8 @@
     "name": "Club De Nuit Intesne Man EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 280,
+      "3ml": {
+        "price": 200,
         "available": true,
         "premium": false
       },
@@ -8832,7 +8842,7 @@
     ],
     "recommendation": "A versatile pick from Scentory.",
     "prices": {
-      "5 ML": 280,
+      "3 ML": 200,
       "6 ML": 350,
       "10 ML": 530,
       "15 ML": 720
@@ -8909,8 +8919,8 @@
     "name": "Club de Nuit Precieux Extrait De Parfum",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 740,
+      "3ml": {
+        "price": 480,
         "available": false,
         "premium": false
       },
@@ -8938,7 +8948,7 @@
     ],
     "recommendation": "Best for year-round wear, semi-formal events, date nights, and stronger evening use.",
     "prices": {
-      "5 ML": 740,
+      "3 ML": 480,
       "6 ML": 930,
       "10 ML": 1500,
       "15 ML": 2190
@@ -8991,8 +9001,8 @@
     "name": "Club De Nuit Intesne Man EDT",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 290,
+      "3ml": {
+        "price": 210,
         "available": true,
         "premium": false
       },
@@ -9019,7 +9029,7 @@
     ],
     "recommendation": "A versatile pick from Scentory.",
     "prices": {
-      "5 ML": 290,
+      "3 ML": 210,
       "6 ML": 370,
       "10 ML": 560,
       "15 ML": 770
@@ -9072,8 +9082,8 @@
     "name": "Club De Nuit Urban man Elixir EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 320,
+      "3ml": {
+        "price": 230,
         "available": true,
         "premium": false
       },
@@ -9101,7 +9111,7 @@
     ],
     "recommendation": "Best for spring days, office, nights out, clubbing, and casual dates.",
     "prices": {
-      "5 ML": 320,
+      "3 ML": 230,
       "6 ML": 400,
       "10 ML": 610,
       "15 ML": 850
@@ -9184,8 +9194,8 @@
     "name": "Club de Nuit Blue Iconic",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 340,
+      "3ml": {
+        "price": 240,
         "available": true,
         "premium": false
       },
@@ -9213,7 +9223,7 @@
     ],
     "recommendation": "Best for office, gym, casual day outings, and date nights.",
     "prices": {
-      "5 ML": 340,
+      "3 ML": 240,
       "6 ML": 430,
       "10 ML": 660,
       "15 ML": 920
@@ -9297,8 +9307,8 @@
     "name": "Spectre Ghost by French Avenue",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 380,
+      "3ml": {
+        "price": 260,
         "available": true,
         "premium": false
       },
@@ -9319,7 +9329,7 @@
       }
     },
     "prices": {
-      "5 ML": 380,
+      "3 ML": 260,
       "6 ML": 480,
       "10 ML": 740,
       "15 ML": 1050
@@ -9387,8 +9397,8 @@
     "name": "Aromatix Platine Blanc Extract",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 350,
+      "3ml": {
+        "price": 240,
         "available": true,
         "premium": false
       },
@@ -9416,7 +9426,7 @@
     ],
     "recommendation": "A new Scentory selection for fragrance discovery and everyday rotation.",
     "prices": {
-      "5 ML": 350,
+      "3 ML": 240,
       "6 ML": 440,
       "10 ML": 670,
       "15 ML": 930
@@ -9467,8 +9477,8 @@
     "name": "Amber Empire by French Avenue",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 330,
+      "3ml": {
+        "price": 230,
         "available": true,
         "premium": false
       },
@@ -9486,11 +9496,6 @@
         "price": 870,
         "available": false,
         "premium": false
-      },
-      "30ml": {
-        "price": 1550,
-        "available": false,
-        "premium": false
       }
     },
     "image": "amber-empire-by-french-avenue-poster.jpg",
@@ -9503,11 +9508,10 @@
     ],
     "recommendation": "A rich amber-vanilla fragrance with liqueur sweetness, warm woods and a smooth musky finish, suited to cooler evenings and formal occasions.",
     "prices": {
-      "5 ML": 330,
+      "3 ML": 230,
       "6 ML": 410,
       "10 ML": 630,
-      "15 ML": 870,
-      "30 ML": 1550
+      "15 ML": 870
     },
     "details": {
       "verification": "scentory-supplied",
@@ -9556,8 +9560,8 @@
     "name": "Atlantis Extrait by French Avenue (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 310,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -9585,7 +9589,7 @@
     ],
     "recommendation": "Best for fresh aquatic daytime wear, warm weather, and easy casual/office use.",
     "prices": {
-      "5 ML": 310,
+      "3 ML": 220,
       "6 ML": 400,
       "10 ML": 600,
       "15 ML": 830
@@ -9639,8 +9643,8 @@
     "name": "Zenith Blue by French Avenue (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 310,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -9668,7 +9672,7 @@
     ],
     "recommendation": "Best for office, gym, casual dates, and daytime wear in spring, summer, and autumn.",
     "prices": {
-      "5 ML": 310,
+      "3 ML": 220,
       "6 ML": 390,
       "10 ML": 590,
       "15 ML": 820
@@ -9744,8 +9748,8 @@
     "name": "Liquid Brun by French Avenue (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 320,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -9774,7 +9778,7 @@
     ],
     "recommendation": "A strong amber-vanilla gourmand for dates, dinners and cool-weather evening wear.",
     "prices": {
-      "5 ML": 320,
+      "3 ML": 220,
       "6 ML": 400,
       "10 ML": 610,
       "15 ML": 840
@@ -9853,8 +9857,8 @@
     "name": "Vulcan Feu by French Avenue (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 310,
+      "3ml": {
+        "price": 220,
         "available": true,
         "premium": false
       },
@@ -9882,7 +9886,7 @@
     ],
     "recommendation": "Best for spring/summer day and evening, casual wear, and nights out.",
     "prices": {
-      "5 ML": 310,
+      "3 ML": 220,
       "6 ML": 400,
       "10 ML": 600,
       "15 ML": 830
@@ -9958,8 +9962,8 @@
     "name": "Naseem by Gulf Orchid",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 220,
+      "3ml": {
+        "price": 160,
         "available": true,
         "premium": false
       },
@@ -9987,7 +9991,7 @@
     ],
     "recommendation": "Best for spring/summer, daytime, casual, office, and outdoor wear.",
     "prices": {
-      "5 ML": 220,
+      "3 ML": 160,
       "6 ML": 270,
       "10 ML": 390,
       "15 ML": 520
@@ -10062,8 +10066,8 @@
     "name": "Mango Ice by Gulf Orchid",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 280,
+      "3ml": {
+        "price": 200,
         "available": true,
         "premium": false
       },
@@ -10091,7 +10095,7 @@
     ],
     "recommendation": "Best for summer and spring, daytime casual outings, beach trips, gym sessions, and office.",
     "prices": {
-      "5 ML": 280,
+      "3 ML": 200,
       "6 ML": 350,
       "10 ML": 530,
       "15 ML": 720
@@ -10161,9 +10165,9 @@
     "name": "Lattafa Opulent Dubai (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 200,
-        "available": true,
+      "3ml": {
+        "price": 150,
+        "available": false,
         "premium": false
       },
       "6ml": {
@@ -10190,7 +10194,7 @@
     ],
     "recommendation": "Best for summer day, tropical weather, vacation, daytime outings, party, casual luxury events, and AC rooms.",
     "prices": {
-      "5 ML": 200,
+      "3 ML": 150,
       "6 ML": 250,
       "10 ML": 350,
       "15 ML": 460
@@ -10268,8 +10272,8 @@
     "name": "Lattafa Art of Universe (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 360,
+      "3ml": {
+        "price": 250,
         "available": true,
         "premium": false
       },
@@ -10297,7 +10301,7 @@
     ],
     "recommendation": "Best for spring and summer days, warm-weather outings, and everyday use.",
     "prices": {
-      "5 ML": 360,
+      "3 ML": 250,
       "6 ML": 460,
       "10 ML": 700,
       "15 ML": 980
@@ -10368,8 +10372,8 @@
     "name": "Lattafa Maahir Legacy (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 200,
         "available": true,
         "premium": false
       },
@@ -10397,7 +10401,7 @@
     ],
     "recommendation": "Best for office, gym, casual summer outings, and regular use.",
     "prices": {
-      "5 ML": 270,
+      "3 ML": 200,
       "6 ML": 350,
       "10 ML": 510,
       "15 ML": 700
@@ -10479,8 +10483,8 @@
     "name": "Lattafa Yara EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 260,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -10509,7 +10513,7 @@
     ],
     "recommendation": "A soft sweet, tropical and powdery fragrance for casual wear, relaxed dates and air-conditioned settings.",
     "prices": {
-      "5 ML": 260,
+      "3 ML": 190,
       "6 ML": 330,
       "10 ML": 490,
       "15 ML": 660
@@ -10585,8 +10589,8 @@
     "name": "Rave Plato by Lattafa (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 220,
+      "3ml": {
+        "price": 160,
         "available": true,
         "premium": false
       },
@@ -10614,7 +10618,7 @@
     ],
     "recommendation": "Best for office, formal events, meetings, smart-casual outings, dinner dates and elegant occasions, especially evenings.",
     "prices": {
-      "5 ML": 220,
+      "3 ML": 160,
       "6 ML": 270,
       "10 ML": 390,
       "15 ML": 520
@@ -10672,8 +10676,8 @@
     "name": "Rave Now by Lattafa (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 220,
+      "3ml": {
+        "price": 160,
         "available": true,
         "premium": false
       },
@@ -10701,7 +10705,7 @@
     ],
     "recommendation": "Best for summer and spring, casual daytime, outdoor events, and gym.",
     "prices": {
-      "5 ML": 220,
+      "3 ML": 160,
       "6 ML": 270,
       "10 ML": 390,
       "15 ML": 520
@@ -10754,8 +10758,8 @@
     "name": "Dynasty by Lattafa (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 200,
         "available": true,
         "premium": false
       },
@@ -10783,7 +10787,7 @@
     ],
     "recommendation": "Best for office, library, formal meetings, and casual daytime use.",
     "prices": {
-      "5 ML": 270,
+      "3 ML": 200,
       "6 ML": 350,
       "10 ML": 510,
       "15 ML": 700
@@ -10859,8 +10863,8 @@
     "name": "Teriaq Intense by Lattafa (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 320,
+      "3ml": {
+        "price": 230,
         "available": true,
         "premium": false
       },
@@ -10888,7 +10892,7 @@
     ],
     "recommendation": "Best for special evening events, date nights, parties, and cold-weather outings.",
     "prices": {
-      "5 ML": 320,
+      "3 ML": 230,
       "6 ML": 410,
       "10 ML": 620,
       "15 ML": 860
@@ -10958,8 +10962,8 @@
     "name": "Lattafa Khamrah Qahwa EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 300,
+      "3ml": {
+        "price": 210,
         "available": true,
         "premium": false
       },
@@ -10988,7 +10992,7 @@
     ],
     "recommendation": "A rich coffee, spice and vanilla gourmand for cool evenings, dates and festive occasions.",
     "prices": {
-      "5 ML": 300,
+      "3 ML": 210,
       "6 ML": 380,
       "10 ML": 570,
       "15 ML": 780
@@ -11068,8 +11072,8 @@
     "name": "Lattafa Asad Bourbon EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 250,
+      "3ml": {
+        "price": 180,
         "available": true,
         "premium": false
       },
@@ -11097,7 +11101,7 @@
     ],
     "recommendation": "Best for cooler evenings, dates, parties, and warm spicy perfume lovers.",
     "prices": {
-      "5 ML": 250,
+      "3 ML": 180,
       "6 ML": 310,
       "10 ML": 460,
       "15 ML": 620
@@ -11150,8 +11154,8 @@
     "name": "Lattafa Asad EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 250,
+      "3ml": {
+        "price": 180,
         "available": true,
         "premium": false
       },
@@ -11180,7 +11184,7 @@
     ],
     "recommendation": "A warm spicy, amber and woody fragrance for cooler evenings, formal occasions and confident night wear.",
     "prices": {
-      "5 ML": 250,
+      "3 ML": 180,
       "6 ML": 310,
       "10 ML": 460,
       "15 ML": 620
@@ -11260,8 +11264,8 @@
     "name": "Lattafa Fakhar Black EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 240,
+      "3ml": {
+        "price": 180,
         "available": true,
         "premium": false
       },
@@ -11289,7 +11293,7 @@
     ],
     "recommendation": "Best for office, daytime, clean casual wear, and easy daily freshness.",
     "prices": {
-      "5 ML": 240,
+      "3 ML": 180,
       "6 ML": 310,
       "10 ML": 450,
       "15 ML": 600
@@ -11367,9 +11371,9 @@
     "name": "Lattafa Najdia (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 200,
-        "available": true,
+      "3ml": {
+        "price": 150,
+        "available": false,
         "premium": false
       },
       "6ml": {
@@ -11396,7 +11400,7 @@
     ],
     "recommendation": "Best for gym, casual daytime, and hot outdoor settings.",
     "prices": {
-      "5 ML": 200,
+      "3 ML": 150,
       "6 ML": 250,
       "10 ML": 360,
       "15 ML": 470
@@ -11447,9 +11451,9 @@
     "name": "Lattafa Haayati (EDP)",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 210,
-        "available": true,
+      "3ml": {
+        "price": 160,
+        "available": false,
         "premium": false
       },
       "6ml": {
@@ -11476,7 +11480,7 @@
     ],
     "recommendation": "Best for gym, casual daytime outings, office, and summer outdoor events.",
     "prices": {
-      "5 ML": 210,
+      "3 ML": 160,
       "6 ML": 260,
       "10 ML": 370,
       "15 ML": 490
@@ -11549,8 +11553,8 @@
     "name": "Khadlaj Karus Gold Absolu EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 270,
+      "3ml": {
+        "price": 200,
         "available": true,
         "premium": false
       },
@@ -11579,7 +11583,7 @@
     ],
     "recommendation": "Best for office, daily wear, dates, smart-casual occasions, special events, and elevated everyday wear.",
     "prices": {
-      "5 ML": 270,
+      "3 ML": 200,
       "6 ML": 350,
       "10 ML": 510,
       "15 ML": 700
@@ -11655,15 +11659,15 @@
     "name": "Khadlaj Island Sun EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 290,
+      "3ml": {
+        "price": 210,
         "available": true,
         "premium": false
       },
       "6ml": {
         "price": 360,
         "available": true,
-        "premium": false
+        "premium": true
       },
       "10ml": {
         "price": 540,
@@ -11674,19 +11678,13 @@
         "price": 740,
         "available": true,
         "premium": false
-      },
-      "30ml": {
-        "price": 1299,
-        "available": true,
-        "premium": false
       }
     },
     "prices": {
-      "5 ML": 290,
+      "3 ML": 210,
       "6 ML": 360,
       "10 ML": 540,
-      "15 ML": 740,
-      "30 ML": 1299
+      "15 ML": 740
     },
     "image": "khadlaj-island-sun-edp-poster-v3059.jpg",
     "tags": [
@@ -11770,8 +11768,8 @@
     "name": "Khadlaj Island EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 260,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -11799,7 +11797,7 @@
     ],
     "recommendation": "Best for summer, late spring, beach parties, vacations, pool days, and casual daytime hangouts.",
     "prices": {
-      "5 ML": 260,
+      "3 ML": 190,
       "6 ML": 330,
       "10 ML": 490,
       "15 ML": 670
@@ -11867,8 +11865,8 @@
     "name": "Khadlaj Island Dream EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 260,
+      "3ml": {
+        "price": 190,
         "available": true,
         "premium": false
       },
@@ -11896,7 +11894,7 @@
     ],
     "recommendation": "Best for summer days, office, gym, and casual outings.",
     "prices": {
-      "5 ML": 260,
+      "3 ML": 190,
       "6 ML": 330,
       "10 ML": 490,
       "15 ML": 670
@@ -11968,8 +11966,8 @@
     "name": "Titan by Khadlaj (EDP)",
     "status": "out",
     "sizes": {
-      "5ml": {
-        "price": 280,
+      "3ml": {
+        "price": 200,
         "available": false,
         "premium": false
       },
@@ -11997,7 +11995,7 @@
     ],
     "recommendation": "Best for evenings, cooler weather, dates, and events.",
     "prices": {
-      "5 ML": 280,
+      "3 ML": 200,
       "6 ML": 350,
       "10 ML": 530,
       "15 ML": 720
@@ -12050,9 +12048,9 @@
     "name": "Qaed Al Fursan EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 200,
-        "available": true,
+      "3ml": {
+        "price": 150,
+        "available": false,
         "premium": false
       },
       "6ml": {
@@ -12079,7 +12077,7 @@
     ],
     "recommendation": "Best for casual sweet fruity wear, parties, and warm weather.",
     "prices": {
-      "5 ML": 200,
+      "3 ML": 150,
       "6 ML": 250,
       "10 ML": 350,
       "15 ML": 470
@@ -12153,9 +12151,9 @@
     "name": "Daring Blue EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 200,
-        "available": true,
+      "3ml": {
+        "price": 150,
+        "available": false,
         "premium": false
       },
       "6ml": {
@@ -12182,7 +12180,7 @@
     ],
     "recommendation": "Best for fresh blue daily wear, office, and casual daytime use.",
     "prices": {
-      "5 ML": 200,
+      "3 ML": 150,
       "6 ML": 250,
       "10 ML": 350,
       "15 ML": 460
@@ -12234,9 +12232,9 @@
     "name": "Oud Al Layl Midnight EDP",
     "status": "available",
     "sizes": {
-      "5ml": {
-        "price": 170,
-        "available": true,
+      "3ml": {
+        "price": 130,
+        "available": false,
         "premium": false
       },
       "6ml": {
@@ -12264,7 +12262,7 @@
     ],
     "recommendation": "A fresh marine-citrus, sweet-woody perfume for hot-weather casual wear, active use and energetic evenings—not a dense traditional oud profile.",
     "prices": {
-      "5 ML": 170,
+      "3 ML": 130,
       "6 ML": 210,
       "10 ML": 280,
       "15 ML": 360

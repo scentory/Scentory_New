@@ -20,7 +20,7 @@ html { scroll-behavior: auto; }
 html, body { max-width: 100%; overflow-x: hidden; }
 body {
   margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at 50% -10%, rgba(255,255,255,.15), transparent 28%),
@@ -3371,27 +3371,27 @@ body {
   gap: 9px;
   margin: 16px 0;
   padding: 14px;
-  border: 1px solid rgba(131, 255, 184, .2);
+  border: 1px solid rgba(131,255,184, .2);
   border-radius: 16px;
-  background: rgba(131, 255, 184, .045);
+  background: rgba(131,255,184, .045);
 }
 .verified-perfume-details.pending-review {
-  border-color: rgba(255, 205, 120, .18);
-  background: rgba(255, 205, 120, .035);
+  border-color: rgba(209,209,209, .18);
+  background: rgba(209,209,209, .035);
 }
 .profile-review-badge {
   justify-self: start;
   padding: 5px 9px;
-  border: 1px solid rgba(255, 205, 120, .28);
+  border: 1px solid rgba(209,209,209, .28);
   border-radius: 999px;
-  color: #ffd58b;
+  color: #d9d9d9;
   font-size: .6rem;
   font-weight: 760;
   letter-spacing: .04em;
   text-transform: uppercase;
 }
 .profile-review-badge.checked {
-  border-color: rgba(131, 255, 184, .35);
+  border-color: rgba(131,255,184, .35);
   color: #9cffc5;
 }
 .profile-fact {
@@ -3436,26 +3436,26 @@ body {
 
 /* ==== SCENTORY v3070 — simple shopping UX + soft anniversary finish ==== */
 :root {
-  --anniv-gold: rgba(205, 165, 94, .22);
-  --anniv-gold-soft: rgba(230, 198, 132, .10);
-  --anniv-line: rgba(226, 193, 127, .18);
+  --anniv-gold: rgba(168,168,168, .22);
+  --anniv-gold-soft: rgba(200,200,200, .10);
+  --anniv-line: rgba(195,195,195, .18);
 }
 body {
   background:
-    radial-gradient(900px 520px at 12% 8%, rgba(196,145,70,.055), transparent 62%),
-    radial-gradient(760px 520px at 88% 36%, rgba(226,190,118,.035), transparent 65%),
+    radial-gradient(900px 520px at 12% 8%, rgba(150,150,150,.055), transparent 62%),
+    radial-gradient(760px 520px at 88% 36%, rgba(192,192,192,.035), transparent 65%),
     #050505 !important;
 }
 .topbar {
   background: linear-gradient(180deg, rgba(5,5,5,.985), rgba(7,6,5,.975)) !important;
-  border-bottom: 1px solid rgba(224,190,124,.10) !important;
+  border-bottom: 1px solid rgba(192,192,192,.10) !important;
 }
 /* Hero uses the exact same supplied photograph on desktop and mobile. */
 .hero {
   min-height: 0 !important;
   height: auto !important;
   background: #050505 !important;
-  border-bottom-color: rgba(224,190,124,.12) !important;
+  border-bottom-color: rgba(192,192,192,.12) !important;
 }
 .hero::before {
   display: block !important;
@@ -3469,33 +3469,33 @@ body {
 }
 .hero::after {
   background:
-    linear-gradient(115deg, rgba(228,190,117,.07), transparent 26%, transparent 72%, rgba(190,137,61,.035)),
+    linear-gradient(115deg, rgba(193,193,193,.07), transparent 26%, transparent 72%, rgba(143,143,143,.035)),
     linear-gradient(180deg, transparent 72%, rgba(0,0,0,.34)) !important;
 }
 .hero-inner { padding: 72px 18px 64px !important; }
 .hero .eyebrow,
-.eyebrow { border-color: var(--anniv-line) !important; box-shadow: inset 0 1px 0 rgba(255,236,196,.04); }
+.eyebrow { border-color: var(--anniv-line) !important; box-shadow: inset 0 1px 0 rgba(237,237,237,.04); }
 
 /* Soft glass/gold anniversary reflection — intentionally minimal. */
 .product, .order-card, .decant-copy, .decant-photo-card, .toolbar,
 .hot-arrivals-section, .best-selling-section, .brand-showcase-card,
 .discovery-tool-card, .review-card, .faq-grid details, .steps-grid article {
-  border-color: rgba(224,190,124,.105) !important;
-  background-image: linear-gradient(145deg, rgba(231,199,137,.025), transparent 34%, rgba(255,255,255,.012)) !important;
+  border-color: rgba(192,192,192,.105) !important;
+  background-image: linear-gradient(145deg, rgba(201,201,201,.025), transparent 34%, rgba(255,255,255,.012)) !important;
 }
 .product::after, .order-card::after, .decant-photo-card::after {
   content:""; position:absolute; inset:0; pointer-events:none; border-radius:inherit;
-  background: linear-gradient(118deg, transparent 12%, rgba(255,226,167,.025) 35%, transparent 55%);
+  background: linear-gradient(118deg, transparent 12%, rgba(228,228,228,.025) 35%, transparent 55%);
 }
 .product, .order-card, .decant-photo-card { position: relative; overflow: hidden; }
-.price-tile.selected { border-color: rgba(230,196,128,.36) !important; box-shadow: inset 0 0 0 1px rgba(230,196,128,.08); }
+.price-tile.selected { border-color: rgba(198,198,198,.36) !important; box-shadow: inset 0 0 0 1px rgba(198,198,198,.08); }
 
 /* Simpler navigation: important destinations first, everything else preserved in More. */
 .simplified-nav { overflow: visible !important; justify-content: center; align-items: center; }
 .more-nav { position: relative; }
 .more-nav summary { list-style:none; cursor:pointer; color:#ddd; font-weight:760; font-size:.72rem; padding:8px 12px; border:1px solid rgba(255,255,255,.10); border-radius:999px; background:rgba(255,255,255,.035); }
 .more-nav summary::-webkit-details-marker { display:none; }
-.more-nav-menu { position:absolute; right:0; top:calc(100% + 8px); min-width:190px; padding:8px; display:grid; gap:4px; background:#0b0b0b; border:1px solid rgba(224,190,124,.16); border-radius:16px; box-shadow:0 18px 42px rgba(0,0,0,.48); z-index:1200; }
+.more-nav-menu { position:absolute; right:0; top:calc(100% + 8px); min-width:190px; padding:8px; display:grid; gap:4px; background:#0b0b0b; border:1px solid rgba(192,192,192,.16); border-radius:16px; box-shadow:0 18px 42px rgba(0,0,0,.48); z-index:1200; }
 .more-nav:not([open]) .more-nav-menu { display:none; }
 .more-nav-menu a { display:block; white-space:nowrap; text-align:left; }
 
@@ -3503,16 +3503,16 @@ body {
 .quick-shop { display:flex; gap:8px; overflow-x:auto; padding:0 0 10px; scrollbar-width:none; }
 .quick-shop::-webkit-scrollbar { display:none; }
 .quick-shop-chip { flex:0 0 auto; border:1px solid rgba(255,255,255,.12); border-radius:999px; background:#101010; color:#ddd; padding:9px 13px; font:inherit; font-size:.72rem; font-weight:760; cursor:pointer; }
-.quick-shop-chip.active { color:#fff; border-color:rgba(225,190,122,.30); background:linear-gradient(135deg,rgba(211,171,96,.12),rgba(255,255,255,.045)); }
+.quick-shop-chip.active { color:#fff; border-color:rgba(193,193,193,.30); background:linear-gradient(135deg,rgba(174,174,174,.12),rgba(255,255,255,.045)); }
 
 /* Cart must always receive the first tap. */
 .cart-pill { position:relative !important; z-index:1300 !important; pointer-events:auto !important; touch-action:manipulation !important; }
 .cart-pill.liquid-hit { animation:cartLiquidHit .28s ease-out; }
 @keyframes cartLiquidHit { 0%{transform:scale(1)} 45%{transform:scale(1.09)} 100%{transform:scale(1)} }
-.liquid-cart-drop { position:fixed; z-index:9999; width:12px; height:18px; border-radius:60% 60% 68% 68% / 72% 72% 42% 42%; pointer-events:none; background:linear-gradient(180deg,rgba(255,225,163,.96),rgba(191,133,51,.88)); box-shadow:0 0 14px rgba(224,179,94,.35); }
+.liquid-cart-drop { position:fixed; z-index:9999; width:12px; height:18px; border-radius:60% 60% 68% 68% / 72% 72% 42% 42%; pointer-events:none; background:linear-gradient(180deg,rgba(227,227,227,.96),rgba(139,139,139,.88)); box-shadow:0 0 14px rgba(182,182,182,.35); }
 
 /* Keep catalogue poster + every price visible, with clearer visual hierarchy. */
-.product-image-wrap { border-color:rgba(224,190,124,.10) !important; }
+.product-image-wrap { border-color:rgba(192,192,192,.10) !important; }
 .product h3 { letter-spacing:-.025em; }
 .price-buttons { position:relative; z-index:2; }
 
@@ -3538,37 +3538,37 @@ body {
 
 /* ==== SCENTORY v3071 — warmer anniversary glass + compact order policy ==== */
 :root {
-  --anniv-gold: rgba(214, 170, 88, .34);
-  --anniv-gold-soft: rgba(238, 203, 132, .16);
-  --anniv-line: rgba(232, 195, 122, .25);
+  --anniv-gold: rgba(173,173,173, .34);
+  --anniv-gold-soft: rgba(205,205,205, .16);
+  --anniv-line: rgba(198,198,198, .25);
 }
 body {
   background:
-    radial-gradient(920px 540px at 10% 7%, rgba(207,151,62,.085), transparent 62%),
-    radial-gradient(820px 560px at 90% 34%, rgba(235,194,111,.060), transparent 66%),
+    radial-gradient(920px 540px at 10% 7%, rgba(156,156,156,.085), transparent 62%),
+    radial-gradient(820px 560px at 90% 34%, rgba(197,197,197,.060), transparent 66%),
     #050505 !important;
 }
 .product, .order-card, .decant-copy, .decant-photo-card, .toolbar,
 .hot-arrivals-section, .best-selling-section, .brand-showcase-card,
 .discovery-tool-card, .review-card, .faq-grid details, .steps-grid article,
 .hot-arrival-card, .best-seller-card, .about-stat-card {
-  border-color: rgba(228,190,116,.17) !important;
+  border-color: rgba(193,193,193,.17) !important;
   background-image:
-    radial-gradient(circle at 12% 0%, rgba(239,202,129,.075), transparent 34%),
-    linear-gradient(145deg, rgba(220,174,91,.065), rgba(31,25,16,.025) 42%, rgba(235,197,124,.025)) !important;
-  box-shadow: inset 0 1px 0 rgba(255,224,164,.055), 0 16px 40px rgba(0,0,0,.20);
+    radial-gradient(circle at 12% 0%, rgba(205,205,205,.075), transparent 34%),
+    linear-gradient(145deg, rgba(178,178,178,.065), rgba(31,25,16,.025) 42%, rgba(200,200,200,.025)) !important;
+  box-shadow: inset 0 1px 0 rgba(226,226,226,.055), 0 16px 40px rgba(0,0,0,.20);
 }
 .product::after, .order-card::after, .decant-photo-card::after {
-  background: linear-gradient(118deg, transparent 10%, rgba(255,220,149,.060) 34%, rgba(217,164,71,.022) 43%, transparent 57%) !important;
+  background: linear-gradient(118deg, transparent 10%, rgba(222,222,222,.060) 34%, rgba(169,169,169,.022) 43%, transparent 57%) !important;
 }
 .hot-arrival-card:hover, .hot-arrival-card:focus-visible,
 .best-seller-card:hover, .best-seller-card:focus-visible {
-  border-color: rgba(235,197,124,.27) !important;
-  background-image: linear-gradient(145deg, rgba(230,185,101,.10), rgba(37,29,17,.04)) !important;
+  border-color: rgba(200,200,200,.27) !important;
+  background-image: linear-gradient(145deg, rgba(189,189,189,.10), rgba(30,30,30,.04)) !important;
 }
 .quick-shop-chip.active {
-  border-color: rgba(230,190,111,.40) !important;
-  background: linear-gradient(135deg, rgba(214,164,73,.18), rgba(86,62,26,.07)) !important;
+  border-color: rgba(193,193,193,.40) !important;
+  background: linear-gradient(135deg, rgba(168,168,168,.18), rgba(65,65,65,.07)) !important;
 }
 
 .order-policy-modal {
@@ -3578,23 +3578,23 @@ body {
 .order-policy-modal.show { display: grid; }
 .order-policy-card {
   position: relative; width: min(430px, calc(100vw - 28px)); max-height: calc(100dvh - 28px);
-  padding: 20px 18px 18px; border: 1px solid rgba(232,195,122,.25); border-radius: 20px;
+  padding: 20px 18px 18px; border: 1px solid rgba(198,198,198,.25); border-radius: 20px;
   background:
-    radial-gradient(circle at 12% 0%, rgba(236,197,119,.10), transparent 36%),
+    radial-gradient(circle at 12% 0%, rgba(200,200,200,.10), transparent 36%),
     linear-gradient(145deg, rgba(22,18,12,.98), rgba(7,7,7,.99));
-  box-shadow: 0 24px 70px rgba(0,0,0,.58), inset 0 1px 0 rgba(255,226,169,.07);
+  box-shadow: 0 24px 70px rgba(0,0,0,.58), inset 0 1px 0 rgba(228,228,228,.07);
   overflow: hidden;
 }
 .order-policy-close {
   position:absolute; top:9px; right:10px; width:32px; height:32px; border-radius:50%;
   border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:#eee; font-size:20px; cursor:pointer;
 }
-.order-policy-kicker { display:block; margin:0 38px 6px 0; color:#d7b474; font-size:.62rem; font-weight:800; letter-spacing:.10em; text-transform:uppercase; }
+.order-policy-kicker { display:block; margin:0 38px 6px 0; color:#b7b7b7; font-size:.62rem; font-weight:800; letter-spacing:.10em; text-transform:uppercase; }
 .order-policy-card h2 { margin:0 38px 9px 0; font-size:1.12rem; line-height:1.15; }
 .order-policy-card p { margin:0 0 9px; color:#c8c8c8; font-size:.76rem; line-height:1.48; }
-.order-policy-card .advance-delivery-note { color:#f0d29a; font-weight:800; }
+.order-policy-card .advance-delivery-note { color:#d4d4d4; font-weight:800; }
 .policy-accept-row { display:flex; align-items:flex-start; gap:9px; margin:11px 0 12px; color:#e2e2e2; font-size:.72rem; line-height:1.35; cursor:pointer; }
-.policy-accept-row input { width:17px; height:17px; margin:0; flex:0 0 auto; accent-color:#c99a45; }
+.policy-accept-row input { width:17px; height:17px; margin:0; flex:0 0 auto; accent-color:#9e9e9e; }
 .policy-continue { min-height:42px; padding:10px 14px !important; }
 .policy-continue:disabled { opacity:.42; cursor:not-allowed; filter:saturate(.45); }
 @media (max-width:420px) {
@@ -3616,7 +3616,7 @@ body[data-page="shop"] .hero,body[data-page="shop"] .decant-section,body[data-pa
 body[data-page="shop"] .layout{display:block;max-width:1240px;margin:0 auto;padding-top:34px}
 body[data-page="shop"] .home-view-all{display:none}
 body[data-page="shop"] .shop-page-intro{display:block}
-.shop-page-intro{display:none;margin:4px 0 24px;padding:24px;border:1px solid rgba(208,169,93,.32);border-radius:24px;background:linear-gradient(135deg,rgba(208,169,93,.11),rgba(10,10,10,.92) 55%,rgba(208,169,93,.05));box-shadow:inset 0 1px rgba(255,226,166,.08)}
+.shop-page-intro{display:none;margin:4px 0 24px;padding:24px;border:1px solid rgba(172,172,172,.32);border-radius:24px;background:linear-gradient(135deg,rgba(172,172,172,.11),rgba(10,10,10,.92) 55%,rgba(172,172,172,.05));box-shadow:inset 0 1px rgba(228,228,228,.08)}
 .shop-page-intro h1{margin:5px 0 8px;font-size:clamp(2rem,5vw,3.4rem)}.shop-page-intro p{margin:0;color:#bbb}
 body[data-page="order"] .hero,body[data-page="order"] .decant-section,body[data-page="order"] .trust-marquee,body[data-page="order"] .catalog-panel,body[data-page="order"] #customerReviews,body[data-page="order"] #whyScentory,body[data-page="order"] #discoveryStudio,body[data-page="order"] #howToOrder,body[data-page="order"] #faq,body[data-page="order"] #contactScentory{display:none!important}
 body[data-page="order"] .layout{display:block;max-width:760px;margin:0 auto;padding-top:34px}body[data-page="order"] #myOrder{display:block!important;position:static;max-width:none}
@@ -3636,34 +3636,34 @@ body[data-page="order"] .floating-cart{display:none!important}
   top: auto !important;
   padding: 16px !important;
   margin: 14px 0 24px !important;
-  border: 1px solid rgba(224,188,116,.25) !important;
+  border: 1px solid rgba(190,190,190,.25) !important;
   border-radius: 24px !important;
   background:
-    radial-gradient(circle at 8% 0%, rgba(222,180,98,.12), transparent 32%),
+    radial-gradient(circle at 8% 0%, rgba(183,183,183,.12), transparent 32%),
     linear-gradient(145deg, rgba(19,17,13,.98), rgba(8,8,8,.98)) !important;
   box-shadow: 0 18px 44px rgba(0,0,0,.24) !important;
 }
 .refine-title { display:flex; align-items:flex-end; justify-content:space-between; gap:18px; margin-bottom:14px; }
 .refine-title > div { display:grid; gap:3px; }
-.refine-kicker { color:#d9b56d; font-size:.62rem; font-weight:900; letter-spacing:.16em; }
+.refine-kicker { color:#b7b7b7; font-size:.62rem; font-weight:900; letter-spacing:.16em; }
 .refine-title strong { color:#fff; font-size:1.08rem; letter-spacing:-.025em; }
 .refine-title > span { max-width:520px; color:rgba(245,245,245,.58); font-size:.76rem; line-height:1.35; }
 .refine-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; align-items:end; }
 .refine-field { display:grid; gap:5px; min-width:0; }
-.refine-field > span { padding-left:3px; color:rgba(235,205,145,.82); font-size:.61rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
+.refine-field > span { padding-left:3px; color:rgba(207,207,207,.82); font-size:.61rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
 .refine-field select {
   width:100%; min-width:0; height:44px; padding:0 11px; color:#f7f7f7; font:inherit; font-size:.78rem;
   border:1px solid rgba(255,255,255,.12); border-radius:13px; background:#101010;
 }
-.refine-field select:focus { outline:2px solid rgba(222,180,98,.30); outline-offset:1px; border-color:rgba(222,180,98,.52); }
-.refine-reset { height:44px; border:1px solid rgba(222,180,98,.30); border-radius:13px; background:rgba(222,180,98,.07); color:#e8c985; font-weight:850; cursor:pointer; }
+.refine-field select:focus { outline:2px solid rgba(183,183,183,.30); outline-offset:1px; border-color:rgba(183,183,183,.52); }
+.refine-reset { height:44px; border:1px solid rgba(183,183,183,.30); border-radius:13px; background:rgba(183,183,183,.07); color:#cbcbcb; font-weight:850; cursor:pointer; }
 .refine-summary { min-height:18px; margin-top:11px; color:rgba(245,245,245,.56); font-size:.7rem; }
 .quick-pick-head { grid-column:1/-1; display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin:2px 0 -2px; }
-.quick-pick-head span { color:#e5c47e; font-size:.7rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+.quick-pick-head span { color:#c6c6c6; font-size:.7rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
 .quick-pick-head small { color:rgba(245,245,245,.48); font-size:.65rem; }
-.quick-pick-grid .price-tile { border-color:rgba(222,180,98,.16); }
-.quick-pick-grid .price-tile:not(.disabled):hover { border-color:rgba(222,180,98,.40); background:rgba(222,180,98,.08); }
-.quick-pick-grid .price-tile.selected { border-color:rgba(232,198,130,.72); background:linear-gradient(145deg, rgba(222,180,98,.20), rgba(255,255,255,.055)); color:#fff; }
+.quick-pick-grid .price-tile { border-color:rgba(183,183,183,.16); }
+.quick-pick-grid .price-tile:not(.disabled):hover { border-color:rgba(183,183,183,.40); background:rgba(183,183,183,.08); }
+.quick-pick-grid .price-tile.selected { border-color:rgba(200,200,200,.72); background:linear-gradient(145deg, rgba(183,183,183,.20), rgba(255,255,255,.055)); color:#fff; }
 .catalog-panel { padding-top:0 !important; }
 
 @media (max-width: 960px) {
@@ -3686,16 +3686,16 @@ body[data-page="order"] .floating-cart{display:none!important}
 }
 
 /* v3081 brand houses */
-.houses-section{margin:56px auto;max-width:1180px;padding:34px 0;border:1px solid rgba(222,190,128,.22);border-radius:32px;background:linear-gradient(145deg,rgba(28,23,15,.92),rgba(7,7,7,.98));overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.28)}
-.houses-head{text-align:center;padding:0 22px 24px}.houses-head h2{margin:7px 0 6px;font-size:clamp(2rem,5vw,3.8rem);letter-spacing:-.045em}.houses-head p{margin:0;color:#d8c5a0;font-size:1.05rem}.brand-marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.houses-section{margin:56px auto;max-width:1180px;padding:34px 0;border:1px solid rgba(192,192,192,.22);border-radius:32px;background:linear-gradient(145deg,rgba(28,23,15,.92),rgba(7,7,7,.98));overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.houses-head{text-align:center;padding:0 22px 24px}.houses-head h2{margin:7px 0 6px;font-size:clamp(2rem,5vw,3.8rem);letter-spacing:-.045em}.houses-head p{margin:0;color:#c6c6c6;font-size:1.05rem}.brand-marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .brand-marquee-track{display:flex;width:max-content;gap:14px;padding:8px 7px 18px;animation:scentoryBrandFlow 42s linear infinite}.brand-marquee:hover .brand-marquee-track{animation-play-state:paused}@keyframes scentoryBrandFlow{to{transform:translateX(-50%)}}
-.brand-logo-card{width:148px;height:88px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;position:relative;border-radius:20px;border:1px solid rgba(231,204,153,.18);background:rgba(255,255,255,.045);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);text-decoration:none;padding:14px;transition:.25s ease}.brand-logo-card:hover{transform:translateY(-3px);border-color:rgba(231,204,153,.5);background:rgba(255,255,255,.075)}.brand-logo-card img{max-width:112px;max-height:48px;object-fit:contain;filter:grayscale(1) brightness(2.4);opacity:.92}.brand-logo-card span{position:absolute;inset:auto 7px 5px;text-align:center;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:#b9aa8e;opacity:.72}.brand-disclaimer{max-width:980px;margin:12px auto 0;padding:0 24px;color:#928b80;font-size:.76rem;line-height:1.65;text-align:center}.brand-disclaimer strong{color:#cdb98f}
+.brand-logo-card{width:148px;height:88px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;position:relative;border-radius:20px;border:1px solid rgba(206,206,206,.18);background:rgba(255,255,255,.045);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);text-decoration:none;padding:14px;transition:.25s ease}.brand-logo-card:hover{transform:translateY(-3px);border-color:rgba(206,206,206,.5);background:rgba(255,255,255,.075)}.brand-logo-card img{max-width:112px;max-height:48px;object-fit:contain;filter:grayscale(1) brightness(2.4);opacity:.92}.brand-logo-card span{position:absolute;inset:auto 7px 5px;text-align:center;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:#ababab;opacity:.72}.brand-disclaimer{max-width:980px;margin:12px auto 0;padding:0 24px;color:#8c8c8c;font-size:.76rem;line-height:1.65;text-align:center}.brand-disclaimer strong{color:#bababa}
 .profile-overview{color:#c9c5bd;line-height:1.65;margin:-6px 0 18px}
 @media(max-width:700px){.houses-section{margin:34px 14px;border-radius:25px;padding:27px 0}.brand-logo-card{width:124px;height:78px}.brand-logo-card img{max-width:92px;max-height:40px}.brand-marquee-track{animation-duration:34s}.brand-disclaimer{text-align:left;font-size:.72rem}}
 @media(prefers-reduced-motion:reduce){.brand-marquee-track{animation:none;transform:none}.brand-marquee{overflow-x:auto}}
 
 /* v3082 brand-house resilience */
 .brand-logo-card .verified-brand-logo{max-width:112px;max-height:45px;object-fit:contain;filter:grayscale(1) invert(1) brightness(1.75);opacity:.94}
-.brand-logo-card .brand-wordmark-fallback{position:static;display:block;max-width:116px;text-align:center;color:#f1e4c8;font-size:.92rem;line-height:1.05;letter-spacing:.035em;font-weight:800;text-transform:uppercase}
+.brand-logo-card .brand-wordmark-fallback{position:static;display:block;max-width:116px;text-align:center;color:#e5e5e5;font-size:.92rem;line-height:1.05;letter-spacing:.035em;font-weight:800;text-transform:uppercase}
 .brand-logo-card .brand-wordmark-fallback[hidden]{display:none!important}
 @media(max-width:700px){.brand-logo-card .verified-brand-logo{max-width:92px;max-height:38px}.brand-logo-card .brand-wordmark-fallback{max-width:98px;font-size:.78rem}}

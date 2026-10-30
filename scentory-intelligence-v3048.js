@@ -165,7 +165,7 @@
   };
 
   const sprayGuide = {
-    '5ml': { min: 70, max: 80, title: '5 ML', copy: 'Perfect for testing new perfumes and discovering your favourites.' },
+    '3ml': { min: 40, max: 50, title: '3 ML', copy: 'A small size for testing new perfumes.' },
     '6ml': { min: 100, max: 110, title: '6 ML Premium', copy: 'A premium choice for gifting, carrying, and daily use.' },
     '10ml': { min: 140, max: 150, title: '10 ML', copy: 'The balanced size for regular wear and frequent use.' },
     '15ml': { min: 200, max: 220, title: '15 ML', copy: 'Best for your signature perfumes that you love wearing often.' }
@@ -585,7 +585,7 @@
             <select id="findAvoid"><option value="none">No strong dislike</option><option value="sweet">Too sweet</option><option value="oud">Oud / smoky</option><option value="fresh">Very fresh / aquatic</option><option value="bold">Very strong projection</option><option value="powdery">Powdery character</option></select>
           </div>
           <div class="discovery-field"><label for="findSize">Preferred decant size</label>
-            <select id="findSize"><option value="5ml">5 ML</option><option value="6ml">6 ML Premium</option><option value="10ml">10 ML</option><option value="15ml">15 ML</option></select>
+            <select id="findSize"><option value="3ml">3 ML</option><option value="6ml">6 ML Premium</option><option value="10ml">10 ML</option><option value="15ml">15 ML</option></select>
           </div>
           <div class="discovery-field"><label for="findBudget">Maximum perfume budget</label>
             <select id="findBudget"><option value="300">Up to 300 Tk</option><option value="500" selected>Up to 500 Tk</option><option value="800">Up to 800 Tk</option><option value="1200">Up to 1,200 Tk</option><option value="2000">Up to 2,000 Tk</option></select>
@@ -608,7 +608,7 @@
     const weather = document.getElementById('findWeather')?.value || 'hot';
     const presence = document.getElementById('findPresence')?.value || 'balanced';
     const avoid = document.getElementById('findAvoid')?.value || 'none';
-    const size = document.getElementById('findSize')?.value || '5ml';
+    const size = document.getElementById('findSize')?.value || '3ml';
     const budget = Number(document.getElementById('findBudget')?.value || 500);
     const pricePreference = document.getElementById('findPricePreference')?.value || 'balanced';
     const resultsBox = document.getElementById('findResults');
@@ -675,7 +675,7 @@
         size: selected.size,
         badge: `${score}% explained match`,
         reason: why.slice(0, 3).join(' · '),
-        breakdown: `<div class="explainable-match"><strong>Why it fits</strong><ul>${why.map(item => `<li>${esc(item)}</li>`).join('')}</ul><strong>Consider before choosing</strong><p>${cautions.length ? esc(cautions.join('. ')) : 'No major conflict was detected from your answers.'}</p><span>${esc(risk)} — try 5 ML first if unsure.</span></div>`
+        breakdown: `<div class="explainable-match"><strong>Why it fits</strong><ul>${why.map(item => `<li>${esc(item)}</li>`).join('')}</ul><strong>Consider before choosing</strong><p>${cautions.length ? esc(cautions.join('. ')) : 'No major conflict was detected from your answers.'}</p><span>${esc(risk)} — try 3 ML first if unsure.</span></div>`
       })).join('')}</div>
       <p class="discovery-disclaimer"><strong>Transparent scoring:</strong> occasion 22%, perfume family 20%, weather 16%, presence 12%, style/maturity 14%, budget position 8%, availability 4% and profile confidence 4%. Results are diversified by perfume family and brand, with penalties for dislikes and first-pick restrictions. This is shopping guidance, not a guarantee of personal preference.</p>
     `;
@@ -889,7 +889,7 @@
       `
         <form class="discovery-form" onsubmit="runDecantBox(event)">
           <div class="discovery-field"><label for="boxBudget">Perfume budget</label><select id="boxBudget"><option value="800">800 Tk</option><option value="1200" selected>1,200 Tk</option><option value="1600">1,600 Tk</option><option value="2200">2,200 Tk</option><option value="3000">3,000 Tk</option><option value="4000">4,000 Tk</option><option value="5000">5,000 Tk</option></select></div>
-          <div class="discovery-field"><label for="boxSize">One size for every decant</label><select id="boxSize"><option value="5ml">5 ML</option><option value="6ml">6 ML Premium</option><option value="10ml">10 ML</option><option value="15ml">15 ML</option></select></div>
+          <div class="discovery-field"><label for="boxSize">One size for every decant</label><select id="boxSize"><option value="3ml">3 ML</option><option value="6ml">6 ML Premium</option><option value="10ml">10 ML</option><option value="15ml">15 ML</option></select></div>
           <div class="discovery-field"><label for="boxCount">Number of perfumes</label><select id="boxCount"><option value="3">3 perfumes</option><option value="4" selected>4 perfumes</option><option value="5">5 perfumes</option><option value="6">6 perfumes</option></select></div>
           <div class="discovery-field"><label for="boxStyle">Box personality</label><select id="boxStyle"><option value="balanced">Balanced wardrobe</option><option value="fresh">Fresh & clean</option><option value="office">Office-ready</option><option value="evening">Evening & date</option><option value="summer">Bangladesh summer</option><option value="sweet">Sweet collection</option><option value="bold">Bold performers</option><option value="versatile">Everyday versatile</option></select></div>
           <div class="discovery-form-actions"><button class="discovery-action" type="submit">Build My Box</button></div>
@@ -948,7 +948,7 @@
   function readBoxSettings() {
     return {
       budget: Number(document.getElementById('boxBudget')?.value || 1200),
-      size: document.getElementById('boxSize')?.value || '5ml',
+      size: document.getElementById('boxSize')?.value || '3ml',
       count: Number(document.getElementById('boxCount')?.value || 4),
       style: document.getElementById('boxStyle')?.value || 'balanced'
     };
@@ -983,7 +983,7 @@
     if (!resultsBox) return;
 
     if (!items.length) {
-      resultsBox.innerHTML = '<div class="discovery-empty">That budget cannot build a box with the selected size. Try 5 ML or increase the budget.</div>';
+      resultsBox.innerHTML = '<div class="discovery-empty">That budget cannot build a box with the selected size. Try 3 ML or increase the budget.</div>';
       return;
     }
 
@@ -1334,14 +1334,14 @@
       const first = getCatalogue().find(product => product.id === recipe.first);
       const second = getCatalogue().find(product => product.id === recipe.second);
       if (!first || !second) return '';
-      const firstSize = availableSize(first, '5ml');
-      const secondSize = availableSize(second, '5ml');
+      const firstSize = availableSize(first, '3ml');
+      const secondSize = availableSize(second, '3ml');
       return `<article class="layering-card">
         <div class="layering-card-head"><span>${esc(recipe.confidence)} · ${recipe.sources} source${recipe.sources === 1 ? '' : 's'}</span><strong>${esc(recipe.title)}</strong></div>
         <div class="layering-pair"><div><img src="${esc(imagePath(first))}" alt="${esc(first.name)}"><b>${esc(first.name)}</b></div><i>＋</i><div><img src="${esc(imagePath(second))}" alt="${esc(second.name)}"><b>${esc(second.name)}</b></div></div>
         <dl><div><dt>Apply</dt><dd>${esc(recipe.order)}</dd></div><div><dt>Starting ratio</dt><dd>${esc(recipe.ratio)}</dd></div><div><dt>Expected effect</dt><dd>${esc(recipe.effect)}</dd></div><div><dt>Best setting</dt><dd>${esc(layerWeatherLabel(recipe))}</dd></div><div><dt>Total spray guide</dt><dd>${esc(layeringSprayText(recipe, temperature, environment))}</dd></div></dl>
         <p>${esc(recipe.note)}</p>
-        <div class="discovery-result-actions">${firstSize && secondSize ? `<button class="discovery-mini-action primary" type="button" onclick="addLayeringPair('${esc(first.id)}','${esc(firstSize.size)}','${esc(second.id)}','${esc(secondSize.size)}')">Add both 5 ML decants</button>` : '<span class="layering-stock-note">One perfume is currently unavailable.</span>'}</div>
+        <div class="discovery-result-actions">${firstSize && secondSize ? `<button class="discovery-mini-action primary" type="button" onclick="addLayeringPair('${esc(first.id)}','${esc(firstSize.size)}','${esc(second.id)}','${esc(secondSize.size)}')">Add both decants</button>` : '<span class="layering-stock-note">One perfume is currently unavailable.</span>'}</div>
       </article>`;
     }).join('')}</div><p class="discovery-disclaimer"><strong>Layer safely:</strong> the spray number is the combined total—not the amount for each perfume. Test on paper or separate skin areas first. Community reports are subjective; Scentory excludes undocumented random pairings but cannot guarantee personal preference.</p>`;
   }

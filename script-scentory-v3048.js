@@ -399,7 +399,7 @@ function renderIntelligenceDetails(p) {
     return `
       <section class="verified-perfume-details pending-review" aria-label="Perfume profile review status">
         <span class="profile-review-badge">Profile review in progress</span>
-        <p>Scentory is rechecking the exact note pyramid and performance sources for this perfume. Until that review is complete, we do not show detailed note claims here. Please sample 5 ML first.</p>
+        <p>Scentory is rechecking the exact note pyramid and performance sources for this perfume. Until that review is complete, we do not show detailed note claims here. Please sample 3 ML first.</p>
         ${bestPlaces.length ? `<div class="profile-fact"><b>Catalogue use profile</b><span>${bestPlaces.map(escapeHtml).join(' · ')}</span></div>` : ''}
       </section>
     `;
@@ -629,7 +629,7 @@ function injectCatalogueStructuredData() {
   node.textContent = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Scentory — 150+ perfume choices in Bangladesh',
+    name: 'Scentory — 135 perfume choices in Bangladesh',
     itemListElement: itemList
   });
   document.head.appendChild(node);
