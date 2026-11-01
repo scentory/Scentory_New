@@ -1,0 +1,45 @@
+{
+  "version": "V42",
+  "basedOn": "SCENTORY_V41_ALL_UPDATES_FULL_MASTER-1.zip",
+  "date": "2026-11-01",
+  "description": "November 2026 price and availability publication; new Valentino Uomo Born in Roma Intense poster and product.",
+  "productsInCatalogue": 136,
+  "orderableSizeOptions": 400,
+  "addedProducts": [
+    "valentino-uomo-born-in-roma-intense-edp"
+  ],
+  "addedImages": [
+    "valentino-uomo-born-in-roma-intense-edp-poster.png"
+  ],
+  "productAvailabilityChanges": {
+    "club-de-nuit-elite": "upcoming → available (15 ML remains unavailable)",
+    "good-girl-by-carolina-herrera": "upcoming → available",
+    "khadlaj-island-sun-edp": "available → out (entire perfume marked ❎)"
+  },
+  "priceChanges": {
+    "valentino-uomo-born-in-roma-intense-edp": {
+      "3ml": 449,
+      "6ml": 860,
+      "10ml": 1370,
+      "15ml": 1999
+    }
+  },
+  "currencyDisplay": "Tk (BDT used only for standards-compliant structured metadata)",
+  "unchangedPricePolicy": "All 135 V41 perfume prices retained because the Nov supplied list matched existing values; new Valentino product price added.",
+  "preservation": "All unspecified original files byte-identical to V41 full master archive.",
+  "note": "Existing Valentino Uomo Born in Roma Coral Fantasy upcoming product is kept separate from the new Intense; November list calls an existing 445/829/1320/1920 item Born in Roma (Soon), without specifying Coral Fantasy. Existing route and image preserved to avoid mismatching the bottle.",
+  "updatedFiles": [
+    "club-de-nuit-elite.html",
+    "good-girl-by-carolina-herrera.html",
+    "index.html",
+    "khadlaj-island-sun-edp.html",
+    "llms.txt",
+    "order.html",
+    "perfumes.json",
+    "script-scentory-v3048.js",
+    "shop.html",
+    "sitemap.xml",
+    "valentino-uomo-born-in-roma-intense-edp-poster.png",
+    "valentino-uomo-born-in-roma-intense-edp.html"
+  ]
+}

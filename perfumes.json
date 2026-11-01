@@ -7,7 +7,7 @@
       "Citrus",
       "Green Tea"
     ],
-    "recommendation": "Fresh citrus and green tea notes. Coming soon to Scentory.",
+    "recommendation": "Fresh citrus and green tea notes. Now available at Scentory.",
     "profile": {
       "schemaVersion": 2,
       "character": [
@@ -45,10 +45,10 @@
       },
       "performance": "No independently verified wear-time estimate is available.",
       "sourceNote": "Green Tea and Bergamot were supplied by Scentory. Exact wear time and comparison claims on the supplied poster are unverified.",
-      "overview": "Club de Nuit Élite is upcoming at Scentory. Explore its fresh green tea and bergamot character."
+      "overview": "Club de Nuit Élite is now available at Scentory. Explore its fresh green tea and bergamot character."
     },
     "name": "Club de Nuit Élite",
-    "status": "upcoming",
+    "status": "available",
     "sizes": {
       "3ml": {
         "price": 280,
@@ -182,6 +182,109 @@
     }
   },
   {
+    "id": "valentino-uomo-born-in-roma-intense-edp",
+    "name": "Valentino Uomo Born In Roma Intense EDP",
+    "image": "valentino-uomo-born-in-roma-intense-edp-poster.png",
+    "tags": [
+      "Vanilla",
+      "Lavandin",
+      "Woody",
+      "Warm Spicy",
+      "Evening"
+    ],
+    "recommendation": "Warm, spicy ambery fougère with vanilla, aromatic lavandin and smoky vetiver. A strong choice for evening and cooler-weather sampling.",
+    "status": "available",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "vanilla",
+        "aromatic",
+        "amber",
+        "spicy",
+        "woody"
+      ],
+      "occasions": [
+        "date",
+        "party",
+        "formal"
+      ],
+      "climates": [
+        "cool",
+        "ac"
+      ],
+      "strength": 4,
+      "projection": 3,
+      "longevity": 3,
+      "sweetness": 4,
+      "freshness": 2,
+      "warmth": 4,
+      "officeSafety": 2,
+      "heatSafety": 2,
+      "versatility": 3,
+      "evidence": "brand-official",
+      "reviewedAt": "2026-11-01",
+      "topPickEligible": true,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "brand-official",
+      "notes": {
+        "top": [
+          "Vanilla Bourbon",
+          "Ginger"
+        ],
+        "heart": [
+          "Lavandin",
+          "Nutmeg"
+        ],
+        "base": [
+          "Smoked Vetiver"
+        ],
+        "featured": [
+          "Vanilla",
+          "Lavandin",
+          "Vetiver"
+        ]
+      },
+      "performance": "No independent, consistent wear-time estimate is available; performance varies with skin, weather and spray count.",
+      "comparison": "Ambery aromatic perfume with a warm vanilla and vetiver signature.",
+      "overview": "Valentino Uomo Born In Roma Intense EDP combines vanilla, lavandin and vetiver in a warm, aromatic fragrance.",
+      "sourceNote": "Notes checked against the official Valentino Beauty Born in Roma Uomo Eau de Parfum Intense listing; wear-time is not independently verified.",
+      "sources": [
+        "https://www.valentino-beauty.us/fragrances/fragrances-men/born-in-roma-uomo-intense/born-in-roma-uomo-eau-de-parfum-intense-MPL01907.html"
+      ],
+      "profileScope": "perfume"
+    },
+    "sizes": {
+      "3ml": {
+        "price": 449,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 860,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 1370,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 1999,
+        "available": true,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 449,
+      "6 ML": 860,
+      "10 ML": 1370,
+      "15 ML": 1999
+    }
+  },
+  {
     "id": "valentino-uomo-born-in-roma-coral-fantasy",
     "name": "Valentino Uomo Born in Roma Coral Fantasy",
     "image": "valentino-uomo-born-in-roma-coral-fantasy-poster.jpg",
@@ -241,8 +344,8 @@
     "tags": [
       "Perfume"
     ],
-    "recommendation": "Coming soon to Scentory. Detailed perfume profile is being verified.",
-    "status": "upcoming",
+    "recommendation": "Available now at Scentory. Full fragrance profile verification is in progress.",
+    "status": "available",
     "profile": {
       "schemaVersion": 2,
       "character": [],
@@ -254,7 +357,7 @@
     },
     "details": {
       "verification": "pending-official-source",
-      "overview": "Good Girl by Carolina Herrera is coming soon to Scentory.",
+      "overview": "Good Girl by Carolina Herrera is available now at Scentory. Additional fragrance profile details will be added after verification.",
       "sourceNote": "Perfume notes and performance have not been independently confirmed.",
       "performance": "No verified wear-time estimate is available."
     },
@@ -11657,26 +11760,26 @@
   {
     "id": "khadlaj-island-sun-edp",
     "name": "Khadlaj Island Sun EDP",
-    "status": "available",
+    "status": "out",
     "sizes": {
       "3ml": {
         "price": 210,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "6ml": {
         "price": 360,
-        "available": true,
+        "available": false,
         "premium": true
       },
       "10ml": {
         "price": 540,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
         "price": 740,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
