@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '4200';
+const DATA_VERSION = '4300';
 const BEST_SELLING_IDS = [
   'sanaya-by-junaid-edp',
   'dolce-gabbana-the-one-edp',
@@ -15,6 +15,7 @@ const BEST_SELLING_IDS = [
 ];
 
 const HOT_ARRIVAL_IDS = [
+  'rayhaan-vanilla-vibe-edp',
   'valentino-uomo-born-in-roma-intense-edp',
   'rayhaan-vantage',
   'jpg-le-male-le-parfum',
@@ -630,7 +631,7 @@ function injectCatalogueStructuredData() {
   node.textContent = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Scentory — 136 perfume choices in Bangladesh',
+    name: 'Scentory — 137 perfume choices in Bangladesh',
     itemListElement: itemList
   });
   document.head.appendChild(node);

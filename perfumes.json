@@ -67,7 +67,7 @@
       },
       "15ml": {
         "price": 1120,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -766,7 +766,7 @@
       },
       "10ml": {
         "price": 670,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
@@ -2971,7 +2971,7 @@
       },
       "6ml": {
         "price": 360,
-        "available": true,
+        "available": false,
         "premium": true
       },
       "10ml": {
@@ -3146,7 +3146,7 @@
       },
       "10ml": {
         "price": 650,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
@@ -3659,7 +3659,7 @@
       },
       "15ml": {
         "price": 1250,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -3877,7 +3877,7 @@
       },
       "10ml": {
         "price": 700,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
@@ -3983,7 +3983,7 @@
       },
       "6ml": {
         "price": 370,
-        "available": true,
+        "available": false,
         "premium": true
       },
       "10ml": {
@@ -4449,7 +4449,7 @@
       },
       "10ml": {
         "price": 970,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -5557,7 +5557,7 @@
       },
       "15ml": {
         "price": 760,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -5786,7 +5786,7 @@
       },
       "15ml": {
         "price": 580,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -7626,7 +7626,7 @@
       },
       "15ml": {
         "price": 570,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -8193,6 +8193,99 @@
     }
   },
   {
+    "id": "rayhaan-vanilla-vibe-edp",
+    "name": "Rayhaan Vanilla Vibe EDP",
+    "status": "available",
+    "image": "rayhaan-vanilla-vibe-edp-poster.png",
+    "tags": [
+      "Vanilla",
+      "Fruity",
+      "Woody",
+      "Warm",
+      "Evening"
+    ],
+    "recommendation": "Warm fruity vanilla with florals and woody depth. Best for date nights, dinners and special occasions.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "vanilla",
+        "fruity",
+        "floral",
+        "woody",
+        "amber"
+      ],
+      "occasions": [
+        "date",
+        "party",
+        "formal"
+      ],
+      "climates": [
+        "cool",
+        "ac"
+      ],
+      "strength": 4,
+      "projection": 3,
+      "longevity": 4,
+      "sweetness": 4,
+      "freshness": 2,
+      "warmth": 4,
+      "officeSafety": 2,
+      "heatSafety": 2,
+      "versatility": 3,
+      "evidence": "scentory-supplied",
+      "reviewedAt": "2026-11-06",
+      "topPickEligible": false,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "scentory-supplied",
+      "notes": {
+        "featured": [
+          "Plum",
+          "Freesia",
+          "Madagascar vanilla",
+          "Tuberose",
+          "Amber",
+          "Labdanum",
+          "Cashmere wood",
+          "Oud"
+        ]
+      },
+      "performance": "Approximately 7–10 hours on clothes; this is an estimate, not guaranteed. Individual results vary.",
+      "overview": "Warm, fruity and woody vanilla with lush florals. Best for date nights, dinners and special occasions.",
+      "comparison": "A warm vanilla fragrance with woody depth.",
+      "profileScope": "perfume"
+    },
+    "sizes": {
+      "3ml": {
+        "price": 190,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 330,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 470,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 650,
+        "available": true,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 190,
+      "6 ML": 330,
+      "10 ML": 470,
+      "15 ML": 650
+    }
+  },
+  {
     "id": "ajmal-kuro-edp",
     "name": "Ajmal Kuro EDP",
     "status": "available",
@@ -8639,12 +8732,12 @@
       },
       "10ml": {
         "price": 630,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "15ml": {
         "price": 880,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -9763,7 +9856,7 @@
       },
       "15ml": {
         "price": 820,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -11274,7 +11367,7 @@
       },
       "15ml": {
         "price": 620,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -11384,7 +11477,7 @@
       },
       "15ml": {
         "price": 600,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },

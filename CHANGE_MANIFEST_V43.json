@@ -1,0 +1,89 @@
+{
+  "version": "V43",
+  "basedOn": "SCENTORY_V42_FULL_MASTER.zip",
+  "date": "2026-11-06",
+  "productsInCatalogue": 137,
+  "orderableSizeOptions": 404,
+  "addedProduct": "rayhaan-vanilla-vibe-edp",
+  "newPricesTk": {
+    "3ml": 190,
+    "6ml": 330,
+    "10ml": 470,
+    "15ml": 650
+  },
+  "numericPriceChangesToExistingProducts": {},
+  "sizeAvailabilityChanges": {
+    "club-de-nuit-elite": {
+      "15ml": true
+    },
+    "mykonos-inception-edp": {
+      "10ml": false
+    },
+    "ateeq-nusuk-by-lattafa": {
+      "6ml": false
+    },
+    "thriller-iii-maison-x-cal-cologne": {
+      "10ml": false
+    },
+    "afnan-9-pm-night-out-edp": {
+      "15ml": true
+    },
+    "afnan-9-pm-rebel-edp": {
+      "10ml": false
+    },
+    "afnan-modest-une-edp": {
+      "6ml": false
+    },
+    "azzaro-the-most-wanted-edp-intense": {
+      "10ml": true
+    },
+    "kaaf-by-ahmed-edp": {
+      "15ml": false
+    },
+    "zeleny-by-ahmed-edp": {
+      "15ml": false
+    },
+    "rayhaan-aquatica-edp": {
+      "15ml": false
+    },
+    "club-de-nuit-intense-man-pure-parfum": {
+      "10ml": true,
+      "15ml": true
+    },
+    "zenith-blue-by-french-avenue-edp": {
+      "15ml": true
+    },
+    "lattafa-asad-edp": {
+      "15ml": true
+    },
+    "lattafa-fakhar-black-edp": {
+      "15ml": true
+    }
+  },
+  "updatedFiles": [
+    "afnan-9-pm-night-out-edp.html",
+    "afnan-9-pm-rebel-edp.html",
+    "afnan-modest-une-edp.html",
+    "ateeq-nusuk-by-lattafa.html",
+    "azzaro-the-most-wanted-edp-intense.html",
+    "club-de-nuit-elite.html",
+    "club-de-nuit-intense-man-pure-parfum.html",
+    "index.html",
+    "kaaf-by-ahmed-edp.html",
+    "lattafa-asad-edp.html",
+    "lattafa-fakhar-black-edp.html",
+    "llms.txt",
+    "mykonos-inception-edp.html",
+    "order.html",
+    "perfumes.json",
+    "rayhaan-aquatica-edp.html",
+    "rayhaan-vanilla-vibe-edp-poster.png",
+    "rayhaan-vanilla-vibe-edp.html",
+    "script-scentory-v3048.js",
+    "shop.html",
+    "sitemap.xml",
+    "thriller-iii-maison-x-cal-cologne.html",
+    "zeleny-by-ahmed-edp.html",
+    "zenith-blue-by-french-avenue-edp.html"
+  ]
+}
