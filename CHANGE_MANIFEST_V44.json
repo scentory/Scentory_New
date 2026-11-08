@@ -1,0 +1,116 @@
+{
+  "version": "V44",
+  "basedOn": "SCENTORY_V43_FULL_MASTER.zip",
+  "date": "2026-11-08",
+  "productsInCatalogue": 137,
+  "orderableSizeOptions": 392,
+  "numericPriceChanges": {},
+  "stockChanges": {
+    "brandy-inspiration-edp": {
+      "status": [
+        "available",
+        "out"
+      ],
+      "sizes": {
+        "6ml": {
+          "from": true,
+          "to": false
+        },
+        "10ml": {
+          "from": true,
+          "to": false
+        }
+      }
+    },
+    "hawas-fire-edp": {
+      "status": [
+        "available",
+        "out"
+      ],
+      "sizes": {
+        "3ml": {
+          "from": true,
+          "to": false
+        },
+        "6ml": {
+          "from": true,
+          "to": false
+        },
+        "10ml": {
+          "from": true,
+          "to": false
+        }
+      }
+    },
+    "afnan-supremacy-collector-s-edition-edp": {
+      "sizes": {
+        "10ml": {
+          "from": true,
+          "to": false
+        }
+      }
+    },
+    "afnan-9-pm-edp": {
+      "sizes": {
+        "10ml": {
+          "from": true,
+          "to": false
+        }
+      }
+    },
+    "rayhaan-cedrus-blanc-edp": {
+      "sizes": {
+        "15ml": {
+          "from": true,
+          "to": false
+        }
+      }
+    },
+    "rayhaan-lion-edp": {
+      "sizes": {
+        "10ml": {
+          "from": true,
+          "to": false
+        },
+        "15ml": {
+          "from": true,
+          "to": false
+        }
+      }
+    },
+    "rayhaan-floriana": {
+      "sizes": {
+        "15ml": {
+          "from": true,
+          "to": false
+        }
+      }
+    },
+    "club-de-nuit-blue-iconic": {
+      "sizes": {
+        "15ml": {
+          "from": true,
+          "to": false
+        }
+      }
+    }
+  },
+  "stockRule": "A ❎ beside the perfume name overrides unmarked sizes; the entire product is out of stock.",
+  "updatedFiles": [
+    "CHANGE_MANIFEST_V44.json",
+    "README_V44.txt",
+    "afnan-9-pm-edp.html",
+    "afnan-supremacy-collector-s-edition-edp.html",
+    "brandy-inspiration-edp.html",
+    "club-de-nuit-blue-iconic.html",
+    "hawas-fire-edp.html",
+    "index.html",
+    "order.html",
+    "perfumes.json",
+    "rayhaan-cedrus-blanc-edp.html",
+    "rayhaan-floriana.html",
+    "rayhaan-lion-edp.html",
+    "script-scentory-v3048.js",
+    "shop.html"
+  ]
+}

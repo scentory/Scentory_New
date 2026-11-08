@@ -2118,21 +2118,21 @@
   {
     "id": "hawas-fire-edp",
     "name": "Hawas Fire EDP",
-    "status": "available",
+    "status": "out",
     "sizes": {
       "3ml": {
         "price": 220,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "6ml": {
         "price": 390,
-        "available": true,
+        "available": false,
         "premium": true
       },
       "10ml": {
         "price": 590,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
@@ -3332,7 +3332,7 @@
       },
       "10ml": {
         "price": 950,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
@@ -3769,7 +3769,7 @@
       },
       "10ml": {
         "price": 580,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
@@ -6099,7 +6099,7 @@
   {
     "id": "brandy-inspiration-edp",
     "name": "Brandy Inspiration EDP",
-    "status": "available",
+    "status": "out",
     "sizes": {
       "3ml": {
         "price": 150,
@@ -6108,12 +6108,12 @@
       },
       "6ml": {
         "price": 250,
-        "available": true,
+        "available": false,
         "premium": true
       },
       "10ml": {
         "price": 340,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
@@ -6880,7 +6880,7 @@
       },
       "15ml": {
         "price": 570,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -7379,12 +7379,12 @@
       },
       "10ml": {
         "price": 420,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "15ml": {
         "price": 570,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -7795,7 +7795,7 @@
       },
       "15ml": {
         "price": 530,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -9407,7 +9407,7 @@
       },
       "15ml": {
         "price": 920,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
