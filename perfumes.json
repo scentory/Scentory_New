@@ -289,24 +289,53 @@
     "name": "Valentino Uomo Born in Roma Coral Fantasy",
     "image": "valentino-uomo-born-in-roma-coral-fantasy-poster.jpg",
     "tags": [
-      "Perfume"
+      "Fruity",
+      "Aromatic",
+      "Woody",
+      "Spicy"
     ],
-    "recommendation": "Coming soon to Scentory. Detailed perfume profile is being verified.",
+    "recommendation": "Red apple and cardamom lead into aromatic herbs and a tobacco, patchouli and vetiver base. Coming soon.",
     "status": "upcoming",
     "profile": {
       "schemaVersion": 2,
-      "character": [],
+      "character": [
+        "fruity",
+        "aromatic",
+        "woody",
+        "spicy"
+      ],
       "occasions": [],
       "climates": [],
       "topPickEligible": false,
       "scope": "perfume",
-      "evidence": "pending"
+      "evidence": "fragrantica-notes",
+      "reviewedAt": "2026-11-09"
     },
     "details": {
-      "verification": "pending-official-source",
-      "overview": "Valentino Uomo Born in Roma Coral Fantasy is coming soon to Scentory.",
-      "sourceNote": "Perfume notes and performance have not been independently confirmed.",
-      "performance": "No verified wear-time estimate is available."
+      "verification": "fragrantica-notes",
+      "overview": "Red apple and cardamom lead into aromatic herbs and a tobacco, patchouli and vetiver base. Coming soon.",
+      "sourceNote": "Note pyramid checked against the exact Fragrantica perfume listing. Wear occasions and performance are not independently verified.",
+      "performance": "No verified wear-time estimate is available.",
+      "notes": {
+        "top": [
+          "Red Apple",
+          "Cardamom",
+          "Calabrian Bergamot"
+        ],
+        "heart": [
+          "Lavender",
+          "Bourbon Geranium",
+          "Clary Sage"
+        ],
+        "base": [
+          "Tobacco Leaf",
+          "Patchouli",
+          "Haitian Vetiver"
+        ]
+      },
+      "sources": [
+        "https://www.fragrantica.com/perfume/Valentino/Valentino-Uomo-Born-In-Roma-Coral-Fantasy-71761.html"
+      ]
     },
     "sizes": {
       "3ml": {
@@ -342,24 +371,62 @@
     "name": "Good Girl by Carolina Herrera",
     "image": "good-girl-by-carolina-herrera-poster.jpg",
     "tags": [
-      "Perfume"
+      "Sweet",
+      "Floral",
+      "Vanilla"
     ],
-    "recommendation": "Available now at Scentory. Full fragrance profile verification is in progress.",
+    "recommendation": "Almond and coffee open into white florals, followed by tonka bean, cacao and vanilla.",
     "status": "available",
     "profile": {
       "schemaVersion": 2,
-      "character": [],
+      "character": [
+        "sweet",
+        "floral",
+        "vanilla"
+      ],
       "occasions": [],
       "climates": [],
       "topPickEligible": false,
       "scope": "perfume",
-      "evidence": "pending"
+      "evidence": "fragrantica-notes",
+      "reviewedAt": "2026-11-09"
     },
     "details": {
-      "verification": "pending-official-source",
-      "overview": "Good Girl by Carolina Herrera is available now at Scentory. Additional fragrance profile details will be added after verification.",
-      "sourceNote": "Perfume notes and performance have not been independently confirmed.",
-      "performance": "No verified wear-time estimate is available."
+      "verification": "fragrantica-notes",
+      "overview": "Almond and coffee open into white florals, followed by tonka bean, cacao and vanilla.",
+      "sourceNote": "Note pyramid checked against the exact Fragrantica perfume listing. Wear occasions and performance are not independently verified.",
+      "performance": "No verified wear-time estimate is available.",
+      "notes": {
+        "top": [
+          "Almond",
+          "Coffee",
+          "Bergamot",
+          "Lemon"
+        ],
+        "heart": [
+          "Tuberose",
+          "Jasmine Sambac",
+          "Orange Blossom",
+          "Bulgarian Rose",
+          "Orris"
+        ],
+        "base": [
+          "Tonka Bean",
+          "Cacao",
+          "Vanilla",
+          "Praline",
+          "Sandalwood",
+          "Musk",
+          "Amber",
+          "Cashmere Wood",
+          "Patchouli",
+          "Cinnamon",
+          "Cedar"
+        ]
+      },
+      "sources": [
+        "https://www.fragrantica.com/perfume/carolina-herrera/good-girl-39681.html"
+      ]
     },
     "sizes": {
       "3ml": {
@@ -6743,10 +6810,11 @@
     },
     "image": "rayhaan-vantage-poster.jpg",
     "tags": [
-      "Rayhaan",
-      "Vantage"
+      "Spicy",
+      "Woody",
+      "Aromatic"
     ],
-    "recommendation": "Explore Rayhaan Vantage in your preferred decant size.",
+    "recommendation": "A woody spicy fragrance with cardamom and pink pepper over incense, myrrh and cedarwood.",
     "prices": {
       "3 ML": 190,
       "6 ML": 340,
@@ -6754,24 +6822,46 @@
       "15 ML": 680
     },
     "details": {
-      "verification": "scentory-supplied-pricing",
-      "notes": {},
+      "verification": "fragrantica-notes",
+      "notes": {
+        "top": [
+          "Cardamom",
+          "Pink Pepper",
+          "Bergamot"
+        ],
+        "heart": [
+          "Frankincense",
+          "Myrrh",
+          "Juniper Berries"
+        ],
+        "base": [
+          "Patchouli",
+          "Cedarwood"
+        ]
+      },
       "performance": "Longevity has not been independently verified for this listing.",
       "bestWear": "Explore based on your personal preference.",
       "comparison": "No verified inspiration claim provided.",
-      "sourceNote": "SCENTORY supplied pricing and poster; fragrance notes and longevity have not been independently confirmed."
+      "sourceNote": "Note pyramid checked against the exact Fragrantica perfume listing. Wear occasions and performance are not independently verified.",
+      "overview": "A woody spicy fragrance with cardamom and pink pepper over incense, myrrh and cedarwood.",
+      "sources": [
+        "https://www.fragrantica.com/perfume/Rayhaan/Vantage-143352.html"
+      ]
     },
     "profile": {
       "character": [
         "spicy",
-        "warm"
+        "woody",
+        "aromatic"
       ],
       "occasions": [
         "casual"
       ],
       "climates": [
         "ac"
-      ]
+      ],
+      "evidence": "fragrantica-notes",
+      "reviewedAt": "2026-11-09"
     }
   },
   {

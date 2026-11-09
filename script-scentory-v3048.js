@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '4700';
+const DATA_VERSION = '5000';
 const BEST_SELLING_IDS = [
   'jpg-le-male-le-parfum',
   'club-de-nuit-intesne-man-edp',
@@ -40,6 +40,7 @@ const brandFilter = document.getElementById('brandFilter');
 const occasionFilter = document.getElementById('occasionFilter');
 const climateFilter = document.getElementById('climateFilter');
 const budgetFilter = document.getElementById('budgetFilter');
+const sizeFilter = document.getElementById('sizeFilter');
 const sortFilter = document.getElementById('sortFilter');
 const clearDiscoveryFilters = document.getElementById('clearDiscoveryFilters');
 const discoveryFilterSummary = document.getElementById('discoveryFilterSummary');
@@ -344,6 +345,13 @@ function lowestAvailablePrice(p) {
   return prices.length ? Math.min(...prices) : Infinity;
 }
 
+function selectedSizePrice(p) {
+  const ml = sizeFilter?.value || 'all';
+  if (ml === 'all') return lowestAvailablePrice(p);
+  const size = p?.sizes?.[ml];
+  return productHasAvailableSize(p) && size?.available && size.price != null ? Number(size.price) : Infinity;
+}
+
 function populateBrandFilter() {
   if (!brandFilter) return;
   const current = brandFilter.value || 'all';
@@ -359,8 +367,9 @@ function updateDiscoveryFilterSummary(count) {
   if (tagFilter?.value && tagFilter.value !== 'all') labels.push(tagFilter.options[tagFilter.selectedIndex]?.text || tagFilter.value);
   if (occasionFilter?.value && occasionFilter.value !== 'all') labels.push(occasionFilter.options[occasionFilter.selectedIndex]?.text || occasionFilter.value);
   if (climateFilter?.value && climateFilter.value !== 'all') labels.push(climateFilter.options[climateFilter.selectedIndex]?.text || climateFilter.value);
-  if (budgetFilter?.value && budgetFilter.value !== 'all') labels.push(`Starts within ${Number(budgetFilter.value).toLocaleString('en-BD')} Tk`);
-  discoveryFilterSummary.textContent = `${count} perfume${count === 1 ? '' : 's'} shown${labels.length ? ' · ' + labels.join(' · ') : ' · Explore the full Scentory collection'}`;
+  if (sizeFilter?.value && sizeFilter.value !== 'all') labels.push(displayMl(sizeFilter.value));
+  if (budgetFilter?.value && budgetFilter.value !== 'all') labels.push(`Within ${Number(budgetFilter.value).toLocaleString('en-BD')} Tk${sizeFilter?.value && sizeFilter.value !== 'all' ? ' for ' + displayMl(sizeFilter.value) : ' starting price'}`);
+  discoveryFilterSummary.textContent = labels.length ? `Matching perfumes · ${labels.join(' · ')}` : 'Explore 150+ perfumes';
 }
 
 function renderTagPills(p, limit = 4) {
@@ -451,12 +460,14 @@ function renderProductCardV3002(p) {
   const available=Object.entries(p.sizes||{}).filter(([,s])=>s.available&&s.price!=null);
   const upcoming=isUpcoming(p);
   const min=available.length?Math.min(...available.map(([,s])=>Number(s.price))):null;
+  const chosen=sizeFilter?.value && sizeFilter.value !== 'all' ? sizeFilter.value : null;
+  const displayPrice=chosen && p.sizes?.[chosen]?.available && !upcoming && productHasAvailableSize(p) ? Number(p.sizes[chosen].price) : min;
   const notes=(p.details?.notes?.listed||p.details?.notes?.featured||p.tags||[]).slice(0,3).join(' · ');
   const first=available[0]?.[0]||'';
   const options=Object.entries(p.sizes||{}).map(([ml,s])=>`<option value="${escapeHtml(ml)}" ${!s.available||s.price==null?'disabled':''}>${escapeHtml(displayMl(ml))}${!s.available||s.price==null?' — Unavailable':''}</option>`).join('');
   return `<article id="perfume-${escapeHtml(p.id)}" data-perfume-id="${escapeHtml(p.id)}" class="product v31-card ${available.length&&!upcoming?'':'sold-out'}">
     <a class="product-image-wrap" href="${encodeURIComponent(p.id)}.html" aria-label="View ${escapeHtml(p.name)}"><img class="product-image" ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async"></a>
-    <div class="product-main"><h3><a href="${encodeURIComponent(p.id)}.html">${escapeHtml(p.name)}</a></h3><p class="v31-notes">${escapeHtml(notes||'Perfume decant')}</p><strong class="v31-from">${upcoming?'Coming soon · From '+taka(min):min!=null?'From '+taka(min):'Currently unavailable'}</strong>
+    <div class="product-main"><h3><a href="${encodeURIComponent(p.id)}.html">${escapeHtml(p.name)}</a></h3><p class="v31-notes">${escapeHtml(notes||'Perfume decant')}</p><strong class="v31-from">${upcoming?'Coming soon · From '+taka(min):displayPrice!=null?(chosen ? displayMl(chosen)+' · '+taka(displayPrice) : 'From '+taka(displayPrice)):'Currently unavailable'}</strong>
     <div class="v31-quick" data-id="${escapeHtml(p.id)}"><label for="v31-${escapeHtml(p.id)}">Choose size</label><select id="v31-${escapeHtml(p.id)}" class="v31-size" data-id="${escapeHtml(p.id)}" ${available.length&&!upcoming?'':'disabled'}><option value="">Select size</option>${options}</select><div class="v31-selection" aria-live="polite">Select a size to see price and sprays</div><button class="v31-add" type="button" data-id="${escapeHtml(p.id)}" disabled>Add to My Picks</button></div>
     <div class="s85-card-links"><a class="details-link" href="${encodeURIComponent(p.id)}.html">View Details</a><button type="button" class="s85-compare-trigger" data-compare-id="${escapeHtml(p.id)}">+ Compare</button></div></div></article>`;
 }
@@ -628,7 +639,7 @@ function injectCatalogueStructuredData() {
   node.textContent = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Scentory — 139 perfume choices in Bangladesh',
+    name: 'Scentory — 150+ perfume choices in Bangladesh',
     itemListElement: itemList
   });
   document.head.appendChild(node);
@@ -959,16 +970,17 @@ function renderProducts() {
     const occasionAliases = selectedOccasion === 'gym' ? ['gym','active'] : [selectedOccasion];
     const matchesOccasion = selectedOccasion === 'all' || occasionAliases.some(value => occasions.includes(value)) || profile.tags.some(tag => tag.toLowerCase().includes(selectedOccasion === 'date' ? 'date' : selectedOccasion));
     const matchesClimate = selectedClimate === 'all' || climates.includes(selectedClimate) || (selectedClimate === 'hot' && profile.tags.includes('Summer')) || (selectedClimate === 'winter' && profile.tags.includes('Winter'));
-    const matchesBudget = maxBudget === Infinity || lowestAvailablePrice(p) <= maxBudget;
-    return matchesTerm(p) && matchesStock && matchesTag && matchesBrand && matchesOccasion && matchesClimate && matchesBudget;
+    const matchesSize = !sizeFilter || sizeFilter.value === 'all' || selectedSizePrice(p) < Infinity;
+    const matchesBudget = maxBudget === Infinity || selectedSizePrice(p) <= maxBudget;
+    return matchesTerm(p) && matchesStock && matchesTag && matchesBrand && matchesOccasion && matchesClimate && matchesSize && matchesBudget;
   });
 
   const originalIndex = new Map(perfumes.map((p, i) => [p.id, i]));
   const popularityIndex = new Map(BEST_SELLING_IDS.map((id, i) => [id, i]));
   const newIndex = new Map(HOT_ARRIVAL_IDS.map((id, i) => [id, i]));
   filtered = [...filtered].sort((a,b) => {
-    if (sortMode === 'price-asc') return lowestAvailablePrice(a) - lowestAvailablePrice(b) || a.name.localeCompare(b.name);
-    if (sortMode === 'price-desc') return lowestAvailablePrice(b) - lowestAvailablePrice(a) || a.name.localeCompare(b.name);
+    if (sortMode === 'price-asc') return selectedSizePrice(a) - selectedSizePrice(b) || a.name.localeCompare(b.name);
+    if (sortMode === 'price-desc') return selectedSizePrice(b) - selectedSizePrice(a) || a.name.localeCompare(b.name);
     if (sortMode === 'name') return a.name.localeCompare(b.name);
     if (sortMode === 'popular') return (popularityIndex.has(a.id) ? popularityIndex.get(a.id) : 999) - (popularityIndex.has(b.id) ? popularityIndex.get(b.id) : 999) || originalIndex.get(a.id) - originalIndex.get(b.id);
     if (sortMode === 'new') return (newIndex.has(a.id) ? newIndex.get(a.id) : 999) - (newIndex.has(b.id) ? newIndex.get(b.id) : 999) || originalIndex.get(a.id) - originalIndex.get(b.id);
@@ -1448,12 +1460,12 @@ tagFilter?.addEventListener('change', () => {
   renderProducts();
   renderSearchSuggestions();
 });
-[brandFilter, occasionFilter, climateFilter, budgetFilter, sortFilter].forEach(control => control?.addEventListener('change', () => {
+[brandFilter, occasionFilter, climateFilter, sizeFilter, budgetFilter, sortFilter].forEach(control => control?.addEventListener('change', () => {
   renderProducts();
   renderSearchSuggestions();
 }));
 clearDiscoveryFilters?.addEventListener('click', () => {
-  [brandFilter, tagFilter, occasionFilter, climateFilter, budgetFilter, stockFilter].forEach(control => { if (control) control.value = 'all'; });
+  [brandFilter, tagFilter, occasionFilter, climateFilter, sizeFilter, budgetFilter, stockFilter].forEach(control => { if (control) control.value = 'all'; });
   if (sortFilter) sortFilter.value = 'recommended';
   if (searchInput) { searchInput.value = ''; delete searchInput.dataset.selectedId; }
   document.querySelectorAll('.quick-shop-chip').forEach(chip => chip.classList.toggle('active', chip.dataset.quickTag === 'all'));

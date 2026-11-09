@@ -225,3 +225,11 @@ body[data-page="product"] .facts {
   .topbar,body[data-page="product"] .phead { background:rgba(13,13,13,.93)!important; }
   @media(max-width:760px) {.scentory-liquid-dock {background:rgba(23,23,23,.91)!important;}}
 }
+
+/* V48: The supplied white wordmark has an opaque black background.
+   Screen blending makes those black pixels visually transparent on the
+   varying charcoal header surfaces while preserving its white marks. */
+.topbar-inner .site-logo,
+body[data-page="product"] .phead .product-brand-center img {
+  mix-blend-mode: screen;
+}
