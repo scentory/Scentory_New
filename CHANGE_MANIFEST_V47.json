@@ -1,0 +1,108 @@
+{
+  "version": "V47",
+  "fullMasterBasedOn": "SCENTORY_V46_FULL_MASTER.zip",
+  "updateOnlyBaseline": "SCENTORY_V42_FULL_MASTER.zip",
+  "date": "2026-11-09",
+  "productCount": 139,
+  "orderableSizeOptions": 399,
+  "addedProducts": [
+    "hawas-diva-edp",
+    "rave-now-women-edp"
+  ],
+  "changedProducts": {
+    "hawas-ice-edp": {
+      "prices": {
+        "3ml": {
+          "from": 200,
+          "to": 199
+        }
+      }
+    },
+    "hawas-black-edp": {
+      "prices": {
+        "3ml": {
+          "from": 200,
+          "to": 199
+        }
+      }
+    },
+    "hawas-tropical-edp": {
+      "prices": {
+        "3ml": {
+          "from": 200,
+          "to": 199
+        }
+      }
+    },
+    "rayhaan-lion-edp": {
+      "availability": {
+        "15ml": {
+          "from": true,
+          "to": false
+        }
+      }
+    }
+  },
+  "newFeatured": [
+    "valentino-uomo-born-in-roma-intense-edp",
+    "good-girl-by-carolina-herrera",
+    "club-de-nuit-elite",
+    "jpg-le-male-le-parfum",
+    "hawas-diva-edp",
+    "hawas-ice-freeze"
+  ],
+  "bestSelling": [
+    "jpg-le-male-le-parfum",
+    "club-de-nuit-intesne-man-edp",
+    "hawas-ice-edp",
+    "dolce-gabbana-the-one-edp",
+    "rayhaan-lion-edp",
+    "liquid-brun-by-french-avenue-edp"
+  ],
+  "countNote": "139 distinct perfume listings. 150+ perfumes cannot be stated truthfully from this catalogue.",
+  "updatedFiles": [
+    "CHANGE_MANIFEST_V47.json",
+    "README_V47.txt",
+    "afnan-9-pm-edp.html",
+    "afnan-9-pm-night-out-edp.html",
+    "afnan-9-pm-rebel-edp.html",
+    "afnan-modest-une-edp.html",
+    "afnan-supremacy-collector-s-edition-edp.html",
+    "ateeq-nusuk-by-lattafa.html",
+    "azzaro-the-most-wanted-edp-intense.html",
+    "brandy-inspiration-edp.html",
+    "club-de-nuit-blue-iconic.html",
+    "club-de-nuit-elite.html",
+    "club-de-nuit-intense-man-pure-parfum.html",
+    "hawas-black-edp.html",
+    "hawas-diva-edp-poster.png",
+    "hawas-diva-edp.html",
+    "hawas-fire-edp.html",
+    "hawas-ice-edp.html",
+    "hawas-ice-freeze.html",
+    "hawas-tropical-edp.html",
+    "index.html",
+    "kaaf-by-ahmed-edp.html",
+    "lattafa-asad-edp.html",
+    "lattafa-fakhar-black-edp.html",
+    "llms.txt",
+    "mykonos-inception-edp.html",
+    "order.html",
+    "perfumes.json",
+    "rave-now-women-edp-poster.png",
+    "rave-now-women-edp.html",
+    "rayhaan-aquatica-edp.html",
+    "rayhaan-cedrus-blanc-edp.html",
+    "rayhaan-floriana.html",
+    "rayhaan-lion-edp.html",
+    "rayhaan-vanilla-vibe-edp-poster.png",
+    "rayhaan-vanilla-vibe-edp.html",
+    "script-scentory-v3048.js",
+    "shop.html",
+    "sitemap.xml",
+    "teriaq-intense-by-lattafa-edp.html",
+    "thriller-iii-maison-x-cal-cologne.html",
+    "zeleny-by-ahmed-edp.html",
+    "zenith-blue-by-french-avenue-edp.html"
+  ]
+}

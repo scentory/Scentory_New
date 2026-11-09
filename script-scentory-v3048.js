@@ -5,26 +5,23 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '4600';
+const DATA_VERSION = '4700';
 const BEST_SELLING_IDS = [
-  'sanaya-by-junaid-edp',
+  'jpg-le-male-le-parfum',
+  'club-de-nuit-intesne-man-edp',
+  'hawas-ice-edp',
   'dolce-gabbana-the-one-edp',
-  'azzaro-the-most-wanted-parfum',
-  'hawas-ice-freeze',
-  'sanaya-40-by-junaid-extrait'
+  'rayhaan-lion-edp',
+  'liquid-brun-by-french-avenue-edp',
 ];
 
 const HOT_ARRIVAL_IDS = [
-  'rayhaan-vanilla-vibe-edp',
   'valentino-uomo-born-in-roma-intense-edp',
-  'rayhaan-vantage',
+  'good-girl-by-carolina-herrera',
+  'club-de-nuit-elite',
   'jpg-le-male-le-parfum',
-  'dolce-gabbana-the-one-edp',
-  'mancera-amberful-edp',
-  'azzaro-the-most-wanted-parfum',
-  'hawas-lava-gold',
-  'spectre-ghost-by-french-avenue',
-  'hawas-thunder'
+  'hawas-diva-edp',
+  'hawas-ice-freeze',
 ];
 
 
@@ -329,7 +326,7 @@ function perfumeBrand(p) {
   const n = `${p?.name || ''} ${p?.id || ''}`.toLowerCase();
   const rules = [
     ['Afnan', /\bafnan\b|supremacy-not-only-intense/], ['Rasasi', /\bhawas\b|rasasi|shuhrah|fattan/],
-    ['Armaf', /club de nuit|armaf/], ['Lattafa', /lattafa|bade.?e al oud|qaed al fursan|fakhar|asad bourbon|\basad\b|haayati|najdia|khamrah|teriaq/],
+    ['Armaf', /club de nuit|armaf/], ['Lattafa', /lattafa|bade.?e al oud|qaed al fursan|fakhar|asad bourbon|\basad\b|haayati|najdia|khamrah|teriaq|rave now women/],
     ['Rayhaan', /rayhaan/], ['Khadlaj', /khadlaj|\btitan by khadlaj/], ['French Avenue', /french avenue|liquid brun|vulcan feu|atlantis extrait|zenith blue/],
     ['Ahmed Al Maghribi', /by ahmed|\bkaaf\b|\bzeleny\b|\bblue by ahmed/], ['Al Haramain', /al haramain/],
     ['Mykonos', /mykonos/], ['Yusuf Bhai', /yusuf bhai/], ['Brandy', /brandy/], ['Gulf Orchid', /gulf orchid|\bnaseem\b|mango ice/],
@@ -631,7 +628,7 @@ function injectCatalogueStructuredData() {
   node.textContent = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Scentory — 137 perfume choices in Bangladesh',
+    name: 'Scentory — 139 perfume choices in Bangladesh',
     itemListElement: itemList
   });
   document.head.appendChild(node);
@@ -794,7 +791,7 @@ function renderHotArrivals() {
   if (!hotArrivalsGrid) return;
   const items = HOT_ARRIVAL_IDS
     .map(id => perfumes.find(p => p.id === id))
-    .filter(p => p && productHasAvailableSize(p) && !isUpcoming(p));
+    .filter(p => p && !isUpcoming(p));
 
   if (!items.length) {
     hotArrivalsGrid.innerHTML = '<p class="order-items empty">No new arrivals found.</p>';
@@ -814,7 +811,7 @@ function renderHotArrivals() {
         </span>
         <span class="hot-arrival-copy">
           <b>${escapeHtml(p.name)}</b>
-          <small>${availableSizes || 'Tap to view prices'}</small>
+          <small>${productHasAvailableSize(p) ? availableSizes : 'Out of stock'}</small>
         </span>
       </button>
     `;

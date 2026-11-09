@@ -1343,7 +1343,7 @@
     "status": "available",
     "sizes": {
       "3ml": {
-        "price": 200,
+        "price": 199,
         "available": true,
         "premium": false
       },
@@ -1371,7 +1371,7 @@
     ],
     "recommendation": "Best for clean fresh summer use, gym, daytime casual outings, and office.",
     "prices": {
-      "3 ML": 200,
+      "3 ML": 199,
       "6 ML": 350,
       "10 ML": 510,
       "15 ML": 700
@@ -1452,7 +1452,7 @@
     "status": "available",
     "sizes": {
       "3ml": {
-        "price": 200,
+        "price": 199,
         "available": true,
         "premium": false
       },
@@ -1480,7 +1480,7 @@
     ],
     "recommendation": "A bold fresh-dark style for office, evening plans, and confident daily wear.",
     "prices": {
-      "3 ML": 200,
+      "3 ML": 199,
       "6 ML": 350,
       "10 ML": 510,
       "15 ML": 700
@@ -1533,7 +1533,7 @@
     "status": "available",
     "sizes": {
       "3ml": {
-        "price": 200,
+        "price": 199,
         "available": true,
         "premium": false
       },
@@ -1563,7 +1563,7 @@
     ],
     "recommendation": "A tropical fresh perfume for beach days, vacations, casual outings and daytime dates.",
     "prices": {
-      "3 ML": 200,
+      "3 ML": 199,
       "6 ML": 350,
       "10 ML": 530,
       "15 ML": 720
@@ -7384,7 +7384,7 @@
       },
       "15ml": {
         "price": 599,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -12542,6 +12542,201 @@
       },
       "profileScope": "perfume",
       "overview": "A fresh marine-citrus, sweet-woody perfume for hot-weather casual wear, active use and energetic evenings—not a dense traditional oud profile."
+    }
+  },
+  {
+    "id": "hawas-diva-edp",
+    "name": "Hawas Diva EDP",
+    "status": "available",
+    "image": "hawas-diva-edp-poster.png",
+    "tags": [
+      "Fruity",
+      "Floral",
+      "Vanilla",
+      "Rose"
+    ],
+    "recommendation": "A fruity floral fragrance with lychee, rose and a warm vanilla finish.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "fruity",
+        "floral",
+        "vanilla",
+        "amber"
+      ],
+      "occasions": [
+        "date",
+        "party",
+        "daily"
+      ],
+      "climates": [
+        "cool",
+        "ac"
+      ],
+      "strength": 3,
+      "projection": 3,
+      "longevity": 3,
+      "sweetness": 4,
+      "freshness": 2,
+      "warmth": 3,
+      "officeSafety": 3,
+      "heatSafety": 2,
+      "versatility": 3,
+      "evidence": "source-checked",
+      "reviewedAt": "2026-11-09",
+      "topPickEligible": false,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "source-checked",
+      "notes": {
+        "top": [
+          "Red fruits",
+          "Lychee",
+          "Rhubarb"
+        ],
+        "heart": [
+          "Rose",
+          "Frankincense",
+          "Cedar"
+        ],
+        "base": [
+          "Vanilla",
+          "Ambergris",
+          "Musk"
+        ]
+      },
+      "performance": "Wear time depends on wearer and conditions; it is not guaranteed.",
+      "overview": "A fruity floral fragrance with lychee, rose and a warm vanilla finish.",
+      "profileScope": "perfume",
+      "sources": [
+        "https://www.parfumo.com/Perfumes/Rasasi/hawas-diva-diva"
+      ]
+    },
+    "sizes": {
+      "3ml": {
+        "price": 199,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 350,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 510,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 700,
+        "available": true,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 199,
+      "6 ML": 350,
+      "10 ML": 510,
+      "15 ML": 700
+    }
+  },
+  {
+    "id": "rave-now-women-edp",
+    "name": "Rave Now Women (EDP)",
+    "status": "available",
+    "image": "rave-now-women-edp-poster.png",
+    "tags": [
+      "Fruity",
+      "Sweet",
+      "Floral",
+      "Vanilla"
+    ],
+    "recommendation": "Red fruits and orange lead into soft florals and marshmallow, with a vanilla and musk finish.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "fruity",
+        "sweet",
+        "floral",
+        "vanilla"
+      ],
+      "occasions": [
+        "daily",
+        "date",
+        "party"
+      ],
+      "climates": [
+        "cool",
+        "ac"
+      ],
+      "strength": 3,
+      "projection": 3,
+      "longevity": 3,
+      "sweetness": 4,
+      "freshness": 2,
+      "warmth": 3,
+      "officeSafety": 3,
+      "heatSafety": 2,
+      "versatility": 3,
+      "evidence": "source-checked",
+      "reviewedAt": "2026-11-09",
+      "topPickEligible": false,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "source-checked",
+      "notes": {
+        "top": [
+          "Red fruits",
+          "Orange"
+        ],
+        "heart": [
+          "Marshmallow",
+          "Lily of the valley",
+          "Jasmine"
+        ],
+        "base": [
+          "Vanilla",
+          "Moss",
+          "Musk"
+        ]
+      },
+      "performance": "Wear time depends on wearer and conditions; it is not guaranteed.",
+      "overview": "Red fruits and orange lead into soft florals and marshmallow, with a vanilla and musk finish.",
+      "profileScope": "perfume",
+      "sources": [
+        "https://lattafa.com/product/rave-now-women/"
+      ]
+    },
+    "sizes": {
+      "3ml": {
+        "price": 170,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 290,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 410,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 550,
+        "available": true,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 170,
+      "6 ML": 290,
+      "10 ML": 410,
+      "15 ML": 550
     }
   }
 ]
