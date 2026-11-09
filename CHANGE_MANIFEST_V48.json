@@ -1,0 +1,6 @@
+{
+  "version": 48,
+  "fix": "Header logo blends its opaque black background into the header on all pages.",
+  "cache_bust": "scentory-v31.css?v=4800",
+  "base_for_cumulative_update": "V42"
+}

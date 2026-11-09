@@ -1,0 +1,59 @@
+{
+  "version": "V45",
+  "basedOn": "SCENTORY_V44_FULL_MASTER.zip",
+  "date": "2026-11-09",
+  "productsInCatalogue": 137,
+  "orderableSizeOptions": 390,
+  "numericPriceChanges": {},
+  "stockChanges": {
+    "hawas-ice-freeze": {
+      "status": [
+        "available",
+        "out"
+      ],
+      "sizes": {
+        "3ml": [
+          true,
+          false
+        ],
+        "6ml": [
+          true,
+          false
+        ]
+      }
+    },
+    "ateeq-nusuk-by-lattafa": {
+      "status": [
+        "available",
+        "out"
+      ],
+      "sizes": {
+        "3ml": [
+          true,
+          false
+        ]
+      }
+    },
+    "rayhaan-lion-edp": {
+      "sizes": {
+        "10ml": [
+          false,
+          true
+        ]
+      }
+    }
+  },
+  "stockRule": "A cross next to the perfume name means the whole product is out of stock.",
+  "updatedFiles": [
+    "CHANGE_MANIFEST_V45.json",
+    "README_V45.txt",
+    "ateeq-nusuk-by-lattafa.html",
+    "hawas-ice-freeze.html",
+    "index.html",
+    "order.html",
+    "perfumes.json",
+    "rayhaan-lion-edp.html",
+    "script-scentory-v3048.js",
+    "shop.html"
+  ]
+}
