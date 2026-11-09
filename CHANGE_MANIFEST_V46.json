@@ -1,0 +1,72 @@
+{
+  "version": "V46",
+  "basedOn": "SCENTORY_V45_FULL_MASTER.zip",
+  "date": "2026-11-09",
+  "productsInCatalogue": 137,
+  "orderableSizeOptions": 392,
+  "productChanges": {
+    "rayhaan-lion-edp": {
+      "prices": {
+        "3ml": {
+          "from": 170,
+          "to": 180
+        },
+        "6ml": {
+          "from": 290,
+          "to": 310
+        },
+        "10ml": {
+          "from": 420,
+          "to": 440
+        },
+        "15ml": {
+          "from": 570,
+          "to": 599
+        }
+      },
+      "availability": {
+        "15ml": {
+          "from": false,
+          "to": true
+        }
+      }
+    },
+    "teriaq-intense-by-lattafa-edp": {
+      "prices": {
+        "3ml": {
+          "from": 230,
+          "to": 250
+        },
+        "6ml": {
+          "from": 410,
+          "to": 460
+        },
+        "10ml": {
+          "from": 620,
+          "to": 690
+        },
+        "15ml": {
+          "from": 860,
+          "to": 990
+        }
+      },
+      "availability": {
+        "15ml": {
+          "from": false,
+          "to": true
+        }
+      }
+    }
+  },
+  "updatedFiles": [
+    "CHANGE_MANIFEST_V46.json",
+    "README_V46.txt",
+    "index.html",
+    "order.html",
+    "perfumes.json",
+    "rayhaan-lion-edp.html",
+    "script-scentory-v3048.js",
+    "shop.html",
+    "teriaq-intense-by-lattafa-edp.html"
+  ]
+}

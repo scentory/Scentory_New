@@ -953,16 +953,16 @@
   {
     "id": "hawas-ice-freeze",
     "name": "Hawas Ice Freeze",
-    "status": "available",
+    "status": "out",
     "sizes": {
       "3ml": {
         "price": 220,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "6ml": {
         "price": 390,
-        "available": true,
+        "available": false,
         "premium": true
       },
       "10ml": {
@@ -2962,11 +2962,11 @@
   {
     "id": "ateeq-nusuk-by-lattafa",
     "name": "Ateeq Nusuk by Riiffs",
-    "status": "available",
+    "status": "out",
     "sizes": {
       "3ml": {
         "price": 200,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "6ml": {
@@ -7368,23 +7368,23 @@
     "status": "available",
     "sizes": {
       "3ml": {
-        "price": 170,
+        "price": 180,
         "available": true,
         "premium": false
       },
       "6ml": {
-        "price": 290,
+        "price": 310,
         "available": true,
         "premium": true
       },
       "10ml": {
-        "price": 420,
-        "available": false,
+        "price": 440,
+        "available": true,
         "premium": false
       },
       "15ml": {
-        "price": 570,
-        "available": false,
+        "price": 599,
+        "available": true,
         "premium": false
       }
     },
@@ -7396,10 +7396,10 @@
     ],
     "recommendation": "Best for cool/cold weather, evenings, dates, parties, and formal occasions.",
     "prices": {
-      "3 ML": 170,
-      "6 ML": 290,
-      "10 ML": 420,
-      "15 ML": 570
+      "3 ML": 180,
+      "6 ML": 310,
+      "10 ML": 440,
+      "15 ML": 599
     },
     "profile": {
       "schemaVersion": 1,
@@ -11060,23 +11060,23 @@
     "status": "available",
     "sizes": {
       "3ml": {
-        "price": 230,
+        "price": 250,
         "available": true,
         "premium": false
       },
       "6ml": {
-        "price": 410,
+        "price": 460,
         "available": true,
         "premium": true
       },
       "10ml": {
-        "price": 620,
+        "price": 690,
         "available": true,
         "premium": false
       },
       "15ml": {
-        "price": 860,
-        "available": false,
+        "price": 990,
+        "available": true,
         "premium": false
       }
     },
@@ -11088,10 +11088,10 @@
     ],
     "recommendation": "Best for special evening events, date nights, parties, and cold-weather outings.",
     "prices": {
-      "3 ML": 230,
-      "6 ML": 410,
-      "10 ML": 620,
-      "15 ML": 860
+      "3 ML": 250,
+      "6 ML": 460,
+      "10 ML": 690,
+      "15 ML": 990
     },
     "profile": {
       "schemaVersion": 1,
