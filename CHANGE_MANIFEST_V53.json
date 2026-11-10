@@ -1,0 +1,12 @@
+{
+  "version": 53,
+  "campaignProducts": 63,
+  "campaignSizes": 249,
+  "regularPricesRemainIn": "perfumes.json",
+  "start": "2026-11-11T00:00:00+06:00",
+  "endExclusive": "2026-11-13T00:00:00+06:00",
+  "stockChanges": {
+    "hawas-ice-freeze": "3/6/10 ML available, 15 ML out",
+    "rayhaan-vantage": "15 ML available"
+  }
+}
