@@ -1,0 +1,9 @@
+{
+  "version": 51,
+  "campaignProducts": 64,
+  "campaignSizes": 253,
+  "regularPricesRemainIn": "perfumes.json",
+  "start": "2026-11-11T00:01:00+06:00",
+  "endExclusive": "2026-12-13T00:00:00+06:00",
+  "stockPolicy": "No campaign override to availability or product status"
+}
