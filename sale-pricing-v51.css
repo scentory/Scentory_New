@@ -5,7 +5,6 @@
 .sale-old-price { color:#e5e5e5; font-size:1em; font-weight:750; text-decoration:line-through; text-decoration-color:#ff7070; text-decoration-thickness:2px; }
 .sale-current-line { color:#baf7ca; font-size:1rem; font-weight:750; white-space:nowrap; }
 .sale-new-price { color:#7be79a; font-size:1.1em; font-weight:900; }
-.sale-saving { display:inline-block; width:max-content; padding:2px 6px; border-radius:6px; color:#d7ffe2; background:#14643a; font-size:.72rem; font-weight:800; white-space:nowrap; }
 .v31-card .sale-badge { margin:1px 0 5px; }
 .v31-from .sale-price-stack { display:flex; margin-top:5px; }
 .v31-from .sale-regular-line,.v31-selection .sale-regular-line { font-size:.82rem; }
@@ -13,7 +12,6 @@
 .product-size-btn strong { white-space:normal!important; }
 .product-size-btn .sale-regular-line { font-size:.92rem!important; line-height:1.25; }
 .product-size-btn .sale-current-line { font-size:1.04rem!important; line-height:1.25; }
-.product-size-btn .sale-saving { width:max-content!important; font-size:.76rem!important; line-height:1.25; }
 .price-tile .sale-regular-line { font-size:.78rem; }
 .price-tile .sale-current-line { font-size:.88rem; }
 .hot-arrival-copy .sale-price-stack,.search-suggestion .sale-price-stack { gap:2px 5px; }

@@ -27,7 +27,7 @@
     if (!size || size.price == null) return 'N/A';
     const current = money(size.price);
     return active() && Number(size._regularPrice) > Number(size.price)
-      ? `<span class="sale-price-stack"><span class="sale-regular-line">Regular <del class="sale-old-price">${money(size._regularPrice)}</del></span><span class="sale-current-line">Sale <span class="sale-new-price">${current}</span></span><span class="sale-saving">Save ${money(Number(size._regularPrice) - Number(size.price))}</span></span>`
+      ? `<span class="sale-price-stack"><span class="sale-regular-line">Regular <del class="sale-old-price">${money(size._regularPrice)}</del></span><span class="sale-current-line">Sale <span class="sale-new-price">${current}</span></span></span>`
       : current;
   }
   function badge(product) {

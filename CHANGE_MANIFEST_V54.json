@@ -1,0 +1,12 @@
+{
+  "version": 54,
+  "change": "Removed the Save XX Tk label from sale price displays.",
+  "preserved": [
+    "crossed-out regular price",
+    "green sale price",
+    "sale prices and availability",
+    "campaign dates and countdowns",
+    "sale poster behavior"
+  ],
+  "files": ["sale-pricing-v51.js", "sale-pricing-v51.css"]
+}
