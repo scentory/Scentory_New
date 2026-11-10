@@ -1,0 +1,1 @@
+V51 includes a Bangladesh-time 11.11 sale from 11 Nov 2026 00:01 through 12 Dec 2026 23:59, with regular prices restored automatically. Stock remains as in V49. Upload the updated-files ZIP contents to the repository root, replacing matching files.

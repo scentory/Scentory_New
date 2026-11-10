@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '5000';
+const DATA_VERSION = '5100';
 const BEST_SELLING_IDS = [
   'jpg-le-male-le-parfum',
   'club-de-nuit-intesne-man-edp',
@@ -435,7 +435,7 @@ function renderPriceTiles(p, extraClass = '') {
   return Object.entries(p.sizes || {}).map(([ml, item]) => {
     const disabled = upcoming || !hasAvailable || !item.available || item.price === null;
     const selected = !disabled && !!getCartItem(p.id, ml);
-    const label = item.price === null ? 'N/A' : (p._anniversaryActive ? window.ScentoryAnniversary?.offerMarkup(item) || taka(item.price) : taka(item.price));
+    const label = item.price === null ? 'N/A' : (p._saleActive ? window.SaleCampaign.priceMarkup(item) : (p._anniversaryActive ? window.ScentoryAnniversary?.offerMarkup(item) || taka(item.price) : taka(item.price)));
     const note = upcoming ? '<em>Soon</em>' : (item.premium ? '<em>Premium</em>' : (disabled ? '<em>Out</em>' : '<em>&nbsp;</em>'));
     const selectedBadge = `<span class="selected-qty ${selected ? '' : 'hide'}">×${getCartQty(p.id, ml)}</span>`;
     return `
@@ -464,10 +464,11 @@ function renderProductCardV3002(p) {
   const displayPrice=chosen && p.sizes?.[chosen]?.available && !upcoming && productHasAvailableSize(p) ? Number(p.sizes[chosen].price) : min;
   const notes=(p.details?.notes?.listed||p.details?.notes?.featured||p.tags||[]).slice(0,3).join(' · ');
   const first=available[0]?.[0]||'';
+  const pricedItem=chosen ? p.sizes?.[chosen] : available.find(([,s])=>Number(s.price)===min)?.[1];
   const options=Object.entries(p.sizes||{}).map(([ml,s])=>`<option value="${escapeHtml(ml)}" ${!s.available||s.price==null?'disabled':''}>${escapeHtml(displayMl(ml))}${!s.available||s.price==null?' — Unavailable':''}</option>`).join('');
   return `<article id="perfume-${escapeHtml(p.id)}" data-perfume-id="${escapeHtml(p.id)}" class="product v31-card ${available.length&&!upcoming?'':'sold-out'}">
     <a class="product-image-wrap" href="${encodeURIComponent(p.id)}.html" aria-label="View ${escapeHtml(p.name)}"><img class="product-image" ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async"></a>
-    <div class="product-main"><h3><a href="${encodeURIComponent(p.id)}.html">${escapeHtml(p.name)}</a></h3><p class="v31-notes">${escapeHtml(notes||'Perfume decant')}</p><strong class="v31-from">${upcoming?'Coming soon · From '+taka(min):displayPrice!=null?(chosen ? displayMl(chosen)+' · '+taka(displayPrice) : 'From '+taka(displayPrice)):'Currently unavailable'}</strong>
+    <div class="product-main">${window.SaleCampaign?.badge(p) || ''}<h3><a href="${encodeURIComponent(p.id)}.html">${escapeHtml(p.name)}</a></h3><p class="v31-notes">${escapeHtml(notes||'Perfume decant')}</p><strong class="v31-from">${upcoming?'Coming soon · From '+taka(min):displayPrice!=null?(chosen ? displayMl(chosen)+' · ' : 'From ')+(p._saleActive && pricedItem ? window.SaleCampaign.priceMarkup(pricedItem) : taka(displayPrice)):'Currently unavailable'}</strong>
     <div class="v31-quick" data-id="${escapeHtml(p.id)}"><label for="v31-${escapeHtml(p.id)}">Choose size</label><select id="v31-${escapeHtml(p.id)}" class="v31-size" data-id="${escapeHtml(p.id)}" ${available.length&&!upcoming?'':'disabled'}><option value="">Select size</option>${options}</select><div class="v31-selection" aria-live="polite">Select a size to see price and sprays</div><button class="v31-add" type="button" data-id="${escapeHtml(p.id)}" disabled>Add to My Picks</button></div>
     <div class="s85-card-links"><a class="details-link" href="${encodeURIComponent(p.id)}.html">View Details</a><button type="button" class="s85-compare-trigger" data-compare-id="${escapeHtml(p.id)}">+ Compare</button></div></div></article>`;
 }
@@ -485,7 +486,7 @@ function openProductDetails(id) {
         <img ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="eager" decoding="async">
       </button>
       <div class="product-modal-copy">
-        <span class="tag ${upcoming ? 'upcoming' : (hasAvailable ? '' : 'out')}">${statusText}</span>
+        ${window.SaleCampaign?.badge(p) || ''}<span class="tag ${upcoming ? 'upcoming' : (hasAvailable ? '' : 'out')}">${statusText}</span>
         <h2>${escapeHtml(p.name)}</h2>
         <div class="tags modal-tags">${profile.tags.map(tag => `<span class="tag scent-tag">${escapeHtml(tag)}</span>`).join('')}</div>
         <p>${escapeHtml(profile.recommendation)}</p>
@@ -652,6 +653,7 @@ async function loadPerfumes() {
     if (!response.ok) throw new Error('Could not load perfume database');
     perfumes = await response.json();
     window.ScentoryAnniversary?.applyToCatalogue(perfumes);
+    window.SaleCampaign?.applyToCatalogue(perfumes);
     normalizeCartAfterLoad();
     populateBrandFilter();
     if (document.body?.dataset?.page === 'shop') {
@@ -734,7 +736,7 @@ function renderProductCard(p) {
   const priceButtons = Object.entries(p.sizes || {}).map(([ml, item]) => {
     const disabled = upcoming || !hasAvailable || !item.available || item.price === null;
     const selected = !disabled && !!getCartItem(p.id, ml);
-    const label = item.price === null ? 'N/A' : taka(item.price);
+    const label = item.price === null ? 'N/A' : (p._saleActive ? window.SaleCampaign.priceMarkup(item) : taka(item.price));
     const note = upcoming ? '<em>Soon</em>' : (item.premium ? '<em>Premium</em>' : (disabled ? '<em>Out</em>' : '<em>&nbsp;</em>'));
     const selectedBadge = `<span class="selected-qty ${selected ? '' : 'hide'}">×${getCartQty(p.id, ml)}</span>`;
     return `
@@ -812,7 +814,7 @@ function renderHotArrivals() {
   hotArrivalsGrid.innerHTML = items.map((p) => {
     const availableSizes = Object.entries(p.sizes || {})
       .filter(([, item]) => item.available && item.price !== null)
-      .map(([ml, item]) => `${displayMl(ml)} ${taka(item.price)}`)
+      .map(([ml, item]) => `${displayMl(ml)} ${p._saleActive ? window.SaleCampaign.priceMarkup(item) : taka(item.price)}`)
       .slice(0, 3)
       .join(' · ');
     return `
@@ -821,7 +823,7 @@ function renderHotArrivals() {
           <img ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
         </span>
         <span class="hot-arrival-copy">
-          <b>${escapeHtml(p.name)}</b>
+          ${window.SaleCampaign?.badge(p) || ''}<b>${escapeHtml(p.name)}</b>
           <small>${productHasAvailableSize(p) ? availableSizes : 'Out of stock'}</small>
         </span>
       </button>
@@ -848,7 +850,7 @@ function renderBestSelling() {
     <button type="button" class="best-seller-card" data-target-id="${escapeHtml(p.id)}" aria-label="View ${escapeHtml(p.name)} in price list">
       <img ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
       <span class="best-seller-copy">
-        <b>${escapeHtml(p.name)}</b>
+        ${window.SaleCampaign?.badge(p) || ''}<b>${escapeHtml(p.name)}</b>
         <small>Tap to view & add</small>
       </span>
       <span class="best-arrow">↘</span>
@@ -1608,7 +1610,7 @@ document.addEventListener('change',function(e){
  const p=perfumes.find(x=>x.id===select.dataset.id),item=p?.sizes?.[select.value];
  const card=select.closest('.v31-quick'),label=card?.querySelector('.v31-selection'),add=card?.querySelector('.v31-add');
  if(p?.status==='upcoming'||!item?.available||item.price==null){if(label)label.textContent='Select an available size';if(add)add.disabled=true;return}
- const ml=parseInt(select.value,10);if(label)label.textContent=`${taka(item.price)} · Approx. ${ml*10}–${ml*15} sprays`;
+ const ml=parseInt(select.value,10);if(label)label.innerHTML=`${p._saleActive ? window.SaleCampaign.priceMarkup(item) : taka(item.price)} · Approx. ${ml*10}–${ml*15} sprays`;
  if(add){add.disabled=false;add.dataset.ml=select.value;add.textContent=getCartItem(p.id,select.value)?'Remove from My Picks':'Add to My Picks'}
 });
 document.addEventListener('click',function(e){

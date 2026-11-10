@@ -1,0 +1,15 @@
+
+.sale-clock { position:relative; z-index:1; box-sizing:border-box; max-width:1180px; margin:12px auto 18px; padding:12px 18px; border:1px solid rgba(255,255,255,.28); border-radius:18px; color:#f8f8f8; background:linear-gradient(115deg,#171717,#29241f 55%,#101010); display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px 18px; text-align:center; box-shadow:0 12px 28px rgba(0,0,0,.25); }
+.sale-clock__name { font-size:.82rem; letter-spacing:.13em; font-weight:800; text-transform:uppercase; }
+.sale-clock__caption { font-size:.82rem; color:#cfc8bf; }
+.sale-clock__time { font-variant-numeric:tabular-nums; font-size:1.14rem; line-height:1.1; letter-spacing:.035em; font-weight:850; white-space:nowrap; }
+.sale-overlay { position:fixed; z-index:20000; inset:0; padding:16px; background:rgba(0,0,0,.80); display:grid; place-items:center; overflow:auto; }
+.sale-overlay[hidden], .sale-clock[hidden] { display:none!important; }
+.sale-dialog { position:relative; box-sizing:border-box; width:min(560px,100%); max-height:calc(100dvh - 32px); overflow:auto; border:1px solid rgba(255,255,255,.32); border-radius:20px; background:#111; color:#fff; box-shadow:0 24px 80px rgba(0,0,0,.65); }
+.sale-dialog__image { display:block; width:100%; height:auto; max-height:calc(100dvh - 150px); object-fit:contain; background:#e5e3e5; }
+.sale-dialog__close { position:absolute; top:10px; right:10px; z-index:1; width:40px; height:40px; border:1px solid rgba(255,255,255,.55); border-radius:50%; background:rgba(0,0,0,.82); color:#fff; font-size:24px; line-height:1; cursor:pointer; }
+.sale-dialog__actions { padding:12px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.sale-dialog__actions span { font-size:.85rem; color:#ddd; }
+.sale-dialog__actions a { border-radius:999px; padding:10px 16px; background:#eee; color:#111; font-size:.82rem; font-weight:800; text-decoration:none; white-space:nowrap; }
+@media(max-width:700px) { .sale-clock { margin:9px 12px 14px; padding:10px 12px; gap:3px 9px; border-radius:14px; } .sale-clock__name { font-size:.72rem; } .sale-clock__caption { font-size:.69rem; } .sale-clock__time { font-size:1rem; } .sale-dialog { width:min(420px,100%); } .sale-dialog__image { max-height:calc(100dvh - 130px); } }
+@media(prefers-reduced-motion:reduce) { .sale-dialog, .sale-overlay { scroll-behavior:auto; } }

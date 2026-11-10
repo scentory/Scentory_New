@@ -1,0 +1,10 @@
+
+.sale-badge { display:inline-block; width:max-content; max-width:100%; margin:6px 0; padding:4px 9px; border:1px solid #53b973; border-radius:999px; background:#0d5b34; color:#eaffee; font-size:.67rem; line-height:1.2; font-weight:800; letter-spacing:.045em; text-transform:uppercase; }
+.sale-old-price { display:inline-block; margin-right:5px; color:#a9a9a9; font-size:.78em; font-weight:500; text-decoration:line-through; text-decoration-thickness:1.5px; }
+.sale-new-price { display:inline-block; color:#7be79a; font-weight:850; }
+.v31-card .sale-badge { margin:1px 0 5px; }
+.v31-from .sale-new-price { color:#baf7ca; }
+.price-tile .sale-old-price,.product-size-btn .sale-old-price { display:block; margin:0 0 2px; white-space:nowrap; }
+.price-tile .sale-new-price,.product-size-btn .sale-new-price { display:block; white-space:nowrap; }
+.product-size-btn strong { white-space:normal!important; }
+.v31-selection .sale-old-price { font-size:1em; }
