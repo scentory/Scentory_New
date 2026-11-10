@@ -1020,21 +1020,21 @@
   {
     "id": "hawas-ice-freeze",
     "name": "Hawas Ice Freeze",
-    "status": "out",
+    "status": "available",
     "sizes": {
       "3ml": {
         "price": 220,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "6ml": {
         "price": 390,
-        "available": false,
+        "available": true,
         "premium": true
       },
       "10ml": {
         "price": 580,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "15ml": {
@@ -6804,7 +6804,7 @@
       },
       "15ml": {
         "price": 680,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },

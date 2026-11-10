@@ -1,6 +1,6 @@
 {
-  "start": "2026-11-11T00:01:00+06:00",
-  "endExclusive": "2026-12-13T00:00:00+06:00",
+  "start": "2026-11-11T00:00:00+06:00",
+  "endExclusive": "2026-11-13T00:00:00+06:00",
   "currency": "BDT",
   "prices": {
     "club-de-nuit-elite": {
@@ -20,12 +20,6 @@
       "6ml": 825,
       "10ml": 1310,
       "15ml": 1905
-    },
-    "valentino-uomo-born-in-roma-coral-fantasy": {
-      "3ml": 445,
-      "6ml": 795,
-      "10ml": 1260,
-      "15ml": 1930
     },
     "good-girl-by-carolina-herrera": {
       "3ml": 399,

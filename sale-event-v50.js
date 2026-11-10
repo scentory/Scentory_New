@@ -2,8 +2,8 @@
 (() => {
   'use strict';
   // All times are absolute Asia/Dhaka instants; visitors' device time zones do not shift the sale.
-  const starts = Date.parse('2026-11-11T00:01:00+06:00');
-  const endsExclusive = Date.parse('2026-12-13T00:00:00+06:00');
+  const starts = Date.parse('2026-11-11T00:00:00+06:00');
+  const endsExclusive = Date.parse('2026-11-13T00:00:00+06:00');
   const now = Date.now();
   if (now >= endsExclusive) return;
 
@@ -15,8 +15,19 @@
   if (header) header.insertAdjacentElement('afterend', banner);
   else document.body.prepend(banner);
 
-  const caption = banner.querySelector('.sale-clock__caption');
-  const clock = banner.querySelector('.sale-clock__time');
+  const extraClocks = [];
+  const discoverTitle = ['home', 'shop'].includes(document.body.dataset.page) ? document.querySelector('#priceList .section-title') : null;
+  const productTitle = document.body.dataset.page === 'product' ? document.querySelector('main article h1') : null;
+  const extraAnchor = discoverTitle || productTitle;
+  if (extraAnchor) {
+    const second = banner.cloneNode(true);
+    second.classList.add(discoverTitle ? 'sale-clock--discover' : 'sale-clock--detail');
+    second.setAttribute('aria-label', discoverTitle ? '11:11 sale countdown below Discover' : '11:11 sale countdown for this perfume');
+    extraAnchor.insertAdjacentElement('afterend', second);
+    extraClocks.push(second);
+  }
+
+  const clocks = [banner, ...extraClocks];
   let overlay = null;
   let previousFocus = null;
   let previousOverflow = '';
@@ -44,7 +55,7 @@
     previousOverflow = document.body.style.overflow;
     overlay = document.createElement('div');
     overlay.className = 'sale-overlay';
-    overlay.innerHTML = '<div class="sale-dialog" role="dialog" aria-modal="true" aria-label="11:11 sale poster"><button class="sale-dialog__close" type="button" aria-label="Close sale poster">×</button><img class="sale-dialog__image" src="sale-11-11-2026.jpg" alt="11:11 sale poster: independent perfume decants" width="1536" height="1536"><div class="sale-dialog__actions"><span>Offer period: 11 Nov to 12 Dec</span><a href="shop.html">Explore perfumes</a></div></div>';
+    overlay.innerHTML = '<div class="sale-dialog" role="dialog" aria-modal="true" aria-label="11:11 sale poster"><button class="sale-dialog__close" type="button" aria-label="Close sale poster">×</button><img class="sale-dialog__image" src="sale-11-11-2026.jpg" alt="11:11 sale poster: independent perfume decants" width="1536" height="1536"><div class="sale-dialog__actions"><span>Offer period: 11–12 Nov</span><a href="shop.html">Explore perfumes</a></div></div>';
     document.body.append(overlay);
     document.body.style.overflow = 'hidden';
     overlay.querySelector('.sale-dialog__close').addEventListener('click', close);
@@ -64,11 +75,14 @@
 
   function tick() {
     const time = Date.now();
-    if (time >= endsExclusive) { banner.remove(); close(); clearInterval(interval); return; }
+    if (time >= endsExclusive) { clocks.forEach(node => node.remove()); close(); clearInterval(interval); return; }
     const beforeSale = time < starts;
-    caption.textContent = beforeSale ? 'Starts in' : 'Ends in';
-    clock.textContent = format((beforeSale ? starts : endsExclusive) - time);
-    clock.setAttribute('datetime', new Date(beforeSale ? starts : endsExclusive).toISOString());
+    for (const node of clocks) {
+      node.querySelector('.sale-clock__caption').textContent = beforeSale ? 'Starts in' : 'Ends in';
+      const clock = node.querySelector('.sale-clock__time');
+      clock.textContent = format((beforeSale ? starts : endsExclusive) - time);
+      clock.setAttribute('datetime', new Date(beforeSale ? starts : endsExclusive).toISOString());
+    }
     if (!beforeSale && !overlay && !shown) maybeOpen();
   }
 
