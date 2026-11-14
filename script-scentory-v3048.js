@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '5100';
+const DATA_VERSION = '5500';
 const BEST_SELLING_IDS = [
   'jpg-le-male-le-parfum',
   'club-de-nuit-intesne-man-edp',
@@ -327,11 +327,11 @@ function perfumeBrand(p) {
   const n = `${p?.name || ''} ${p?.id || ''}`.toLowerCase();
   const rules = [
     ['Afnan', /\bafnan\b|supremacy-not-only-intense/], ['Rasasi', /\bhawas\b|rasasi|shuhrah|fattan/],
-    ['Armaf', /club de nuit|armaf/], ['Lattafa', /lattafa|bade.?e al oud|qaed al fursan|fakhar|asad bourbon|\basad\b|haayati|najdia|khamrah|teriaq|rave now women/],
+    ['Armaf', /club de nuit|armaf/], ['Lattafa', /ameer al oudh|lattafa|bade.?e al oud|qaed al fursan|fakhar|asad bourbon|\basad\b|haayati|najdia|khamrah|teriaq|rave now women/],
     ['Rayhaan', /rayhaan/], ['Khadlaj', /khadlaj|\btitan by khadlaj/], ['French Avenue', /french avenue|liquid brun|vulcan feu|atlantis extrait|zenith blue/],
     ['Ahmed Al Maghribi', /by ahmed|\bkaaf\b|\bzeleny\b|\bblue by ahmed/], ['Al Haramain', /al haramain/],
     ['Mykonos', /mykonos/], ['Yusuf Bhai', /yusuf bhai/], ['Brandy', /brandy/], ['Gulf Orchid', /gulf orchid|\bnaseem\b|mango ice/],
-    ['Arabiyat Prestige', /arabiyat|arabian prestige|\bmarwa\b|bois blanc/], ['Riiffs', /riiffs/], ['Azzaro', /azzaro/], ['Dior', /dior/],
+    ['Arabiyat Prestige', /arabiyat|arabian prestige|\bmarwa\b|bois blanc/], ['Riiffs', /riiffs/], ['Azzaro', /azzaro/], ['Gucci', /gucci/], ['Viktor & Rolf', /spicebomb|viktor/], ['Dior', /dior/],
     ['Versace', /versace/], ['YSL', /ysl|yves saint/], ['Dolce & Gabbana', /dolce|gabbana/], ['Carolina Herrera', /carolina herrera|212 men/],
     ['Davidoff', /davidoff/], ['Burberry', /burberry/], ['Kenzo', /kenzo/], ['Nautica', /nautica/], ['Mancera', /mancera/],
     ['Junaid Jamshed', /junaid|sanaya/], ['Ajmal', /ajmal/], ['Reef', /reef/], ['Maison Asrar', /maison asrar|vanguard/],
