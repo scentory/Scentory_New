@@ -1,9 +1,9 @@
-SCENTORY V58 cumulative updates since V55
+SCENTORY V59 cumulative updates since V55
 
-These changed and new files must be extracted OVER a complete V55 site in the same web-root directory. A hosting provider that replaces the entire deployment with each ZIP needs SCENTORY_V58_FULL_SITE.zip instead.
+Extract these files OVER a complete V55 site in the same web-root. If your hosting upload replaces the entire deployment, use SCENTORY_V59_FULL_SITE.zip instead.
 
 Remove these stale V55 files if they remain on your server:
 - lattafa-ameer-al-oudh-edp-card.svg
 - valentino-uomo-born-in-roma-coral-fantasy.html
 
-The removed Lattafa Ameer Al Oudh listing is a redirect to the retained Ameer Al Oudh Intense Oud page.
+The retired Lattafa Ameer Al Oudh URL redirects to the retained Ameer Al Oudh Intense Oud page; it is absent from the product catalog.

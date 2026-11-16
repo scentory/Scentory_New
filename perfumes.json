@@ -431,6 +431,102 @@
     }
   },
   {
+    "id": "mercedes-benz-club-black-edt",
+    "name": "Mercedes-Benz Club Black EDT",
+    "status": "available",
+    "image": "mercedes-benz-club-black-edt-poster-v59.png",
+    "tags": [
+      "Vanilla",
+      "Incense"
+    ],
+    "recommendation": "Warm vanilla and incense with a bright bergamot opening and woody amber depth.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "vanilla",
+        "amber",
+        "warm",
+        "woody",
+        "smoky"
+      ],
+      "occasions": [
+        "date",
+        "party",
+        "formal"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ],
+      "strength": null,
+      "projection": null,
+      "longevity": null,
+      "sweetness": 4,
+      "freshness": 1,
+      "warmth": 5,
+      "officeSafety": 2,
+      "heatSafety": 2,
+      "versatility": 3,
+      "evidence": "source-checked",
+      "reviewedAt": "2026-11-16",
+      "topPickEligible": false,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "source-checked",
+      "notes": {
+        "top": [
+          "Bergamot"
+        ],
+        "heart": [
+          "Incense",
+          "Jasmine"
+        ],
+        "base": [
+          "Vanilla",
+          "Benzoin",
+          "Golden Woods",
+          "Ambrox"
+        ]
+      },
+      "performance": "Wear time varies with fabric, skin, weather and spray count; Scentory has not verified a fixed number of hours on clothes.",
+      "bestWear": "Evening outings, dates and cooler or air-conditioned settings.",
+      "comparison": "An original Mercedes-Benz fragrance; not a dupe.",
+      "keyNotes": "Bergamot, incense, jasmine, vanilla, benzoin, woods and ambrox.",
+      "overview": "Warm vanilla and incense with a bright bergamot opening and woody amber depth.",
+      "profileScope": "perfume",
+      "sources": []
+    },
+    "sizes": {
+      "3ml": {
+        "price": 299,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 530,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 820,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 1170,
+        "available": true,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 299,
+      "6 ML": 530,
+      "10 ML": 820,
+      "15 ML": 1170
+    }
+  },
+  {
     "id": "valentino-uomo-born-in-roma-intense-edp",
     "name": "Valentino Uomo Born In Roma Intense EDP",
     "image": "valentino-uomo-born-in-roma-intense-edp-poster.png",
