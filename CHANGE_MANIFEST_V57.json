@@ -1,0 +1,32 @@
+{
+  "version": "V57 working catalogue",
+  "date": "2026-11-15",
+  "base": "SCENTORY_V55_FULL_MASTER.zip",
+  "layout": "existing V55 layout retained",
+  "catalogueCount": 145,
+  "marketingCount": "150+",
+  "changes": [
+    "November regular prices and stock follow the user's latest ordered list.",
+    "Afnan 9 PM Rebel EDP: 3 ML 260 Tk; 10 ML available at 700 Tk.",
+    "Kaaf By Ahmed EDP: 15 ML 770 Tk and unavailable.",
+    "Added Gaaf by Ahmed EDP, Veneno by French Avenue, and Royal Blend SÉQUOIA by French Avenue with provided sizes and 15 ML unavailable.",
+    "Used previously created Scentory images for the three new products.",
+    "Kept Valentino Uomo Born in Roma upcoming with an honest placeholder, replacing the Coral Fantasy identification.",
+    "Moved Lattafa Opulent Dubai to follow Najdia, matching the supplied order.",
+    "Corrected Gaaf to Ghaf and completed four customer-facing profile rows for seven recent/upcoming perfume pages.",
+    "Completed the same four-row perfume profile on all six New Arrivals pages; removed source mentions from those pages and the seven other recent/upcoming profiles.",
+    "Removed Lattafa Ameer Al Oudh EDP placeholder permanently from the active site and restored Ameer Al Oudh Intense Oud (EDP), its real poster, and 180/280/400/540 Tk prices.",
+    "Completed the four profile rows on Ameer Al Oudh Intense Oud and Rave Now Women; reviewed Spicebomb Extreme, Gucci Flora Gorgeous Gardenia and Hawas Diva.",
+    "The removed Ameer placeholder URL now redirects to Ameer Al Oudh Intense Oud so uploading updated files overwrites the old product page."
+  ],
+  "pending": [
+    "Confirm the exact upcoming Valentino Uomo Born in Roma variant before using a product poster."
+  ],
+  "profilePolicy": [
+    "Every new product page must include Key notes, Longevity on clothes, Best wear, and Fragrance comparison.",
+    "Verify exact product variant and notes against the brand or a reputable fragrance database before publication.",
+    "Keep source records internal; do not display reference links or source names in the customer-facing profile.",
+    "Label Scentory clothes-hour claims as estimates; if not measured, state that no fixed-hour estimate is available.",
+    "Do not invent a dupe, performance hours, projection, or note pyramid."
+  ]
+}

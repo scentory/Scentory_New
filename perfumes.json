@@ -144,7 +144,7 @@
       "15 ML": 1290
     },
     "details": {
-      "verification": "scentory-supplied",
+      "verification": "source-checked",
       "notes": {
         "listed": [
           "Cardamom",
@@ -159,10 +159,11 @@
           "Iris"
         ]
       },
-      "performance": "Approx. 9–10 hours on clothes (SCENTORY estimate; varies by conditions).",
+      "performance": "Approx. 9–10 hours on clothes (Scentory estimate; varies by fabric, sprays and conditions).",
       "bestWear": "Date nights, evening dinners and weddings, especially in winter or air-conditioned settings.",
       "comparison": "An original Jean Paul Gaultier designer fragrance; not a dupe.",
-      "sourceNote": "SCENTORY supplied fragrance information; longevity is an estimate."
+      "keyNotes": "Cardamom, lavender, iris, vanilla and woody amber warmth.",
+      "sources": []
     },
     "profile": {
       "character": [
@@ -358,11 +359,17 @@
         "tobacco",
         "vanilla"
       ],
-      "occasions": [],
-      "climates": [],
-      "strength": 4,
-      "projection": 3,
-      "longevity": 4,
+      "occasions": [
+        "date",
+        "party"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ],
+      "strength": null,
+      "projection": null,
+      "longevity": null,
       "sweetness": 4,
       "freshness": 2,
       "warmth": 4,
@@ -370,25 +377,29 @@
       "heatSafety": 2,
       "versatility": 3,
       "evidence": "source-checked",
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-15",
       "topPickEligible": false,
       "scope": "perfume"
     },
     "details": {
       "verification": "source-checked",
       "notes": {
-        "featured": [
-          "Tobacco",
+        "listed": [
           "Vanilla",
-          "Warm spices"
+          "Tobacco",
+          "Cinnamon",
+          "Cumin",
+          "Bourbon Whiskey",
+          "Saffron"
         ]
       },
-      "performance": "Wear time depends on skin and conditions; no fixed-hour claim is verified.",
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
       "overview": "A warm spicy fragrance with tobacco and vanilla character.",
       "profileScope": "perfume",
-      "sources": [
-        "https://www.fragrantica.com/perfume/Viktor-Rolf/Spicebomb-Extreme-30499.html"
-      ]
+      "sources": [],
+      "comparison": "A richer, warmer direction than the original Spicebomb; this is Viktor&Rolf's own Extreme flanker.",
+      "bestWear": "Evenings, dates and cooler weather; the spicy tobacco-vanilla profile can feel rich in heat.",
+      "keyNotes": "Vanilla, tobacco, cinnamon, cumin, Bourbon whiskey and saffron."
     },
     "sizes": {
       "3ml": {
@@ -465,7 +476,7 @@
       "scope": "perfume"
     },
     "details": {
-      "verification": "brand-official",
+      "verification": "source-checked",
       "notes": {
         "top": [
           "Vanilla Bourbon",
@@ -484,14 +495,13 @@
           "Vetiver"
         ]
       },
-      "performance": "No independent, consistent wear-time estimate is available; performance varies with skin, weather and spray count.",
-      "comparison": "Ambery aromatic perfume with a warm vanilla and vetiver signature.",
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
+      "comparison": "Warmer and more vanilla-led than the original Born in Roma Uomo EDT's mineral, sage and vetiver direction.",
       "overview": "Valentino Uomo Born In Roma Intense EDP combines vanilla, lavandin and vetiver in a warm, aromatic fragrance.",
-      "sourceNote": "Notes checked against the official Valentino Beauty Born in Roma Uomo Eau de Parfum Intense listing; wear-time is not independently verified.",
-      "sources": [
-        "https://www.valentino-beauty.us/fragrances/fragrances-men/born-in-roma-uomo-intense/born-in-roma-uomo-eau-de-parfum-intense-MPL01907.html"
-      ],
-      "profileScope": "perfume"
+      "sources": [],
+      "profileScope": "perfume",
+      "keyNotes": "Vanilla Bourbon, ginger, lavandin, nutmeg and smoked vetiver.",
+      "bestWear": "Evening outings, dates and cooler or air-conditioned settings for its warm vanilla-aromatic character."
     },
     "sizes": {
       "3ml": {
@@ -523,57 +533,56 @@
     }
   },
   {
-    "id": "valentino-uomo-born-in-roma-coral-fantasy",
-    "name": "Valentino Uomo Born in Roma Coral Fantasy",
-    "image": "valentino-uomo-born-in-roma-coral-fantasy-poster.jpg",
-    "tags": [
-      "Fruity",
-      "Aromatic",
-      "Woody",
-      "Spicy"
-    ],
-    "recommendation": "Red apple and cardamom lead into aromatic herbs and a tobacco, patchouli and vetiver base. Coming soon.",
+    "id": "valentino-uomo-born-in-roma",
+    "name": "Valentino Uomo Born in Roma (Soon)",
+    "image": "product-image-coming-soon.svg",
+    "tags": [],
+    "recommendation": "Coming soon. Product details will be added after confirmation.",
     "status": "upcoming",
     "profile": {
       "schemaVersion": 2,
-      "character": [
-        "fruity",
-        "aromatic",
-        "woody",
-        "spicy"
+      "character": [],
+      "occasions": [
+        "daily",
+        "office",
+        "date"
       ],
-      "occasions": [],
-      "climates": [],
+      "climates": [
+        "hot",
+        "ac"
+      ],
       "topPickEligible": false,
       "scope": "perfume",
-      "evidence": "fragrantica-notes",
-      "reviewedAt": "2026-11-09"
+      "evidence": "source-checked",
+      "reviewedAt": "2026-11-15",
+      "strength": null,
+      "projection": null,
+      "longevity": null
     },
     "details": {
-      "verification": "fragrantica-notes",
-      "overview": "Red apple and cardamom lead into aromatic herbs and a tobacco, patchouli and vetiver base. Coming soon.",
-      "sourceNote": "Note pyramid checked against the exact Fragrantica perfume listing. Wear occasions and performance are not independently verified.",
-      "performance": "No verified wear-time estimate is available.",
+      "verification": "source-checked",
       "notes": {
         "top": [
-          "Red Apple",
-          "Cardamom",
-          "Calabrian Bergamot"
+          "Mineral Notes",
+          "Violet Leaf",
+          "Salt"
         ],
         "heart": [
-          "Lavender",
-          "Bourbon Geranium",
-          "Clary Sage"
+          "Sage",
+          "Ginger"
         ],
         "base": [
-          "Tobacco Leaf",
-          "Patchouli",
-          "Haitian Vetiver"
+          "Woody Notes",
+          "Vetiver"
         ]
       },
-      "sources": [
-        "https://www.fragrantica.com/perfume/Valentino/Valentino-Uomo-Born-In-Roma-Coral-Fantasy-71761.html"
-      ]
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
+      "overview": "Coming soon. Product details will be added after confirmation.",
+      "profileScope": "perfume",
+      "sources": [],
+      "comparison": "The original Born in Roma Uomo EDT is fresher and more mineral than Born in Roma Intense EDP's warm vanilla direction.",
+      "bestWear": "Daytime, office and casual evenings; its mineral-aromatic profile suits varied settings.",
+      "keyNotes": "Mineral salt, violet leaf, sage, ginger, woods and vetiver."
     },
     "sizes": {
       "3ml": {
@@ -701,10 +710,9 @@
       "reviewedAt": "2026-11-09"
     },
     "details": {
-      "verification": "fragrantica-notes",
+      "verification": "source-checked",
       "overview": "Almond and coffee open into white florals, followed by tonka bean, cacao and vanilla.",
-      "sourceNote": "Note pyramid checked against the exact Fragrantica perfume listing. Wear occasions and performance are not independently verified.",
-      "performance": "No verified wear-time estimate is available.",
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
       "notes": {
         "top": [
           "Almond",
@@ -733,9 +741,10 @@
           "Cedar"
         ]
       },
-      "sources": [
-        "https://www.fragrantica.com/perfume/carolina-herrera/good-girl-39681.html"
-      ]
+      "sources": [],
+      "keyNotes": "Almond, coffee, tuberose, jasmine, tonka bean, cacao and vanilla.",
+      "bestWear": "Evening dinners, parties and cooler or air-conditioned settings; its floral-gourmand character is rich.",
+      "comparison": "Sweeter and more gourmand than Gucci Flora Gorgeous Gardenia's pear-and-gardenia floral direction."
     },
     "sizes": {
       "3ml": {
@@ -784,11 +793,17 @@
         "gardenia",
         "fruity"
       ],
-      "occasions": [],
-      "climates": [],
-      "strength": 4,
-      "projection": 3,
-      "longevity": 4,
+      "occasions": [
+        "daily",
+        "party"
+      ],
+      "climates": [
+        "ac",
+        "hot"
+      ],
+      "strength": null,
+      "projection": null,
+      "longevity": null,
       "sweetness": 4,
       "freshness": 2,
       "warmth": 4,
@@ -796,7 +811,7 @@
       "heatSafety": 2,
       "versatility": 3,
       "evidence": "source-checked",
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-15",
       "topPickEligible": false,
       "scope": "perfume"
     },
@@ -818,12 +833,13 @@
           "Patchouli"
         ]
       },
-      "performance": "Wear time depends on skin and conditions; no fixed-hour claim is verified.",
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
       "overview": "A floral fragrance with pear blossom, gardenia and a sweet base. Coming soon.",
       "profileScope": "perfume",
-      "sources": [
-        "https://www.fragrantica.com/perfume/Gucci/Flora-Gorgeous-Gardenia-68578.html"
-      ]
+      "sources": [],
+      "comparison": "A sweet gardenia-forward floral from Gucci, rather than a spicy or oud-focused scent.",
+      "bestWear": "Daytime outings, casual events and air-conditioned settings; gardenia and soft sweetness lead the style.",
+      "keyNotes": "Pear blossom, red berries, mandarin, gardenia, jasmine, frangipani, brown sugar and patchouli."
     },
     "sizes": {
       "3ml": {
@@ -1748,7 +1764,7 @@
       "scope": "perfume"
     },
     "details": {
-      "verification": "scentory-supplied",
+      "verification": "source-checked",
       "notes": {
         "listed": [
           "Bergamot",
@@ -1762,12 +1778,13 @@
           "Musk"
         ]
       },
-      "performance": "7–9 hours on clothes, based on Scentory guidance.",
-      "comparison": "No specific fragrance confirmed",
-      "sourceNote": "Profile details are based on the Scentory-supplied website poster. Performance can vary by wearer, weather and spray count.",
+      "performance": "Approx. 7–9 hours on clothes (Scentory estimate; varies by fabric, sprays and conditions).",
+      "comparison": "Fresher and more citrus-mint focused than Hawas Diva's red-fruit and rose profile.",
       "sources": [],
       "profileScope": "perfume",
-      "overview": "A crisp citrus, mint and ginger fragrance for hot days, office and casual outings."
+      "overview": "A crisp citrus, mint and ginger fragrance for hot days, office and casual outings.",
+      "keyNotes": "Mandarin, orange, bergamot, ginger, lily of the valley, mint, musk, sandalwood and ambergris.",
+      "bestWear": "Hot days, office, university and casual daytime outings for a cool citrus-mint feel."
     }
   },
   {
@@ -2313,12 +2330,13 @@
           "Musk"
         ]
       },
-      "performance": "Wear time depends on wearer and conditions; it is not guaranteed.",
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
       "overview": "A fruity floral fragrance with lychee, rose and a warm vanilla finish.",
       "profileScope": "perfume",
-      "sources": [
-        "https://www.parfumo.com/Perfumes/Rasasi/hawas-diva-diva"
-      ]
+      "sources": [],
+      "keyNotes": "Red fruits, rhubarb, lychee, rose, frankincense, cedar, vanilla, musk and ambergris.",
+      "bestWear": "Daytime gatherings, dinners and air-conditioned settings for a fruity rose-and-vanilla profile.",
+      "comparison": "Fruitier and more floral than Hawas Ice Freeze's citrus, mint and ginger character."
     },
     "sizes": {
       "3ml": {
@@ -5414,7 +5432,7 @@
     "status": "available",
     "sizes": {
       "3ml": {
-        "price": 250,
+        "price": 260,
         "available": true,
         "premium": false
       },
@@ -5425,7 +5443,7 @@
       },
       "10ml": {
         "price": 700,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "15ml": {
@@ -5443,7 +5461,7 @@
     ],
     "recommendation": "A fruity, woody and ambery perfume that can move from daytime casual wear to dates and nights out.",
     "prices": {
-      "3 ML": 250,
+      "3 ML": 260,
       "6 ML": 460,
       "10 ML": 700,
       "15 ML": 980
@@ -5624,21 +5642,21 @@
   {
     "id": "ateeq-nusuk-by-lattafa",
     "name": "Ateeq Nusuk by Riiffs",
-    "status": "out",
+    "status": "available",
     "sizes": {
       "3ml": {
         "price": 210,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "6ml": {
         "price": 370,
-        "available": false,
+        "available": true,
         "premium": true
       },
       "10ml": {
         "price": 540,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "15ml": {
@@ -7402,7 +7420,7 @@
         "premium": false
       },
       "15ml": {
-        "price": 760,
+        "price": 770,
         "available": false,
         "premium": false
       }
@@ -7419,7 +7437,7 @@
       "3 ML": 210,
       "6 ML": 370,
       "10 ML": 550,
-      "15 ML": 760
+      "15 ML": 770
     },
     "profile": {
       "schemaVersion": 2,
@@ -7491,6 +7509,101 @@
       },
       "profileScope": "perfume",
       "overview": "A clean fruity-aquatic and musky perfume for hot days, office, university and active casual wear."
+    }
+  },
+  {
+    "id": "ghaf-by-ahmed-edp",
+    "name": "Ghaf by Ahmed EDP",
+    "status": "available",
+    "image": "ghaf-by-ahmed-edp-poster-v58.png",
+    "tags": [
+      "Rose",
+      "Woody",
+      "Oud"
+    ],
+    "recommendation": "A floral woody fragrance with rose and oud at its heart.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "rose",
+        "woody",
+        "oud"
+      ],
+      "occasions": [
+        "date",
+        "party"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ],
+      "strength": null,
+      "projection": null,
+      "longevity": null,
+      "sweetness": 3,
+      "freshness": 3,
+      "warmth": 3,
+      "officeSafety": 3,
+      "heatSafety": 3,
+      "versatility": 3,
+      "evidence": "source-checked",
+      "reviewedAt": "2026-11-15",
+      "topPickEligible": false,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "source-checked",
+      "notes": {
+        "top": [
+          "Lavender",
+          "Leather"
+        ],
+        "heart": [
+          "Rose",
+          "Oud",
+          "Jasmine"
+        ],
+        "base": [
+          "Woody Notes",
+          "Amber",
+          "Musk"
+        ]
+      },
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
+      "overview": "A floral woody fragrance with rose and oud at its heart.",
+      "profileScope": "perfume",
+      "sources": [],
+      "comparison": "More floral and oud-focused than Veneno's smoky apple and tobacco direction.",
+      "bestWear": "Evenings, dinners and cooler or air-conditioned settings; its rose-oud and leather character is rich.",
+      "keyNotes": "Lavender, leather, rose, jasmine, oud, amber and musk."
+    },
+    "sizes": {
+      "3ml": {
+        "price": 210,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 370,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 550,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 770,
+        "available": false,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 210,
+      "6 ML": 370,
+      "10 ML": 550,
+      "15 ML": 770
     }
   },
   {
@@ -8530,16 +8643,19 @@
       "scope": "perfume"
     },
     "details": {
-      "verification": "scentory-supplied",
+      "verification": "source-checked",
       "notes": {
         "featured": [
           "Green Tea",
           "Bergamot"
         ]
       },
-      "performance": "No independently verified wear-time estimate is available.",
-      "sourceNote": "Green Tea and Bergamot were supplied by Scentory. Exact wear time and comparison claims on the supplied poster are unverified.",
-      "overview": "Club de Nuit Élite is now available at Scentory. Explore its fresh green tea and bergamot character."
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
+      "overview": "Club de Nuit Élite is now available at Scentory. Explore its fresh green tea and bergamot character.",
+      "keyNotes": "Green tea, bergamot, apple, Sichuan pepper, rose, vetiver and cedarwood.",
+      "bestWear": "Daytime, office and casual outings; its green tea and citrus profile suits fresh everyday wear.",
+      "comparison": "A green tea and citrus aromatic from Armaf, rather than a sweet gourmand or oud-forward fragrance.",
+      "sources": []
     },
     "name": "Club de Nuit Élite",
     "status": "available",
@@ -9353,6 +9469,195 @@
       "sourceNote": "Scentory supplied profile. Note information follows the linked product source; wear occasions and recommendation scores are Scentory catalogue guidance, not measured test results.",
       "profileScope": "perfume",
       "overview": "Best for office, gym, casual day outings, and date nights."
+    }
+  },
+  {
+    "id": "veneno-by-french-avenue",
+    "name": "Veneno by French Avenue",
+    "status": "available",
+    "image": "veneno-by-french-avenue-poster-v58.png",
+    "tags": [
+      "Smoky",
+      "Fruity",
+      "Tobacco"
+    ],
+    "recommendation": "A smoky fruity fragrance with apple, tobacco and vanilla.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "smoky",
+        "fruity",
+        "tobacco"
+      ],
+      "occasions": [
+        "date",
+        "party"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ],
+      "strength": null,
+      "projection": null,
+      "longevity": null,
+      "sweetness": 3,
+      "freshness": 3,
+      "warmth": 3,
+      "officeSafety": 3,
+      "heatSafety": 3,
+      "versatility": 3,
+      "evidence": "source-checked",
+      "reviewedAt": "2026-11-15",
+      "topPickEligible": false,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "source-checked",
+      "notes": {
+        "top": [
+          "Apple",
+          "Smoke",
+          "Cinnamon"
+        ],
+        "heart": [
+          "Tobacco",
+          "Moss"
+        ],
+        "base": [
+          "Bourbon Vanilla",
+          "Orcanox™"
+        ]
+      },
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
+      "overview": "A smoky fruity fragrance with apple, tobacco and vanilla.",
+      "profileScope": "perfume",
+      "sources": [],
+      "comparison": "Compared with Royal Blend Séquoia, Veneno emphasizes smoke, apple and tobacco rather than raspberry, rose and praline.",
+      "bestWear": "Cooler evenings, dinners and occasions where a smoky, sweet scent fits.",
+      "keyNotes": "Apple, smoke, cinnamon, tobacco, moss and Bourbon vanilla."
+    },
+    "sizes": {
+      "3ml": {
+        "price": 260,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 450,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 680,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 960,
+        "available": false,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 260,
+      "6 ML": 450,
+      "10 ML": 680,
+      "15 ML": 960
+    }
+  },
+  {
+    "id": "royal-blend-sequoia-by-french-avenue",
+    "name": "Royal Blend SÉQUOIA by French Avenue",
+    "status": "available",
+    "image": "royal-blend-sequoia-by-french-avenue-poster-v58.png",
+    "tags": [
+      "Woody",
+      "Sweet",
+      "Fruity"
+    ],
+    "recommendation": "A fruity woody fragrance with raspberry, rose and praline.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "woody",
+        "sweet",
+        "fruity"
+      ],
+      "occasions": [
+        "date",
+        "party"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ],
+      "strength": null,
+      "projection": null,
+      "longevity": null,
+      "sweetness": 3,
+      "freshness": 3,
+      "warmth": 3,
+      "officeSafety": 3,
+      "heatSafety": 3,
+      "versatility": 3,
+      "evidence": "source-checked",
+      "reviewedAt": "2026-11-15",
+      "topPickEligible": false,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "source-checked",
+      "notes": {
+        "top": [
+          "Raspberry",
+          "Cognac",
+          "Liquor"
+        ],
+        "heart": [
+          "Rose",
+          "Moss"
+        ],
+        "base": [
+          "Praline",
+          "Oak",
+          "Sandalwood"
+        ]
+      },
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
+      "overview": "A fruity woody fragrance with raspberry, rose and praline.",
+      "profileScope": "perfume",
+      "sources": [],
+      "comparison": "Fruitier and rosier than Veneno, with praline and oak in place of Veneno's smoky tobacco character.",
+      "bestWear": "Evening dinners, celebrations and cooler or air-conditioned settings; it has a sweet fruity-woody profile.",
+      "keyNotes": "Raspberry, cognac, rose, moss, praline, oak and sandalwood."
+    },
+    "sizes": {
+      "3ml": {
+        "price": 230,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 390,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 580,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 810,
+        "available": false,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 230,
+      "6 ML": 390,
+      "10 ML": 580,
+      "15 ML": 810
     }
   },
   {
@@ -10214,113 +10519,6 @@
     }
   },
   {
-    "id": "lattafa-opulent-dubai-edp",
-    "name": "Lattafa Opulent Dubai (EDP)",
-    "status": "available",
-    "sizes": {
-      "3ml": {
-        "price": 150,
-        "available": false,
-        "premium": false
-      },
-      "6ml": {
-        "price": 250,
-        "available": true,
-        "premium": true
-      },
-      "10ml": {
-        "price": 350,
-        "available": true,
-        "premium": false
-      },
-      "15ml": {
-        "price": 460,
-        "available": false,
-        "premium": false
-      }
-    },
-    "image": "lattafa-opulent-dubai-edp.webp",
-    "tags": [
-      "Sweet",
-      "Summer",
-      "Party"
-    ],
-    "recommendation": "Best for summer day, tropical weather, vacation, daytime outings, party, casual luxury events, and AC rooms.",
-    "prices": {
-      "3 ML": 150,
-      "6 ML": 250,
-      "10 ML": 350,
-      "15 ML": 460
-    },
-    "profile": {
-      "schemaVersion": 1,
-      "character": [
-        "fresh",
-        "fruity",
-        "sweet"
-      ],
-      "occasions": [
-        "daily",
-        "active",
-        "party"
-      ],
-      "climates": [
-        "hot",
-        "ac",
-        "outdoor"
-      ],
-      "strength": 3,
-      "projection": 3,
-      "longevity": 3,
-      "sweetness": 4,
-      "freshness": 4,
-      "warmth": 4,
-      "officeSafety": 3,
-      "heatSafety": 4,
-      "versatility": 4,
-      "evidence": "catalogue-derived",
-      "reviewedAt": "2026-08-26",
-      "scope": "perfume"
-    },
-    "details": {
-      "verification": "source-checked",
-      "performance": "Performance guidance is under source review; skin, weather and atomizer can change results.",
-      "sources": [
-        {
-          "title": "Opulent Dubai — published product notes",
-          "url": "https://lattafa-usa.com/products/opulent-dubai",
-          "type": "brand-store"
-        }
-      ],
-      "source30ml": {
-        "price": 800,
-        "available": false
-      },
-      "notes": {
-        "top": [
-          "Lemon",
-          "Ginger",
-          "Grapefruit",
-          "Mango"
-        ],
-        "heart": [
-          "Jasmine",
-          "Violet",
-          "Cedar"
-        ],
-        "base": [
-          "Ambergris",
-          "Woody notes",
-          "Oakmoss",
-          "Benzoin"
-        ]
-      },
-      "sourceNote": "Scentory supplied profile. Note information follows the linked product source; wear occasions and recommendation scores are Scentory catalogue guidance, not measured test results.",
-      "profileScope": "perfume",
-      "overview": "Best for summer day, tropical weather, vacation, daytime outings, party, casual luxury events, and AC rooms."
-    }
-  },
-  {
     "id": "ameer-al-oudh-intense-oud-edp",
     "name": "Ameer Al Oudh Intense Oud (EDP)",
     "status": "available",
@@ -10338,11 +10536,17 @@
         "oud",
         "vanilla"
       ],
-      "occasions": [],
-      "climates": [],
-      "strength": 4,
-      "projection": 3,
-      "longevity": 4,
+      "occasions": [
+        "date",
+        "party"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ],
+      "strength": null,
+      "projection": null,
+      "longevity": null,
       "sweetness": 4,
       "freshness": 2,
       "warmth": 4,
@@ -10350,25 +10554,35 @@
       "heatSafety": 2,
       "versatility": 3,
       "evidence": "source-checked",
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-15",
       "topPickEligible": false,
       "scope": "perfume"
     },
     "details": {
       "verification": "source-checked",
       "notes": {
-        "featured": [
+        "top": [
+          "Saffron",
+          "Nutmeg"
+        ],
+        "heart": [
+          "Geranium",
+          "Woody Notes",
+          "Labdanum"
+        ],
+        "base": [
           "Oud",
-          "Woody notes",
-          "Vanilla"
+          "Vanilla",
+          "Leather"
         ]
       },
-      "performance": "Wear time depends on skin and conditions; no fixed-hour claim is verified.",
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
       "overview": "Warm, woody oud with a sweet vanilla impression.",
       "profileScope": "perfume",
-      "sources": [
-        "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Ameer-Al-Oudh-Intense-Oud-64947.html"
-      ]
+      "sources": [],
+      "keyNotes": "Saffron, nutmeg, geranium, woody notes, labdanum, oud, vanilla and leather.",
+      "bestWear": "Evenings, dates and cooler or air-conditioned settings for its warm oud-and-vanilla character.",
+      "comparison": "A smoky-sweet oud direction from Lattafa, distinct from Spicebomb Extreme's tobacco-and-spice profile."
     },
     "sizes": {
       "3ml": {
@@ -10738,16 +10952,15 @@
       ],
       "occasions": [
         "daily",
-        "date",
         "party"
       ],
       "climates": [
-        "cool",
-        "ac"
+        "ac",
+        "hot"
       ],
-      "strength": 3,
-      "projection": 3,
-      "longevity": 3,
+      "strength": null,
+      "projection": null,
+      "longevity": null,
       "sweetness": 4,
       "freshness": 2,
       "warmth": 3,
@@ -10755,7 +10968,7 @@
       "heatSafety": 2,
       "versatility": 3,
       "evidence": "source-checked",
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-15",
       "topPickEligible": false,
       "scope": "perfume"
     },
@@ -10763,12 +10976,12 @@
       "verification": "source-checked",
       "notes": {
         "top": [
-          "Red fruits",
+          "Red Fruits",
           "Orange"
         ],
         "heart": [
           "Marshmallow",
-          "Lily of the valley",
+          "Lily of the Valley",
           "Jasmine"
         ],
         "base": [
@@ -10777,12 +10990,13 @@
           "Musk"
         ]
       },
-      "performance": "Wear time depends on wearer and conditions; it is not guaranteed.",
+      "performance": "Not yet measured by Scentory on clothes, so no fixed-hour estimate is given. Fabric, spray count and conditions affect wear time.",
       "overview": "Red fruits and orange lead into soft florals and marshmallow, with a vanilla and musk finish.",
       "profileScope": "perfume",
-      "sources": [
-        "https://lattafa.com/product/rave-now-women/"
-      ]
+      "sources": [],
+      "keyNotes": "Red fruits, orange, marshmallow, lily of the valley, jasmine, vanilla, moss and musk.",
+      "bestWear": "Casual outings, daytime gatherings and air-conditioned settings for a fruity, soft floral sweetness.",
+      "comparison": "Both this and Hawas Diva feature red fruits and vanilla; Rave Now Women adds orange and marshmallow, while Hawas Diva emphasizes rose and rhubarb."
     },
     "sizes": {
       "3ml": {
@@ -11489,77 +11703,6 @@
     }
   },
   {
-    "id": "lattafa-ameer-al-oudh-edp",
-    "name": "Lattafa Ameer Al Oudh EDP",
-    "status": "available",
-    "image": "lattafa-ameer-al-oudh-edp-card.svg",
-    "tags": [
-      "Oud",
-      "Woody"
-    ],
-    "recommendation": "Ameer Al Oudh by Lattafa. Fragrance details are being reviewed.",
-    "profile": {
-      "schemaVersion": 2,
-      "character": [
-        "oud",
-        "woody"
-      ],
-      "occasions": [],
-      "climates": [],
-      "strength": 4,
-      "projection": 3,
-      "longevity": 4,
-      "sweetness": 4,
-      "freshness": 2,
-      "warmth": 4,
-      "officeSafety": 2,
-      "heatSafety": 2,
-      "versatility": 3,
-      "evidence": "pending",
-      "reviewedAt": "2026-11-14",
-      "topPickEligible": false,
-      "scope": "perfume"
-    },
-    "details": {
-      "verification": "pending",
-      "notes": {},
-      "performance": "Wear time depends on skin and conditions; no fixed-hour claim is verified.",
-      "overview": "Ameer Al Oudh by Lattafa. Fragrance details are being reviewed.",
-      "profileScope": "perfume",
-      "sources": [
-        "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Ameer-Al-Oudh-25826.html"
-      ]
-    },
-    "sizes": {
-      "3ml": {
-        "price": 180,
-        "available": true,
-        "premium": false
-      },
-      "6ml": {
-        "price": 290,
-        "available": true,
-        "premium": true
-      },
-      "10ml": {
-        "price": 410,
-        "available": true,
-        "premium": false
-      },
-      "15ml": {
-        "price": 550,
-        "available": true,
-        "premium": false
-      }
-    },
-    "prices": {
-      "3 ML": 180,
-      "6 ML": 290,
-      "10 ML": 410,
-      "15 ML": 550
-    }
-  },
-  {
     "id": "lattafa-fakhar-black-edp",
     "name": "Lattafa Fakhar Black EDP",
     "status": "available",
@@ -11744,6 +11887,113 @@
       "sourceNote": "Scentory catalogue guidance for this perfume. A reliable exact note pyramid has not been confirmed in the research collected for this update; no note stages or fixed wear time are asserted.",
       "comparison": "",
       "overview": "Best for gym, casual daytime, and hot outdoor settings."
+    }
+  },
+  {
+    "id": "lattafa-opulent-dubai-edp",
+    "name": "Lattafa Opulent Dubai (EDP)",
+    "status": "available",
+    "sizes": {
+      "3ml": {
+        "price": 150,
+        "available": false,
+        "premium": false
+      },
+      "6ml": {
+        "price": 250,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 350,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 460,
+        "available": false,
+        "premium": false
+      }
+    },
+    "image": "lattafa-opulent-dubai-edp.webp",
+    "tags": [
+      "Sweet",
+      "Summer",
+      "Party"
+    ],
+    "recommendation": "Best for summer day, tropical weather, vacation, daytime outings, party, casual luxury events, and AC rooms.",
+    "prices": {
+      "3 ML": 150,
+      "6 ML": 250,
+      "10 ML": 350,
+      "15 ML": 460
+    },
+    "profile": {
+      "schemaVersion": 1,
+      "character": [
+        "fresh",
+        "fruity",
+        "sweet"
+      ],
+      "occasions": [
+        "daily",
+        "active",
+        "party"
+      ],
+      "climates": [
+        "hot",
+        "ac",
+        "outdoor"
+      ],
+      "strength": 3,
+      "projection": 3,
+      "longevity": 3,
+      "sweetness": 4,
+      "freshness": 4,
+      "warmth": 4,
+      "officeSafety": 3,
+      "heatSafety": 4,
+      "versatility": 4,
+      "evidence": "catalogue-derived",
+      "reviewedAt": "2026-08-26",
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "source-checked",
+      "performance": "Performance guidance is under source review; skin, weather and atomizer can change results.",
+      "sources": [
+        {
+          "title": "Opulent Dubai — published product notes",
+          "url": "https://lattafa-usa.com/products/opulent-dubai",
+          "type": "brand-store"
+        }
+      ],
+      "source30ml": {
+        "price": 800,
+        "available": false
+      },
+      "notes": {
+        "top": [
+          "Lemon",
+          "Ginger",
+          "Grapefruit",
+          "Mango"
+        ],
+        "heart": [
+          "Jasmine",
+          "Violet",
+          "Cedar"
+        ],
+        "base": [
+          "Ambergris",
+          "Woody notes",
+          "Oakmoss",
+          "Benzoin"
+        ]
+      },
+      "sourceNote": "Scentory supplied profile. Note information follows the linked product source; wear occasions and recommendation scores are Scentory catalogue guidance, not measured test results.",
+      "profileScope": "perfume",
+      "overview": "Best for summer day, tropical weather, vacation, daytime outings, party, casual luxury events, and AC rooms."
     }
   },
   {

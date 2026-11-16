@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '5500';
+const DATA_VERSION = '5701';
 const BEST_SELLING_IDS = [
   'jpg-le-male-le-parfum',
   'club-de-nuit-intesne-man-edp',
@@ -402,6 +402,18 @@ function renderIntelligenceDetails(p) {
   const longevity = DETAIL_LONGEVITY_LABELS[Number(profile.longevity || 0)] || 'Varies by wearer';
   const character = (profile.character || []).map(value => value.replace(/\b\w/g, letter => letter.toUpperCase()));
   const comparison = String(details.comparison || '').trim();
+
+  if (details.keyNotes && details.bestWear && comparison) {
+    const rows = [
+      ['Key notes', details.keyNotes],
+      ['Longevity on clothes', details.performance],
+      ['Best wear', details.bestWear],
+      ['Fragrance comparison', comparison]
+    ];
+    return `<section class="verified-perfume-details" aria-label="Perfume profile shared across all decant sizes">
+      ${rows.map(([label, value]) => `<div class="profile-fact"><b>${escapeHtml(label)}</b><span>${escapeHtml(value)}</span></div>`).join('')}
+    </section>`;
+  }
 
   if (!hasDetailedProfile) {
     return `
