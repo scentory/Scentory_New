@@ -1,0 +1,104 @@
+/* Scentory's original, temporary Vice City sunset-inspired palette. Active only
+   while the class is present. Existing branding, layout, content and prices stay. */
+@font-face {
+  font-family: "Scentory Sunset Narrow";
+  src: url("scentory-sunset-narrow-v62.ttf") format("truetype");
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+html.scentory-sunset-week {
+  --bg: #100d25; --bg2: #191431; --card: #1e1735; --card2: #292042;
+  --text: #fff5fa; --muted: #c9bdd3;
+  --line: rgba(255,151,203,.22); --line2: rgba(255,151,203,.38);
+  --accent: #ff85b9; --accent2: #ffad91;
+  --tile: rgba(255,137,194,.08);
+  --tile-selected: linear-gradient(120deg,#ffb180,#ff6daf);
+  --s85-gold: #ff97c5; --s85-line: rgba(255,155,200,.34);
+  --gold: #ff97c5; --glass-edge: rgba(255,175,219,.45);
+  color-scheme: dark;
+}
+html.scentory-sunset-week body {
+  color: #fff5fa !important;
+  background:
+    radial-gradient(ellipse 80% 45% at 80% 1%, rgba(255,119,165,.22),transparent 70%),
+    radial-gradient(ellipse 60% 40% at 0% 32%, rgba(91,226,224,.12),transparent 74%),
+    linear-gradient(155deg,#121026 0%,#28163d 46%,#0d1226 100%) fixed !important;
+}
+html.scentory-sunset-week :is(h1,h2,h3,.eyebrow,.v31-card h3,.shop-page-intro h1,.discovery-refiner h2) {
+  font-family: "Scentory Sunset Narrow", "Arial Narrow", Impact, sans-serif !important;
+  font-weight: 800;
+  letter-spacing: .012em;
+}
+html.scentory-sunset-week :is(h1,h2) { text-shadow: 0 2px 24px rgba(255,89,161,.24); }
+html.scentory-sunset-week :is(.topbar,body[data-page="product"] .phead) {
+  background: linear-gradient(105deg,rgba(39,22,61,.94),rgba(22,19,54,.90)) !important;
+  border-bottom-color: rgba(255,143,201,.48) !important;
+  box-shadow: 0 9px 28px rgba(13,4,30,.4),inset 0 1px 0 rgba(255,203,224,.22) !important;
+}
+html.scentory-sunset-week :is(.top-search-input,body[data-page="product"] .product-global-search input,.cart-pill,body[data-page="product"] .product-cart-link,.site-nav a,.more-nav summary) {
+  background: linear-gradient(125deg,rgba(255,136,195,.18),rgba(85,216,226,.09)) !important;
+  border-color: rgba(255,159,209,.5) !important;
+  color: #fff7fb !important;
+}
+html.scentory-sunset-week :is(.top-search-input,body[data-page="product"] .product-global-search input):focus-visible {
+  outline: 2px solid #66e7e1 !important; outline-offset: 2px;
+}
+html.scentory-sunset-week .hero { background: #1b1534 !important; border-color: rgba(255,163,214,.4) !important; }
+html.scentory-sunset-week .hero::before {
+  /* Retain the actual Scentory hero photo underneath the sunset wash. */
+  background-image: linear-gradient(130deg,rgba(31,15,61,.56),rgba(255,90,143,.14) 52%,rgba(11,19,46,.70)),url("hero-scentory-main-desktop.webp?v=3070") !important;
+}
+html.scentory-sunset-week .hero::after {
+  background: linear-gradient(180deg,rgba(255,140,177,.06),transparent 45%,rgba(37,15,64,.34)) !important;
+}
+html.scentory-sunset-week .hero .eyebrow {
+  background: rgba(64,29,76,.70) !important; border-color: rgba(255,174,217,.56) !important;
+  color: #ffe1ed !important;
+}
+html.scentory-sunset-week :is(.product,.v31-card,.order-card,.decant-copy,.decant-photo-card,.toolbar,.catalog-panel,.shop-page-intro,.discovery-refiner,.discovery-studio,.discovery-tool-card,.brand-showcase-card,.review-card,.faq-grid details,.steps-grid article,.hot-arrival-card,.best-seller-card,.about-stat-card,.product-modal-card,.discovery-modal-card,body[data-page="product"] .buy-block,body[data-page="product"] .facts,body[data-page="product"] .rec-card) {
+  background: linear-gradient(145deg,rgba(64,38,90,.92),rgba(23,21,52,.96) 55%,rgba(19,33,60,.94)) !important;
+  background-image: radial-gradient(circle at 0 0,rgba(255,137,186,.12),transparent 48%),linear-gradient(145deg,#2a1c47,#171a36 95%) !important;
+  border-color: rgba(255,153,210,.36) !important;
+  box-shadow: inset 0 1px 0 rgba(255,197,229,.12),0 15px 35px rgba(7,5,26,.28) !important;
+}
+html.scentory-sunset-week :is(.product-image-wrap,.photo,.price-tile,.product-size-btn,.v31-size,.quick-shop-chip,.filter-chip,.discovery-refiner select,.search-suggestions,.more-nav-menu) {
+  border-color: rgba(255,151,205,.40) !important;
+  background-color: #201b3b !important;
+  color: #fff3f8 !important;
+}
+html.scentory-sunset-week :is(.price-tile.selected,.product-size-btn.selected,.quick-shop-chip.active,.filter-chip.active) {
+  border-color: #65e3df !important;
+  box-shadow: inset 0 0 0 1px rgba(101,227,223,.32),0 0 19px rgba(96,218,226,.18) !important;
+}
+html.scentory-sunset-week :is(.btn.primary,.hero .btn.primary,.v31-add,.quick-pick-btn,.order-cta .btn.primary) {
+  background: linear-gradient(115deg,#ffb57d,#ff7dbb 66%,#ff67aa) !important;
+  border-color: #ffbad5 !important; color: #24112e !important;
+  box-shadow: 0 8px 24px rgba(255,95,160,.22) !important;
+  font-family: "Scentory Sunset Narrow", "Arial Narrow", Impact, sans-serif !important;
+  letter-spacing: .025em;
+}
+html.scentory-sunset-week :is(.btn.ghost,.hero .btn.ghost,.quick-shop-chip,.site-nav a,.more-nav summary) {
+  border-color: rgba(255,163,209,.48) !important; color: #fff0f8 !important;
+}
+html.scentory-sunset-week :is(.trust-marquee,.scentory-liquid-dock) {
+  background: linear-gradient(110deg,rgba(54,31,78,.94),rgba(25,37,65,.95)) !important;
+  border-color: rgba(255,174,215,.56) !important;
+  color: #fff3f9 !important;
+}
+html.scentory-sunset-week .scentory-dock-item.active::after {
+  background: linear-gradient(90deg,transparent,#74ebe1,transparent) !important;
+  box-shadow: 0 0 11px #74ebe1 !important;
+}
+html.scentory-sunset-week :is(.sale-old-price,.sale-regular-line) { color: #f1dbe9 !important; }
+html.scentory-sunset-week :is(.sale-new-price,.sale-current-line) { color: #a2f6db !important; }
+html.scentory-sunset-week :is(.sale-badge,.sale-saving) {
+  background: #14553d !important; border-color: #71e9ac !important; color: #e9fff3 !important;
+}
+html.scentory-sunset-week :is(.v31-notes,.v31-selection,.fact-row span,.spray-estimate,.recommend-sub) { color: #dbcede !important; }
+html.scentory-sunset-week :is(a,button,input,select,summary):focus-visible { outline-color: #70e8e3 !important; }
+@media(max-width:640px) {
+  html.scentory-sunset-week .hero::before {
+    background-image: linear-gradient(130deg,rgba(31,15,61,.55),rgba(255,90,143,.13) 52%,rgba(11,19,46,.69)),url("hero-scentory-main-mobile.webp?v=3070") !important;
+  }
+}
