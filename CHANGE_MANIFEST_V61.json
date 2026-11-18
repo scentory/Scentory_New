@@ -1,0 +1,12 @@
+{
+  "version": "V61",
+  "base": "V60",
+  "catalogueCount": 147,
+  "marketingCount": "150+",
+  "changes": [
+    "Standardized profile sections for all 147 perfume pages, including key notes, verified top/heart/base notes where available, qualitative longevity and projection, best wear, and fragrance comparison.",
+    "Checked 76 exact-match pyramids against Fragrantica in this pass; 18 perfumes retain a clearly marked verification gap, including Ajmal Kuro whose Fragrantica listing provides notes without stages.",
+    "Kept performance labels as Scentory guidance with explicit variation by use, weather, fabric and skin chemistry.",
+    "Future additions must use the same profile format and exact-source matching."
+  ]
+}
