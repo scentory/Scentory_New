@@ -1,0 +1,13 @@
+{
+  "version": "V60",
+  "base": "V59",
+  "catalogueCount": 147,
+  "marketingCount": "150+",
+  "changes": [
+    "Added Rayhaan Palawan before Vantage with the user-supplied poster and 3/6/10 ML available; 15 ML out.",
+    "Added Rayhaan's published top, heart and base notes because the exact perfume is absent from Fragrantica's current Rayhaan listing.",
+    "Expressed longevity and projection without unverified fixed-hour or strength claims.",
+    "Applied 15 listed price and availability changes to the JSON catalogue, static pages and structured offers.",
+    "Kept the removed Lattafa Ameer Al Oudh placeholder absent; retained Ameer Al Oudh Intense Oud."
+  ]
+}

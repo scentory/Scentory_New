@@ -419,7 +419,7 @@
       },
       "15ml": {
         "price": 1860,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -1808,7 +1808,7 @@
       },
       "15ml": {
         "price": 800,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -2305,7 +2305,7 @@
       },
       "15ml": {
         "price": 700,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -3385,6 +3385,111 @@
     }
   },
   {
+    "id": "rayhaan-palawan",
+    "name": "Rayhaan Palawan",
+    "status": "available",
+    "image": "rayhaan-palawan-poster-v60.jpg",
+    "tags": [
+      "Citrus",
+      "Fruity",
+      "Woody"
+    ],
+    "recommendation": "Bright tropical citrus and pineapple, a fruity floral heart, and a soft musky woody base.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "citrus",
+        "fruity",
+        "fresh",
+        "woody",
+        "musky"
+      ],
+      "occasions": [
+        "casual",
+        "office",
+        "travel"
+      ],
+      "climates": [
+        "summer",
+        "spring",
+        "hot"
+      ],
+      "strength": null,
+      "projection": null,
+      "longevity": null,
+      "sweetness": 3,
+      "freshness": 4,
+      "warmth": 2,
+      "officeSafety": 3,
+      "heatSafety": 4,
+      "versatility": 3,
+      "evidence": "brand-notes",
+      "reviewedAt": "2026-11-18",
+      "topPickEligible": false,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "brand-notes",
+      "notes": {
+        "top": [
+          "Calamansi",
+          "Grapefruit",
+          "Yellow Mandarin Orpur",
+          "Pineapple"
+        ],
+        "heart": [
+          "African Orange Blossom Orpur",
+          "Pomarose",
+          "Fig"
+        ],
+        "base": [
+          "Sandalwood",
+          "White Musk",
+          "Dry Amber"
+        ]
+      },
+      "performance": "Rating pending; wear time varies with use, weather, fabric and skin chemistry.",
+      "projection": "Rating pending; projection varies with use, weather and skin chemistry.",
+      "bestWear": "Warm days, casual outings and daytime sampling.",
+      "comparison": "An original Rayhaan fragrance created with Noel Thomas; not a dupe.",
+      "keyNotes": "Calamansi, grapefruit, yellow mandarin, pineapple, orange blossom, fig, sandalwood, musk and dry amber.",
+      "overview": "Bright tropical citrus and pineapple, a fruity floral heart, and a soft musky woody base.",
+      "profileScope": "perfume",
+      "sourceNote": "Fragrantica's Rayhaan designer listing did not include Palawan on 2026-11-18; note pyramid was checked against Rayhaan's official product listing. Performance is not independently verified.",
+      "sources": [
+        "https://rayhaanperfumes.eu/products/palawan"
+      ]
+    },
+    "sizes": {
+      "3ml": {
+        "price": 190,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 320,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 460,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 630,
+        "available": false,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 190,
+      "6 ML": 320,
+      "10 ML": 460,
+      "15 ML": 630
+    }
+  },
+  {
     "id": "rayhaan-vantage",
     "name": "Rayhaan Vantage",
     "status": "available",
@@ -3406,7 +3511,7 @@
       },
       "15ml": {
         "price": 680,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -4327,7 +4432,7 @@
       },
       "10ml": {
         "price": 420,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "15ml": {
@@ -4819,22 +4924,22 @@
     "status": "available",
     "sizes": {
       "3ml": {
-        "price": 170,
+        "price": 190,
         "available": true,
         "premium": false
       },
       "6ml": {
-        "price": 290,
+        "price": 320,
         "available": true,
         "premium": true
       },
       "10ml": {
-        "price": 420,
+        "price": 460,
         "available": true,
         "premium": false
       },
       "15ml": {
-        "price": 570,
+        "price": 630,
         "available": true,
         "premium": false
       }
@@ -4847,10 +4952,10 @@
     ],
     "recommendation": "Best for evening outings, night dates, and formal occasions.",
     "prices": {
-      "3 ML": 170,
-      "6 ML": 290,
-      "10 ML": 420,
-      "15 ML": 570
+      "3 ML": 190,
+      "6 ML": 320,
+      "10 ML": 460,
+      "15 ML": 630
     },
     "profile": {
       "schemaVersion": 1,
@@ -7691,7 +7796,7 @@
       },
       "15ml": {
         "price": 770,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -9650,7 +9755,7 @@
       },
       "15ml": {
         "price": 960,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -9745,7 +9850,7 @@
       },
       "15ml": {
         "price": 810,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -10219,7 +10324,7 @@
       },
       "15ml": {
         "price": 840,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -10731,7 +10836,7 @@
       },
       "15ml": {
         "price": 980,
-        "available": true,
+        "available": false,
         "premium": false
       }
     },
@@ -10942,7 +11047,7 @@
       },
       "15ml": {
         "price": 660,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
@@ -12216,7 +12321,7 @@
       },
       "15ml": {
         "price": 700,
-        "available": false,
+        "available": true,
         "premium": false
       }
     },
