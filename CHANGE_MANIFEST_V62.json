@@ -1,0 +1,17 @@
+{
+  "version": "V62",
+  "baseline": "V55 live baseline",
+  "scope": "Full master and direct V55 updates ZIP",
+  "theme": {
+    "name": "Scentory sunset week",
+    "start_bdt": "2026-11-19 00:50",
+    "end_bdt": "2026-11-25 00:50",
+    "automatic_revert": true
+  },
+  "details": [
+    "Temporary sunset pink, coral, aqua and violet palette across all 151 pages",
+    "Bundled condensed display font for headings and selected calls to action",
+    "All V56–V61 catalog, prices, availability, posters and perfume profiles retained"
+  ],
+  "installation": "Upload the contents of either ZIP to the website root; do not nest the ZIP directory."
+}
