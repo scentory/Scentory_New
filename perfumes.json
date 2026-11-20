@@ -1765,6 +1765,120 @@
     }
   },
   {
+    "id": "kiss-and-sea-nicotine",
+    "name": "Kiss and Sea Nicotine",
+    "status": "available",
+    "image": "kiss-and-sea-nicotine-poster-v63.jpg",
+    "tags": [
+      "Fresh",
+      "Tea",
+      "Woody"
+    ],
+    "recommendation": "Fresh citrus, aromatic tea and a softly woody tobacco-suede base.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "fresh",
+        "citrus",
+        "aromatic",
+        "woody",
+        "tea",
+        "tobacco"
+      ],
+      "occasions": [
+        "casual",
+        "office",
+        "travel"
+      ],
+      "climates": [
+        "spring",
+        "ac",
+        "summer"
+      ],
+      "strength": null,
+      "projection": null,
+      "longevity": null,
+      "sweetness": 2,
+      "freshness": 4,
+      "warmth": 2,
+      "officeSafety": 3,
+      "heatSafety": 3,
+      "versatility": 3,
+      "evidence": "fragrantica-notes",
+      "reviewedAt": "2026-11-20",
+      "topPickEligible": false,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "fragrantica-notes",
+      "notes": {
+        "top": [
+          "Mountain Air",
+          "Bergamot",
+          "Clary Sage",
+          "Orange Oil",
+          "Cardamom",
+          "Juniper"
+        ],
+        "heart": [
+          "Tea",
+          "Magnolia",
+          "Hedione",
+          "Violet",
+          "Rose"
+        ],
+        "base": [
+          "Tobacco",
+          "Suede",
+          "Iso E Super",
+          "Sandalwood",
+          "Tonka Bean",
+          "Ambergris",
+          "Moss"
+        ]
+      },
+      "keyNotes": "Bergamot, Tea, Tobacco, Sandalwood",
+      "performance": "Not rated yet. Results vary with use, weather, fabric and skin chemistry.",
+      "projection": "Not rated yet. Results vary with use, weather, fabric and skin chemistry.",
+      "bestWear": "Daytime outings and relaxed evenings, especially in mild or air-conditioned weather.",
+      "comparison": "A Samam Kiss & Sea fragrance; no confirmed direct dupe.",
+      "overview": "Fresh citrus, aromatic tea and a softly woody tobacco-suede base.",
+      "profileScope": "perfume",
+      "sourceNote": "Exact Kiss & Sea Nicotine by Samam note pyramid checked against Fragrantica; performance has too few dependable reports to rate.",
+      "sources": [
+        "https://www.fragrantica.com/perfume/Samam/Kiss-Sea-Nicotine-106434.html"
+      ]
+    },
+    "sizes": {
+      "3ml": {
+        "price": 280,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 520,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 790,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 1140,
+        "available": true,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 280,
+      "6 ML": 520,
+      "10 ML": 790,
+      "15 ML": 1140
+    }
+  },
+  {
     "id": "sanaya-by-junaid-edp",
     "name": "Sanaya by Junaid EDP",
     "status": "available",

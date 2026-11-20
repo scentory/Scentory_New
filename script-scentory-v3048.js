@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '6100';
+const DATA_VERSION = '6300';
 const BEST_SELLING_IDS = [
   'jpg-le-male-le-parfum',
   'club-de-nuit-intesne-man-edp',
@@ -326,7 +326,7 @@ function buildRecommendationFromTags(tagList = []) {
 function perfumeBrand(p) {
   const n = `${p?.name || ''} ${p?.id || ''}`.toLowerCase();
   const rules = [
-    ['Afnan', /\bafnan\b|supremacy-not-only-intense/], ['Rasasi', /\bhawas\b|rasasi|shuhrah|fattan/],
+    ['Samam', /kiss (?:and|&) sea|kiss-and-sea/], ['Afnan', /\bafnan\b|supremacy-not-only-intense/], ['Rasasi', /\bhawas\b|rasasi|shuhrah|fattan/],
     ['Armaf', /club de nuit|armaf/], ['Lattafa', /ameer al oudh|lattafa|bade.?e al oud|qaed al fursan|fakhar|asad bourbon|\basad\b|haayati|najdia|khamrah|teriaq|rave now women/],
     ['Rayhaan', /rayhaan/], ['Khadlaj', /khadlaj|\btitan by khadlaj/], ['French Avenue', /french avenue|liquid brun|vulcan feu|atlantis extrait|zenith blue/],
     ['Ahmed Al Maghribi', /by ahmed|\bkaaf\b|\bzeleny\b|\bblue by ahmed/], ['Al Haramain', /al haramain/],
