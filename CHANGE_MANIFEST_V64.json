@@ -1,0 +1,29 @@
+{
+  "version": "V64",
+  "base": "V63",
+  "liveBaseline": "V55",
+  "catalogueCount": 150,
+  "marketingCount": "150+",
+  "orderableSizeOptions": 444,
+  "changes": [
+    "Added Liquid Brun Limited Edition with the user-supplied poster, 230/399/580/800 Tk prices, all four sizes available, and a complete Fragrantica-checked profile.",
+    "Added Lattafa Angham EDP with the user-supplied poster, 220/370/550/760 Tk prices, all four sizes available, and a complete Fragrantica-checked profile.",
+    "Updated Liquid Brun by French Avenue (EDP) to 230/410/610/860 Tk; 15 ML remains unavailable.",
+    "Updated the existing Ameer Al Oudh Intense Oud listing to 180/290/410/550 Tk, matching the latest list row labelled Lattafa Ameer Al Oudh EDP.",
+    "Marked Yusuf Bhai - Men 212 globally out of stock and disabled all four decant sizes, following the latest supplied stock mark.",
+    "Added the new product pages and posters to the catalogue, search, new-arrivals strip and sitemap.",
+    "Updated the homepage orderable size-option figure to 444 based on available size combinations, excluding upcoming and out-of-stock listings.",
+    "Preserved the existing temporary Scentory sunset theme and its V62 expiry; no theme timer was restarted."
+  ],
+  "profilePolicy": [
+    "New note pyramids are taken from exact Fragrantica fragrance listings.",
+    "Performance is qualitative Scentory guidance (Strong or Moderate), not a fixed-hour guarantee.",
+    "Customer-facing performance wording states that results vary with use, weather, fabric and skin chemistry.",
+    "No unverified dupe or fragrance comparison is claimed."
+  ],
+  "sources": {
+    "liquidBrunLimitedEdition": "https://www.fragrantica.com/perfume/French-Avenue/Liquid-Brun-Limited-Edition-123526.html",
+    "lattafaAngham": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Angham-96768.html"
+  },
+  "installation": "Extract the ZIP and upload its contents to the website root. Do not upload the ZIP itself or nest its folder."
+}
