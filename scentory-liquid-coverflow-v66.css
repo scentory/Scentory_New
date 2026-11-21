@@ -1,0 +1,380 @@
+/* Scentory V66 — liquid-glass 3D coverflow for New Arrivals + Best Selling */
+.scentory-coverflow-host {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  grid-column: 1 / -1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.hot-arrivals-section #hotArrivalsGrid,
+.best-selling-section #bestSellingGrid {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.scentory-coverflow {
+  --cover-card-width: 220px;
+  --cover-card-height: 366px;
+  --cover-step: 154px;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+  isolation: isolate;
+}
+
+.scentory-coverflow-viewport {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 24px;
+  outline: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scentory-coverflow-viewport:focus-visible {
+  outline: 2px solid rgba(226, 201, 255, .72);
+  outline-offset: -3px;
+}
+
+.scentory-coverflow-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.scentory-coverflow-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: var(--cover-card-width);
+  height: var(--cover-card-height);
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, .27);
+  border-radius: 24px;
+  overflow: hidden;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  background:
+    radial-gradient(125% 75% at 12% 0%, rgba(232, 210, 255, .20), transparent 58%),
+    radial-gradient(90% 75% at 100% 100%, rgba(104, 73, 170, .24), transparent 64%),
+    linear-gradient(145deg, rgba(62, 48, 91, .91), rgba(29, 23, 48, .94) 56%, rgba(18, 17, 34, .97));
+  box-shadow:
+    0 24px 54px rgba(0, 0, 0, .39),
+    0 9px 24px rgba(12, 7, 27, .27),
+    0 0 26px rgba(178, 139, 255, .13),
+    inset 0 1px 0 rgba(255, 255, 255, .29),
+    inset 0 -1px 0 rgba(255, 255, 255, .075);
+  backdrop-filter: blur(22px) saturate(155%);
+  -webkit-backdrop-filter: blur(22px) saturate(155%);
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform:
+    translate(-50%, -50%)
+    translateX(var(--cover-x, 0px))
+    translateZ(var(--cover-z, 0px))
+    rotateY(var(--cover-rotate, 0deg))
+    scale(var(--cover-scale, 1));
+  transition:
+    transform 760ms cubic-bezier(.19, .82, .22, 1),
+    opacity 620ms ease,
+    filter 620ms ease,
+    border-color 620ms ease,
+    box-shadow 760ms cubic-bezier(.19, .82, .22, 1);
+  will-change: transform, opacity;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scentory-coverflow-card::before {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(128deg, rgba(255, 255, 255, .17), transparent 25%, transparent 70%, rgba(255, 255, 255, .035)),
+    radial-gradient(85% 45% at 50% 0%, rgba(255, 255, 255, .095), transparent 80%);
+}
+
+.scentory-coverflow-card::after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  top: -30%;
+  left: -75%;
+  width: 55%;
+  height: 165%;
+  pointer-events: none;
+  opacity: .0;
+  transform: rotate(22deg) translateX(-30%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .19), rgba(220, 201, 255, .12), transparent);
+}
+
+.scentory-coverflow-card.is-active {
+  border-color: rgba(238, 222, 255, .62);
+  box-shadow:
+    0 38px 78px rgba(0, 0, 0, .49),
+    0 16px 36px rgba(10, 5, 24, .32),
+    0 0 0 1px rgba(255, 255, 255, .10),
+    0 0 48px rgba(181, 137, 255, .30),
+    inset 0 1px 0 rgba(255, 255, 255, .38),
+    inset 0 -1px 0 rgba(255, 255, 255, .10);
+}
+
+.scentory-coverflow-card.is-active::after {
+  opacity: .85;
+  animation: scentoryLiquidSheen 5.8s ease-in-out infinite;
+}
+
+.scentory-coverflow-card:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, .95);
+  outline-offset: 4px;
+}
+
+@keyframes scentoryLiquidSheen {
+  0%, 18% { transform: rotate(22deg) translateX(-30%); opacity: 0; }
+  36% { opacity: .82; }
+  64% { transform: rotate(22deg) translateX(310%); opacity: .30; }
+  100% { transform: rotate(22deg) translateX(310%); opacity: 0; }
+}
+
+.coverflow-card-poster {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .36);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .97);
+  box-shadow:
+    0 9px 20px rgba(0, 0, 0, .22),
+    inset 0 1px 0 rgba(255, 255, 255, .9);
+  transform: translateZ(15px);
+}
+
+.coverflow-card-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+.coverflow-card-badge {
+  position: absolute;
+  z-index: 7;
+  top: 17px;
+  left: 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+  max-width: calc(100% - 34px);
+  padding: 0 9px;
+  border: 1px solid rgba(255, 255, 255, .42);
+  border-radius: 999px;
+  color: #241a35;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .96), rgba(228, 215, 247, .88));
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .17), inset 0 1px 0 rgba(255, 255, 255, .9);
+  font-size: .54rem;
+  font-weight: 950;
+  letter-spacing: .085em;
+  line-height: 1;
+  white-space: nowrap;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.coverflow-card-copy {
+  display: grid;
+  flex: 0 0 68px;
+  align-content: center;
+  gap: 5px;
+  min-width: 0;
+  padding: 9px 5px 1px;
+  transform: translateZ(22px);
+}
+
+.coverflow-card-copy b {
+  display: -webkit-box;
+  min-height: 2.25em;
+  overflow: hidden;
+  color: rgba(255, 255, 255, .98);
+  font-size: .84rem;
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: -.018em;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.coverflow-card-copy small {
+  display: block;
+  overflow: hidden;
+  color: rgba(255, 255, 255, .92);
+  font-size: .72rem;
+  font-weight: 850;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.coverflow-card-copy small span {
+  color: rgba(238, 225, 255, .64);
+  font-size: .63rem;
+  font-weight: 650;
+}
+
+.coverflow-arrow {
+  position: absolute;
+  z-index: 150;
+  top: calc((100% - 42px) / 2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0 0 4px;
+  border: 1px solid rgba(255, 255, 255, .48);
+  border-radius: 50%;
+  color: #241a35;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .96), rgba(226, 213, 245, .83));
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .31), inset 0 1px 0 rgba(255, 255, 255, .95);
+  font-size: 1.85rem;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+
+.coverflow-arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .38), 0 0 20px rgba(193, 154, 255, .25);
+}
+
+.coverflow-arrow:active { transform: translateY(-50%) scale(.96); }
+.coverflow-arrow-prev { left: 8px; }
+.coverflow-arrow-next { right: 8px; }
+
+.coverflow-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 20px;
+  margin: -1px 0 0;
+  padding: 2px 8px 0;
+}
+
+.coverflow-dot {
+  display: block;
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  min-width: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(235, 221, 255, .30);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .16);
+  cursor: pointer;
+  transition: width .36s ease, flex-basis .36s ease, background .36s ease, box-shadow .36s ease;
+}
+
+.coverflow-dot.is-active {
+  flex-basis: 27px;
+  width: 27px;
+  background: linear-gradient(90deg, #fff, #d7b9ff);
+  box-shadow: 0 0 15px rgba(203, 164, 255, .42);
+}
+
+.coverflow-dot:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.coverflow-hint {
+  margin: 4px 0 0;
+  color: rgba(239, 229, 255, .55);
+  text-align: center;
+  font-size: .66rem;
+  letter-spacing: .035em;
+}
+
+.coverflow-hint span { padding: 0 6px; color: rgba(236, 214, 255, .9); }
+
+@media (min-width: 1100px) {
+  .scentory-coverflow { --cover-card-width: 232px; --cover-card-height: 380px; --cover-step: 166px; }
+  .scentory-coverflow-viewport { height: 438px; }
+}
+
+@media (max-width: 900px) {
+  .scentory-coverflow { --cover-card-width: 198px; --cover-card-height: 338px; --cover-step: 140px; }
+  .scentory-coverflow-viewport { height: 394px; }
+  .coverflow-card-copy { flex-basis: 64px; }
+}
+
+@media (max-width: 640px) {
+  .scentory-coverflow { --cover-card-width: 178px; --cover-card-height: 306px; --cover-step: 124px; }
+  .scentory-coverflow-viewport { height: 354px; border-radius: 18px; }
+  .scentory-coverflow-card { padding: 8px; border-radius: 20px; }
+  .coverflow-card-poster { border-radius: 13px; }
+  .coverflow-card-copy { flex-basis: 60px; gap: 4px; padding: 7px 4px 1px; }
+  .coverflow-card-copy b { font-size: .76rem; }
+  .coverflow-card-copy small { font-size: .66rem; }
+  .coverflow-card-copy small span { font-size: .58rem; }
+  .coverflow-card-badge { top: 14px; left: 14px; min-height: 20px; font-size: .49rem; }
+  .coverflow-arrow { width: 34px; height: 34px; font-size: 1.55rem; }
+  .coverflow-arrow-prev { left: 3px; }
+  .coverflow-arrow-next { right: 3px; }
+  .coverflow-pagination { gap: 6px; }
+  .coverflow-dot { flex-basis: 6px; width: 6px; height: 6px; min-width: 6px; }
+  .coverflow-dot.is-active { flex-basis: 22px; width: 22px; }
+  .coverflow-hint { font-size: .59rem; }
+}
+
+@media (max-width: 390px) {
+  .scentory-coverflow { --cover-card-width: 164px; --cover-card-height: 286px; --cover-step: 114px; }
+  .scentory-coverflow-viewport { height: 332px; }
+  .coverflow-card-copy { flex-basis: 56px; }
+  .coverflow-card-copy b { font-size: .72rem; }
+  .coverflow-card-copy small { font-size: .62rem; }
+  .coverflow-arrow { width: 31px; height: 31px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scentory-coverflow-card,
+  .coverflow-arrow,
+  .coverflow-dot { transition: none !important; }
+  .scentory-coverflow-card.is-active::after { animation: none !important; }
+}

@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '6500';
+const DATA_VERSION = '6600';
 const BEST_SELLING_IDS = [
   'dior-sauvage-edt',
   'jpg-le-male-le-parfum',
@@ -854,16 +854,17 @@ function renderScentoryCoverflow(container, items, type) {
     return;
   }
 
-  const cardMarkup = (p, index, clone = '') => {
+  const displayNameFor = p => p.id === 'club-de-nuit-intesne-man-edp'
+    ? 'Club de Nuit Intense Man EDP'
+    : (p.id === 'liquid-brun-by-french-avenue-edp' ? 'Liquid Brun' : p.name);
+
+  const cardMarkup = (p, index) => {
     const price = getCoverflowPrice(p);
-    const displayName = p.id === 'club-de-nuit-intesne-man-edp'
-      ? 'Club de Nuit Intense Man EDP'
-      : (p.id === 'liquid-brun-by-french-avenue-edp' ? 'Liquid Brun' : p.name);
+    const displayName = displayNameFor(p);
     const badge = isNew ? 'NEW' : 'BEST SELLER';
     return `
-      <button type="button" class="scentory-coverflow-card" data-target-id="${escapeHtml(p.id)}" data-slide-index="${index}" ${clone ? `data-clone="${clone}"` : ''} aria-label="View ${escapeHtml(displayName)}">
+      <button type="button" class="scentory-coverflow-card" data-target-id="${escapeHtml(p.id)}" data-slide-index="${index}" aria-label="View ${escapeHtml(displayName)}">
         <span class="coverflow-card-badge">${badge}</span>
-        ${!isNew ? `<span class="coverflow-card-rank">${String(index + 1).padStart(2, '0')}</span>` : ''}
         <span class="coverflow-card-poster">
           <img ${imageAttrs(p)} alt="${escapeHtml(displayName)}" loading="lazy" decoding="async" fetchpriority="low">
         </span>
@@ -875,20 +876,19 @@ function renderScentoryCoverflow(container, items, type) {
     `;
   };
 
-  const startClone = items.length > 1 ? cardMarkup(items[items.length - 1], items.length - 1, 'start') : '';
-  const endClone = items.length > 1 ? cardMarkup(items[0], 0, 'end') : '';
   container.classList.add('scentory-coverflow-host');
   container.innerHTML = `
     <div class="scentory-coverflow" data-coverflow-type="${isNew ? 'new' : 'best'}" aria-label="${title} perfume carousel">
       <button type="button" class="coverflow-arrow coverflow-arrow-prev" aria-label="Previous ${title.toLowerCase()} perfume">‹</button>
       <div class="scentory-coverflow-viewport" tabindex="0" aria-label="Swipe or use arrow keys to explore ${title.toLowerCase()} perfumes">
-        <div class="scentory-coverflow-track">
-          ${startClone}
+        <div class="scentory-coverflow-track" role="group" aria-label="${title} perfumes">
           ${items.map((p, index) => cardMarkup(p, index)).join('')}
-          ${endClone}
         </div>
       </div>
       <button type="button" class="coverflow-arrow coverflow-arrow-next" aria-label="Next ${title.toLowerCase()} perfume">›</button>
+      <div class="coverflow-pagination" role="group" aria-label="Choose a ${title.toLowerCase()} perfume">
+        ${items.map((p, index) => `<button type="button" class="coverflow-dot${index === 0 ? ' is-active' : ''}" data-dot-index="${index}" aria-label="Show ${escapeHtml(displayNameFor(p))}" aria-pressed="${index === 0 ? 'true' : 'false'}"></button>`).join('')}
+      </div>
     </div>
     <p class="coverflow-hint">Swipe to explore <span aria-hidden="true">✦</span> Tap a card to view</p>
   `;
@@ -897,78 +897,97 @@ function renderScentoryCoverflow(container, items, type) {
   const viewport = container.querySelector('.scentory-coverflow-viewport');
   const track = container.querySelector('.scentory-coverflow-track');
   const cards = [...track.querySelectorAll('.scentory-coverflow-card')];
-  const realCards = cards.filter(card => !card.dataset.clone);
-  let scrollTimer = null;
+  const dots = [...carousel.querySelectorAll('.coverflow-dot')];
+  const previous = carousel.querySelector('.coverflow-arrow-prev');
+  const next = carousel.querySelector('.coverflow-arrow-next');
+  let activeIndex = 0;
+  let pointerStartX = null;
+  let suppressCardClick = false;
   let frame = null;
 
-  const centeredCard = () => {
-    const center = viewport.scrollLeft + viewport.clientWidth / 2;
-    return cards.reduce((closest, card) => {
-      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-      const distance = Math.abs(cardCenter - center);
-      return !closest || distance < closest.distance ? { card, distance } : closest;
-    }, null)?.card || realCards[0];
+  const getStep = () => {
+    const value = Number.parseFloat(getComputedStyle(carousel).getPropertyValue('--cover-step'));
+    return Number.isFinite(value) && value > 0 ? value : 150;
   };
 
   const updateDepth = () => {
     frame = null;
-    const center = viewport.scrollLeft + viewport.clientWidth / 2;
-    cards.forEach(card => {
-      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-      const distance = (cardCenter - center) / Math.max(1, card.offsetWidth);
-      const abs = Math.min(2.4, Math.abs(distance));
-      const rotation = Math.max(-32, Math.min(32, distance * -23));
-      const scale = 1 - Math.min(abs, 2) * 0.105;
-      const lift = Math.min(abs, 2) * 7;
-      const depth = 34 - abs * 26;
-      card.style.transform = `translateY(${lift}px) rotateY(${rotation}deg) translateZ(${depth}px) scale(${scale})`;
-      card.style.opacity = String(Math.max(0.38, 1 - abs * 0.27));
-      card.style.zIndex = String(100 - Math.round(abs * 12));
-      card.classList.toggle('is-active', abs < 0.48);
-      card.setAttribute('aria-current', abs < 0.48 ? 'true' : 'false');
+    const count = cards.length;
+    cards.forEach((card, index) => {
+      let offset = index - activeIndex;
+      if (offset > count / 2) offset -= count;
+      if (offset < -count / 2) offset += count;
+      const distance = Math.abs(offset);
+      const scale = distance === 0 ? 1 : distance === 1 ? .88 : distance === 2 ? .77 : distance === 3 ? .66 : .56;
+      const depth = distance === 0 ? 72 : distance === 1 ? 14 : distance === 2 ? -58 : distance === 3 ? -126 : -180;
+      const opacity = distance === 0 ? 1 : distance === 1 ? .98 : distance === 2 ? .82 : distance === 3 ? .58 : .28;
+      card.style.setProperty('--cover-x', `${offset * getStep()}px`);
+      card.style.setProperty('--cover-z', `${depth}px`);
+      card.style.setProperty('--cover-rotate', `${-offset * 13}deg`);
+      card.style.setProperty('--cover-scale', String(scale));
+      card.style.opacity = String(opacity);
+      card.style.zIndex = String(100 - distance * 12);
+      card.style.pointerEvents = distance <= 3 ? 'auto' : 'none';
+      card.classList.toggle('is-active', distance === 0);
+      card.setAttribute('aria-current', distance === 0 ? 'true' : 'false');
+      card.tabIndex = distance <= 1 ? 0 : -1;
+    });
+    dots.forEach((dot, index) => {
+      const selected = index === activeIndex;
+      dot.classList.toggle('is-active', selected);
+      dot.setAttribute('aria-pressed', selected ? 'true' : 'false');
     });
   };
 
   const scheduleDepth = () => {
     if (frame === null) frame = requestAnimationFrame(updateDepth);
-    if (scrollTimer) clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(() => {
-      const nearest = centeredCard();
-      if (nearest?.dataset.clone === 'start') {
-        const last = realCards[realCards.length - 1];
-        viewport.scrollTo({ left: last.offsetLeft + last.offsetWidth / 2 - viewport.clientWidth / 2, behavior: 'auto' });
-      } else if (nearest?.dataset.clone === 'end') {
-        const first = realCards[0];
-        viewport.scrollTo({ left: first.offsetLeft + first.offsetWidth / 2 - viewport.clientWidth / 2, behavior: 'auto' });
-      }
-      if (frame === null) frame = requestAnimationFrame(updateDepth);
-    }, 110);
   };
 
-  const move = direction => {
-    const current = centeredCard();
-    const currentPosition = cards.indexOf(current);
-    const target = cards[Math.max(0, Math.min(cards.length - 1, currentPosition + direction))];
-    if (target) viewport.scrollTo({ left: target.offsetLeft + target.offsetWidth / 2 - viewport.clientWidth / 2, behavior: 'smooth' });
+  const setActive = index => {
+    activeIndex = (index + cards.length) % cards.length;
+    scheduleDepth();
   };
 
-  viewport.addEventListener('scroll', scheduleDepth, { passive: true });
-  container.querySelector('.coverflow-arrow-prev')?.addEventListener('click', () => move(-1));
-  container.querySelector('.coverflow-arrow-next')?.addEventListener('click', () => move(1));
+  const move = direction => setActive(activeIndex + direction);
+
+  previous?.addEventListener('click', () => move(-1));
+  next?.addEventListener('click', () => move(1));
+  dots.forEach(dot => dot.addEventListener('click', () => setActive(Number(dot.dataset.dotIndex) || 0)));
+
   viewport.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft') { event.preventDefault(); move(-1); }
     if (event.key === 'ArrowRight') { event.preventDefault(); move(1); }
+    if (event.key === 'Home') { event.preventDefault(); setActive(0); }
+    if (event.key === 'End') { event.preventDefault(); setActive(cards.length - 1); }
   });
-  cards.forEach(card => card.addEventListener('click', () => {
+
+  viewport.addEventListener('pointerdown', event => {
+    if (event.pointerType === 'mouse' && event.button !== 0) return;
+    pointerStartX = event.clientX;
+  }, { passive: true });
+  viewport.addEventListener('pointerup', event => {
+    if (pointerStartX === null) return;
+    const delta = event.clientX - pointerStartX;
+    pointerStartX = null;
+    if (Math.abs(delta) > 42) {
+      suppressCardClick = true;
+      move(delta < 0 ? 1 : -1);
+      window.setTimeout(() => { suppressCardClick = false; }, 420);
+    }
+  }, { passive: true });
+  viewport.addEventListener('pointercancel', () => { pointerStartX = null; }, { passive: true });
+
+  cards.forEach(card => card.addEventListener('click', event => {
+    if (suppressCardClick) {
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
     window.location.href = `${encodeURIComponent(card.dataset.targetId)}.html`;
   }));
 
-  requestAnimationFrame(() => {
-    const first = realCards[0];
-    if (first) viewport.scrollTo({ left: first.offsetLeft + first.offsetWidth / 2 - viewport.clientWidth / 2, behavior: 'auto' });
-    updateDepth();
-  });
   window.addEventListener('resize', scheduleDepth, { passive: true });
+  requestAnimationFrame(updateDepth);
 }
 
 function renderHotArrivals() {

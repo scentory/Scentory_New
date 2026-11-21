@@ -1,0 +1,42 @@
+{
+  "version": "V66",
+  "baseline": "V65",
+  "release_date": "2026-11-21",
+  "summary": "Rebuilt both homepage featured perfume carousels as responsive liquid-glass 3D coverflows.",
+  "runtime_changed_files": [
+    "index.html",
+    "shop.html",
+    "order.html",
+    "script-scentory-v3048.js"
+  ],
+  "runtime_added_files": [
+    "scentory-liquid-coverflow-v66.css"
+  ],
+  "release_metadata_files": [
+    "CHANGE_MANIFEST_V66.json",
+    "README_V66.txt"
+  ],
+  "features": [
+    "Both New to Scentory and Best Selling use the same overlapping 3D coverflow layout.",
+    "The active center card is larger, elevated and centered; side cards recede with perspective and scale.",
+    "Liquid-glass styling includes translucent layered surfaces, highlights, animated sheen and multi-layer shadows on every card.",
+    "Responsive card sizing for mobile, tablet and desktop.",
+    "Arrow controls, touch/pointer swipe, keyboard navigation and non-numbered pagination dots.",
+    "Removed numeric rank labels from Best Selling cards.",
+    "Preserved automatic newest-12 selection, the configured 12 best-selling product order, current product data, prices and links."
+  ],
+  "validation": {
+    "javascript_syntax": "Passed with node --check.",
+    "browser_layouts": [
+      "390px mobile",
+      "700px tablet",
+      "1280px desktop"
+    ],
+    "both_carousels_render_12_cards": true,
+    "active_card_centered": true,
+    "next_arrow_navigation": "Passed.",
+    "numeric_rank_labels": 0,
+    "browser_console_errors_in_component_test": 0
+  },
+  "incremental_archive_policy": "The V66 update ZIP contains only the five runtime files changed or added in this release plus this release manifest and README. It does not include historical update files."
+}
