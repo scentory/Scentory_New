@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '6300';
+const DATA_VERSION = '6400';
 const BEST_SELLING_IDS = [
   'jpg-le-male-le-parfum',
   'club-de-nuit-intesne-man-edp',
@@ -16,6 +16,8 @@ const BEST_SELLING_IDS = [
 ];
 
 const HOT_ARRIVAL_IDS = [
+  'liquid-brun-limited-edition',
+  'lattafa-angham-edp',
   'valentino-uomo-born-in-roma-intense-edp',
   'good-girl-by-carolina-herrera',
   'club-de-nuit-elite',
@@ -138,7 +140,9 @@ const shortOrderName = name => {
     "Al Haramain Amber Oud Gold Edition": "Al Haramain Gold Edition",
     "Al Haramain Amber Oud Aqua Dubai": "Al Haramain Aqua Dubai",
     "Marwa by Arabiyat Prestige": "Marwa",
+    "Liquid Brun Limited Edition": "Liquid Brun LE",
     "Liquid Brun by French Avenue (EDP)": "Liquid Brun",
+    "Lattafa Angham EDP": "Angham",
     "Hawas For Him EDP": "Hawas",
     "Hawas Ice EDP": "Hawas Ice",
     "Oud Al Layl Midnight EDP": "Oud Al Layl",

@@ -7316,16 +7316,16 @@
       "Daily Wear"
     ],
     "recommendation": "Best for office, university, clean daytime wear, and an easy everyday rotation.",
-    "status": "available",
+    "status": "out",
     "sizes": {
       "3ml": {
         "price": 190,
-        "available": true,
+        "available": false,
         "premium": false
       },
       "6ml": {
         "price": 340,
-        "available": true,
+        "available": false,
         "premium": true
       },
       "10ml": {
@@ -11819,17 +11819,127 @@
     }
   },
   {
+    "id": "liquid-brun-limited-edition",
+    "name": "Liquid Brun Limited Edition",
+    "status": "available",
+    "image": "liquid-brun-limited-edition-poster-v64.webp",
+    "tags": [
+      "Amber",
+      "Vanilla",
+      "Warm Spicy"
+    ],
+    "recommendation": "A rich aromatic vanilla-amber fragrance with a bright citrus-lavender opening and a floral woody heart.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "vanilla",
+        "amber",
+        "citrus",
+        "aromatic",
+        "floral",
+        "woody",
+        "warm spicy"
+      ],
+      "occasions": [
+        "date",
+        "party",
+        "formal"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ],
+      "strength": 4,
+      "projection": 4,
+      "longevity": 4,
+      "sweetness": 4,
+      "freshness": 2,
+      "warmth": 4,
+      "officeSafety": 2,
+      "heatSafety": 1,
+      "versatility": 3,
+      "evidence": "web-verified",
+      "reviewedAt": "2026-11-21",
+      "topPickEligible": false,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "source-checked",
+      "notes": {
+        "top": [
+          "Cardamom",
+          "Lavender",
+          "Citrus"
+        ],
+        "heart": [
+          "Orange Blossom",
+          "Guaiac Wood",
+          "Rose"
+        ],
+        "base": [
+          "Vanilla",
+          "Tonka",
+          "Amber",
+          "Oak Moss"
+        ]
+      },
+      "performance": "Strong (Scentory guide). Results vary with use, weather, fabric and skin chemistry.",
+      "projection": "Strong (Scentory guide). Results vary with use, weather, fabric and skin chemistry.",
+      "comparison": "No verified fragrance comparison is listed.",
+      "sourceNote": "Exact top, heart and base note pyramid checked against the Fragrantica listing on 2026-11-21.",
+      "sources": [
+        {
+          "title": "Fragrantica — Liquid Brun Limited Edition by French Avenue",
+          "url": "https://www.fragrantica.com/perfume/French-Avenue/Liquid-Brun-Limited-Edition-123526.html",
+          "type": "community"
+        }
+      ],
+      "profileScope": "perfume",
+      "overview": "A rich aromatic vanilla-amber fragrance with citrus and lavender up front, a floral-woody heart, and a warm vanilla-tonka base.",
+      "keyNotes": "Cardamom, Lavender, Vanilla, Amber",
+      "bestWear": "Suggested for cool weather, evening outings and dates; choose by your preference."
+    },
+    "sizes": {
+      "3ml": {
+        "price": 230,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 399,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 580,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 800,
+        "available": true,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 230,
+      "6 ML": 399,
+      "10 ML": 580,
+      "15 ML": 800
+    }
+  },
+  {
     "id": "liquid-brun-by-french-avenue-edp",
     "name": "Liquid Brun by French Avenue (EDP)",
     "status": "available",
     "sizes": {
       "3ml": {
-        "price": 220,
+        "price": 230,
         "available": true,
         "premium": false
       },
       "6ml": {
-        "price": 400,
+        "price": 410,
         "available": true,
         "premium": true
       },
@@ -11839,7 +11949,7 @@
         "premium": false
       },
       "15ml": {
-        "price": 840,
+        "price": 860,
         "available": false,
         "premium": false
       }
@@ -11853,10 +11963,10 @@
     ],
     "recommendation": "A strong amber-vanilla gourmand for dates, dinners and cool-weather evening wear.",
     "prices": {
-      "3 ML": 220,
-      "6 ML": 400,
+      "3 ML": 230,
+      "6 ML": 410,
       "10 ML": 610,
-      "15 ML": 840
+      "15 ML": 860
     },
     "profile": {
       "schemaVersion": 2,
@@ -12335,26 +12445,137 @@
         "premium": false
       },
       "6ml": {
-        "price": 280,
+        "price": 290,
         "available": true,
         "premium": true
       },
       "10ml": {
-        "price": 400,
+        "price": 410,
         "available": true,
         "premium": false
       },
       "15ml": {
-        "price": 540,
+        "price": 550,
         "available": true,
         "premium": false
       }
     },
     "prices": {
       "3 ML": 180,
-      "6 ML": 280,
-      "10 ML": 400,
-      "15 ML": 540
+      "6 ML": 290,
+      "10 ML": 410,
+      "15 ML": 550
+    }
+  },
+  {
+    "id": "lattafa-angham-edp",
+    "name": "Lattafa Angham EDP",
+    "status": "available",
+    "image": "lattafa-angham-edp-poster-v64.webp",
+    "tags": [
+      "Vanilla",
+      "Sweet",
+      "Warm Spicy"
+    ],
+    "recommendation": "A sweet vanilla-led fragrance with a fresh-spicy ginger and mandarin opening and a creamy lavender-praline-cacao heart.",
+    "profile": {
+      "schemaVersion": 2,
+      "character": [
+        "vanilla",
+        "sweet",
+        "aromatic",
+        "floral",
+        "fresh spicy",
+        "powdery",
+        "cacao",
+        "musky"
+      ],
+      "occasions": [
+        "daily",
+        "date",
+        "party"
+      ],
+      "climates": [
+        "winter",
+        "ac"
+      ],
+      "strength": 3,
+      "projection": 3,
+      "longevity": 3,
+      "sweetness": 5,
+      "freshness": 2,
+      "warmth": 4,
+      "officeSafety": 3,
+      "heatSafety": 2,
+      "versatility": 3,
+      "evidence": "web-verified",
+      "reviewedAt": "2026-11-21",
+      "topPickEligible": false,
+      "scope": "perfume"
+    },
+    "details": {
+      "verification": "source-checked",
+      "notes": {
+        "top": [
+          "Ginger",
+          "Mandarin",
+          "Pink Pepper"
+        ],
+        "heart": [
+          "Lavender",
+          "Praline",
+          "Cacao",
+          "Jasmine"
+        ],
+        "base": [
+          "Vanilla",
+          "Amber",
+          "Musk"
+        ]
+      },
+      "performance": "Moderate (Scentory guide). Results vary with use, weather, fabric and skin chemistry.",
+      "projection": "Moderate (Scentory guide). Results vary with use, weather, fabric and skin chemistry.",
+      "comparison": "No verified fragrance comparison is listed.",
+      "sourceNote": "Exact top, heart and base note pyramid checked against the Fragrantica listing on 2026-11-21.",
+      "sources": [
+        {
+          "title": "Fragrantica — Angham by Lattafa Perfumes",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Angham-96768.html",
+          "type": "community"
+        }
+      ],
+      "profileScope": "perfume",
+      "overview": "A sweet aromatic vanilla fragrance with ginger, mandarin and pink pepper, a lavender-praline-cacao heart, and a smooth amber-musk base.",
+      "keyNotes": "Ginger, Lavender, Praline, Vanilla",
+      "bestWear": "Suggested for casual outings, dates and air-conditioned settings; choose by your preference."
+    },
+    "sizes": {
+      "3ml": {
+        "price": 220,
+        "available": true,
+        "premium": false
+      },
+      "6ml": {
+        "price": 370,
+        "available": true,
+        "premium": true
+      },
+      "10ml": {
+        "price": 550,
+        "available": true,
+        "premium": false
+      },
+      "15ml": {
+        "price": 760,
+        "available": true,
+        "premium": false
+      }
+    },
+    "prices": {
+      "3 ML": 220,
+      "6 ML": 370,
+      "10 ML": 550,
+      "15 ML": 760
     }
   },
   {
