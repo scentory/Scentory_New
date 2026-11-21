@@ -1,0 +1,60 @@
+{
+  "version": "V65",
+  "base": "V64",
+  "liveBaseline": "V55",
+  "catalogueCount": 150,
+  "marketingCount": "150+",
+  "featuredCounts": {
+    "newToScentory": 12,
+    "bestSelling": 12
+  },
+  "changes": [
+    "Rebuilt the New to Scentory and Best Selling homepage sections as compact, swipeable 3D coverflow carousels with centered elevated cards, angled side cards, arrow controls, and keyboard navigation.",
+    "Set the approved 12 New to Scentory perfumes and made the section automatically select the newest 12 catalogue entries using newArrivalSequence metadata.",
+    "Set the approved 12 Best Selling perfumes, including Dolce & Gabbana The One at position 11 and Afnan Supremacy Collector’s Edition at position 12.",
+    "Added newArrivalSequence metadata to the approved current 12 genuine additions. Future genuine perfume additions receive the next higher sequence; price or poster updates do not change arrival order, and the oldest entry drops when a 13th new perfume is added.",
+    "Updated script and catalogue cache versions to V65.",
+    "The Only Updates ZIP contains only files changed or added in V65 relative to V64."
+  ],
+  "featuredLists": {
+    "newToScentory": [
+      "liquid-brun-limited-edition",
+      "lattafa-angham-edp",
+      "kiss-and-sea-nicotine",
+      "rayhaan-palawan",
+      "mercedes-benz-club-black-edt",
+      "ghaf-by-ahmed-edp",
+      "veneno-by-french-avenue",
+      "royal-blend-sequoia-by-french-avenue",
+      "ameer-al-oudh-intense-oud-edp",
+      "spicebomb-extreme",
+      "hawas-diva-edp",
+      "rave-now-women-edp"
+    ],
+    "bestSelling": [
+      "dior-sauvage-edt",
+      "jpg-le-male-le-parfum",
+      "club-de-nuit-intesne-man-edp",
+      "afnan-9-pm-night-out-edp",
+      "rayhaan-lion-edp",
+      "liquid-brun-by-french-avenue-edp",
+      "azzaro-the-most-wanted-parfum",
+      "lattafa-yara-edp",
+      "stronger-with-you-intensely-edp",
+      "supremacy-not-only-intense-edp",
+      "dolce-gabbana-the-one-edp",
+      "afnan-supremacy-collector-s-edition-edp"
+    ]
+  },
+  "currentReleaseFiles": [
+    "index.html",
+    "shop.html",
+    "order.html",
+    "script-scentory-v3048.js",
+    "perfumes.json",
+    "scentory-coverflow-v65.css",
+    "CHANGE_MANIFEST_V65.json",
+    "README_V65.txt"
+  ],
+  "installation": "For a full replacement, extract the Full Master ZIP into the website root. For an existing V64 site, extract the Only Updates ZIP and upload its contents directly into the website root, replacing matching files. Do not upload the ZIP itself or nest the files in a subfolder."
+}

@@ -1,0 +1,212 @@
+/* Scentory V65 — compact 3D featured perfume coverflows */
+.scentory-coverflow-host { display: block !important; min-width: 0; }
+.scentory-coverflow {
+  --cover-card-width: 166px;
+  --cover-card-height: 236px;
+  position: relative;
+  width: 100%;
+  perspective: 1100px;
+  transform-style: preserve-3d;
+  isolation: isolate;
+}
+.scentory-coverflow-viewport {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 15px max(12px, calc((100% - var(--cover-card-width)) / 2)) 19px;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x pan-y;
+}
+.scentory-coverflow-viewport::-webkit-scrollbar { display: none; }
+.scentory-coverflow-track {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: max-content;
+  min-width: 100%;
+  min-height: 232px;
+  transform-style: preserve-3d;
+}
+.scentory-coverflow-card {
+  position: relative;
+  display: flex;
+  flex: 0 0 var(--cover-card-width);
+  flex-direction: column;
+  width: var(--cover-card-width);
+  height: var(--cover-card-height);
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,.17);
+  border-radius: 19px;
+  overflow: hidden;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.16), transparent 47%),
+    linear-gradient(155deg, #242424 0%, #111 56%, #070707 100%);
+  box-shadow: 0 17px 34px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.13);
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  backface-visibility: hidden;
+  scroll-snap-align: center;
+  transition: transform .22s ease, opacity .22s ease, border-color .22s ease, box-shadow .22s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.scentory-coverflow-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(128deg, rgba(255,255,255,.13), transparent 33%, transparent 72%, rgba(255,255,255,.035));
+  transform: translateZ(2px);
+}
+.scentory-coverflow-card.is-active {
+  border-color: rgba(255,255,255,.55);
+  box-shadow: 0 22px 42px rgba(0,0,0,.43), 0 0 0 1px rgba(255,255,255,.08), inset 0 1px 0 rgba(255,255,255,.19);
+}
+.scentory-coverflow-card:focus-visible {
+  outline: 2px solid rgba(255,255,255,.9);
+  outline-offset: 3px;
+}
+.coverflow-card-poster {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 169px;
+  flex: 0 0 169px;
+  overflow: hidden;
+  border-radius: 13px;
+  background: radial-gradient(circle at 50% 25%, rgba(255,255,255,.13), rgba(255,255,255,.025) 72%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.09);
+  transform: translateZ(10px);
+}
+.coverflow-card-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 3px;
+  box-sizing: border-box;
+}
+.coverflow-card-badge,
+.coverflow-card-rank {
+  position: absolute;
+  z-index: 3;
+  top: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 19px;
+  padding: 0 7px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 999px;
+  background: rgba(5,5,5,.78);
+  color: rgba(255,255,255,.94);
+  font-size: .52rem;
+  font-weight: 900;
+  letter-spacing: .09em;
+  line-height: 1;
+  backdrop-filter: blur(8px);
+}
+.coverflow-card-badge { left: 14px; }
+.coverflow-card-rank { right: 14px; min-width: 22px; padding: 0 5px; color: #090909; background: rgba(255,255,255,.92); }
+.coverflow-card-copy {
+  display: grid;
+  align-content: center;
+  gap: 5px;
+  min-width: 0;
+  padding: 9px 3px 2px;
+  transform: translateZ(13px);
+}
+.coverflow-card-copy b {
+  display: -webkit-box;
+  min-height: 2.25em;
+  overflow: hidden;
+  color: #fff;
+  font-size: .76rem;
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.coverflow-card-copy small {
+  display: block;
+  overflow: hidden;
+  color: rgba(255,255,255,.83);
+  font-size: .64rem;
+  font-weight: 750;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.coverflow-card-copy small span { color: rgba(255,255,255,.52); font-size: .58rem; font-weight: 600; }
+.coverflow-arrow {
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0 0 3px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(8,8,8,.78);
+  box-shadow: 0 5px 14px rgba(0,0,0,.3);
+  font-size: 1.65rem;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  backdrop-filter: blur(8px);
+}
+.coverflow-arrow:hover { background: rgba(255,255,255,.18); }
+.coverflow-arrow-prev { left: 2px; }
+.coverflow-arrow-next { right: 2px; }
+.coverflow-hint {
+  margin: -3px 0 1px;
+  color: rgba(255,255,255,.53);
+  text-align: center;
+  font-size: .62rem;
+  letter-spacing: .035em;
+}
+.coverflow-hint span { padding: 0 5px; color: rgba(255,255,255,.8); }
+
+@media (min-width: 900px) {
+  .scentory-coverflow { --cover-card-width: 178px; --cover-card-height: 246px; }
+  .scentory-coverflow-viewport { height: 280px; }
+  .coverflow-card-poster { height: 177px; flex-basis: 177px; }
+}
+@media (max-width: 640px) {
+  .scentory-coverflow { --cover-card-width: 143px; --cover-card-height: 207px; }
+  .scentory-coverflow-viewport { height: 238px; padding-top: 12px; padding-bottom: 15px; }
+  .scentory-coverflow-track { min-height: 210px; gap: 11px; }
+  .scentory-coverflow-card { padding: 7px; border-radius: 16px; }
+  .coverflow-card-poster { height: 143px; flex-basis: 143px; border-radius: 11px; }
+  .coverflow-card-badge, .coverflow-card-rank { top: 12px; min-height: 17px; font-size: .47rem; }
+  .coverflow-card-badge { left: 12px; }
+  .coverflow-card-rank { right: 12px; }
+  .coverflow-card-copy { gap: 4px; padding: 7px 2px 1px; }
+  .coverflow-card-copy b { font-size: .68rem; }
+  .coverflow-card-copy small { font-size: .58rem; }
+  .coverflow-arrow { width: 29px; height: 29px; font-size: 1.45rem; }
+  .coverflow-arrow-prev { left: 1px; }
+  .coverflow-arrow-next { right: 1px; }
+  .coverflow-hint { font-size: .58rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scentory-coverflow-viewport { scroll-behavior: auto; }
+  .scentory-coverflow-card { transition: none; }
+}

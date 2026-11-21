@@ -477,7 +477,8 @@
       "6 ML": 810,
       "10 ML": 1270,
       "15 ML": 1860
-    }
+    },
+    "newArrivalSequence": 3
   },
   {
     "id": "mercedes-benz-club-black-edt",
@@ -574,7 +575,8 @@
       "6 ML": 530,
       "10 ML": 820,
       "15 ML": 1170
-    }
+    },
+    "newArrivalSequence": 8
   },
   {
     "id": "valentino-uomo-born-in-roma-intense-edp",
@@ -1876,7 +1878,8 @@
       "6 ML": 520,
       "10 ML": 790,
       "15 ML": 1140
-    }
+    },
+    "newArrivalSequence": 10
   },
   {
     "id": "sanaya-by-junaid-edp",
@@ -2823,7 +2826,8 @@
       "6 ML": 350,
       "10 ML": 510,
       "15 ML": 700
-    }
+    },
+    "newArrivalSequence": 2
   },
   {
     "id": "hawas-tropical-edp",
@@ -4053,7 +4057,8 @@
       "6 ML": 320,
       "10 ML": 460,
       "15 ML": 630
-    }
+    },
+    "newArrivalSequence": 9
   },
   {
     "id": "rayhaan-vantage",
@@ -9050,7 +9055,8 @@
       "6 ML": 370,
       "10 ML": 550,
       "15 ML": 770
-    }
+    },
+    "newArrivalSequence": 7
   },
   {
     "id": "blue-by-ahmed-edp",
@@ -11230,7 +11236,8 @@
       "6 ML": 450,
       "10 ML": 680,
       "15 ML": 960
-    }
+    },
+    "newArrivalSequence": 6
   },
   {
     "id": "royal-blend-sequoia-by-french-avenue",
@@ -11326,7 +11333,8 @@
       "6 ML": 390,
       "10 ML": 580,
       "15 ML": 810
-    }
+    },
+    "newArrivalSequence": 5
   },
   {
     "id": "spectre-ghost-by-french-avenue",
@@ -11926,7 +11934,8 @@
       "6 ML": 399,
       "10 ML": 580,
       "15 ML": 800
-    }
+    },
+    "newArrivalSequence": 12
   },
   {
     "id": "liquid-brun-by-french-avenue-edp",
@@ -12465,7 +12474,8 @@
       "6 ML": 290,
       "10 ML": 410,
       "15 ML": 550
-    }
+    },
+    "newArrivalSequence": 4
   },
   {
     "id": "lattafa-angham-edp",
@@ -12576,7 +12586,8 @@
       "6 ML": 370,
       "10 ML": 550,
       "15 ML": 760
-    }
+    },
+    "newArrivalSequence": 11
   },
   {
     "id": "lattafa-art-of-universe-edp",
@@ -13003,7 +13014,8 @@
       "6 ML": 290,
       "10 ML": 410,
       "15 ML": 550
-    }
+    },
+    "newArrivalSequence": 1
   },
   {
     "id": "rave-plato-lattafa",

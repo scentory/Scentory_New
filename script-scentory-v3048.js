@@ -5,25 +5,37 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '6400';
+const DATA_VERSION = '6500';
 const BEST_SELLING_IDS = [
+  'dior-sauvage-edt',
   'jpg-le-male-le-parfum',
   'club-de-nuit-intesne-man-edp',
-  'hawas-ice-edp',
-  'dolce-gabbana-the-one-edp',
+  'afnan-9-pm-night-out-edp',
   'rayhaan-lion-edp',
   'liquid-brun-by-french-avenue-edp',
+  'azzaro-the-most-wanted-parfum',
+  'lattafa-yara-edp',
+  'stronger-with-you-intensely-edp',
+  'supremacy-not-only-intense-edp',
+  'dolce-gabbana-the-one-edp',
+  'afnan-supremacy-collector-s-edition-edp',
 ];
 
-const HOT_ARRIVAL_IDS = [
+// The carousel is populated from perfumes.json using newArrivalSequence.
+// Add a higher sequence only to a genuinely new perfume; price/poster edits do not count. The newest 12 are shown.
+let HOT_ARRIVAL_IDS = [
   'liquid-brun-limited-edition',
   'lattafa-angham-edp',
-  'valentino-uomo-born-in-roma-intense-edp',
-  'good-girl-by-carolina-herrera',
-  'club-de-nuit-elite',
-  'jpg-le-male-le-parfum',
+  'kiss-and-sea-nicotine',
+  'rayhaan-palawan',
+  'mercedes-benz-club-black-edt',
+  'ghaf-by-ahmed-edp',
+  'veneno-by-french-avenue',
+  'royal-blend-sequoia-by-french-avenue',
+  'ameer-al-oudh-intense-oud-edp',
+  'spicebomb-extreme',
   'hawas-diva-edp',
-  'hawas-ice-freeze',
+  'rave-now-women-edp',
 ];
 
 
@@ -668,6 +680,11 @@ async function loadPerfumes() {
     const response = await fetch(`perfumes.json?v=${DATA_VERSION}`, { cache: 'no-store' });
     if (!response.ok) throw new Error('Could not load perfume database');
     perfumes = await response.json();
+    const automaticArrivals = perfumes
+      .filter(p => Number.isFinite(Number(p.newArrivalSequence)) && !isUpcoming(p))
+      .sort((a, b) => Number(b.newArrivalSequence) - Number(a.newArrivalSequence))
+      .slice(0, 12);
+    if (automaticArrivals.length) HOT_ARRIVAL_IDS = automaticArrivals.map(p => p.id);
     window.ScentoryAnniversary?.applyToCatalogue(perfumes);
     window.SaleCampaign?.applyToCatalogue(perfumes);
     normalizeCartAfterLoad();
@@ -816,39 +833,150 @@ function renderAnniversaryOffers() {
   }).join('');
 }
 
+function getCoverflowPrice(p) {
+  const available = Object.entries(p.sizes || {})
+    .filter(([, item]) => item && item.available && item.price !== null && item.price !== undefined)
+    .sort(([a], [b]) => Number.parseInt(a, 10) - Number.parseInt(b, 10));
+  if (!available.length) return { price: 'Currently unavailable', size: '' };
+  const [ml, item] = available[0];
+  const price = p._saleActive && window.SaleCampaign?.priceMarkup
+    ? window.SaleCampaign.priceMarkup(item)
+    : taka(item.price);
+  return { price: `From ${price}`, size: displayMl(ml) };
+}
+
+function renderScentoryCoverflow(container, items, type) {
+  if (!container) return;
+  const isNew = type === 'new';
+  const title = isNew ? 'New to Scentory' : 'Best Selling';
+  if (!items.length) {
+    container.innerHTML = `<p class="order-items empty">No ${isNew ? 'new arrivals' : 'best-selling perfumes'} found.</p>`;
+    return;
+  }
+
+  const cardMarkup = (p, index, clone = '') => {
+    const price = getCoverflowPrice(p);
+    const displayName = p.id === 'club-de-nuit-intesne-man-edp'
+      ? 'Club de Nuit Intense Man EDP'
+      : (p.id === 'liquid-brun-by-french-avenue-edp' ? 'Liquid Brun' : p.name);
+    const badge = isNew ? 'NEW' : 'BEST SELLER';
+    return `
+      <button type="button" class="scentory-coverflow-card" data-target-id="${escapeHtml(p.id)}" data-slide-index="${index}" ${clone ? `data-clone="${clone}"` : ''} aria-label="View ${escapeHtml(displayName)}">
+        <span class="coverflow-card-badge">${badge}</span>
+        ${!isNew ? `<span class="coverflow-card-rank">${String(index + 1).padStart(2, '0')}</span>` : ''}
+        <span class="coverflow-card-poster">
+          <img ${imageAttrs(p)} alt="${escapeHtml(displayName)}" loading="lazy" decoding="async" fetchpriority="low">
+        </span>
+        <span class="coverflow-card-copy">
+          <b>${escapeHtml(displayName)}</b>
+          <small>${price.price}${price.size ? ` <span>· ${escapeHtml(price.size)}</span>` : ''}</small>
+        </span>
+      </button>
+    `;
+  };
+
+  const startClone = items.length > 1 ? cardMarkup(items[items.length - 1], items.length - 1, 'start') : '';
+  const endClone = items.length > 1 ? cardMarkup(items[0], 0, 'end') : '';
+  container.classList.add('scentory-coverflow-host');
+  container.innerHTML = `
+    <div class="scentory-coverflow" data-coverflow-type="${isNew ? 'new' : 'best'}" aria-label="${title} perfume carousel">
+      <button type="button" class="coverflow-arrow coverflow-arrow-prev" aria-label="Previous ${title.toLowerCase()} perfume">‹</button>
+      <div class="scentory-coverflow-viewport" tabindex="0" aria-label="Swipe or use arrow keys to explore ${title.toLowerCase()} perfumes">
+        <div class="scentory-coverflow-track">
+          ${startClone}
+          ${items.map((p, index) => cardMarkup(p, index)).join('')}
+          ${endClone}
+        </div>
+      </div>
+      <button type="button" class="coverflow-arrow coverflow-arrow-next" aria-label="Next ${title.toLowerCase()} perfume">›</button>
+    </div>
+    <p class="coverflow-hint">Swipe to explore <span aria-hidden="true">✦</span> Tap a card to view</p>
+  `;
+
+  const carousel = container.querySelector('.scentory-coverflow');
+  const viewport = container.querySelector('.scentory-coverflow-viewport');
+  const track = container.querySelector('.scentory-coverflow-track');
+  const cards = [...track.querySelectorAll('.scentory-coverflow-card')];
+  const realCards = cards.filter(card => !card.dataset.clone);
+  let scrollTimer = null;
+  let frame = null;
+
+  const centeredCard = () => {
+    const center = viewport.scrollLeft + viewport.clientWidth / 2;
+    return cards.reduce((closest, card) => {
+      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+      const distance = Math.abs(cardCenter - center);
+      return !closest || distance < closest.distance ? { card, distance } : closest;
+    }, null)?.card || realCards[0];
+  };
+
+  const updateDepth = () => {
+    frame = null;
+    const center = viewport.scrollLeft + viewport.clientWidth / 2;
+    cards.forEach(card => {
+      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+      const distance = (cardCenter - center) / Math.max(1, card.offsetWidth);
+      const abs = Math.min(2.4, Math.abs(distance));
+      const rotation = Math.max(-32, Math.min(32, distance * -23));
+      const scale = 1 - Math.min(abs, 2) * 0.105;
+      const lift = Math.min(abs, 2) * 7;
+      const depth = 34 - abs * 26;
+      card.style.transform = `translateY(${lift}px) rotateY(${rotation}deg) translateZ(${depth}px) scale(${scale})`;
+      card.style.opacity = String(Math.max(0.38, 1 - abs * 0.27));
+      card.style.zIndex = String(100 - Math.round(abs * 12));
+      card.classList.toggle('is-active', abs < 0.48);
+      card.setAttribute('aria-current', abs < 0.48 ? 'true' : 'false');
+    });
+  };
+
+  const scheduleDepth = () => {
+    if (frame === null) frame = requestAnimationFrame(updateDepth);
+    if (scrollTimer) clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      const nearest = centeredCard();
+      if (nearest?.dataset.clone === 'start') {
+        const last = realCards[realCards.length - 1];
+        viewport.scrollTo({ left: last.offsetLeft + last.offsetWidth / 2 - viewport.clientWidth / 2, behavior: 'auto' });
+      } else if (nearest?.dataset.clone === 'end') {
+        const first = realCards[0];
+        viewport.scrollTo({ left: first.offsetLeft + first.offsetWidth / 2 - viewport.clientWidth / 2, behavior: 'auto' });
+      }
+      if (frame === null) frame = requestAnimationFrame(updateDepth);
+    }, 110);
+  };
+
+  const move = direction => {
+    const current = centeredCard();
+    const currentPosition = cards.indexOf(current);
+    const target = cards[Math.max(0, Math.min(cards.length - 1, currentPosition + direction))];
+    if (target) viewport.scrollTo({ left: target.offsetLeft + target.offsetWidth / 2 - viewport.clientWidth / 2, behavior: 'smooth' });
+  };
+
+  viewport.addEventListener('scroll', scheduleDepth, { passive: true });
+  container.querySelector('.coverflow-arrow-prev')?.addEventListener('click', () => move(-1));
+  container.querySelector('.coverflow-arrow-next')?.addEventListener('click', () => move(1));
+  viewport.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') { event.preventDefault(); move(-1); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); move(1); }
+  });
+  cards.forEach(card => card.addEventListener('click', () => {
+    window.location.href = `${encodeURIComponent(card.dataset.targetId)}.html`;
+  }));
+
+  requestAnimationFrame(() => {
+    const first = realCards[0];
+    if (first) viewport.scrollTo({ left: first.offsetLeft + first.offsetWidth / 2 - viewport.clientWidth / 2, behavior: 'auto' });
+    updateDepth();
+  });
+  window.addEventListener('resize', scheduleDepth, { passive: true });
+}
+
 function renderHotArrivals() {
   if (!hotArrivalsGrid) return;
   const items = HOT_ARRIVAL_IDS
     .map(id => perfumes.find(p => p.id === id))
     .filter(p => p && !isUpcoming(p));
-
-  if (!items.length) {
-    hotArrivalsGrid.innerHTML = '<p class="order-items empty">No new arrivals found.</p>';
-    return;
-  }
-
-  hotArrivalsGrid.innerHTML = items.map((p) => {
-    const availableSizes = Object.entries(p.sizes || {})
-      .filter(([, item]) => item.available && item.price !== null)
-      .map(([ml, item]) => `${displayMl(ml)} ${p._saleActive ? window.SaleCampaign.priceMarkup(item) : taka(item.price)}`)
-      .slice(0, 3)
-      .join(' · ');
-    return `
-      <button type="button" class="hot-arrival-card" data-target-id="${escapeHtml(p.id)}" aria-label="View ${escapeHtml(p.name)} in price list">
-        <span class="hot-arrival-photo-wrap">
-          <img ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
-        </span>
-        <span class="hot-arrival-copy">
-          ${window.SaleCampaign?.badge(p) || ''}<b>${escapeHtml(p.name)}</b>
-          <small>${productHasAvailableSize(p) ? availableSizes : 'Out of stock'}</small>
-        </span>
-      </button>
-    `;
-  }).join('');
-
-  hotArrivalsGrid.querySelectorAll('.hot-arrival-card[data-target-id]').forEach(btn => {
-    btn.addEventListener('click', () => { window.location.href = `${encodeURIComponent(btn.dataset.targetId)}.html`; });
-  });
+  renderScentoryCoverflow(hotArrivalsGrid, items, 'new');
 }
 
 function renderBestSelling() {
@@ -856,26 +984,7 @@ function renderBestSelling() {
   const items = BEST_SELLING_IDS
     .map(id => perfumes.find(p => p.id === id))
     .filter(Boolean);
-
-  if (!items.length) {
-    bestSellingGrid.innerHTML = '<p class="order-items empty">No best-selling perfume found.</p>';
-    return;
-  }
-
-  bestSellingGrid.innerHTML = items.map((p) => `
-    <button type="button" class="best-seller-card" data-target-id="${escapeHtml(p.id)}" aria-label="View ${escapeHtml(p.name)} in price list">
-      <img ${imageAttrs(p)} alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" fetchpriority="low">
-      <span class="best-seller-copy">
-        ${window.SaleCampaign?.badge(p) || ''}<b>${escapeHtml(p.name)}</b>
-        <small>Tap to view & add</small>
-      </span>
-      <span class="best-arrow">↘</span>
-    </button>
-  `).join('');
-
-  bestSellingGrid.querySelectorAll('.best-seller-card[data-target-id]').forEach(btn => {
-    btn.addEventListener('click', () => { window.location.href = `${encodeURIComponent(btn.dataset.targetId)}.html`; });
-  });
+  renderScentoryCoverflow(bestSellingGrid, items, 'best');
 }
 
 function syncTopbarHeight() {
