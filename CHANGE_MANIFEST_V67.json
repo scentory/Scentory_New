@@ -1,0 +1,82 @@
+{
+  "version": "V67",
+  "baseline": "V66",
+  "release_date": "2026-11-23",
+  "summary": "Synced the catalogue to the latest November price list, removed the separate Liquid Brun Limited Edition listing, and corrected Yusuf Bhai - Men 212 size availability.",
+  "catalogue": {
+    "product_count_before": 150,
+    "product_count_after": 149,
+    "price_source": "Latest SCENTORY — NOVEMBER UPDATED PRICE LIST supplied by the user in this release.",
+    "price_amounts": "Existing catalogue prices were checked against the supplied list; Liquid Brun by French Avenue remains 230/410/610/860 Tk for 3/6/10/15 ML.",
+    "new_to_scentory_current_count": 11,
+    "new_to_scentory_note": "The removed Limited Edition was the 12th sequenced arrival. No replacement was invented; the carousel continues to select the newest sequenced additions automatically and will return to 12 when another genuine new product is added.",
+    "best_selling_count": 12,
+    "display_label": "150+ (retained from V66; the actual product record count is 149)"
+  },
+  "changes": [
+    "Removed Liquid Brun Limited Edition from the catalogue data and its standalone product page and poster asset.",
+    "Removed the deleted product from the New to Scentory fallback list and sitemap.",
+    "Updated Yusuf Bhai - Men 212: 3 ML (190 Tk) and 6 ML Premium (340 Tk) are available; 10 ML (500 Tk) and 15 ML (680 Tk) remain unavailable.",
+    "Kept the previously requested 150+ display label while the catalogue has 149 records across the homepage, shop, order page, script metadata and llms.txt.",
+    "Bumped catalogue data and script cache version to 6700.",
+    "Preserved the V66 Liquid Glass 3D carousels, all 12 Best Selling selections, product profiles, images and existing site behavior."
+  ],
+  "runtime_changed_files": [
+    "index.html",
+    "shop.html",
+    "order.html",
+    "script-scentory-v3048.js",
+    "perfumes.json",
+    "yusuf-bhai-men-212.html",
+    "sitemap.xml",
+    "llms.txt"
+  ],
+  "runtime_deleted_files": [
+    "liquid-brun-limited-edition.html",
+    "liquid-brun-limited-edition-poster-v64.webp"
+  ],
+  "release_metadata_files": [
+    "CHANGE_MANIFEST_V67.json",
+    "README_V67.txt",
+    "DELETE_FILES_V67.txt"
+  ],
+  "validation": {
+    "catalogue_json_valid": true,
+    "catalogue_count": 149,
+    "liquid_brun_limited_edition_record_present": false,
+    "liquid_brun_standard_prices": {
+      "3 ML": 230,
+      "6 ML": 410,
+      "10 ML": 610,
+      "15 ML": 860
+    },
+    "yusuf_bhai_men_212": {
+      "status": "available",
+      "sizes": {
+        "3ml": {
+          "price": 190,
+          "available": true,
+          "premium": false
+        },
+        "6ml": {
+          "price": 340,
+          "available": true,
+          "premium": true
+        },
+        "10ml": {
+          "price": 500,
+          "available": false,
+          "premium": false
+        },
+        "15ml": {
+          "price": 680,
+          "available": false,
+          "premium": false
+        }
+      }
+    },
+    "new_arrival_sequence_count": 11,
+    "best_selling_ids_preserved": true
+  },
+  "incremental_archive_policy": "The V67 Only Current Update ZIP contains only the eight runtime files changed in this release plus the release manifest, README and deletion instructions. It contains no unchanged site files or historical update files."
+}

@@ -7321,16 +7321,16 @@
       "Daily Wear"
     ],
     "recommendation": "Best for office, university, clean daytime wear, and an easy everyday rotation.",
-    "status": "out",
+    "status": "available",
     "sizes": {
       "3ml": {
         "price": 190,
-        "available": false,
+        "available": true,
         "premium": false
       },
       "6ml": {
         "price": 340,
-        "available": false,
+        "available": true,
         "premium": true
       },
       "10ml": {
@@ -11825,117 +11825,6 @@
       "comparison": "No verified fragrance comparison is listed.",
       "projection": "Moderate (Scentory guide). Results vary with use, weather, fabric and skin chemistry."
     }
-  },
-  {
-    "id": "liquid-brun-limited-edition",
-    "name": "Liquid Brun Limited Edition",
-    "status": "available",
-    "image": "liquid-brun-limited-edition-poster-v64.webp",
-    "tags": [
-      "Amber",
-      "Vanilla",
-      "Warm Spicy"
-    ],
-    "recommendation": "A rich aromatic vanilla-amber fragrance with a bright citrus-lavender opening and a floral woody heart.",
-    "profile": {
-      "schemaVersion": 2,
-      "character": [
-        "vanilla",
-        "amber",
-        "citrus",
-        "aromatic",
-        "floral",
-        "woody",
-        "warm spicy"
-      ],
-      "occasions": [
-        "date",
-        "party",
-        "formal"
-      ],
-      "climates": [
-        "winter",
-        "ac"
-      ],
-      "strength": 4,
-      "projection": 4,
-      "longevity": 4,
-      "sweetness": 4,
-      "freshness": 2,
-      "warmth": 4,
-      "officeSafety": 2,
-      "heatSafety": 1,
-      "versatility": 3,
-      "evidence": "web-verified",
-      "reviewedAt": "2026-11-21",
-      "topPickEligible": false,
-      "scope": "perfume"
-    },
-    "details": {
-      "verification": "source-checked",
-      "notes": {
-        "top": [
-          "Cardamom",
-          "Lavender",
-          "Citrus"
-        ],
-        "heart": [
-          "Orange Blossom",
-          "Guaiac Wood",
-          "Rose"
-        ],
-        "base": [
-          "Vanilla",
-          "Tonka",
-          "Amber",
-          "Oak Moss"
-        ]
-      },
-      "performance": "Strong (Scentory guide). Results vary with use, weather, fabric and skin chemistry.",
-      "projection": "Strong (Scentory guide). Results vary with use, weather, fabric and skin chemistry.",
-      "comparison": "No verified fragrance comparison is listed.",
-      "sourceNote": "Exact top, heart and base note pyramid checked against the Fragrantica listing on 2026-11-21.",
-      "sources": [
-        {
-          "title": "Fragrantica — Liquid Brun Limited Edition by French Avenue",
-          "url": "https://www.fragrantica.com/perfume/French-Avenue/Liquid-Brun-Limited-Edition-123526.html",
-          "type": "community"
-        }
-      ],
-      "profileScope": "perfume",
-      "overview": "A rich aromatic vanilla-amber fragrance with citrus and lavender up front, a floral-woody heart, and a warm vanilla-tonka base.",
-      "keyNotes": "Cardamom, Lavender, Vanilla, Amber",
-      "bestWear": "Suggested for cool weather, evening outings and dates; choose by your preference."
-    },
-    "sizes": {
-      "3ml": {
-        "price": 230,
-        "available": true,
-        "premium": false
-      },
-      "6ml": {
-        "price": 399,
-        "available": true,
-        "premium": true
-      },
-      "10ml": {
-        "price": 580,
-        "available": true,
-        "premium": false
-      },
-      "15ml": {
-        "price": 800,
-        "available": true,
-        "premium": false
-      }
-    },
-    "prices": {
-      "3 ML": 230,
-      "6 ML": 399,
-      "10 ML": 580,
-      "15 ML": 800
-    },
-    "newArrivalSequence": 12
   },
   {
     "id": "liquid-brun-by-french-avenue-edp",

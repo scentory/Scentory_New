@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '8801410939978';
 const FACEBOOK_PAGE_URL = 'https://m.me/Scentorybd';
 // Paste your deployed Google Apps Script Web App URL below. Keep it blank until setup.
 const GOOGLE_SCRIPT_URL = ''; // Example: https://script.google.com/macros/s/XXXXX/exec
-const DATA_VERSION = '6600';
+const DATA_VERSION = '6700';
 const BEST_SELLING_IDS = [
   'dior-sauvage-edt',
   'jpg-le-male-le-parfum',
@@ -24,7 +24,6 @@ const BEST_SELLING_IDS = [
 // The carousel is populated from perfumes.json using newArrivalSequence.
 // Add a higher sequence only to a genuinely new perfume; price/poster edits do not count. The newest 12 are shown.
 let HOT_ARRIVAL_IDS = [
-  'liquid-brun-limited-edition',
   'lattafa-angham-edp',
   'kiss-and-sea-nicotine',
   'rayhaan-palawan',
@@ -152,7 +151,6 @@ const shortOrderName = name => {
     "Al Haramain Amber Oud Gold Edition": "Al Haramain Gold Edition",
     "Al Haramain Amber Oud Aqua Dubai": "Al Haramain Aqua Dubai",
     "Marwa by Arabiyat Prestige": "Marwa",
-    "Liquid Brun Limited Edition": "Liquid Brun LE",
     "Liquid Brun by French Avenue (EDP)": "Liquid Brun",
     "Lattafa Angham EDP": "Angham",
     "Hawas For Him EDP": "Hawas",

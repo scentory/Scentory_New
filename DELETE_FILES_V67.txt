@@ -1,0 +1,4 @@
+Delete these two files from the website root when applying the V67 incremental update:
+
+liquid-brun-limited-edition.html
+liquid-brun-limited-edition-poster-v64.webp
